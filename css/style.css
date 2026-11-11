@@ -36,7 +36,7 @@ a{color:var(--acc)}
 .ic svg{width:19px;height:19px;fill:currentColor}
 .ic:hover,.ic:focus-visible{background:var(--acc);color:var(--bg)}
 /* hero */
-header.hero{position:relative;color:var(--bg);padding:56px 0 52px;background:var(--dark) url("../img/hero-banner.png") center/cover no-repeat}
+header.hero{position:relative;color:var(--bg);padding:56px 0 52px;background:var(--dark) url("../img/hero-banner.jpg") center/cover no-repeat}
 header.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.82),rgba(17,17,17,.9));z-index:0}
 header.hero .wrap{position:relative;z-index:1}
 /* profile bar, under the hero banner */
