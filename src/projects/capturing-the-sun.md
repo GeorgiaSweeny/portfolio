@@ -20,6 +20,10 @@ links:
     url: https://www.youtube.com/@georgia-sweeny
     youtube: true
 blocks:
+  - type: video
+    youtube: fKp3UTxZdac
+    poster: sun-medina.jpg
+    label: Watch the animatic
   - type: gallery
     heading: Storyboards
     images:

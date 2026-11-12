@@ -9,13 +9,13 @@ const showDrafts = () => process.env.ELEVENTY_RUN_MODE === "serve" || process.en
 const IMG_SRC = "src/images";
 const imgOpts = (extra = {}) => ({
   widths: [400, 800, 1200, 1600, 2400],
-  formats: ["avif", "webp", "jpeg"],
+  formats: ["webp", "jpeg"], // AVIF left out: too slow to encode on every Cloudflare build
   outputDir: "_site/img/",
   urlPath: "/img/",
-  sharpAvifOptions: { quality: 55 },
   sharpWebpOptions: { quality: 72 },
   sharpJpegOptions: { quality: 76, mozjpeg: true },
-  filenameFormat: (id, src, width, format) => `${path.parse(src).name}-${width}.${format}`,
+  // The hash changes when the master changes, so year-long browser caching stays safe.
+  filenameFormat: (id, src, width, format) => `${path.parse(src).name}-${id.slice(0, 6)}-${width}.${format}`,
   ...extra,
 });
 
@@ -53,7 +53,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addAsyncShortcode("ogImage", async (src) => {
     const meta = await Image(path.join(IMG_SRC, src), imgOpts({
       widths: [1200], formats: ["jpeg"],
-      filenameFormat: (id, s) => `og-${path.parse(s).name}.jpeg`,
+      filenameFormat: (id, s) => `og-${path.parse(s).name}-${id.slice(0, 6)}.jpeg`,
       transform: (sharp) => sharp.resize(1200, 630, { fit: "cover", withoutEnlargement: false }),
     }));
     return meta.jpeg[0].url;

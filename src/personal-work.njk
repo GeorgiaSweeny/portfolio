@@ -4,7 +4,7 @@ section: personal
 title: Personal Work
 description: "Paintings, commissions and objects Georgia Sweeny makes for herself, outside courses and jobs."
 ---
-{%- set showPlaceholders = (eleventy.env.runMode == "serve") or (env.showDrafts) %}
+{%- set showPlaceholders = features.preview %}
 <header class="page-head">
   <div class="wrap">
     <h1 class="cutout page-title">Personal Work</h1>

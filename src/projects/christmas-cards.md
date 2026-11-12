@@ -11,7 +11,7 @@ cardImage: card-doorway.jpg
 intro: A range of original illustrated greeting cards and prints celebrating St Albans, sold through local stockists and direct to customers.
 facts:
   role: 'Everything: illustration, print-ready artwork, print production, pricing, stockist relationships, marketing and sales.'
-  tools: Watercolour, ink and Adobe Photoshop; print-ready artwork and digital print production.
+  tools: Watercolour, ink, Procreate and Adobe Photoshop; print-ready artwork and digital print production.
   outcome: Chosen by the Mayor of St Albans for the official Christmas card (2018). The doorway design won the St Albans Art Society Trophy (2022). Stocked by St Albans Museum + Gallery for five years and by the Cathedral gift shop, and licensed to the Addison’s Disease Self-Help Group for fundraising cards.
 blocks:
   - type: gallery

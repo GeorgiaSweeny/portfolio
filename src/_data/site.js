@@ -17,5 +17,9 @@ export default {
   turnstileSiteKey: "1x00000000000000000000AA",
   // Cloudflare Web Analytics beacon token; empty = no analytics script.
   analyticsToken: "",
+  // The PDF CV: put the file at src/static/cv/georgia-sweeny-cv.pdf and the
+  // Download PDF buttons appear on the next build.
   cvPdf: "/cv/georgia-sweeny-cv.pdf",
+  // Personal Work stays hidden from visitors until this is true.
+  showPersonalWork: false,
 };

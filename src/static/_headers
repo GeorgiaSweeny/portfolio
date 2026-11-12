@@ -1,4 +1,4 @@
-# Cloudflare Pages response headers.
+# Response headers (Cloudflare Workers static assets read this file natively).
 # The script-src hash is for the one-line inline script in layouts/base.njk; change both together.
 /*
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'sha256-0A3SoNnOj/VD5rKtWDb4PSvN8Br+QRibbwlM+84okfY=' https://challenges.cloudflare.com https://static.cloudflareinsights.com; frame-src https://www.youtube-nocookie.com https://challenges.cloudflare.com; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests

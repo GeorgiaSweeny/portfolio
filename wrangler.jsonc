@@ -1,0 +1,20 @@
+// Cloudflare Worker that serves the built site (_site) and the contact form endpoint.
+// Deployed by Workers Builds: build command `npm run build`, deploy command `npx wrangler deploy`.
+{
+  "name": "georgiasweeny",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./_site",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Only the form endpoint runs code; every page and image is served straight from the edge.
+    "run_worker_first": ["/api/*"]
+  },
+  // Sends the form message to Georgia's inbox (address set as the CONTACT_TO secret, never in this repo).
+  "send_email": [{ "name": "EMAIL" }],
+  "vars": {
+    "CONTACT_FROM": "form@georgiasweeny.com"
+  },
+  "observability": { "enabled": true }
+}

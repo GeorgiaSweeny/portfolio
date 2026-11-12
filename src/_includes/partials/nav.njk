@@ -1,7 +1,9 @@
 {%- from "partials/icons.njk" import icon -%}
 <nav class="nav" aria-label="Main">
   <a href="/projects/"{% if section == "projects" %} aria-current="page"{% endif %}>Projects</a>
+  {%- if features.personalWork %}
   <a href="/personal-work/"{% if section == "personal" %} aria-current="page"{% endif %}>Personal Work</a>
+  {%- endif %}
   <a href="/about/"{% if section == "about" %} aria-current="page"{% endif %}>About</a>
   <a class="ic" href="/cv/" aria-label="CV"{% if section == "cv" %} aria-current="page"{% endif %}>{{ icon("cv") }}<span class="label" aria-hidden="true">CV</span></a>
   <a class="ic{% if section == 'home' %} cta{% endif %}" href="#contact" aria-label="Get in touch">{{ icon("mail") }}<span class="label" aria-hidden="true">Get in touch</span></a>

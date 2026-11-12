@@ -1,6 +1,6 @@
 # georgiasweeny.com
 
-Portfolio site, built with [Eleventy](https://www.11ty.dev/) and served by Cloudflare Pages.
+Portfolio site, built with [Eleventy](https://www.11ty.dev/) and served by a Cloudflare Worker (static assets + the contact form endpoint).
 
 ```sh
 npm install
@@ -18,12 +18,13 @@ npm run build:drafts   # production build with drafts
 | Status tag, positioning line, social links, Turnstile key | `src/_data/site.js` |
 | Shared profile (About + CV + PDF CV) | `src/_data/profile.js` |
 | About: stats, skills, timeline | `src/_data/about.js` |
-| Public CV | `src/_data/cv.js` (+ PDF at `src/static/cv/georgia-sweeny-cv.pdf`) |
+| Public CV | `src/_data/cv.js`; drop the PDF at `src/static/cv/georgia-sweeny-cv.pdf` and the Download PDF buttons appear |
 | Personal Work artworks | `src/_data/artworks.js` |
 | Image masters | `src/images/` (one large file per image; the build makes AVIF/WebP/JPEG at several widths) |
 | Styles / script | `src/css/site.css`, `src/js/site.js` |
 | Security headers | `src/static/_headers` |
-| Contact form backend | `functions/api/contact.js` (Cloudflare Pages Function) |
+| Contact form backend | `worker/index.js`, configured in `wrangler.jsonc` |
+| Show Personal Work to visitors | `showPersonalWork: true` in `src/_data/site.js` |
 
 ### Adding a project
 
