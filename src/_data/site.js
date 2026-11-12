@@ -12,9 +12,8 @@ export default {
     github: "https://github.com/GeorgiaSweeny",
     youtube: "https://www.youtube.com/@georgia-sweeny",
   },
-  // Cloudflare Turnstile site key (public). Replace once the Cloudflare account exists;
-  // this one is Cloudflare's always-passes test key.
-  turnstileSiteKey: "1x00000000000000000000AA",
+  // Cloudflare Turnstile site key (public; the secret key lives only in Cloudflare).
+  turnstileSiteKey: "0x4AAAAAAF9-sNlu-FehDQ0N",
   // Cloudflare Web Analytics beacon token; empty = no analytics script.
   analyticsToken: "",
   // The PDF CV: put the file at src/static/cv/georgia-sweeny-cv.pdf and the
