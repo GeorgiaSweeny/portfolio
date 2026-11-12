@@ -12,7 +12,7 @@ intro: A 3D animated short about an architect whose creative block takes physica
 facts:
   role: Director and writer. I set the creative direction for the team, wrote the story, painted concept art, and modelled characters and environments.
   tools: Autodesk Maya, ZBrush, Substance Painter, Adobe Photoshop and Premiere Pro.
-  outcome: Everyone in the year pitched a film (about 100 pitches); mine was one of 7–12 chosen for group production, and the finished short is below.
+  outcome: Everyone in the year pitched a film (about 100 pitches); mine was one of 7–12 chosen for group production.
 links:
   - label: Visit my channel
     url: https://www.youtube.com/@georgia-sweeny

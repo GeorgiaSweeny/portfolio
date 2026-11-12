@@ -2,9 +2,12 @@
 layout: layouts/base.njk
 ---
 {%- from "partials/icons.njk" import icon -%}
+{#- The first block, if it's a full-size video, is the project's feature video: it sits beside the description. #}
+{%- set fv = blocks[0] if (blocks and blocks.length and blocks[0].type == "video" and blocks[0].size != "small") else false %}
+{%- set hasSide = heroVideo or fv or ownToolNote %}
 <main id="main" class="proj-main">
   <div class="wrap">
-    <div class="proj-top{% if not ownToolNote and not heroVideo %} solo{% endif %}">
+    <div class="proj-top{% if hasSide %} has-side{% else %} solo{% endif %}">
       <div class="proj-intro">
         <header>
           <p class="meta">{{ disciplines | disciplineLabels }} <span>· {{ year }}</span></p>
@@ -25,6 +28,17 @@ layout: layouts/base.njk
         </p>
         {%- endif %}
       </div>
+      {%- if hasSide %}
+      <div class="proj-side">
+      {%- if fv %}
+      <figure class="video-fig feature">
+        <div class="video" data-youtube="{{ fv.youtube }}" data-title="{{ fv.label }}: {{ title }}">
+          {% image fv.poster, "", "(min-width: 1100px) 560px, (min-width: 700px) 42vw, 100vw" %}
+          <button type="button" aria-label="{{ fv.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ fv.label }}</button>
+        </div>
+        {%- if fv.caption %}<figcaption>{{ fv.caption }}</figcaption>{% endif %}
+      </figure>
+      {%- endif %}
       {%- if heroVideo %}
       <figure class="proj-media">
         <video autoplay muted loop playsinline preload="metadata" poster="{% imageFull heroVideo.poster %}" aria-label="{{ heroVideo.alt }}" data-autoplay>
@@ -45,10 +59,13 @@ layout: layouts/base.njk
         </div>
       </aside>
       {%- endif %}
+      </div>
+      {%- endif %}
     </div>
 
     {%- asyncEach b in blocks %}
-      {%- if b.type == "video" %}
+      {%- if fv and loop.index0 == 0 %}{# feature video already shown beside the description #}
+      {%- elif b.type == "video" %}
       {#- size: small = a secondary clip, about half width on desktop, with an optional caption #}
       {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
       <figure class="video-fig{% if b.size == 'small' %} small{% endif %}">

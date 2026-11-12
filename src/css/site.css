@@ -211,7 +211,6 @@ a.namecut:hover { color: var(--teal-deep); }
 @media (min-width: 1100px) {
   .proj-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; }
   .proj-intro { grid-column: span 7; }
-  .proj-top aside { grid-column: span 5; align-self: end; }
   .proj-top.solo .proj-intro { grid-column: span 9; }
   .proj-intro h1 { font-size: 60px; }
   .proj-intro .intro { font-size: 21px; }
@@ -221,9 +220,20 @@ a.namecut:hover { color: var(--teal-deep); }
 @media (min-width: 700px) { .facts > div { grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 18px 0; } }
 @media (min-width: 1100px) { .facts > div { grid-template-columns: 160px minmax(0, 1fr); } }
 .links { display: flex; flex-wrap: wrap; gap: 10px; }
-.proj-media { border-radius: 14px; overflow: hidden; background: var(--tile); aspect-ratio: 1; max-width: 560px; }
+/* Side column (feature video, looping clip, own-tool box): beside the description from tablet up, on the right */
+.proj-side { display: flex; flex-direction: column; gap: 24px; }
+.proj-side .video-fig { margin-top: 0; }
+@media (min-width: 700px) {
+  .proj-top.has-side { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
+  .proj-side { margin-top: 6px; }
+}
+@media (min-width: 1100px) {
+  .proj-top.has-side { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; }
+  .proj-top.has-side .proj-intro { grid-column: 1 / span 7; }
+  .proj-top.has-side .proj-side { grid-column: 8 / span 5; }
+}
+.proj-media { border-radius: 14px; overflow: hidden; background: var(--tile); aspect-ratio: 1; }
 .proj-media video { display: block; width: 100%; height: 100%; object-fit: cover; }
-@media (min-width: 1100px) { .proj-top .proj-media { grid-column: span 5; align-self: start; margin-top: 8px; } }
 .owntool-box { border-radius: 16px; background: var(--wash); color: var(--teal-mid); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
 .owntool-box p.serif { font-size: 20px; line-height: 1.35; font-weight: 500; }
 .owntool-box .pills { display: flex; flex-wrap: wrap; gap: 10px; }
