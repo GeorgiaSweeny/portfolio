@@ -32,7 +32,13 @@ async function contact(request, env) {
     }),
   }).then((r) => r.json()).catch(() => ({ success: false }));
   if (!verify.success) {
-    const codes = (verify["error-codes"] || []).join(", ") || "no reply";
+    let codes = (verify["error-codes"] || []).join(", ") || "no reply";
+    if (codes.includes("invalid-input-secret")) {
+      // Safe diagnostic: says whether the secret is set and how long it is, never its value.
+      // (A Turnstile site key is 24 characters; a secret key is longer.)
+      const sec = env.TURNSTILE_SECRET;
+      codes += sec ? `; secret is ${sec.length} characters${sec !== sec.trim() ? " with spaces at the ends" : ""}` : "; TURNSTILE_SECRET is not set";
+    }
     console.error("turnstile failed", codes, verify.hostname || "");
     return json({ ok: false, error: `The spam check didn’t pass (${codes}). Please try again.` }, 403);
   }
