@@ -31,7 +31,11 @@ async function contact(request, env) {
       remoteip: request.headers.get("CF-Connecting-IP") || "",
     }),
   }).then((r) => r.json()).catch(() => ({ success: false }));
-  if (!verify.success) return json({ ok: false, error: "The spam check didn’t pass. Please try again." }, 403);
+  if (!verify.success) {
+    const codes = (verify["error-codes"] || []).join(", ") || "no reply";
+    console.error("turnstile failed", codes, verify.hostname || "");
+    return json({ ok: false, error: `The spam check didn’t pass (${codes}). Please try again.` }, 403);
+  }
 
   try {
     await env.EMAIL.send({

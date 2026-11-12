@@ -57,38 +57,73 @@
     });
   }
 
-  // ---- contact form: Turnstile loads only once someone starts writing
+  // ---- contact form: Cloudflare Turnstile spam check, rendered explicitly so
+  // the form can wait for its token before sending.
   const form = document.querySelector(".contact-form");
   if (form) {
     const msg = form.querySelector(".form-msg");
     const btn = form.querySelector(".sendbtn");
-    let loaded = false;
-    const loadTurnstile = () => {
-      if (loaded) return;
-      loaded = true;
+    const box = form.querySelector(".cf-turnstile");
+    let widgetId = null, loading = false;
+    const render = () => {
+      if (widgetId !== null || !window.turnstile) return;
+      widgetId = window.turnstile.render(box, {
+        sitekey: box.dataset.sitekey,
+        theme: "dark",
+        appearance: "interaction-only",
+        "error-callback": (code) => {
+          msg.className = "form-msg err";
+          msg.textContent = `The spam check couldn’t load (code ${code}). Please refresh and try again.`;
+          return true;
+        },
+      });
+    };
+    window.onTurnstileLoad = render;
+    const load = () => {
+      if (loading) return;
+      loading = true;
       const s = document.createElement("script");
-      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad";
       s.async = true;
       document.head.append(s);
     };
-    form.addEventListener("focusin", loadTurnstile);
+    // Load when the form comes near the screen, or as soon as someone touches it.
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { load(); io.disconnect(); } }, { rootMargin: "600px" });
+      io.observe(form);
+    }
+    form.addEventListener("focusin", load);
+
+    const token = async () => {
+      for (let i = 0; i < 30; i++) {           // wait up to 15 s for the check to finish
+        const t = widgetId !== null && window.turnstile ? window.turnstile.getResponse(widgetId) : "";
+        if (t) return t;
+        await new Promise((r) => setTimeout(r, 500));
+      }
+      return "";
+    };
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      loadTurnstile();
+      load();
       msg.className = "form-msg";
       msg.textContent = "Sending…";
       btn.disabled = true;
       try {
-        const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        const t = await token();
+        if (!t) throw new Error("The spam check is still loading. Please wait a moment and try again.");
+        const body = new FormData(form);
+        body.set("cf-turnstile-response", t);
+        const res = await fetch(form.action, { method: "POST", body, headers: { Accept: "application/json" } });
         const data = await res.json().catch(() => ({}));
         if (!res.ok || !data.ok) throw new Error(data.error || "Something went wrong.");
         form.reset();
-        window.turnstile?.reset();
         msg.textContent = "Thank you! Your message is on its way, and I’ll reply soon.";
       } catch (err) {
         msg.className = "form-msg err";
         msg.textContent = `${err.message} You can also reach me on LinkedIn.`;
       } finally {
+        if (widgetId !== null) window.turnstile.reset(widgetId); // a token works only once
         btn.disabled = false;
       }
     });
