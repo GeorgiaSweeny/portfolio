@@ -76,9 +76,9 @@ blocks:
       - src: sun-wool.jpg
         alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
         caption: 'Concept painting: the wool-dyers’ alley'
-      - src: sun-plan.jpg
-        alt: A hand-drawn floor plan beside an early grey 3D blockout
-        caption: From floor plan to blockout
+      - src: sun-medina-plan.jpg
+        alt: Three painted top-down plans in terracotta, cream and sage — the courtyard with the tree on its sun-disc plinth, the souks street lined with stalls, and the camp with bushes and a fire
+        caption: Plans of the three environments – the courtyard, the souks and the camp
         span: pair
       - src: sun-stages.jpg
         alt: Three stages of the medina courtyard build, from grey boxes to the finished tree
