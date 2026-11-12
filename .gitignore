@@ -2,11 +2,16 @@
 CLAUDE.md
 .claude/
 *.pdf
+!src/static/cv/*.pdf
 
 # OS / editor noise
 Thumbs.db
 *.swp
 
-# Local tooling
+# Build and tooling
 node_modules/
+_site/
+.cache/
+.tmp/
 .env
+.dev.vars

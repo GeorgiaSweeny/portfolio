@@ -1,0 +1,15 @@
+{#- Project card. Expects `p` (a project from collections.projects) and `flagship`, `sizes`. -#}
+{%- from "partials/icons.njk" import icon -%}
+<a class="card{% if flagship %} flagship{% endif %}" href="{{ p.url }}">
+  <div class="shot">
+    {%- if p.data.cardImage %}{% image p.data.cardImage, "", sizes %}{% else %}<div class="placeholder"></div>{% endif -%}
+    {%- if p.data.draft %}<span class="draft-flag">Draft: hidden on the live site</span>{% endif -%}
+  </div>
+  <div class="text">
+    <p class="meta">{{ p.data.disciplines | disciplineLabels }} <span>· {{ p.data.year }}</span></p>
+    <h3>{{ p.data.title }}</h3>
+    <p class="role">{{ p.data.role }}</p>
+    <p class="outcome">{{ (p.data.outcomeLong if flagship and p.data.outcomeLong else p.data.outcome) }}</p>
+    {%- if p.data.ownTool %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
+  </div>
+</a>

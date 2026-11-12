@@ -1,0 +1,25 @@
+{%- from "partials/icons.njk" import icon -%}
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="intro">
+      <p class="label">Contact</p>
+      <h2 id="contact-h">Pop me a message</h2>
+      <p>Open to full-time creative roles in marketing, film and TV, where I can bring my traditional, digital and technical skills together. <span class="mob">Use the form below</span><span class="desk">Use the form</span>, or find me on LinkedIn.</p>
+      <div class="social">
+        <a href="{{ site.social.linkedin }}" aria-label="Georgia Sweeny on LinkedIn" rel="me noopener" target="_blank">{{ icon("linkedin") }}</a>
+        <a href="{{ site.social.github }}" aria-label="Georgia Sweeny on GitHub" rel="me noopener" target="_blank">{{ icon("github") }}</a>
+        <a href="{{ site.social.youtube }}" aria-label="Georgia Sweeny on YouTube" rel="me noopener" target="_blank">{{ icon("youtube") }}</a>
+      </div>
+    </div>
+    <form class="contact-form" method="post" action="/api/contact">
+      <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120"></div>
+      <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+      <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="4" required maxlength="5000"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="cf-web">Leave this empty</label><input id="cf-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="cf-turnstile" data-sitekey="{{ site.turnstileSiteKey }}" data-theme="dark" data-appearance="interaction-only"></div>
+      <p class="small">Protected by Cloudflare Turnstile. Your message goes straight to my inbox.</p>
+      <button type="submit" class="sendbtn">Send message</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

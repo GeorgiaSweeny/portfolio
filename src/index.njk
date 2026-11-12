@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+section: home
+title: Georgia Sweeny
+ogImage: pat-banner.jpg
+---
+<main id="main" class="home-main">
+  <div class="wrap">
+    <h2 class="sr-only">Featured projects</h2>
+    <div class="cards home">
+      {%- asyncEach p in collections.featured %}
+        {%- set flagship = p.data.flagship %}
+        {%- set sizes = "(min-width: 1100px) 66vw, 100vw" if flagship else "(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw" %}
+        {% include "partials/card.njk" %}
+      {%- endeach %}
+    </div>
+    <a class="btn outline" href="/projects/">See all projects →</a>
+  </div>
+</main>
+<section class="stats-section" aria-label="About me">
+  <div class="wrap">
+    <div class="stats">
+      {%- for s in about.stats %}
+      <div class="stat"><p class="cutout">{{ s.big }}</p><p>{{ s.small }}</p></div>
+      {%- endfor %}
+    </div>
+    <a class="more" href="/about/">More about me →</a>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+section: cv
+title: CV
+description: "Georgia Sweeny’s CV: designer, illustrator and technical artist. Skills, experience, projects, education and awards."
+---
+{%- from "partials/icons.njk" import icon -%}
+<main id="main" class="cv-main">
+  <div class="wrap">
+    <div class="cv-head">
+      <h1 class="cutout page-title">CV</h1>
+      <p class="cv-meta"><span>London area</span><a href="{{ site.social.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a><a href="{{ site.social.github }}" rel="me noopener" target="_blank">GitHub</a><a href="#contact">Get in touch</a></p>
+      <nav class="cv-jump" aria-label="CV sections">
+        <div class="links">{% for s in cv.sections %}<a href="#cv-{{ s | lower }}">{{ s }}</a>{% endfor %}</div>
+        <a class="dl-round" href="{{ site.cvPdf }}" aria-label="Download my CV as a PDF" download>{{ icon("download") }}</a>
+        <a class="btn" href="{{ site.cvPdf }}" download>{{ icon("download") }}Download PDF</a>
+      </nav>
+      <p class="cv-profile">{{ profile.opening }} {{ profile.rest | join(" ") }}</p>
+      <a class="btn" href="{{ site.cvPdf }}" download>{{ icon("download") }}Download PDF</a>
+    </div>
+
+    <div class="cv-body">
+      <div class="cv-col">
+        <section class="cv-sec loose" id="cv-experience"><h2>Experience</h2>
+          {%- for e in cv.experience %}
+          <div class="cv-item"><p class="row"><strong>{{ e.title }}</strong><span class="yrs">{{ e.years }}</span></p>
+            <ul class="b">{% for b in e.points %}<li>{{ b }}</li>{% endfor %}</ul></div>
+          {%- endfor %}
+        </section>
+        <section class="cv-sec loose" id="cv-projects"><h2>Projects</h2>
+          {%- for p in cv.projects %}
+          {%- set target = collections.projects | projectBySlug(p.project) %}
+          <div class="cv-item"><p class="row"><span>{% if target %}<a class="t" href="{{ target.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %} <span class="sub">– {{ p.sub }}</span></span><span class="yrs">{{ p.years }}</span></p>
+            {%- if p.tools %}<p class="tools">Tools: {{ p.tools }}</p>{% endif %}
+            <ul class="b">{% for b in p.points %}<li>{{ b }}</li>{% endfor %}</ul></div>
+          {%- endfor %}
+        </section>
+      </div>
+      <div class="cv-col side">
+        <section class="cv-sec cv-small" id="cv-skills"><h2>Skills</h2>
+          {%- for s in cv.skills %}<div><h3>{{ s.group }}</h3><p>{{ s.text }}</p></div>{% endfor %}
+        </section>
+        <section class="cv-sec" id="cv-education"><h2>Education</h2>
+          {%- for e in cv.education %}
+          <div class="cv-edu"><strong>{{ e.qual }}</strong><span>{{ e.place }}{% if e.years %} · {{ e.years }}{% endif %}</span><i>{{ e.note }}</i></div>
+          {%- endfor %}
+        </section>
+        <section class="cv-sec cv-small" id="cv-certifications"><h2>Certifications</h2>
+          <ul class="b">{% for c in cv.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
+        </section>
+        <section class="cv-sec cv-small" id="cv-awards"><h2>Awards</h2>
+          <ul class="b">{% for a in cv.awards %}<li>{{ a }}</li>{% endfor %}</ul>
+        </section>
+        <section class="cv-sec cv-small" id="cv-interests"><h2>Interests</h2><p>{{ cv.interests }}</p></section>
+      </div>
+    </div>
+  </div>
+</main>

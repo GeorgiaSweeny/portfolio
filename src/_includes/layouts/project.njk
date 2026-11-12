@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+---
+{%- from "partials/icons.njk" import icon -%}
+<main id="main" class="proj-main">
+  <div class="wrap">
+    <div class="proj-top{% if not ownToolNote %} solo{% endif %}">
+      <div class="proj-intro">
+        <header>
+          <p class="meta">{{ disciplines | disciplineLabels }} <span>· {{ year }}</span></p>
+          <h1>{{ title }}</h1>
+          <p class="intro">{{ intro }}</p>
+          {%- if ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
+        </header>
+        <dl class="facts">
+          <div><dt>My Role</dt><dd>{{ facts.role }}</dd></div>
+          <div><dt>Tools</dt><dd>{{ facts.tools }}</dd></div>
+          <div><dt>Outcome</dt><dd>{{ facts.outcome }}</dd></div>
+        </dl>
+        {%- if links %}
+        <p class="links">
+          {%- for l in links %}
+          <a class="btn{% if not loop.first or l.youtube %} outline{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">{% if l.youtube %}{{ icon("youtube") }}{% endif %}{{ l.label }}</a>
+          {%- endfor %}
+        </p>
+        {%- endif %}
+      </div>
+      {%- if ownToolNote %}
+      <aside class="owntool-box" aria-label="Made with one of my own tools">
+        <p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>
+        <p class="serif">{{ ownToolNote }}</p>
+        <div class="pills">
+          {%- for l in ownToolLinks %}
+            {%- set target = collections.projects | projectBySlug(l.project) %}
+            {%- if target %}<a class="pill" href="{{ target.url }}">{{ l.label }} →</a>{% endif %}
+          {%- endfor %}
+        </div>
+      </aside>
+      {%- endif %}
+    </div>
+
+    {%- asyncEach b in blocks %}
+      {%- if b.type == "video" %}
+      <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ title }}">
+        {% image b.poster, "", "(min-width: 1328px) 1328px, 100vw" %}
+        <button type="button" aria-label="{{ b.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ b.label }}</button>
+      </div>
+      {%- elif b.type == "gallery" %}
+        {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
+        <div class="gallery"{% if b.imgH %} style="--img-h:{{ b.imgH }}px"{% endif %}>
+          {%- asyncEach im in b.images %}
+          <figure{% if im.span %} class="{{ im.span }}"{% endif %} style="--ar:{% imageRatio im.src %}">
+            <a href="{% imageFull im.src %}" data-lightbox>{% image im.src, im.alt, "(min-width: 1100px) 50vw, (min-width: 700px) 60vw, 100vw" %}</a>
+            {%- if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
+          </figure>
+          {%- endeach %}
+        </div>
+      {%- endif %}
+    {%- endeach %}
+
+    {{ content | safe }}
+
+    {%- set nb = collections.projects | neighbours(page.url) %}
+    <nav class="pager" aria-label="More projects">
+      <a href="{{ nb.prev.url }}">← {{ nb.prev.data.title }}</a>
+      <a href="{{ nb.next.url }}">{{ nb.next.data.title }} →</a>
+    </nav>
+  </div>
+</main>

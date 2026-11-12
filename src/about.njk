@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+section: about
+title: About
+description: "About Georgia Sweeny: seven years running an illustration and greeting card business, a BA in Computer Animation and an MSc in Computer Science."
+---
+<main id="main" class="about-main">
+  <div class="wrap">
+    <div class="about-top">
+      <div class="portrait"><div class="inner">{% include "partials/portrait.html" %}</div></div>
+      <div class="text">
+        <h1 class="cutout page-title">About</h1>
+        <p class="positioning">{{ site.positioning }}</p>
+        {#- The positioning line sits just above, so the profile's opening sentence (the same line) is left out here. #}
+        <div class="paras">{% for t in profile.rest %}<p>{{ t }}</p>{% endfor %}</div>
+        <a class="btn" href="/cv/">Read my CV</a>
+      </div>
+    </div>
+    <div class="about-lower">
+      <section class="skills" aria-labelledby="skills-h">
+        <h2 id="skills-h">Skills</h2>
+        {%- for group, items in about.skills %}
+        <div><h3>{{ group }}</h3><ul>{% for s in items %}<li>{{ s }}</li>{% endfor %}</ul></div>
+        {%- endfor %}
+      </section>
+      <section class="timeline" aria-labelledby="tl-h">
+        <h2 id="tl-h">Experience and Education</h2>
+        <ul>
+          {%- for r in about.timeline %}
+          <li><span class="y">{{ r.year }}</span><span class="t">{{ r.title }}<i>{{ r.note }}</i></span></li>
+          {%- endfor %}
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>

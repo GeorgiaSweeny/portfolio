@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+section: personal
+title: Personal Work
+description: "Paintings, commissions and objects Georgia Sweeny makes for herself, outside courses and jobs."
+---
+{%- set showPlaceholders = (eleventy.env.runMode == "serve") or (env.showDrafts) %}
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="cutout page-title">Personal Work</h1>
+    <p class="lede">Paintings, commissions and objects I make for myself, outside courses and jobs.</p>
+    {%- if not artworks.length %}<p class="note">{% if showPlaceholders %}Placeholders show the layout until the photos, titles, media and sold list arrive.{% else %}Photos of my paintings and commissions are on their way.{% endif %}</p>{% endif %}
+  </div>
+</header>
+<main id="main" class="page-main">
+  <div class="wrap">
+    <h2 class="sr-only">Artworks</h2>
+    {%- if artworks.length %}
+    <div class="tiles">
+      {%- asyncEach a in artworks %}
+      <figure class="tile">
+        <a class="img" href="{% imageFull a.image %}" data-lightbox>{% image a.image, a.alt, "(min-width: 700px) 33vw, 50vw" %}{% if a.sold %}<span class="sold">Sold</span>{% endif %}</a>
+        <figcaption><span class="t">{{ a.title }}</span><span class="m">{{ a.medium }} · {{ a.year }}</span></figcaption>
+      </figure>
+      {%- endeach %}
+    </div>
+    {%- elif showPlaceholders %}
+    <div class="tiles">
+      {%- for i in range(0, 9) %}
+      <figure class="tile"><div class="img ph">{% if i % 3 == 0 %}<span class="sold">Sold</span>{% endif %}</div>
+        <figcaption><span class="t">[Painting title]</span><span class="m">[Medium] · [Year]</span></figcaption></figure>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    {%- set personalProjects = collections.projects | inDiscipline("personal-work") %}
+    {%- if personalProjects.length %}
+    <div class="related">
+      <span class="note">Personal projects</span>
+      {%- for p in personalProjects %}<a class="pill" href="{{ p.url }}">{{ p.data.title }} →</a>{% endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</main>

@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+section: projects
+title: Projects
+description: "Georgia Sweeny’s projects: illustration and print, film and animation, 3D and interactive work, and the tools and software she builds."
+pagination:
+  data: filterPages
+  size: 1
+  alias: current
+permalink: "/projects/{% if current.slug %}{{ current.slug }}/{% endif %}"
+eleventyComputed:
+  title: "{% if current.slug %}{{ current.label }} Projects{% else %}Projects{% endif %}"
+---
+{%- from "partials/icons.njk" import icon -%}
+{%- set list = collections.projects | inDiscipline(current.slug) %}
+<header class="page-head">
+  <div class="wrap">
+    <h1 class="cutout page-title">Projects</h1>
+    <p class="lede">Here’s what I’ve been up to – come have a look.</p>
+    <div class="filter-select">
+      <label for="filter">Show</label>
+      <div class="box"><span aria-hidden="true">{{ current.label }}</span>{{ icon("chevron") }}
+        <select id="filter" data-filter>
+          {%- for f in filterPages %}<option value="/projects/{% if f.slug %}{{ f.slug }}/{% endif %}"{% if f.slug == current.slug %} selected{% endif %}>{{ f.label }}</option>{% endfor %}
+        </select>
+      </div>
+    </div>
+    <ul class="chips filter-chips" aria-label="Filter by discipline">
+      {%- for f in filterPages %}
+      <li><a href="/projects/{% if f.slug %}{{ f.slug }}/{% endif %}"{% if f.slug == current.slug %} aria-current="page"{% endif %}>{{ f.label }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</header>
+<main id="main" class="page-main">
+  <div class="wrap">
+    <h2 class="sr-only">{{ current.label }}{% if current.slug %} projects{% endif %}</h2>
+    <div class="cards">
+      {%- asyncEach p in list %}
+        {%- set flagship = false %}{%- set sizes = "(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw" %}
+        {% include "partials/card.njk" %}
+      {%- endeach %}
+    </div>
+    {%- if not list.length %}<p class="lede">Nothing here yet: new work in this discipline is on its way.</p>{% endif %}
+  </div>
+</main>
