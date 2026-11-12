@@ -53,6 +53,8 @@ a.namecut:hover { color: var(--teal-deep); }
   background-image: linear-gradient(rgba(11,53,51,.25), rgba(11,53,51,.25)), url(/assets/cutout.jpg);
   background-size: 140px; background-position: center; background-color: var(--teal-mid);
   -webkit-background-clip: text; background-clip: text; color: var(--teal-mid); -webkit-text-fill-color: transparent;
+  /* room for descenders (the j in Projects, the y in years): the pattern only paints inside this box */
+  padding-bottom: .18em; margin-bottom: -.18em;
 }
 @media (forced-colors: active) { .namecut, .cutout { -webkit-text-fill-color: CanvasText; background: none; filter: none; } }
 .band { height: 14px; background: url(/assets/band.jpg) 0 0 / 180px; }
