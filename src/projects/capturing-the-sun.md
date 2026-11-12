@@ -39,9 +39,24 @@ blocks:
       - src: sun-sb-crowd-stage.jpg
         alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
         caption: The challenge, staged in front of the crowd
-      - src: sun-sb-colour-thumbs.jpg
-        alt: A grid of small colour thumbnails planning the film shot by shot
-        caption: Colour thumbnails, planning the mood of each shot
+  - type: gallery
+    heading: Initial Storyboards and Colour Thumbnails
+    images:
+      - src: sun-thumbs-notebook.jpg
+        alt: A notebook spread of tiny pen thumbnail storyboards for Acts 3 and 4, each panel annotated with handwritten notes, a few touched with yellow and red
+        caption: The very first thumbnail storyboards, in my notebook (Acts 3 and 4)
+      - src: sun-thumbs-1.jpg
+        alt: Twelve colour storyboard panels — a glowing sun emblem, a book on a lit pedestal opening, its pages and an orange picture, then the market street and the crowd around the tree
+        caption: The opening – the book, its pages, and into the medina
+        span: wide
+      - src: sun-thumbs-2.jpg
+        alt: Twelve colour thumbnail panels — the philosopher on the stage beneath the tree before the crowd, the wise woman and her golden staff, the sun emblem, and a walk into an alley hung with dyed wool
+        caption: The challenge at the tree, and into the dyers’ alley
+        span: wide
+      - src: sun-thumbs-3.jpg
+        alt: Twelve sketch panels — the philosopher in a narrow alley and at a stall, a golden sun sign on a door, then night scenes in dark blue with glowing golden lights swirling around him and a lantern
+        caption: The market, the sun sign on the door, and the night of golden lights
+        span: wide
   - type: gallery
     heading: Characters
     images:
