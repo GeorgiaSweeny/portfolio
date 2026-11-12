@@ -244,6 +244,7 @@ a.namecut:hover { color: var(--teal-deep); }
 .gallery { --h: calc(var(--img-h, 450px) * .62); display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
 .gallery figure { flex: calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6)); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .gallery figure.wide { flex-basis: 100%; max-width: 100%; }
+.gallery figure.large { flex-basis: 100%; max-width: min(100%, 820px); }
 .gallery::after { content: ""; flex: 10000 1 0; } /* last row keeps its height instead of stretching */
 .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--tile); cursor: zoom-in; }
 .gallery img { width: 100%; height: auto; }

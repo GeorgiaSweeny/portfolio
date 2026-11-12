@@ -24,6 +24,12 @@ blocks:
     youtube: fKp3UTxZdac
     poster: sun-medina.jpg
     label: Watch the animatic
+  - type: video
+    size: small
+    youtube: vNhvHVbImFI
+    poster: sun-souks.jpg
+    label: Watch the teaser
+    caption: 3D previs concept teaser
   - type: gallery
     heading: Storyboards
     images:
@@ -45,6 +51,7 @@ blocks:
       - src: sun-thumbs-notebook.jpg
         alt: A notebook spread of tiny pen thumbnail storyboards for Acts 3 and 4, each panel annotated with handwritten notes, a few touched with yellow and red
         caption: The very first thumbnail storyboards, in my notebook (Acts 3 and 4)
+        span: large
       - src: sun-thumbs-1.jpg
         alt: Twelve colour storyboard panels — a glowing sun emblem, a book on a lit pedestal opening, its pages and an orange picture, then the market street and the crowd around the tree
         caption: The opening – the book, its pages, and into the medina
@@ -99,12 +106,6 @@ blocks:
         alt: Three stages of the medina courtyard build, from grey boxes to the finished tree
         caption: 'Building the courtyard: blockout, structure, final tree'
         span: wide
-  - type: video
-    size: small
-    youtube: vNhvHVbImFI
-    poster: sun-souks.jpg
-    label: Watch the teaser
-    caption: 3D previs concept teaser
   - type: gallery
     heading: Building the Medina
     images:
