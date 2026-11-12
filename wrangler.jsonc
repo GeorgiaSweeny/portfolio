@@ -13,6 +13,8 @@
   },
   // Sends the form message to Georgia's inbox (address set as the CONTACT_TO secret, never in this repo).
   "send_email": [{ "name": "EMAIL" }],
+  // Keep variables added in the dashboard when a new build deploys.
+  "keep_vars": true,
   "vars": {
     "CONTACT_FROM": "form@georgiasweeny.com"
   },
