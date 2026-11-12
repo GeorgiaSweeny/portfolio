@@ -45,6 +45,8 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
   text-decoration: none; display: inline-block; padding: 0 .04em .2em; margin-bottom: -.14em;
   /* tight dark edge so pale parts of the pattern hold their shape, plus a bigger soft shadow */
   filter: drop-shadow(0 0 .012em rgba(11,53,51,.9)) drop-shadow(0 .04em .06em rgba(11,53,51,.6));
+  /* faint keyline: a stopgap until the banner image is edited (Nov 2026) */
+  -webkit-text-stroke: 1px rgba(11,53,51,.35);
 }
 a.namecut:hover { color: var(--teal-deep); }
 /* Page titles and stats: the teal pattern, with a 25% deep-teal wash for legibility. */
