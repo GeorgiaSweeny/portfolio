@@ -6,13 +6,13 @@ disciplines:
 order: 6
 featured: 6
 role: Writer and Director
-outcome: An original 3D short, selected by tutors in a year-wide pitch round for group production.
+outcome: My pitch was one of 7–12 picked from about 100 across the year, then made as a group 3D short.
 cardImage: blot-ink.jpg
 intro: A 3D animated short about an architect whose creative block takes physical form. A group film, made over two years.
 facts:
   role: Director and writer. I set the creative direction for the team, wrote the story, painted concept art, and modelled characters and environments.
   tools: Autodesk Maya, ZBrush, Substance Painter, Adobe Photoshop and Premiere Pro.
-  outcome: A finished short film.
+  outcome: Everyone in the year pitched a film (about 100 pitches); mine was one of 7–12 chosen for group production, and the finished short is below.
 links:
   - label: Visit my channel
     url: https://www.youtube.com/@georgia-sweeny

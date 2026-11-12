@@ -41,6 +41,9 @@ blocks:
       - src: ab-sonar.jpg
         alt: A sonar pulse sweeping out and lighting the cave walls ahead
         caption: A sonar pulse, the main way the player sees anything at all
+      - src: ab-jellyfish-cave.jpg
+        alt: Gameplay in a dark cave, a cluster of jellyfish glowing blue around the submarine and lighting the rocks
+        caption: My glowing jellyfish lighting the cave in play (sprites by a teammate)
       - src: ab-jelly-glow.jpg
         alt: A single violet jellyfish glowing in the dark water
         caption: The jellyfish glow on its own

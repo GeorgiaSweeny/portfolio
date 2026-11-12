@@ -13,7 +13,7 @@ export default {
     { title: "Freelance Illustrator & Card Designer", years: "2018–2025", points: [
       "Designed, produced and sold a range of 8 original illustrated greeting cards and prints, handling artwork, print-ready files, print production, stock and pricing; grew annual profit from ~£500 to ~£2,000 at its peak.",
       "Pitched to the newly opened St Albans Museum + Gallery and became one of its first stocked local artists, with repeat orders for ~5 years; also stocked by St Albans Cathedral gift shop.",
-      "Licensed designs to the Mayor of St Albans as the official Christmas card (2018) and to the Addison’s Disease Self-Help Group for fundraising cards (2021 and 2022); featured in the St Albans Artists’ Calendar.",
+      "A design licensed by the Mayor of St Albans as the official Christmas card (2018); designs licensed to the Addison’s Disease Self-Help Group for fundraising cards (2021 and 2022); featured in the St Albans Artists’ Calendar.",
       "Ran my own marketing and sales through local social media groups, managing pre-orders, bulk orders and seasonal promotions."] },
     { title: "Showroom Assistant – Farrow & Ball", years: "2025", points: [
       "Advised customers on colour, finish and design choices for a premium, design-led heritage brand, translating their brief into tailored recommendations.",
@@ -45,7 +45,7 @@ export default {
   ],
   education: [
     { qual: "MSc Computer Science", place: "University of Bristol", years: "2025–2026", note: "Award pending" },
-    { qual: "BA (Hons) Computer Animation: Art and Design", place: "Bournemouth University", years: "2021–2024", note: "2:1 · led a multidisciplinary team after my project pitch was selected" },
+    { qual: "BA (Hons) Computer Animation: Art and Design", place: "Bournemouth University", years: "2021–2024", note: "2:1 · my film pitch was one of 7–12 chosen from about 100; I then led its multidisciplinary team" },
     { qual: "Art Foundation Diploma", place: "Arts University Bournemouth", years: "2020–2021", note: "Distinction" },
     { qual: "A Levels and GCSEs", place: "St Albans High School for Girls", years: "", note: "A Level Art (A*), English (B), Religious Studies (B); GCSE Mathematics (9)" },
   ],

@@ -7,7 +7,7 @@ export default {
     { big: "BA", small: "Computer Animation: Art and Design, Bournemouth" },
   ],
   skills: {
-    "Creative": ["Illustration", "Concept art", "Storyboarding", "2D animation", "3D animation", "Pattern design", "Print-ready artwork", "Hand-lettering", "Previs", "3D modelling", "Book design", "Generative design", "Digital sculpting", "Texturing", "Lighting", "Stop-motion", "Level design"],
+    "Creative": ["Illustration", "Concept art", "Storyboarding", "2D animation", "3D animation", "Pattern design", "Print-ready artwork", "Previs", "3D modelling", "Book design", "Generative design", "Digital sculpting", "Texturing", "Lighting", "Stop-motion", "Level design"],
     "Technical": ["Adobe Photoshop", "After Effects", "Premiere Pro", "Procreate", "Autodesk Maya", "Blender", "Houdini", "Unreal Engine", "ZBrush", "Substance 3D Painter", "Python", "JavaScript", "React", "p5.js", "Git and GitHub"],
     "Production and Business": ["Directing", "Leading a team", "Running a creative business", "Story writing"],
   },
@@ -18,6 +18,6 @@ export default {
     { year: "2024", title: "BA (Hons) Computer Animation: Art and Design, Bournemouth University", note: "2:1" },
     { year: "2022", title: "St Albans Trophy", note: "Awarded by St Albans Art Society" },
     { year: "2021", title: "Art Foundation Diploma, Arts University Bournemouth", note: "Distinction" },
-    { year: "2018", title: "The Mayor of St Albans’ official Christmas card", note: "Design licensed to the Mayor" },
+    { year: "2018", title: "The Mayor of St Albans’ official Christmas card", note: "Design licensed by the Mayor" },
   ],
 };

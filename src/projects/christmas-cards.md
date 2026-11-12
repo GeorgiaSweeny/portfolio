@@ -6,7 +6,7 @@ disciplines:
 order: 2
 featured: 2
 role: Illustrator, Designer and Seller
-outcome: 'Eight original designs: one award-winning, another licensed to the Mayor of St Albans as the official Christmas card.'
+outcome: 'Eight original designs: one award-winning, another licensed by the Mayor of St Albans as the official Christmas card.'
 cardImage: card-doorway.jpg
 intro: A range of original illustrated greeting cards and prints celebrating St Albans, sold through local stockists and direct to customers.
 facts:

@@ -10,7 +10,7 @@ outcome: A children’s picture book I wrote and illustrated from scratch.
 cardImage: oak-cover.jpg
 intro: An original picture book written, illustrated and typeset from scratch — a story about a lonely oak tree and the seed that grows beside it.
 facts:
-  role: Story, illustration, hand-lettering and typesetting for every spread.
+  role: Story, illustration and typesetting for every spread.
   tools: Digital painting in Adobe Photoshop.
   outcome: A complete picture book, produced in my first year at Bournemouth.
 blocks:
