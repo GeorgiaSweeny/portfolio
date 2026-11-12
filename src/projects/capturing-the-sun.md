@@ -9,7 +9,7 @@ featured: 3
 ownTool: true
 role: Writer and Director
 outcome: An original fable, storyboarded, modelled, lit and rendered across three environments in Unreal Engine.
-cardImage: sun-medina.jpg
+cardImage: sun-sb-market.jpg
 intro: 'My BA final major project: an original fable told through 3D dioramas rendered in Unreal Engine, with narration.'
 facts:
   role: Writer and director. I storyboarded the film, painted the concept art, and modelled, textured and lit all three environments.
@@ -50,6 +50,12 @@ blocks:
         alt: Three stages of the medina courtyard build, from grey boxes to the finished tree
         caption: 'Building the courtyard: blockout, structure, final tree'
         span: wide
+  - type: video
+    size: small
+    youtube: vNhvHVbImFI
+    poster: sun-souks.jpg
+    label: Watch the teaser
+    caption: 3D previs concept teaser
   - type: gallery
     heading: Final Renders
     images:

@@ -41,10 +41,15 @@ layout: layouts/base.njk
 
     {%- asyncEach b in blocks %}
       {%- if b.type == "video" %}
-      <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ title }}">
-        {% image b.poster, "", "(min-width: 1328px) 1328px, 100vw" %}
-        <button type="button" aria-label="{{ b.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ b.label }}</button>
-      </div>
+      {#- size: small = a secondary clip, about half width on desktop, with an optional caption #}
+      {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
+      <figure class="video-fig{% if b.size == 'small' %} small{% endif %}">
+        <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ title }}">
+          {% image b.poster, "", ("(min-width: 1100px) 640px, 100vw" if b.size == "small" else "(min-width: 1328px) 1328px, 100vw") %}
+          <button type="button" aria-label="{{ b.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ b.label }}</button>
+        </div>
+        {%- if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
+      </figure>
       {%- elif b.type == "gallery" %}
         {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
         <div class="gallery"{% if b.imgH %} style="--img-h:{{ b.imgH }}px"{% endif %}>
