@@ -10,6 +10,11 @@ role: Designer and Developer
 outcome: 'MSc dissertation: a pattern ‘language’ for anything from random to rule-based designs, shown through an app I built.'
 outcomeLong: 'My MSc dissertation: a pattern ‘language’ that can describe anything from random to rule-based designs, shown through a node-graph app I built. In user studies with 25 people, understanding rose by about 20%.'
 cardImage: pat-prev.jpg
+heroVideo:
+  mp4: /media/pattinator-preview.mp4
+  webm: /media/pattinator-preview.webm
+  poster: pat-prev.jpg
+  alt: Animated preview of Pattinator, its title over patterns that keep changing from one style to the next
 intro: 'My MSc dissertation: a public web app that shows, step by step, how generative pattern algorithms are built, for learners with no coding background.'
 facts:
   role: Interface and interaction design, the visual workflow, and the pattern library. I ran the research, designed the node-graph UI, and built the app.

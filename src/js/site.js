@@ -6,6 +6,11 @@
     sel.addEventListener("change", () => { location.href = sel.value; });
   });
 
+  // ---- silent looping clips: stay on their still image if the visitor prefers less motion
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("video[data-autoplay]").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
+  }
+
   // ---- videos: a still with a play button, swapped for YouTube only on click
   document.querySelectorAll(".video[data-youtube]").forEach((box) => {
     box.querySelector("button").addEventListener("click", () => {
