@@ -22,7 +22,7 @@ links:
 blocks:
   - type: video
     youtube: fKp3UTxZdac
-    poster: sun-medina.jpg
+    poster: sun-sb-market.jpg
     label: Watch the animatic
   - type: video
     size: small
