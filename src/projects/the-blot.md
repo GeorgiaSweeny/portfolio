@@ -41,6 +41,21 @@ blocks:
         alt: 'Concept painting: tangled ink scribbles bursting from a desk'
         caption: The blot taking form
   - type: gallery
+    heading: Character and Set Building
+    images:
+      - src: blot-expressions.jpg
+        alt: 'Character sketches of the architect: standing with a satchel, clutching his face, and slumped on a chair with his head in his hands'
+        caption: 'The architect: expression studies'
+      - src: blot-turnaround.jpg
+        alt: Character turnaround of the architect from front, three-quarter, side and back
+        caption: Turnaround for modelling
+      - src: blot-head-sculpt.jpg
+        alt: Two views of a grey digital sculpt of the architect’s head
+        caption: Sculpting his head
+      - src: blot-window-set.jpg
+        alt: Render of the studio’s sash window set into a brick wall, the lit room visible behind
+        caption: The studio window, from outside
+  - type: gallery
     heading: Stills from the Film
     images:
       - src: blot-ink.jpg

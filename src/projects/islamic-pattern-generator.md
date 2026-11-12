@@ -1,5 +1,5 @@
 ---
-title: Islamic pattern generator
+title: Islamic Pattern Generator
 year: '2024'
 disciplines:
   - tools-software

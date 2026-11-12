@@ -36,9 +36,43 @@ blocks:
       - src: sun-sb-birds.jpg
         alt: 'Storyboard: rough bird’s-eye view of the medina layout'
         caption: Bird’s-eye rough, working out how the spaces connect
+      - src: sun-sb-crowd-stage.jpg
+        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
+        caption: The challenge, staged in front of the crowd
+      - src: sun-sb-colour-thumbs.jpg
+        alt: A grid of small colour thumbnails planning the film shot by shot
+        caption: Colour thumbnails, planning the mood of each shot
+  - type: gallery
+    heading: Characters
+    images:
+      - src: sun-char-philosopher.jpg
+        alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
+        caption: The travelling philosopher
+      - src: sun-char-wise-woman.jpg
+        alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
+        caption: The wise woman
+      - src: sun-sculpt-philosopher.jpg
+        alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
+        caption: Sculpting the philosopher’s head
+      - src: sun-sculpt-wise-woman.jpg
+        alt: Digital sculpt of the wise woman’s lined face inside her hood
+        caption: Sculpting the wise woman
+      - src: sun-costume-patterns.jpg
+        alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
+        caption: Costume patterns for the two characters
+        span: pair
   - type: gallery
     heading: Concept and Development
     images:
+      - src: sun-ref-wool-dyers.jpg
+        alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
+        caption: 'Reference photo: the dyers’ alley that inspired the concept painting'
+      - src: sun-concept-sun-tree.jpg
+        alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
+        caption: 'The sun and the tree: the film’s two key images'
+      - src: sun-sketchbook.jpg
+        alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
+        caption: 'Sketchbook: working out the wise woman’s cloak'
       - src: sun-wool.jpg
         alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
         caption: 'Concept painting: the wool-dyers’ alley'
@@ -57,6 +91,22 @@ blocks:
     label: Watch the teaser
     caption: 3D previs concept teaser
   - type: gallery
+    heading: Building the Medina
+    images:
+      - src: sun-modular-kit.jpg
+        alt: Terracotta-coloured render of a modular kit of walls, arches, doors, a plinth and a tree, laid out on a grey floor
+        caption: 'The modular kit: every wall, arch and prop, built once and reused'
+        span: wide
+      - src: sun-souks-lighting.jpg
+        alt: Untextured terracotta street of the souks with stall frames and two placeholder figures, lit by sunlight
+        caption: Lighting the souks before texturing
+      - src: sun-lantern-model.jpg
+        alt: Grey 3D model of an ornate lantern with pierced patterned panels and a domed top
+        caption: Lantern prop model
+      - src: sun-motif.jpg
+        alt: Intricate black line drawing of a twelve-pointed geometric sun motif
+        caption: The sun motif, built from geometric pattern rules
+  - type: gallery
     heading: Final Renders
     images:
       - src: sun-medina.jpg
@@ -74,6 +124,24 @@ blocks:
       - src: sun-watching.jpg
         alt: Unreal Engine render of two characters beneath a twisted tree
         caption: Beneath the tree
+  - type: gallery
+    heading: Props and Set Dressing
+    images:
+      - src: sun-prop-book-staff.jpg
+        alt: Render of a purple book with a gold sun on its cover, beside the wise woman’s staff
+        caption: The book and the staff
+      - src: sun-prop-lantern-stall.jpg
+        alt: Render of a market stall laid with brass lanterns, plates and glass jars
+        caption: The lantern stall
+      - src: sun-prop-spice-stall.jpg
+        alt: Render of a spice stall with tall dark jars, wooden tubs and dishes of coloured spices
+        caption: The spice stall
+      - src: sun-prop-pottery-stall.jpg
+        alt: Render of a stall of painted pottery and pastel dishes
+        caption: The pottery stall
+      - src: sun-prop-rugs-door.jpg
+        alt: Render of rugs hung on a rail and laid on the ground beside a carved wooden door
+        caption: Rugs and a carved door
 ownToolNote: 'Look closely and you’ll spot loads of designs made with my Houdini pattern generator: woven into the costumes, carved into the props, shining in the sun motif. One prop even became a real 3D-printed lamp.'
 ownToolLinks:
   - label: Islamic Pattern Generator

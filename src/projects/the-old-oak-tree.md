@@ -49,4 +49,17 @@ blocks:
         alt: The sapling grown tall beside the oak at sunrise, with bees and butterflies
       - src: oak-art-4.jpg
         alt: The oak and the grown tree in a forest, surrounded by deer, rabbits, a bear and a squirrel
+  - type: gallery
+    heading: Early Sketches
+    imgH: 400
+    images:
+      - src: oak-sketch-1.jpg
+        alt: Pencil rough of tangled roots and a treasure chest among fallen leaves
+        caption: 'Pencil rough: roots and buried treasure'
+      - src: oak-sketch-2.jpg
+        alt: Pencil rough of an acorn sprouting in a sunlit clearing among flowers
+        caption: 'Pencil rough: the acorn sprouts'
+      - src: oak-sketch-3.jpg
+        alt: Pencil rough of woodland animals gathered beneath a great tree
+        caption: 'Pencil rough: the animals gather'
 ---

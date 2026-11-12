@@ -41,12 +41,27 @@ blocks:
       - src: ab-sonar.jpg
         alt: A sonar pulse sweeping out and lighting the cave walls ahead
         caption: A sonar pulse, the main way the player sees anything at all
+      - src: ab-jelly-glow.jpg
+        alt: A single violet jellyfish glowing in the dark water
+        caption: The jellyfish glow on its own
   - type: gallery
     heading: Level Design
     images:
+      - src: ab-world-map.jpg
+        alt: 'Labelled world map of the demo: the surface, jellyfish atrium, crab caverns, spike maze, the drop, a tunnel and the endless abyss'
+        caption: The demo’s world map, from the surface down to the endless abyss
+      - src: ab-tile-editor.jpg
+        alt: A tile map editor showing a winding blue cave level with red hazards placed along it
+        caption: Building a level in the tile editor
       - src: ab-map-early.jpg
         alt: An early greyscale map of the cave layout
         caption: 'Early layout: testing routes and dead ends'
+      - src: ab-map-atrium.jpg
+        alt: Grey grid map of the jellyfish atrium, a tall cave of pillars and pockets
+        caption: The jellyfish atrium
+      - src: ab-map-spike-maze.jpg
+        alt: Grey grid map of the spike maze, a looping corridor lined with red spike walls
+        caption: The spike maze
       - src: ab-map-final.jpg
         alt: The final level map with jellyfish placements marked in red
         caption: Final map, with jellyfish and hazard placements marked
