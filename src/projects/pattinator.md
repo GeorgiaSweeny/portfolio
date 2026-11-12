@@ -22,22 +22,6 @@ links:
     url: https://github.com/GeorgiaSweeny/algorithmic-pattern-explorer
 blocks:
   - type: gallery
-    heading: Designing the Interface
-    images:
-      - src: pat-sketch.jpg
-        alt: Hand-drawn wireframe sketches of the app layout
-        caption: First wireframes, working out how to hide the technical layer
-      - src: pat-proto.jpg
-        alt: Early prototype showing a noise texture and a checkerboard
-        caption: 'Early prototype: the first algorithms running'
-        span: pair
-      - src: pat-ui.jpg
-        alt: The finished app showing the node graph editor beside a generated green pattern
-        caption: 'The finished editor: node graph on the left, live pattern on the right'
-      - src: pat-gallery.jpg
-        alt: The gallery screen showing a grid of saved patterns
-        caption: The gallery, where learners load an example and take it apart
-  - type: gallery
     heading: Patterns from One Shared Vocabulary
     imgH: 350
     images:
@@ -71,4 +55,20 @@ blocks:
         alt: 'Generated pattern: black and white Perlin swirl'
       - src: pat-t15.jpg
         alt: 'Generated pattern: navy and yellow Perlin noise with an animal silhouette emerging'
+  - type: gallery
+    heading: Designing the Interface
+    images:
+      - src: pat-sketch.jpg
+        alt: Hand-drawn wireframe sketches of the app layout
+        caption: First wireframes, working out how to hide the technical layer
+      - src: pat-proto.jpg
+        alt: Early prototype showing a noise texture and a checkerboard
+        caption: 'Early prototype: the first algorithms running'
+        span: pair
+      - src: pat-ui.jpg
+        alt: The finished app showing the node graph editor beside a generated green pattern
+        caption: 'The finished editor: node graph on the left, live pattern on the right'
+      - src: pat-gallery.jpg
+        alt: The gallery screen showing a grid of saved patterns
+        caption: The gallery, where learners load an example and take it apart
 ---
