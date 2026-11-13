@@ -4,8 +4,14 @@ year: '2026'
 disciplines:
   - tools-software
 order: 1
-featured: 1
-flagship: true
+featured: 3
+feature:
+  mode: stage
+  line: 'The tool behind the pattern in my name at the top of this page: my MSc research into one shared language for random and rule-based design.'
+  video:
+    webm: /media/pattinator-preview.webm
+    mp4: /media/pattinator-preview.mp4
+  poster: pat-prev.jpg
 role: Designer and Developer
 outcome: 'MSc dissertation: a pattern ‘language’ for anything from random to rule-based designs, shown through an app I built.'
 outcomeLong: 'My MSc dissertation: a pattern ‘language’ that can describe anything from random to rule-based designs, shown through a node-graph app I built. In user studies with 25 people, understanding rose by about 20%.'

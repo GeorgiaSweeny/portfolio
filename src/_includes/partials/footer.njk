@@ -1,6 +1,11 @@
 {%- from "partials/icons.njk" import icon -%}
 <footer class="site-foot">
   <div class="wrap">
+    <div class="social">
+      <a href="{{ site.social.linkedin }}" aria-label="Georgia Sweeny on LinkedIn" rel="me noopener" target="_blank">{{ icon("linkedin") }}</a>
+      <a href="{{ site.social.github }}" aria-label="Georgia Sweeny on GitHub" rel="me noopener" target="_blank">{{ icon("github") }}</a>
+      <a href="{{ site.social.youtube }}" aria-label="Georgia Sweeny on YouTube" rel="me noopener" target="_blank">{{ icon("youtube") }}</a>
+    </div>
     <p>© Georgia Sweeny. All artwork is my own and may not be reproduced without permission. My tools are free to use with attribution.</p>
     <p class="mono">hand-built · no tracking cookies{{ icon("palette") }}</p>
   </div>

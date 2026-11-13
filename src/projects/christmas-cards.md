@@ -5,6 +5,10 @@ disciplines:
   - illustration-print
 order: 2
 featured: 2
+feature:
+  mode: range
+  line: My own card range for seven years, stocked by St Albans Museum + Gallery and the Cathedral shop, and licensed by the Mayor of St Albans.
+  images: [card-doorway.jpg, card-museum.jpg, card-choir.jpg, card-moon.jpg, card-postbox.jpg, card-gold.jpg, card-tree.jpg, card-bench.jpg]
 role: Illustrator, Designer and Seller
 outcome: 'Eight original designs: one award-winning, another licensed by the Mayor of St Albans as the official Christmas card.'
 cardImage: card-doorway.jpg

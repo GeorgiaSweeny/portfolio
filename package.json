@@ -5,7 +5,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "build:drafts": "SHOW_DRAFTS=1 eleventy"
+    "build:drafts": "SHOW_DRAFTS=1 eleventy",
+    "build:hero": "esbuild tools/hero-pattern/worker-src.js --bundle --minify --format=iife --outfile=src/js/hero-pattern-worker.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "@11ty/eleventy": "^3.1.8",
     "@11ty/eleventy-img": "^6.0.4",
     "cheerio": "^1.2.0",
+    "esbuild": "^0.28.2",
     "js-yaml": "^5.5.0"
   },
   "private": true,

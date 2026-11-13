@@ -5,7 +5,6 @@ disciplines:
   - 3d-interactive
   - tools-software
 order: 4
-featured: 4
 role: Lighting and Level Design · Product Owner
 outcome: All the lighting (apart from the sonar) and level design for a sonar-navigation game, built by a team of six I led as Product Owner.
 cardImage: ab-glow.jpg

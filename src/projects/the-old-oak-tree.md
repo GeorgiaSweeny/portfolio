@@ -4,7 +4,6 @@ year: '2021'
 disciplines:
   - illustration-print
 order: 5
-featured: 5
 role: Author and Illustrator
 outcome: A children’s picture book I wrote and illustrated from scratch.
 cardImage: oak-cover.jpg

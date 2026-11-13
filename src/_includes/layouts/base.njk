@@ -9,10 +9,11 @@
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ pageDesc }}">
 <link rel="canonical" href="{{ canonical }}">
-<meta name="theme-color" content="#f3efe4">
+<meta name="theme-color" content="#0b3533">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dela-gothic-one.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css?v={{ build.version }}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.name }}">
@@ -29,19 +30,19 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+{% include "partials/topbar.njk" %}
 {%- if section == "home" %}
 {% include "partials/hero.njk" %}
-{%- else %}
-<header class="site-head">
-  <a href="/" class="namecut" aria-label="Georgia Sweeny, home">Georgia Sweeny</a>
-  {% include "partials/nav.njk" %}
-</header>
 {%- endif %}
 {{ content | safe }}
-<div class="band" aria-hidden="true"></div>
-{% include "partials/contact.njk" %}
+{%- if section != "contact" %}
+{% include "partials/contact-band.njk" %}
+{%- endif %}
 {% include "partials/footer.njk" %}
 <script src="/js/site.js?v={{ build.version }}" defer></script>
+{%- if section == "home" %}
+<script src="/js/hero-pattern.js?v={{ build.version }}" defer></script>
+{%- endif %}
 {%- if site.analyticsToken %}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analyticsToken }}"}'></script>
 {%- endif %}

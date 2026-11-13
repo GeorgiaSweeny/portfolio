@@ -1,7 +1,11 @@
-<header class="hero">
-  <p class="status{% if not site.status.open %} busy{% endif %}">{{ site.status.text }}</p>
-  <h1 class="namecut">Georgia Sweeny</h1>
-  <p class="positioning">{{ site.positioning }}</p>
-  <p class="roles">{{ site.roles | join(" · ") }}</p>
-</header>
-<div class="home-nav">{% include "partials/nav.njk" %}</div>
+{#- Home's first screen. The hero pattern (js/hero-pattern.js) draws a live Pattinator pattern
+    through the letters; without JS they show a still frame of it. #}
+<section class="hero" aria-label="Introduction">
+  <div class="hero-inner">
+    <p class="status{% if not site.status.open %} busy{% endif %}">{{ site.status.text }}</p>
+    <h1 class="hero-name"><span class="w">Georgia</span> <span class="w">Sweeny</span></h1>
+    <p class="positioning">{{ site.positioning }}</p>
+    <p class="hero-caption">Drawn live by <a href="/projects/pattinator/">Pattinator</a>, the pattern tool I built.<span class="hint-pointer"> Move your cursor to change it.</span><span class="hint-touch"> Drag across my name to change it.</span></p>
+  </div>
+  <a class="scroll-cue" href="#featured" aria-label="Skip to featured projects"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>

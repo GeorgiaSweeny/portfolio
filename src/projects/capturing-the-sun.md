@@ -5,16 +5,23 @@ disciplines:
   - film-animation
   - 3d-interactive
 order: 3
-featured: 3
+featured: 1
+feature:
+  mode: bleed
+  tone: light
+  line: 'An original fable I wrote and storyboarded: a full animatic, plus a 3D previs of its world in Unreal Engine.'
+  video:
+    mp4: /media/sun-animatic-a.mp4
+  poster: sun-animatic-a.jpg
 ownTool: true
 role: Writer and Director
-outcome: An original fable, storyboarded, modelled, lit and rendered across three environments in Unreal Engine.
+outcome: An original fable, told through a full animatic and a 3D previs of its world in Unreal Engine.
 cardImage: sun-sb-market.jpg
-intro: 'My BA final major project: an original fable told through 3D dioramas rendered in Unreal Engine, with narration.'
+intro: 'My BA final major project: an original fable, developed through storyboards and a full animatic into a 3D previs of its world in Unreal Engine.'
 facts:
-  role: Writer and director. I storyboarded the film, painted the concept art, and modelled, textured and lit all three environments.
+  role: Writer and director. I storyboarded the film, painted the concept art, and modelled, textured and lit the three previs environments.
   tools: Autodesk Maya, ZBrush, Substance 3D Painter, Houdini (with my own pattern generator), Unreal Engine, Adobe Photoshop, Procreate.
-  outcome: Three finished environments and a complete previs, from first thumbnail to final render.
+  outcome: A complete animatic, and a 3D previs of three environments in Unreal Engine. The 3D film itself was left unfinished.
 links:
   - label: Visit my channel
     url: https://www.youtube.com/@georgia-sweeny

@@ -7,6 +7,7 @@ npm install
 npm start              # local preview at http://localhost:8080, drafts included
 npm run build          # production build into _site/ (drafts left out)
 npm run build:drafts   # production build with drafts
+npm run build:hero     # rebuild the hero pattern worker after editing tools/hero-pattern/
 ```
 
 ## Where things live
@@ -22,6 +23,8 @@ npm run build:drafts   # production build with drafts
 | Personal Work artworks | `src/_data/artworks.js` |
 | Image masters | `src/images/` (one large file per image; the build makes AVIF/WebP/JPEG at several widths) |
 | Styles / script | `src/css/site.css`, `src/js/site.js` |
+| Hero pattern (Home) | `src/js/hero-pattern.js` (blends frames, follows the cursor); frames drawn by `src/js/hero-pattern-worker.js`, built from `tools/hero-pattern/worker-src.js` and Pattinator's own generators in `tools/hero-pattern/pattinator/`. Spectrum colours: `STOPS` in `worker-src.js`. No-JS still: `src/assets/hero-still.jpg` (`node tools/hero-pattern/still.mjs`) |
+| Contact page (form) | `src/contact.njk` + `src/_includes/partials/contact.njk`; every other page ends with `partials/contact-band.njk` |
 | Security headers | `src/static/_headers` |
 | Contact form backend | `worker/index.js`, configured in `wrangler.jsonc` |
 | Show Personal Work to visitors | `showPersonalWork: true` in `src/_data/site.js` |
@@ -29,14 +32,17 @@ npm run build:drafts   # production build with drafts
 ### Adding a project
 
 Copy an existing file in `src/projects/`, rename it (the file name is the URL), and fill in the
-front matter. `featured: <n>` puts it on Home in that position; `flagship: true` makes it the big
-card. `draft: true` keeps it off the live site.
+front matter. `draft: true` keeps it off the live site.
+
+Home shows exactly three featured projects as feature cards: give a project `featured: <1-3>` and a
+`feature:` block (`mode`: `bleed` for full-screen video/image, `range` for a drifting row of images,
+`stage` for a smaller clip beside the words; `line`: its one line; `video`/`poster` or `images`).
 
 ### Images
 
 Put the largest sensible version (about 2400px wide, JPEG) in `src/images/` and refer to it by
 file name. Never crop gallery images to fit: galleries match image heights instead (`imgH` on a
-gallery sets the row height). Card images are cropped square, so keep the subject centred.
+gallery sets the row height). Card images are cropped 4:3, so keep the subject centred.
 
 © Georgia Sweeny. All artwork and designs in this repository are my own work and may not be
 reproduced without permission.

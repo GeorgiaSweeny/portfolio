@@ -1,0 +1,7 @@
+{#- Slim dark bar on every page. Home has no wordmark: the hero is the name. #}
+<header class="topbar{% if section == 'home' %} on-home{% endif %}">
+  {%- if section != "home" %}
+  <a href="/" class="wordmark" aria-label="Georgia Sweeny, home">Georgia Sweeny</a>
+  {%- endif %}
+  {% include "partials/nav.njk" %}
+</header>

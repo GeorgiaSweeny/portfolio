@@ -4,26 +4,36 @@ section: home
 title: Georgia Sweeny
 ogImage: pat-banner.jpg
 ---
+{%- from "partials/icons.njk" import icon -%}
 <main id="main" class="home-main">
-  <div class="wrap">
-    <h2 class="sr-only">Featured projects</h2>
-    <div class="cards home">
-      {%- asyncEach p in collections.featured %}
-        {%- set flagship = p.data.flagship %}
-        {%- set sizes = "(min-width: 1100px) 66vw, 100vw" if flagship else "(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw" %}
-        {% include "partials/card.njk" %}
-      {%- endeach %}
-    </div>
-    <a class="btn outline" href="/projects/">See all projects →</a>
-  </div>
+  <section class="featured" id="featured" aria-labelledby="featured-h">
+    <h2 id="featured-h" class="sr-only">Featured projects</h2>
+    {%- asyncEach p in collections.featured %}
+    {%- set f = p.data.feature %}
+    <article class="feature f-{{ f.mode }}{% if f.tone %} t-{{ f.tone }}{% endif %}" aria-labelledby="ft-{{ p.fileSlug }}">
+      <div class="feature-media" aria-hidden="true">
+        {%- if f.mode == "range" %}
+        <div class="range"><div class="range-track">
+          {%- asyncEach pass in [1, 2] %}
+          {%- asyncEach im in f.images %}<div class="range-card">{% image im, "", "(min-width: 1100px) 360px, (min-width: 700px) 300px, 220px" %}</div>{% endeach %}
+          {%- endeach %}
+        </div></div>
+        {%- elif f.video %}
+        <video muted loop playsinline preload="none" poster="{% imageFull f.poster %}" data-inview>
+          {%- if f.video.webm %}<source src="{{ f.video.webm }}" type="video/webm">{% endif %}
+          <source src="{{ f.video.mp4 }}" type="video/mp4">
+        </video>
+        {%- endif %}
+      </div>
+      <div class="feature-text">
+        <p class="meta">{{ p.data.disciplines | disciplineLabels }} <span>· {{ p.data.year }}</span></p>
+        <h3 id="ft-{{ p.fileSlug }}"><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
+        <p class="role">{{ p.data.role }}</p>
+        <p class="line">{{ f.line }}</p>
+        <span class="go" aria-hidden="true">See the project{{ icon("arrow") }}</span>
+      </div>
+    </article>
+    {%- endeach %}
+  </section>
+  <div class="all-projects"><a class="btn light outline" href="/projects/">All projects</a></div>
 </main>
-<section class="stats-section" aria-label="About me">
-  <div class="wrap">
-    <div class="stats">
-      {%- for s in about.stats %}
-      <div class="stat"><p class="cutout">{{ s.big }}</p><p>{{ s.small }}</p></div>
-      {%- endfor %}
-    </div>
-    <a class="more" href="/about/">More about me →</a>
-  </div>
-</section>

@@ -4,14 +4,16 @@ layout: layouts/base.njk
 {%- from "partials/icons.njk" import icon -%}
 {#- The first block, if it's a full-size video, is the project's feature video: it sits beside the description. #}
 {%- set fv = blocks[0] if (blocks and blocks.length and blocks[0].type == "video" and blocks[0].size != "small") else false %}
-{%- set hasSide = heroVideo or fv or ownToolNote %}
+{%- set keyImage = cardImage if not (heroVideo or fv) else false %}
+{%- set hasSide = heroVideo or fv or ownToolNote or keyImage %}
 <main id="main" class="proj-main">
-  <div class="wrap">
+  <div class="proj-open"><div class="wrap">
     <div class="proj-top{% if hasSide %} has-side{% else %} solo{% endif %}">
       <div class="proj-intro">
         <header>
           <p class="meta">{{ disciplines | disciplineLabels }} <span>· {{ year }}</span></p>
           <h1>{{ title }}</h1>
+          <p class="proj-role">{{ role }}</p>
           <p class="intro">{{ intro }}</p>
           {%- if ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
         </header>
@@ -30,6 +32,9 @@ layout: layouts/base.njk
       </div>
       {%- if hasSide %}
       <div class="proj-side">
+      {%- if keyImage %}
+      <figure class="proj-key">{% image keyImage, "", "(min-width: 1100px) 560px, (min-width: 700px) 42vw, 100vw", "", "eager" %}</figure>
+      {%- endif %}
       {%- if fv %}
       <figure class="video-fig feature">
         <div class="video" data-youtube="{{ fv.youtube }}" data-title="{{ fv.label }}: {{ title }}">
@@ -62,7 +67,9 @@ layout: layouts/base.njk
       </div>
       {%- endif %}
     </div>
+  </div></div>
 
+  <div class="proj-body"><div class="wrap">
     {%- asyncEach b in blocks %}
       {%- if fv and loop.index0 == 0 %}{# feature video already shown beside the description #}
       {%- elif b.type == "video" %}
@@ -95,5 +102,5 @@ layout: layouts/base.njk
       <a href="{{ nb.prev.url }}">← {{ nb.prev.data.title }}</a>
       <a href="{{ nb.next.url }}">{{ nb.next.data.title }} →</a>
     </nav>
-  </div>
+  </div></div>
 </main>

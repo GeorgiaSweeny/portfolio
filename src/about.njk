@@ -11,6 +11,8 @@ description: "About Georgia Sweeny: seven years running an illustration and gree
       <div class="text">
         <h1 class="cutout page-title">About</h1>
         <p class="positioning">{{ site.positioning }}</p>
+        <p class="roles">{{ site.roles | join(" · ") }}</p>
+        <ul class="about-facts">{% for s in about.stats %}<li><strong>{{ s.big }}</strong> {{ s.small }}</li>{% endfor %}</ul>
         {#- The positioning line sits just above, so the profile's opening sentence (the same line) is left out here. #}
         <div class="paras">{% for t in profile.rest %}<p>{{ t }}</p>{% endfor %}</div>
         <a class="btn" href="/cv/">Read my CV</a>

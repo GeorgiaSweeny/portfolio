@@ -4,7 +4,6 @@ year: 2022–23
 disciplines:
   - film-animation
 order: 6
-featured: 6
 role: Writer and Director
 outcome: My pitch was one of 7–12 picked from about 100 across the year, then made as a group 3D short.
 cardImage: blot-ink.jpg

@@ -11,6 +11,22 @@
     document.querySelectorAll("video[data-autoplay]").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
   }
 
+  // ---- feature cards: silent clips play only while on screen; the words come in once
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window) {
+    const vids = document.querySelectorAll("video[data-inview]");
+    const vio = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting && !still) e.target.play().catch(() => {}); else e.target.pause();
+    }), { threshold: 0.25 });
+    vids.forEach((v) => vio.observe(v));
+    const fio = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add("in"); fio.unobserve(e.target); }
+    }), { threshold: 0.3 });
+    document.querySelectorAll(".feature").forEach((f) => fio.observe(f));
+  } else {
+    document.querySelectorAll(".feature").forEach((f) => f.classList.add("in"));
+  }
+
   // ---- videos: a still with a play button, swapped for YouTube only on click
   document.querySelectorAll(".video[data-youtube]").forEach((box) => {
     box.querySelector("button").addEventListener("click", () => {

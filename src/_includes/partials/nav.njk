@@ -6,5 +6,5 @@
   {%- endif %}
   <a href="/about/"{% if section == "about" %} aria-current="page"{% endif %}>About</a>
   <a class="ic" href="/cv/" aria-label="CV"{% if section == "cv" %} aria-current="page"{% endif %}>{{ icon("cv") }}<span class="label" aria-hidden="true">CV</span></a>
-  <a class="ic{% if section == 'home' %} cta{% endif %}" href="#contact" aria-label="Get in touch">{{ icon("mail") }}<span class="label" aria-hidden="true">Get in touch</span></a>
+  <a class="ic cta" href="/contact/" aria-label="Get in touch"{% if section == "contact" %} aria-current="page"{% endif %}>{{ icon("mail") }}<span class="label" aria-hidden="true">Get in touch</span></a>
 </nav>
