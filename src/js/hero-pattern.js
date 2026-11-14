@@ -14,7 +14,7 @@
   if (!h1 || !("Worker" in window)) return;
   const hero = h1.closest(".hero");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const N = 10;                                         // patterns in the worker's PRESETS list
+  const N = 11;                                         // patterns in the worker's PRESETS list
   const cfg = Object.assign({
     ambient: 1.2,                                       // constant slow flow (0 = still between changes)
     stir: true, stirStrength: 0.5,                      // brush-through-paint response to the pointer

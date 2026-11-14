@@ -23,13 +23,17 @@ const INK = { amplitude1: 0.445, scale1: 0.00639, octaves1: 1, amplitude2: 0.3, 
 // In spectrum order, random → rule-based. `size`: how much bigger than Pattinator's own pixels to draw.
 export const PRESETS = [
   { name: "Cotton Candy Ridge", gen: noise, size: 1.5, colours: ["#df84e6", "#f50000"],
+    ridge: 0.7, // ridge lines a tad more distinct (Georgia, 14 Nov)
     params: { mode: "ridge", scale: 0.00394, octaves: 2, lacunarity: 3, persistence: 0.716 } }, // Georgia's re-export, 14 Nov
+  // Georgia's export ridge-noise (3), 14 Nov
+  { name: "Blue Ridge", gen: noise, size: 1.5, colours: ["#8accf5", "#1f00bd"],
+    params: { mode: "ridge", scale: 0.00541, octaves: 3, lacunarity: 4, persistence: 0.9 } },
   { name: "Ink Bloom", gen: recursiveNoise, size: 1.5, colours: ["#121111", "#fffefa"], params: INK },
   // Ink Bloom's settings in the red and purple of the banner strip (colours sampled from the banner).
   { name: "Red and purple bloom", gen: recursiveNoise, size: 1.5, colours: ["#8e0f6b", "#e8442f"], params: INK },
   { name: "Voronoi Patchwork", gen: voronoi, size: 1.5, kind: "cells", colours: ["#e7f5e0", "#d8c2e0", "#5fafbf", "#8a3d3d", "#ce721c"],
     params: { numCells: 51.5, tones: "5" } },
-  { name: "Golden Shards", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#fff700", "#e5c10b", "#862331"],
+  { name: "Golden Shards", gen: voronoiIslamicV2, size: 2.5, kind: "cells", colours: ["#fff700", "#e5c10b", "#862331"],
     params: { numCells: 60.5, tones: "3", tileSize: 196.8, scale: 0.3876, segments: 7, frequency: 4, lineWidth: 0.0198, rotation: 0, randomRotation: 0 } },
   { name: "Gilded Cluster", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#2a6564", "#bdc369", "#5fb498"],
     params: { numCells: 69.5, tones: "3", tileSize: 118.4, scale: 0.3148, segments: 8, frequency: 2, lineWidth: 0.0352, rotation: 0, randomRotation: 0 } },
@@ -64,11 +68,15 @@ export function drawFrame(index, w, h, ppu, seed) {
     params.numCells = p.params.numCells * (dw * dh) / (500 * 500);
   } else { CANVAS.WIDTH = 500; CANVAS.HEIGHT = 500; }
   const px = new Uint8ClampedArray(w * h * 4), C = RGB[index], wrap = p.kind === "wrap";
+  // `ridge` < 1 narrows ridge-noise lines (colour1, value +1) so they read more distinctly; settings unchanged
+  const r = p.ridge || 1;
   for (let y = 0, o = 0; y < h; y++) {
     const uy = y / k;
     for (let x = 0; x < w; x++, o += 4) {
       const ux = x / k;
-      paint(px, o, p.gen(wrap ? ux % 500 : ux, wrap ? uy % 500 : uy, params), C);
+      let v = p.gen(wrap ? ux % 500 : ux, wrap ? uy % 500 : uy, params);
+      if (r !== 1) v = 1 - 2 * Math.pow(Math.max(0, (1 - v) / 2), r);
+      paint(px, o, v, C);
     }
   }
   CANVAS.WIDTH = 500; CANVAS.HEIGHT = 500;
