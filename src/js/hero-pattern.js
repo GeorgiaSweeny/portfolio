@@ -99,7 +99,7 @@ void main(){
   }
   gl.activeTexture(gl.TEXTURE2); const maskTex = tex();
   gl.activeTexture(gl.TEXTURE3); const velTex = tex();
-  let patTex = [], size = null, words = [], worker = null, pw = 0, ph = 0, sharpWorkers = [], lineH = 0;
+  let genId = 0, patTex = [], size = null, words = [], worker = null, pw = 0, ph = 0, sharpWorkers = [], lineH = 0;
 
   // ---- stir field: a coarse grid of velocities, deposited by the pointer and fading each frame ----
   let GW = 96, GH = 32, vx, vy, velBytes, energy = 0;
@@ -130,6 +130,35 @@ void main(){
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, GW, GH, 0, gl.RGBA, gl.UNSIGNED_BYTE, velBytes);
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+  }
+
+  // ---- turning a worker result into a texture: pixels directly, or Pattinator's SVG rasterised here ----
+  function toSource(d, w, h) {
+    if (!d.svg) return Promise.resolve(new ImageData(d.px, w, h));
+    return new Promise((ok, fail) => {
+      const img = new Image();
+      const url = URL.createObjectURL(new Blob([d.svg], { type: "image/svg+xml" }));
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        const c = document.createElement("canvas"); c.width = w; c.height = h;
+        const g = c.getContext("2d");
+        if (d.wrap) {                                   // repeat the 500-unit square at the pattern's scale
+          const t = document.createElement("canvas"); t.width = t.height = Math.max(1, Math.round(500 * d.k));
+          t.getContext("2d").drawImage(img, 0, 0, t.width, t.height);
+          g.fillStyle = g.createPattern(t, "repeat"); g.fillRect(0, 0, w, h);
+        } else g.drawImage(img, 0, 0, w, h);
+        ok(c);
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); fail(); };
+      img.src = url;
+    });
+  }
+  function upload(src, w, h) {
+    gl.activeTexture(gl.TEXTURE0);                    // create on unit 0 so the mask on unit 2 is never replaced
+    const t = tex();
+    if (src instanceof ImageData) gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, src.data);
+    else gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, src);
+    return t;
   }
 
   // ---- layout, letters, outline ------------------------------------------------
@@ -179,14 +208,17 @@ void main(){
     let got = 0;
     worker = new Worker(window.HERO_WORKER || "/js/hero-pattern-worker.js");
     const order = reduce ? [cur] : [...Array(N).keys()].sort((a, b) => ((a - cur + N) % N) - ((b - cur + N) % N));
+    const gen = genId = (genId || 0) + 1;
     worker.onmessage = (e) => {
-      const { i, px } = e.data;
-      gl.activeTexture(gl.TEXTURE0);                  // create on unit 0 so the mask on unit 2 is never replaced
-      const t = tex();
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, pw, ph, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
-      patTex[i] = t;
-      if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
-      if (++got === order.length) { worker.terminate(); worker = null; sharpen(); }
+      const d = e.data, i = d.i;
+      toSource(d, pw, ph).then((src) => {
+        if (gen !== genId) return;                     // resized since: stale
+        if (patTex[i]) gl.deleteTexture(patTex[i]);
+        patTex[i] = upload(src, pw, ph);
+        if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
+      }).catch(() => {}).finally(() => {
+        if (++got === order.length && gen === genId) { if (worker) worker.terminate(); worker = null; sharpen(); }
+      });
     };
     worker.postMessage({ w: pw, h: ph, ppu, order, seed });
   }
@@ -205,15 +237,16 @@ void main(){
       const mine = order.filter((_, j) => j % n === w);
       const wk = new Worker(window.HERO_WORKER || "/js/hero-pattern-worker.js");
       let left = mine.length;
+      const gen = genId;
       wk.onmessage = (e) => {
-        const { i, px } = e.data;
-        gl.activeTexture(gl.TEXTURE0);
-        const t = tex();
-        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, sw, shh, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
-        if (patTex[i]) gl.deleteTexture(patTex[i]);
-        patTex[i] = t;
-        wake();
+        const d = e.data, i = d.i;
         if (--left === 0) wk.terminate();
+        toSource(d, sw, shh).then((src) => {
+          if (gen !== genId) return;
+          if (patTex[i]) gl.deleteTexture(patTex[i]);
+          patTex[i] = upload(src, sw, shh);
+          wake();
+        }).catch(() => {});
       };
       wk.postMessage({ w: sw, h: shh, ppu, order: mine, seed });
       sharpWorkers.push(wk);

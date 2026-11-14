@@ -17,6 +17,12 @@ import { voronoiIslamicV2 } from "./pattinator/generators/voronoiIslamicV2.js";
 import { escher } from "./pattinator/generators/escher.js";
 import { recursive } from "./pattinator/generators/recursive.js";
 import { islamic } from "./pattinator/generators/islamic.js";
+// Vector renderers: Pattinator draws these pattern types as SVG (nativeFormat "vector"), so the hero uses
+// the same code for them, for identical shapes and crisp edges. The main thread rasterises the SVG.
+import { islamicSvg } from "./pattinator/generators/svg/islamic-svg.js";
+import { voronoiSvg } from "./pattinator/generators/svg/voronoi-svg.js";
+import { escherSvg } from "./pattinator/generators/svg/escher-svg.js";
+import { recursiveSvg } from "./pattinator/generators/svg/recursive-svg.js";
 
 const INK = { amplitude1: 0.445, scale1: 0.00639, octaves1: 1, amplitude2: 0.3, scale2: 0.00982, octaves2: 1, amplitude3: 0.18, scale3: 0.01031, octaves3: 7, amplitude4: 0.185, scale4: 0.00443, octaves4: 2, depth: 4 };
 
@@ -31,20 +37,20 @@ export const PRESETS = [
   { name: "Ink Bloom", gen: recursiveNoise, size: 1.5, colours: ["#121111", "#fffefa"], params: INK },
   // Ink Bloom's settings in the red and purple of the banner strip (colours sampled from the banner).
   { name: "Red and purple bloom", gen: recursiveNoise, size: 1.5, colours: ["#8e0f6b", "#e8442f"], params: INK },
-  { name: "Voronoi Patchwork", gen: voronoi, size: 1.5, kind: "cells", colours: ["#e7f5e0", "#d8c2e0", "#5fafbf", "#8a3d3d", "#ce721c"],
+  { name: "Voronoi Patchwork", gen: voronoi, svg: voronoiSvg, size: 1.5, kind: "cells", colours: ["#e7f5e0", "#d8c2e0", "#5fafbf", "#8a3d3d", "#ce721c"],
     params: { numCells: 51.5, tones: "5" } },
   { name: "Golden Shards", gen: voronoiIslamicV2, size: 2.5, kind: "cells", colours: ["#fff700", "#e5c10b", "#862331"],
     params: { numCells: 60.5, tones: "3", tileSize: 196.8, scale: 0.3876, segments: 7, frequency: 4, lineWidth: 0.0198, rotation: 0, randomRotation: 0 } },
   { name: "Gilded Cluster", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#2a6564", "#bdc369", "#5fb498"],
     params: { numCells: 69.5, tones: "3", tileSize: 118.4, scale: 0.3148, segments: 8, frequency: 2, lineWidth: 0.0352, rotation: 0, randomRotation: 0 } },
   // Georgia's export islamic-rosette (2), 14 Nov: cream six-point rosettes (replaces Emerald Hex Bloom)
-  { name: "Cream Rosette", gen: islamic, size: 1.5, colours: ["#f9eed7", "#c36213"],
+  { name: "Cream Rosette", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#f9eed7", "#c36213"],
     params: { tileShape: "hexagon", tones: "2", tileSize: 72, scale: 0.4324, segments: 6, frequency: 1, lineWidth: 0.0688, rotation: 0 } },
-  { name: "Overlook Diamonds", gen: islamic, size: 1.5, colours: ["#493127", "#9d0b0b", "#da6110"],
+  { name: "Overlook Diamonds", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#493127", "#9d0b0b", "#da6110"],
     params: { tileShape: "square", tones: "3", tileSize: 99.2, scale: 0.354, segments: 4, frequency: 1, lineWidth: 0.15, rotation: 0 } },
-  { name: "Tropical Bones", gen: escher, size: 1.5, colours: ["#fd7f58", "#ffeeb3", "#f04790", "#fddddd", "#a7e633"],
+  { name: "Tropical Bones", gen: escher, svg: escherSvg, size: 1.5, colours: ["#fd7f58", "#ffeeb3", "#f04790", "#fddddd", "#a7e633"],
     params: { tileShape: "square", tones: "5", tileSize: 88, scale: 0.48, segments: 8, frequency: 6, lineWidth: 0.0954, rotation: 22.5, baseShape: "square", bumpAmp: 10.97, bumpType: "wave" } },
-  { name: "Amber Weave", gen: recursive, size: 2.5, kind: "wrap", colours: ["#ffc23d", "#fd8e26"],
+  { name: "Amber Weave", gen: recursive, svg: recursiveSvg, size: 2.5, kind: "wrap", colours: ["#ffc23d", "#fd8e26"],
     params: { mode: "grid", depth: 3, subdivisions: 4 } },
 ];
 
@@ -84,9 +90,24 @@ export function drawFrame(index, w, h, ppu, seed) {
   return px;
 }
 
+// Vector patterns: the SVG in Pattinator units, plus the scale `k` (canvas px per unit). "wrap" patterns
+// come back as one 500-unit square for the main thread to repeat.
+export function drawVector(index, w, h, ppu, seed) {
+  const p = PRESETS[index], k = ppu * p.size;
+  const wrap = p.kind === "wrap";
+  const uw = wrap ? 500 : w / k, uh = wrap ? 500 : h / k;
+  const params = { ...p.params, seed, tones: p.params.tones ?? String(p.colours.length) };
+  p.colours.forEach((c, j) => { params["colour" + (j + 1)] = c; });
+  if (p.kind === "cells") { CANVAS.WIDTH = uw; CANVAS.HEIGHT = uh; params.numCells = p.params.numCells * (uw * uh) / (500 * 500); }
+  const svg = p.svg(uw, uh, params);
+  CANVAS.WIDTH = 500; CANVAS.HEIGHT = 500;
+  return { svg, k, wrap };
+}
+
 self.onmessage = (e) => {
   const { w, h, ppu, order, seed } = e.data;
   for (const i of order) {
+    if (PRESETS[i].svg) { postMessage({ i, ...drawVector(i, w, h, ppu, seed) }); continue; }
     const px = drawFrame(i, w, h, ppu, seed);
     postMessage({ i, px }, [px.buffer]);
   }
