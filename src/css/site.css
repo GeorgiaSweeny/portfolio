@@ -77,7 +77,8 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 }
 
 /* ---- Home: hero pattern --------------------------------------------------- */
-.hero { position: relative; min-height: calc(100vh - 60px); min-height: calc(100svh - 60px); display: flex; flex-direction: column; justify-content: center; padding: 32px var(--pad) 88px; background: var(--night); color: var(--on-night); overflow: hidden; }
+/* Hugs its content from the top (no full-screen centring), so the name sits near the top and the featured section starts sooner. */
+.hero { position: relative; display: flex; flex-direction: column; padding: 20px var(--pad) 84px; background: var(--night); color: var(--on-night); overflow: hidden; }
 .hero-inner { width: 100%; max-width: var(--maxw); margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 .status { display: inline-flex; align-items: center; gap: 8px; font: 13px/1.4 var(--mono); }
 .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #5f7a2e; }
@@ -105,7 +106,7 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .scroll-cue svg { width: 20px; height: 20px; }
 .scroll-cue:hover { color: var(--accent); border-color: var(--accent); }
 @media (min-width: 700px) {
-  .hero { padding: 48px var(--pad) 104px; }
+  .hero { padding: 28px var(--pad) 96px; }
   .hero-inner { gap: 24px; }
   .hero-name { font-size: clamp(96px, 17.5vw, 270px); }
   .hero .positioning { font-size: 26px; max-width: 30ch; }
