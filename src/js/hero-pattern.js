@@ -20,9 +20,10 @@
     stir: true, stirStrength: 0.5,                      // brush-through-paint response to the pointer
     transition: "meltink",                              // "fade" | "melt" | "ink" | "meltink"
     interval: 4000,                                     // ms each pattern stays fully on screen before the next change; 0 = only on click/tap
-    duration: 3000,                                     // ms per transition
+    duration: 3000,                                     // ms per transition (shortened to match a quick tapping rhythm)
+    drop: false,                                        // ink-drop: changes spread out from where you click
   }, window.HERO_CFG || {});
-  const api = window.heroPattern = { cfg, next: () => advance() };
+  const api = window.heroPattern = { cfg, next: () => advance(true) };
 
   const seed = 1 + Math.floor(Math.random() * 1e6);
   let cur = Math.floor(Math.random() * N), nxt = -1, p = 0, tStart = 0;
@@ -41,7 +42,8 @@
   const FS = `precision mediump float;
 varying vec2 uv;
 uniform sampler2D A, B, M, V;
-uniform float p, aspect, time, stir, melt, ink, fade, ambient;
+uniform float p, aspect, time, stir, melt, ink, fade, ambient, snap, drop;
+uniform vec2 origin;
 float h(vec2 q){ return fract(sin(dot(q, vec2(127.1, 311.7))) * 43758.5453); }
 float vn(vec2 q){ vec2 i = floor(q), f = fract(q); f = f * f * (3.0 - 2.0 * f);
   return mix(mix(h(i), h(i + vec2(1, 0)), f.x), mix(h(i + vec2(0, 1)), h(i + vec2(1, 1)), f.x), f.y); }
@@ -59,6 +61,7 @@ void main(){
   vec2 af = ((vec2(fbm(q * 2.6 + vec2(time * 0.24, -time * 0.09)), fbm(q * 2.6 + vec2(7.7 - time * 0.11, time * 0.2))) - 0.5) * 0.05
            + (vec2(fbm(q * 0.9 + vec2(time * 0.1, 0.0)), fbm(q * 0.9 + vec2(3.1, -time * 0.09))) - 0.5) * 0.035) * ambient / asp;
   d += af;
+  if (snap > 0.5) d = vec2(0.0);                         // snapshot: the pattern itself, without stir/flow (they're added live)
   // melt: only the outgoing pattern melts, more and more as it gives way; the incoming one arrives crisp
   float pe = 1.0 - (1.0 - p) * (1.0 - p);              // ease-out: changes start the instant you click, then settle
   float m = melt * pe;
@@ -68,7 +71,11 @@ void main(){
   float n = fbm(q * 2.2 + 3.0);
   float wInk = smoothstep(n - 0.06, n + 0.06, 0.12 + pe * 0.72);   // n spans ~0.10–0.80: first spots at once, spread fills the change
   float wMelt = smoothstep(0.4, 0.6, p);
-  float w = ink > 0.5 ? wInk : (melt > 0.5 ? wMelt : p);
+  // ink drop: the next pattern spreads out from where you clicked, with a ragged inky edge
+  float r = distance(q, origin * asp) + (n - 0.4) * 0.35;
+  float wDrop = smoothstep(r - 0.05, r + 0.05, pe * (aspect + 1.3));
+  float w = drop > 0.5 ? wDrop : (ink > 0.5 ? wInk : (melt > 0.5 ? wMelt : p));
+  if (snap > 0.5) { gl_FragColor = vec4(mix(a, b, w), 1.0); return; }
   float alpha = texture2D(M, uv).a;
   gl_FragColor = vec4(mix(a, b, w) * alpha, alpha);
 }`;
@@ -86,7 +93,7 @@ void main(){
   gl.enableVertexAttribArray(loc);
   gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
   const U = {};
-  for (const n of ["A", "B", "M", "V", "p", "aspect", "time", "stir", "melt", "ink", "fade", "ambient"]) U[n] = gl.getUniformLocation(prog, n);
+  for (const n of ["A", "B", "M", "V", "p", "aspect", "time", "stir", "melt", "ink", "fade", "ambient", "snap", "drop", "origin"]) U[n] = gl.getUniformLocation(prog, n);
   gl.uniform1i(U.A, 0); gl.uniform1i(U.B, 1); gl.uniform1i(U.M, 2); gl.uniform1i(U.V, 3);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
   function tex() {
@@ -260,22 +267,45 @@ void main(){
     clearTimeout(timer);
     if (!reduce && cfg.interval > 0) timer = setTimeout(advance, cfg.interval);
   }
-  let dur = 0, queued = false;
-  function advance() {
-    if (reduce) return;
-    if (nxt !== -1) {
-      if (p >= 0.7) { cur = nxt; nxt = -1; p = 0; }    // the new pattern already shows fully: just start the next, at normal speed
-      else {                                            // mid-change: let it finish a little faster (≤1.2s left), then play the next in full
-        if (!queued) { queued = true; const now = performance.now(), left = Math.min(1200, (1 - p) * dur); dur = left / (1 - p); tStart = now - p * dur; }
-        return;
+  // Every click starts the next change at once. Mid-change, what's on screen is captured into a texture
+  // (snapshot) and becomes the starting point, so rapid clicks chain without waiting or skipping. The
+  // change's length follows the tapping rhythm: about 90% of the gap between clicks (0.5–3s).
+  let dur = 0, aTex = null, lastClick = 0, org = [0.5, 0.5];
+  const snaps = [null, null]; let snapFb = null, snapW = 0, snapH = 0, snapI = 0;
+  function snapshot() {
+    const w = glc.width, h = glc.height;
+    if (!snapFb || snapW !== w || snapH !== h) {
+      snaps.forEach((t) => t && gl.deleteTexture(t));
+      for (let k = 0; k < 2; k++) {
+        gl.activeTexture(gl.TEXTURE0); snaps[k] = tex();
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
       }
+      snapFb = snapFb || gl.createFramebuffer(); snapW = w; snapH = h;
     }
+    snapI = 1 - snapI;                                   // ping-pong: never draw into the texture being read
+    gl.bindFramebuffer(gl.FRAMEBUFFER, snapFb);
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, snaps[snapI], 0);
+    draw(performance.now(), true);
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    return snaps[snapI];
+  }
+  function advance(byClick, at) {
+    if (reduce) return;
+    const now = performance.now();
+    if (nxt !== -1) {                                    // mid-change: start from exactly what's showing
+      aTex = snapshot(); cur = nxt; nxt = -1;
+    } else if (!byClick) aTex = null;
     let n = (cur + 1) % N, tries = 0;
     while (!patTex[n] && tries++ < N) n = (n + 1) % N;  // skip any not drawn yet
-    if (!patTex[n] || n === cur) return schedule();
+    if (!patTex[n] || (n === cur && !aTex)) return schedule();
     clearTimeout(timer);
-    nxt = n; p = 0; tStart = performance.now();
-    dur = cfg.transition === "fade" ? Math.min(900, cfg.duration) : cfg.duration;
+    let d = cfg.transition === "fade" ? Math.min(900, cfg.duration) : cfg.duration;
+    if (byClick) {
+      const gap = now - lastClick; lastClick = now;
+      if (gap < 3200) d = Math.max(500, Math.min(d, gap * 0.9));
+    }
+    org = at || [Math.random(), Math.random()];
+    nxt = n; p = 0; tStart = now; dur = d;
     wake();
   }
 
@@ -285,11 +315,14 @@ void main(){
     now = performance.now();
     if (nxt !== -1) {
       p = Math.min(1, Math.max(0, (now - tStart) / dur));
-      if (p >= 1) { cur = nxt; nxt = -1; p = 0; if (queued) { queued = false; advance(); } else schedule(); }
+      if (p >= 1) { cur = nxt; nxt = -1; p = 0; aTex = null; schedule(); }
     }
     uploadVel();
-    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, patTex[cur]);
-    gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, patTex[nxt === -1 ? cur : nxt]);
+    draw(now, false);
+  }
+  function draw(now, snapping) {
+    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, aTex || patTex[cur]);
+    gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, nxt === -1 ? (aTex || patTex[cur]) : patTex[nxt]);
     gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, maskTex);
     const tr = cfg.transition;
     gl.uniform1f(U.p, nxt === -1 ? 0 : p);
@@ -299,6 +332,9 @@ void main(){
     gl.uniform1f(U.ambient, reduce ? 0 : cfg.ambient);
     gl.uniform1f(U.melt, tr === "melt" || tr === "meltink" ? 1 : 0);
     gl.uniform1f(U.ink, tr === "ink" || tr === "meltink" ? 1 : 0);
+    gl.uniform1f(U.drop, cfg.drop ? 1 : 0);
+    gl.uniform2f(U.origin, org[0], 1 - org[1]);
+    gl.uniform1f(U.snap, snapping ? 1 : 0);
     gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   }
@@ -330,7 +366,9 @@ void main(){
     hero.addEventListener("pointerleave", () => { last = null; });
     hero.addEventListener("pointerdown", (e) => { if (e.target.closest("a, button")) return; downAt = { x: e.clientX, y: e.clientY }; last = at(e); });
     hero.addEventListener("pointerup", (e) => {   // a click or tap (not a drag) anywhere in the hero brings in the next pattern
-      if (downAt && !e.target.closest("a, button") && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 10) advance();
+      if (downAt && !e.target.closest("a, button") && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 10) {
+        const q = at(e); advance(true, [Math.min(1, Math.max(0, q.x)), Math.min(1, Math.max(0, q.y))]);
+      }
       downAt = null;
     });
     h1.style.touchAction = "pan-y";
