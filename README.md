@@ -23,7 +23,7 @@ npm run build:hero     # rebuild the hero pattern worker after editing tools/her
 | Personal Work artworks | `src/_data/artworks.js` |
 | Image masters | `src/images/` (one large file per image; the build makes AVIF/WebP/JPEG at several widths) |
 | Styles / script | `src/css/site.css`, `src/js/site.js` |
-| Hero pattern (Home) | `src/js/hero-pattern.js` (blends frames, follows the cursor); frames drawn by `src/js/hero-pattern-worker.js`, built from `tools/hero-pattern/worker-src.js` and Pattinator's own generators in `tools/hero-pattern/pattinator/`. Spectrum colours: `STOPS` in `worker-src.js`. No-JS still: `src/assets/hero-still.jpg` (`node tools/hero-pattern/still.mjs`) |
+| Hero pattern (Home) | `src/js/hero-pattern.js` (blends between patterns, follows the cursor, random start and seed per visit); frames drawn by `src/js/hero-pattern-worker.js`, built from `tools/hero-pattern/worker-src.js` and Pattinator's own generators in `tools/hero-pattern/pattinator/`. The nine patterns (Georgia's gallery presets, random → rule-based) are `PRESETS` in `worker-src.js`; if you change how many there are, change `N` in `hero-pattern.js` too. No-JS still and wordmark fill: `src/assets/hero-still.jpg` (Gilded Cluster, `node tools/hero-pattern/still.mjs`) |
 | Contact page (form) | `src/contact.njk` + `src/_includes/partials/contact.njk`; every other page ends with `partials/contact-band.njk` |
 | Security headers | `src/static/_headers` |
 | Contact form backend | `worker/index.js`, configured in `wrangler.jsonc` |

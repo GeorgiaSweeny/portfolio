@@ -9,7 +9,7 @@
 :root {
   --paper: #f3efe4; --paper-2: #fbf9f3; --ink: #13201f; --ink-2: #2d3a38; --muted: #4f5b59;
   --teal: #0e6b66; --teal-deep: #0b3533; --teal-mid: #0d504d; --wash: #dce2d7;
-  --sage: #a8bd77; --coral: #f2a07b; --rule: #d8d2c2; --tile: #e4dfd1; --band-text: #c9d3c6;
+  --sage: #a8bd77; --accent: #ffe08a; /* pale gold from the Deep Sea Silhouette pattern; the dark-background accent */ --rule: #d8d2c2; --tile: #e4dfd1; --band-text: #c9d3c6;
   --pad: 20px; --maxw: 1328px;
   --heading: "Bricolage Grotesque", system-ui, sans-serif;
   --name: "Dela Gothic One", "Bricolage Grotesque", system-ui, sans-serif;
@@ -28,7 +28,7 @@ img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: var(--teal); }
 a:hover { color: var(--teal-deep); }
-:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; box-shadow: 0 0 0 5px var(--night); }
 h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .wrap { max-width: var(--maxw); margin: 0 auto; }
 .mono { font-family: var(--mono); }
@@ -52,12 +52,12 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .wordmark:hover { filter: brightness(1.12); }
 .nav { display: flex; align-items: center; gap: 16px; }
 .nav a { font-size: 15px; font-weight: 600; color: var(--on-night); text-decoration: none; padding: 10px 2px; border-bottom: 2px solid transparent; }
-.nav a:hover { color: var(--coral); }
-.nav a[aria-current] { border-bottom-color: var(--coral); }
+.nav a:hover { color: var(--accent); }
+.nav a[aria-current] { border-bottom-color: var(--accent); }
 .nav .ic { width: 40px; height: 40px; margin: 0 -10px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .nav .ic svg { width: 18px; height: 18px; }
 .nav .ic:hover, .nav .ic:focus-visible { background: rgba(243,239,228,.12); color: var(--on-night); }
-.nav .ic[aria-current] { background: linear-gradient(var(--coral), var(--coral)) center bottom 2px / 22px 2px no-repeat; border-radius: 0; }
+.nav .ic[aria-current] { background: linear-gradient(var(--accent), var(--accent)) center bottom 2px / 22px 2px no-repeat; border-radius: 0; }
 .nav .ic .label { display: none; }
 @media (max-width: 699px) { .topbar { padding-left: 16px; padding-right: 16px; gap: 10px; } .wordmark { font-size: 17px; } .nav { gap: 14px; } .nav a { font-size: 14px; } }
 @media (max-width: 380px) { .wordmark { font-size: 15px; } .nav { gap: 11px; } }
@@ -67,13 +67,13 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
   .nav { gap: 32px; }
   .nav a { font-size: 16px; }
   .nav .ic, .nav .ic[aria-current] { width: auto; height: auto; margin: 0; padding: 10px 2px; border-radius: 0; display: inline; background: none; }
-  .nav .ic:hover, .nav .ic:focus-visible { background: none; color: var(--coral); }
-  .nav .ic[aria-current] { border-bottom-color: var(--coral); }
+  .nav .ic:hover, .nav .ic:focus-visible { background: none; color: var(--accent); }
+  .nav .ic[aria-current] { border-bottom-color: var(--accent); }
   .nav .ic svg { display: none; }
   .nav .ic .label { display: inline; }
   .nav .cta, .nav .cta[aria-current] { padding: 9px 18px; border: 1px solid rgba(243,239,228,.4); border-radius: 999px; }
-  .nav .cta:hover { border-color: var(--coral); }
-  .nav .cta[aria-current] { border-color: var(--coral); }
+  .nav .cta:hover { border-color: var(--accent); }
+  .nav .cta[aria-current] { border-color: var(--accent); }
 }
 
 /* ---- Home: hero pattern --------------------------------------------------- */
@@ -95,14 +95,14 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .hero .positioning { font: 400 20px/1.3 var(--heading); letter-spacing: -0.015em; color: var(--on-night); max-width: 26ch; }
 .hero-caption { font: 13px/1.5 var(--mono); color: var(--on-night-2); max-width: 46ch; }
 .hero-caption a { color: var(--on-night); }
-.hero-caption a:hover { color: var(--coral); }
+.hero-caption a:hover { color: var(--accent); }
 .hint-touch { display: none; }
 @media (hover: none) { .hint-pointer { display: none; } .hint-touch { display: inline; } }
 @media (prefers-reduced-motion: reduce) { .hint-pointer, .hint-touch { display: none !important; } }
 .no-js .hint-pointer, .no-js .hint-touch { display: none; }
 .scroll-cue { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--on-night); border: 1px solid rgba(243,239,228,.3); }
 .scroll-cue svg { width: 20px; height: 20px; }
-.scroll-cue:hover { color: var(--coral); border-color: var(--coral); }
+.scroll-cue:hover { color: var(--accent); border-color: var(--accent); }
 @media (min-width: 700px) {
   .hero { padding: 48px var(--pad) 104px; }
   .hero-inner { gap: 24px; }
@@ -119,7 +119,7 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .btn.outline:hover { background: var(--teal); color: var(--paper); }
 .btn svg { width: 18px; height: 18px; flex: none; }
 .btn.light { background: var(--on-night); border-color: var(--on-night); color: var(--night); }
-.btn.light:hover { background: var(--coral); border-color: var(--coral); color: var(--night); }
+.btn.light:hover { background: var(--accent); border-color: var(--accent); color: var(--night); }
 .btn.light.outline { background: transparent; color: var(--on-night); border-color: rgba(243,239,228,.5); }
 .btn.light.outline:hover { background: var(--on-night); color: var(--night); border-color: var(--on-night); }
 .pill { display: inline-block; font-size: 15px; font-weight: 700; text-decoration: none; padding: 9px 15px; border-radius: 999px; border: 1px solid currentColor; }
@@ -169,10 +169,10 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .feature .line { font-size: 17px; line-height: 1.5; color: var(--on-night-2); max-width: 52ch; }
 .feature .go { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 700; color: var(--on-night); }
 .feature .go svg { width: 18px; height: 18px; transition: transform .2s; }
-.feature:hover .go { color: var(--coral); }
+.feature:hover .go { color: var(--accent); }
 .feature:hover .go svg { transform: translateX(4px); }
 .feature:focus-within h3 a { outline: none; }
-.feature:has(a:focus-visible) { outline: 3px solid var(--coral); outline-offset: -3px; }
+.feature:has(a:focus-visible) { outline: 3px solid var(--accent); outline-offset: -3px; }
 /* light artwork (the animatic): a deeper shade so the words hold */
 .t-light .feature-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(11,53,51,.15), rgba(11,53,51,.1) 40%, rgba(11,53,51,.55)); }
 /* the Christmas card range: the designs drift past like a shop display */
@@ -246,7 +246,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .proj-open .facts dt { color: var(--sage); }
 .proj-open .facts dd { color: var(--on-night-2); }
 .proj-open .btn { background: var(--on-night); border-color: var(--on-night); color: var(--night); }
-.proj-open .btn:hover { background: var(--coral); border-color: var(--coral); color: var(--night); }
+.proj-open .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--night); }
 .proj-open .btn.outline { background: transparent; color: var(--on-night); border-color: rgba(243,239,228,.5); }
 .proj-open .btn.outline:hover { background: var(--on-night); color: var(--night); }
 .proj-role { font-size: 18px; font-weight: 600; margin-top: -4px; }
@@ -289,7 +289,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .owntool-box p.serif { font-size: 20px; line-height: 1.35; font-weight: 500; }
 .owntool-box .pills { display: flex; flex-wrap: wrap; gap: 10px; }
 .owntool-box a { color: var(--on-night); }
-.owntool-box a:hover { color: var(--coral); }
+.owntool-box a:hover { color: var(--accent); }
 @media (min-width: 700px) { .owntool-box { padding: 32px; } }
 @media (min-width: 1100px) { .owntool-box p.serif { font-size: 22px; } }
 
@@ -478,7 +478,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .sendbtn:hover, .sendbtn:focus-visible { background: var(--teal); color: var(--paper); }
 .sendbtn[disabled] { opacity: .6; cursor: progress; }
 .form-msg { font-weight: 600; min-height: 1.6em; }
-.form-msg.err { color: var(--coral); }
+.form-msg.err { color: var(--accent); }
 @media (min-width: 700px) { .contact { padding: 80px var(--pad) 96px; } .contact .wrap { gap: 64px; } .contact h1 { font-size: 64px; } }
 @media (min-width: 1100px) { .contact .desk { display: inline; } .contact .mob { display: none; } }
 
