@@ -43,9 +43,9 @@ export const PRESETS = [
     params: { numCells: 60.5, tones: "3", tileSize: 196.8, scale: 0.3876, segments: 7, frequency: 4, lineWidth: 0.0198, rotation: 0, randomRotation: 0 } },
   { name: "Gilded Cluster", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#2a6564", "#bdc369", "#5fb498"],
     params: { numCells: 69.5, tones: "3", tileSize: 118.4, scale: 0.3148, segments: 8, frequency: 2, lineWidth: 0.0352, rotation: 0, randomRotation: 0 } },
-  // Georgia's export islamic-rosette (2), 14 Nov: cream six-point rosettes (replaces Emerald Hex Bloom)
-  { name: "Cream Rosette", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#f9eed7", "#c36213"],
-    params: { tileShape: "hexagon", tones: "2", tileSize: 72, scale: 0.4324, segments: 6, frequency: 1, lineWidth: 0.0688, rotation: 0 } },
+  // Georgia's export islamic-rosette (4), 14 Nov: violet six-point rosette, rotated 30° (replaces Cream Rosette)
+  { name: "Violet Rosette", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#cc55f7", "#a3baff", "#9b0396", "#404040"],
+    params: { tileShape: "hexagon", tones: "4", tileSize: 72, scale: 0.3344, segments: 6, frequency: 1, lineWidth: 0.0758, rotation: 30 } },
   { name: "Overlook Diamonds", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#493127", "#9d0b0b", "#da6110"],
     params: { tileShape: "square", tones: "3", tileSize: 99.2, scale: 0.354, segments: 4, frequency: 1, lineWidth: 0.15, rotation: 0 } },
   { name: "Tropical Bones", gen: escher, svg: escherSvg, size: 1.5, colours: ["#fd7f58", "#ffeeb3", "#f04790", "#fddddd", "#a7e633"],
