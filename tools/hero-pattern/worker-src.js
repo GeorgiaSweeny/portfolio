@@ -22,14 +22,10 @@ const INK = { amplitude1: 0.445, scale1: 0.00639, octaves1: 1, amplitude2: 0.3, 
 // In spectrum order, random → rule-based. `size`: how much bigger than Pattinator's own pixels to draw.
 export const PRESETS = [
   { name: "Cotton Candy Ridge", gen: noise, size: 1.5, colours: ["#df84e6", "#f50000"],
-    params: { mode: "ridge", scale: 0.00247, octaves: 2, lacunarity: 3, persistence: 0.484 } },
+    params: { mode: "ridge", scale: 0.00394, octaves: 2, lacunarity: 3, persistence: 0.716 } }, // Georgia's re-export, 14 Nov
   { name: "Ink Bloom", gen: recursiveNoise, size: 1.5, colours: ["#121111", "#fffefa"], params: INK },
   // Ink Bloom's settings in the red and purple of the banner strip (colours sampled from the banner).
   { name: "Red and purple bloom", gen: recursiveNoise, size: 1.5, colours: ["#8e0f6b", "#e8442f"], params: INK },
-  // Deep Sea Silhouette taken to depth 5 (Georgia's pick, option E) so the cream and navy balance.
-  { name: "Deep Sea Silhouette", gen: recursiveNoise, size: 1.5, colours: ["#033449", "#ffe08a"],
-    params: { depth: 5, amplitude1: 0.29, scale1: 0.01717, octaves1: 1, amplitude2: 0.5, scale2: 0.03334, octaves2: 1,
-              amplitude3: 0.18, scale3: 0.01031, octaves3: 7, amplitude4: 0.185, scale4: 0.00443, octaves4: 2, amplitude5: 0.2, scale5: 0.03, octaves5: 1 } },
   { name: "Voronoi Patchwork", gen: voronoi, size: 1.5, kind: "cells", colours: ["#e7f5e0", "#d8c2e0", "#5fafbf", "#8a3d3d", "#ce721c"],
     params: { numCells: 51.5, tones: "5" } },
   { name: "Golden Shards", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#fff700", "#e5c10b", "#862331"],

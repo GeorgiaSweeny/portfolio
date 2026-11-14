@@ -1,5 +1,5 @@
 // Hero pattern: Georgia's name with her own Pattinator gallery patterns showing through the letters.
-// A worker draws one frame per pattern (nine, ordered random → rule-based) with her generator code;
+// A worker draws one frame per pattern (eight, ordered random → rule-based) with her generator code;
 // this script blends from one to the next as the cursor (or a finger) moves across, and drifts on
 // its own when nobody is touching it. Every visit starts at a random point with a new seed.
 // Without JS, or before the first frame, the name shows a still frame through CSS
@@ -9,7 +9,7 @@
   if (!h1 || !("Worker" in window) || !window.CanvasRenderingContext2D) return;
   const hero = h1.closest(".hero");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const N = 9;                                         // patterns in the worker's PRESETS list
+  const N = 8;                                         // patterns in the worker's PRESETS list
   const startT = Math.random();                         // where this visit begins on the spectrum
   const seed = 1 + Math.floor(Math.random() * 1e6);    // a fresh layout of the same settings
   const first = Math.round(startT * (N - 1));
