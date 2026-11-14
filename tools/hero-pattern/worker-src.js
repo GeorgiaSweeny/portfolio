@@ -43,6 +43,9 @@ export const PRESETS = [
     params: { numCells: 60.5, tones: "3", tileSize: 196.8, scale: 0.3876, segments: 7, frequency: 4, lineWidth: 0.0198, rotation: 0, randomRotation: 0 } },
   { name: "Gilded Cluster", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#2a6564", "#bdc369", "#5fb498"],
     params: { numCells: 69.5, tones: "3", tileSize: 118.4, scale: 0.3148, segments: 8, frequency: 2, lineWidth: 0.0352, rotation: 0, randomRotation: 0 } },
+  // Georgia's export voronoi-islamic-v2 (1), 14 Nov: nested squares in blush, teal, rose and cream
+  { name: "Rose Squares", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#e4ad9a", "#5aa094", "#bc5c6b", "#e6e9cd"],
+    params: { numCells: 64.25, tones: "4", tileSize: 164.8, scale: 0.4016, segments: 4, frequency: 4, lineWidth: 0.0296, rotation: 25.714285714285715, randomRotation: 0 } },
   // Georgia's export islamic-rosette (4), 14 Nov: six-point rosette, rotated 30° (replaces Cream Rosette).
   // Recoloured magenta / blush / berry (her pick from calmer palettes); tone 4 is needed for tone 3 to show.
   { name: "Magenta Rosette", gen: islamic, svg: islamicSvg, size: 1.5, colours: ["#c4359b", "#ffd0e8", "#7a1659", "#7a1659"],
