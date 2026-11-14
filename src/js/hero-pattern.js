@@ -5,7 +5,7 @@
 //    paint, scaled by speed; it settles back to the clean pattern when you stop;
 //  - change: the pattern moves on to the next one every few seconds, or on a click/tap. Georgia's pick
 //    (14 Nov): melt + ink, the outgoing pattern melts into Perlin turbulence while the next one spreads in
-//    crisp along noise contours, over 3s, each pattern held 8s, with a gentle stir (0.5) and a constant flow (1.2).
+//    crisp along noise contours, over 3s, each pattern held 4s, with a gentle stir (0.5) and a constant flow (1.2).
 //  - flow: a constant, slow, gentle drift so the name is visibly alive before anyone touches it.
 // Without WebGL or JS the name shows a still frame through CSS. Reduced motion: one pattern, still.
 // Options can be changed at runtime through window.heroPattern.cfg (used by the hero lab page).
@@ -19,7 +19,7 @@
     ambient: 1.2,                                       // constant slow flow (0 = still between changes)
     stir: true, stirStrength: 0.5,                      // brush-through-paint response to the pointer
     transition: "meltink",                              // "fade" | "melt" | "ink" | "meltink"
-    interval: 8000,                                     // ms each pattern stays fully on screen before the next change; 0 = only on click/tap
+    interval: 4000,                                     // ms each pattern stays fully on screen before the next change; 0 = only on click/tap
     duration: 3000,                                     // ms per transition
   }, window.HERO_CFG || {});
   const api = window.heroPattern = { cfg, next: () => advance() };
@@ -60,12 +60,13 @@ void main(){
            + (vec2(fbm(q * 0.9 + vec2(time * 0.1, 0.0)), fbm(q * 0.9 + vec2(3.1, -time * 0.09))) - 0.5) * 0.035) * ambient / asp;
   d += af;
   // melt: only the outgoing pattern melts, more and more as it gives way; the incoming one arrives crisp
-  float m = melt * smoothstep(0.0, 1.0, p);
+  float pe = 1.0 - (1.0 - p) * (1.0 - p);              // ease-out: changes start the instant you click, then settle
+  float m = melt * pe;
   vec2 md = (vec2(fbm(q * 1.6 + 11.0 + time * 0.05), fbm(q * 1.6 + 37.0 - time * 0.05)) - 0.5) * m * 0.22 / asp;
   vec3 a = texture2D(A, clamp(uv + d + md, 0.0, 1.0)).rgb, b = texture2D(B, clamp(uv + d, 0.0, 1.0)).rgb;
   // how much of the next pattern shows: ink spreads along noise contours, melt swaps at the peak, fade blends
   float n = fbm(q * 2.2 + 3.0);
-  float wInk = smoothstep(n - 0.06, n + 0.06, 0.03 + p * 0.85);    // n spans ~0.10–0.80: the spread lasts the whole change
+  float wInk = smoothstep(n - 0.06, n + 0.06, 0.12 + pe * 0.72);   // n spans ~0.10–0.80: first spots at once, spread fills the change
   float wMelt = smoothstep(0.4, 0.6, p);
   float w = ink > 0.5 ? wInk : (melt > 0.5 ? wMelt : p);
   float alpha = texture2D(M, uv).a;
@@ -263,7 +264,7 @@ void main(){
   function advance() {
     if (reduce) return;
     if (nxt !== -1) {
-      if (p >= 0.85) { cur = nxt; nxt = -1; p = 0; }    // the new pattern already shows fully: just start the next, at normal speed
+      if (p >= 0.7) { cur = nxt; nxt = -1; p = 0; }    // the new pattern already shows fully: just start the next, at normal speed
       else {                                            // mid-change: let it finish a little faster (≤1.2s left), then play the next in full
         if (!queued) { queued = true; const now = performance.now(), left = Math.min(1200, (1 - p) * dur); dur = left / (1 - p); tStart = now - p * dur; }
         return;
