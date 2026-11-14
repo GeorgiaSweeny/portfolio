@@ -5,7 +5,7 @@
 //    paint, scaled by speed; it settles back to the clean pattern when you stop;
 //  - change: the pattern moves on to the next one every few seconds, or on a click/tap. Georgia's pick
 //    (14 Nov): melt + ink, the outgoing pattern melts into Perlin turbulence while the next one spreads in
-//    crisp along noise contours, over 3s, each pattern held 4s, with a gentle stir (0.5) and a constant flow (1.2).
+//    crisp along noise contours, over 3s, each pattern held 3s, with a gentle stir (0.5) and a constant flow (1.2).
 //  - flow: a constant, slow, gentle drift so the name is visibly alive before anyone touches it.
 // Without WebGL or JS the name shows a still frame through CSS. Reduced motion: one pattern, still.
 // Options can be changed at runtime through window.heroPattern.cfg (used by the hero lab page).
@@ -19,7 +19,7 @@
     ambient: 1.2,                                       // constant slow flow (0 = still between changes)
     stir: true, stirStrength: 0.5,                      // brush-through-paint response to the pointer
     transition: "meltink",                              // "fade" | "melt" | "ink" | "meltink"
-    interval: 4000,                                     // ms each pattern stays fully on screen before the next change; 0 = only on click/tap
+    interval: 3000,                                     // ms each pattern stays fully on screen before the next change; 0 = only on click/tap
     duration: 3000,                                     // ms per transition (shortened to match a quick tapping rhythm)
     drop: false,                                        // ink-drop: changes spread out from where you click
   }, window.HERO_CFG || {});
