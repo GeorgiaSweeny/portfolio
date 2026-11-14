@@ -6,6 +6,7 @@
 //  - change: the pattern moves on to the next one every few seconds, or on a click/tap. Georgia's pick
 //    (14 Nov): melt + ink, the outgoing pattern melts into Perlin turbulence while the next one spreads in
 //    crisp along noise contours, over 3s, every 5s, with a gentle stir (0.6).
+//  - flow: a constant, slow, gentle drift so the name is visibly alive before anyone touches it.
 // Without WebGL or JS the name shows a still frame through CSS. Reduced motion: one pattern, still.
 // Options can be changed at runtime through window.heroPattern.cfg (used by the hero lab page).
 (() => {
@@ -15,6 +16,7 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const N = 8;                                          // patterns in the worker's PRESETS list
   const cfg = Object.assign({
+    ambient: 1,                                         // constant slow flow (0 = still between changes)
     stir: true, stirStrength: 0.6,                      // brush-through-paint response to the pointer
     transition: "meltink",                              // "fade" | "melt" | "ink" | "meltink"
     interval: 5000,                                     // ms between automatic changes; 0 = only on click/tap
@@ -39,7 +41,7 @@
   const FS = `precision mediump float;
 varying vec2 uv;
 uniform sampler2D A, B, M, V;
-uniform float p, aspect, time, stir, melt, ink, fade;
+uniform float p, aspect, time, stir, melt, ink, fade, ambient;
 float h(vec2 q){ return fract(sin(dot(q, vec2(127.1, 311.7))) * 43758.5453); }
 float vn(vec2 q){ vec2 i = floor(q), f = fract(q); f = f * f * (3.0 - 2.0 * f);
   return mix(mix(h(i), h(i + vec2(1, 0)), f.x), mix(h(i + vec2(0, 1)), h(i + vec2(1, 1)), f.x), f.y); }
@@ -52,6 +54,9 @@ void main(){
   float e = length(vel);
   vec2 curl = vec2(fbm(q * 3.0 + vec2(0.0, time * 0.15)), fbm(q * 3.0 + vec2(5.2, 1.3) - time * 0.15)) - 0.5;
   vec2 d = -stir * (vel * 0.12 + curl * e * 0.22) / asp;   // sample behind the motion, so paint moves with the pointer
+  // ambient: a constant, slow, gentle flow so the name is visibly alive even when nobody touches it
+  vec2 af = (vec2(fbm(q * 1.3 + vec2(time * 0.045, 0.0)), fbm(q * 1.3 + vec2(7.7, -time * 0.038))) - 0.5) * ambient * 0.035 / asp;
+  d += af;
   // melt: only the outgoing pattern melts, more and more as it gives way; the incoming one arrives crisp
   float m = melt * smoothstep(0.0, 1.0, p);
   vec2 md = (vec2(fbm(q * 1.6 + 11.0 + time * 0.05), fbm(q * 1.6 + 37.0 - time * 0.05)) - 0.5) * m * 0.22 / asp;
@@ -78,7 +83,7 @@ void main(){
   gl.enableVertexAttribArray(loc);
   gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
   const U = {};
-  for (const n of ["A", "B", "M", "V", "p", "aspect", "time", "stir", "melt", "ink", "fade"]) U[n] = gl.getUniformLocation(prog, n);
+  for (const n of ["A", "B", "M", "V", "p", "aspect", "time", "stir", "melt", "ink", "fade", "ambient"]) U[n] = gl.getUniformLocation(prog, n);
   gl.uniform1i(U.A, 0); gl.uniform1i(U.B, 1); gl.uniform1i(U.M, 2); gl.uniform1i(U.V, 3);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
   function tex() {
@@ -175,7 +180,7 @@ void main(){
       const t = tex();
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, pw, ph, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
       patTex[i] = t;
-      if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); }
+      if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
     };
     worker.postMessage({ w: pw, h: ph, ppu, order, seed });
   }
@@ -210,15 +215,18 @@ void main(){
     gl.uniform1f(U.aspect, size.w / size.h);
     gl.uniform1f(U.time, now / 1000);
     gl.uniform1f(U.stir, cfg.stir && !reduce ? 1 : 0);
+    gl.uniform1f(U.ambient, reduce ? 0 : cfg.ambient);
     gl.uniform1f(U.melt, tr === "melt" || tr === "meltink" ? 1 : 0);
     gl.uniform1f(U.ink, tr === "ink" || tr === "meltink" ? 1 : 0);
     gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   }
+  let skip = false;
   function tick(now) {
     if (!running) return;
-    frame(now);
-    if (!visible || (nxt === -1 && energy < 0.004)) { running = false; return; }   // idle: nothing moving
+    const busy = nxt !== -1 || energy >= 0.004;
+    if (busy || !(skip = !skip)) frame(now);           // only the slow flow moving: draw every other frame
+    if (!visible || (!busy && !(cfg.ambient > 0 && !reduce))) { running = false; return; }   // idle: nothing moving
     requestAnimationFrame(tick);
   }
   function wake() { if (!running && visible && size) { running = true; requestAnimationFrame(tick); } }
@@ -256,6 +264,7 @@ void main(){
     rw = setTimeout(() => { const r = h1.getBoundingClientRect(); if (!size || Math.abs(r.width - size.w) > 2 || Math.abs(r.height - size.h) > 2) start(); }, 250);
   });
   api.restartTimer = schedule;
+  api.wake = wake;
   const go = () => document.fonts.load(`${getComputedStyle(h1).fontWeight} 100px "Dela Gothic One"`).then(start, start);
   if (document.readyState === "complete") setTimeout(go, 50); else addEventListener("load", () => setTimeout(go, 50));
 })();
