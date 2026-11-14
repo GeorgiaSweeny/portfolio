@@ -85,10 +85,11 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .hero .status { color: var(--on-night-2); }
 .hero .status::before { background: var(--sage); }
 .hero-name {
-  position: relative; font: 400 clamp(64px, 19vw, 96px)/0.98 var(--name); letter-spacing: -0.02em; margin: 0 0 6px -0.04em;
+  position: relative; font: 400 clamp(64px, 19vw, 96px)/0.98 var(--name); letter-spacing: -0.02em; margin: 0 0 calc(6px - .14em) -0.04em;
   /* still frame until the live pattern is ready (and for no-JS visitors) */
   color: var(--on-night); background: url(/assets/hero-still.jpg) center / cover; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  padding-bottom: .1em; user-select: none;
+  /* deep enough for the y's tail: the pattern, outline and shadow are only drawn inside this box */
+  padding-bottom: .24em; user-select: none;
 }
 .hero-name .w { display: inline-block; }
 .hero-name.is-live { background: none; -webkit-text-fill-color: transparent; }
