@@ -1,5 +1,6 @@
 // Cloudflare Worker that serves the built site (_site) and the contact form endpoint.
-// Deployed by Workers Builds: build command `npm run build`, deploy command `npx wrangler deploy`.
+// Deployed by Workers Builds: build command `npm run build`, deploy command `npx wrangler deploy`
+// (branch previews: `npx wrangler preview`).
 {
   "name": "portfolio",
   "main": "worker/index.js",
@@ -18,5 +19,13 @@
   "vars": {
     "CONTACT_FROM": "form@georgiasweeny.com"
   },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // Branch builds deploy with `npx wrangler preview`, which needs the preview environment spelled out.
+  // Same sender and email binding as production; the form only ever sends to Georgia's own inbox.
+  "previews": {
+    "vars": {
+      "CONTACT_FROM": "form@georgiasweeny.com"
+    },
+    "send_email": [{ "name": "EMAIL" }]
+  }
 }
