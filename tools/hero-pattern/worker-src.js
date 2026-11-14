@@ -84,11 +84,14 @@ export function drawFrame(index, w, h, ppu, seed) {
   const px = new Uint8ClampedArray(w * h * 4), C = RGB[index], wrap = p.kind === "wrap";
   // `ridge` < 1 narrows ridge-noise lines (colour1, value +1) so they read more distinctly; settings unchanged
   const r = p.ridge || 1;
+  // `levels: [lo, hi]` stretches values from lo..hi to the full light-dark range (like Levels on an image)
+  const lv = p.levels, lvs = lv ? 2 / (lv[1] - lv[0]) : 0;
   for (let y = 0, o = 0; y < h; y++) {
     const uy = y / k;
     for (let x = 0; x < w; x++, o += 4) {
       const ux = x / k;
       let v = p.gen(wrap ? ux % 500 : ux, wrap ? uy % 500 : uy, params);
+      if (lv) v = Math.max(-1, Math.min(1, (v - lv[0]) * lvs - 1));
       if (r !== 1) v = 1 - 2 * Math.pow(Math.max(0, (1 - v) / 2), r);
       paint(px, o, v, C);
     }

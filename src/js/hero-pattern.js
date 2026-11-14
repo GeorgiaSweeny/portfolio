@@ -36,6 +36,10 @@
   const outline = document.createElement("div");      // outline: a colour layer masked to the letters' edges
   outline.className = "hero-canvas hero-edge";
   const edgeCol = [];
+  const shadow = document.createElement("canvas");     // soft drop shadow, drawn once per size (not per frame)
+  shadow.className = "hero-canvas hero-shadow";
+  shadow.setAttribute("aria-hidden", "true");
+  const SH = 32;                                       // room around the letters for the blur
   outline.setAttribute("aria-hidden", "true");
 
   // ---- shader ---------------------------------------------------------------
@@ -196,11 +200,28 @@ void main(){
     return c;
   }
 
+  function drawShadow() {
+    const d = size.dpr;
+    shadow.width = Math.round((size.w + SH * 2) * d); shadow.height = Math.round((size.h + SH * 2) * d);
+    shadow.style.width = `${size.w + SH * 2}px`; shadow.style.height = `${size.h + SH * 2}px`;
+    shadow.style.left = shadow.style.top = `${-SH}px`;
+    const g = shadow.getContext("2d");
+    const L = letters(true);
+    // draw the letters far off-canvas and let only their shadows fall onto it
+    const away = shadow.width + 100;
+    for (const [blur, dy, a] of [[12, 6, 0.55], [3, 2, 0.35]]) {
+      g.save();
+      g.shadowColor = `rgba(0, 0, 0, ${a})`; g.shadowBlur = blur * d; g.shadowOffsetX = away; g.shadowOffsetY = dy * d;
+      g.drawImage(L, SH * d - away, SH * d);
+      g.restore();
+    }
+  }
   function start() {
     size = measure();
     for (const c of [glc, outline]) { c.style.width = `${size.w}px`; c.style.height = `${size.h}px`; }
     glc.width = Math.round(size.w * size.dpr); glc.height = Math.round(size.h * size.dpr);
     gl.viewport(0, 0, glc.width, glc.height);
+    drawShadow();
     const o = letters(false), url = `url(${o.toDataURL()})`;
     outline.style.webkitMaskImage = outline.style.maskImage = url;
     outline.style.webkitMaskSize = outline.style.maskSize = "100% 100%";
@@ -226,7 +247,7 @@ void main(){
         if (gen !== genId) return;                     // resized since: stale
         if (patTex[i]) gl.deleteTexture(patTex[i]);
         patTex[i] = upload(src, pw, ph);
-        if (i === cur) { setEdge(cur, 0); h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
+        if (i === cur) { setEdge(cur, 0); h1.append(shadow, glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
       }).catch(() => {}).finally(() => {
         if (++got === order.length && gen === genId) { if (worker) worker.terminate(); worker = null; sharpen(); }
       });
