@@ -5,7 +5,7 @@
 //    paint, scaled by speed; it settles back to the clean pattern when you stop;
 //  - change: the pattern moves on to the next one every few seconds, or on a click/tap. Georgia's pick
 //    (14 Nov): melt + ink, the outgoing pattern melts into Perlin turbulence while the next one spreads in
-//    crisp along noise contours, over 3s, every 5s, with a gentle stir (0.6).
+//    crisp along noise contours, over 3s, every 5s, with a gentle stir (0.5) and a constant flow (1.2).
 //  - flow: a constant, slow, gentle drift so the name is visibly alive before anyone touches it.
 // Without WebGL or JS the name shows a still frame through CSS. Reduced motion: one pattern, still.
 // Options can be changed at runtime through window.heroPattern.cfg (used by the hero lab page).
@@ -14,10 +14,10 @@
   if (!h1 || !("Worker" in window)) return;
   const hero = h1.closest(".hero");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const N = 8;                                          // patterns in the worker's PRESETS list
+  const N = 10;                                         // patterns in the worker's PRESETS list
   const cfg = Object.assign({
-    ambient: 1,                                         // constant slow flow (0 = still between changes)
-    stir: true, stirStrength: 0.6,                      // brush-through-paint response to the pointer
+    ambient: 1.2,                                       // constant slow flow (0 = still between changes)
+    stir: true, stirStrength: 0.5,                      // brush-through-paint response to the pointer
     transition: "meltink",                              // "fade" | "melt" | "ink" | "meltink"
     interval: 5000,                                     // ms between automatic changes; 0 = only on click/tap
     duration: 3000,                                     // ms per transition
@@ -194,7 +194,8 @@ void main(){
     if (!reduce && cfg.interval > 0) timer = setTimeout(advance, cfg.interval);
   }
   function advance() {
-    if (reduce || nxt !== -1) return;
+    if (reduce) return;
+    if (nxt !== -1) { cur = nxt; nxt = -1; p = 0; }     // mid-change: finish it at once, then start the next
     let n = (cur + 1) % N, tries = 0;
     while (!patTex[n] && tries++ < N) n = (n + 1) % N;  // skip any not drawn yet
     if (!patTex[n] || n === cur) return schedule();
@@ -249,13 +250,13 @@ void main(){
       last = q;
     });
     hero.addEventListener("pointerleave", () => { last = null; });
-    h1.addEventListener("pointerdown", (e) => { downAt = { x: e.clientX, y: e.clientY }; last = at(e); });
-    h1.addEventListener("pointerup", (e) => {   // a click or tap (not a drag) brings in the next pattern
-      if (downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 8) advance();
+    hero.addEventListener("pointerdown", (e) => { if (e.target.closest("a, button")) return; downAt = { x: e.clientX, y: e.clientY }; last = at(e); });
+    hero.addEventListener("pointerup", (e) => {   // a click or tap (not a drag) anywhere in the hero brings in the next pattern
+      if (downAt && !e.target.closest("a, button") && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 10) advance();
       downAt = null;
     });
     h1.style.touchAction = "pan-y";
-    h1.style.cursor = "pointer";
+    hero.style.cursor = "pointer";
     new IntersectionObserver((es) => { visible = es[0].isIntersecting; if (visible) wake(); }).observe(hero);
     document.addEventListener("visibilitychange", () => { visible = !document.hidden; if (visible) wake(); else clearTimeout(timer); if (visible) schedule(); });
   }
