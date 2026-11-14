@@ -99,7 +99,7 @@ void main(){
   }
   gl.activeTexture(gl.TEXTURE2); const maskTex = tex();
   gl.activeTexture(gl.TEXTURE3); const velTex = tex();
-  let patTex = [], size = null, words = [], worker = null, pw = 0, ph = 0;
+  let patTex = [], size = null, words = [], worker = null, pw = 0, ph = 0, sharpWorkers = [], lineH = 0;
 
   // ---- stir field: a coarse grid of velocities, deposited by the pointer and fading each frame ----
   let GW = 96, GH = 32, vx, vy, velBytes, energy = 0;
@@ -167,13 +167,16 @@ void main(){
     gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, maskTex);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, letters(true));
     resetGrid();
-    // patterns are drawn at up to ~950px wide and scaled up by the GPU
+    // First pass: every pattern quickly at up to ~950px wide (stretched by the GPU); a second pass then
+    // redraws them at the screen's own resolution (see sharpen()) so hard edges don't look pixelated.
     const k = Math.min(1, 950 / size.w);
     pw = Math.max(2, Math.round(size.w * k)); ph = Math.max(2, Math.round(size.h * k));
-    const lineH = words.length ? words[0].h : size.h;
+    lineH = words.length ? words[0].h : size.h;
     const ppu = (lineH * k) / 500;                     // Pattinator's 500px height = one line of the name
     patTex.forEach((t) => t && gl.deleteTexture(t)); patTex = [];
     if (worker) worker.terminate();
+    sharpWorkers.forEach((w) => w.terminate()); sharpWorkers = [];
+    let got = 0;
     worker = new Worker(window.HERO_WORKER || "/js/hero-pattern-worker.js");
     const order = reduce ? [cur] : [...Array(N).keys()].sort((a, b) => ((a - cur + N) % N) - ((b - cur + N) % N));
     worker.onmessage = (e) => {
@@ -183,8 +186,38 @@ void main(){
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, pw, ph, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
       patTex[i] = t;
       if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
+      if (++got === order.length) { worker.terminate(); worker = null; sharpen(); }
     };
     worker.postMessage({ w: pw, h: ph, ppu, order, seed });
+  }
+
+  // Second pass: redraw each pattern at the screen's resolution (capped at 1800px wide to keep GPU memory
+  // modest), shared between a few workers, the pattern on screen and the next ones first. Same seed and
+  // same layout, so each swap is invisible apart from the sharper edges.
+  function sharpen() {
+    const ks = Math.min(size.dpr, 1800 / size.w);
+    const sw = Math.round(size.w * ks), shh = Math.round(size.h * ks);
+    if (sw <= pw * 1.15) return;                       // the first pass is already close to screen resolution
+    const ppu = (lineH * ks) / 500;
+    const order = reduce ? [cur] : [...Array(N).keys()].sort((a, b) => ((a - cur + N) % N) - ((b - cur + N) % N));
+    const n = Math.max(1, Math.min(4, (navigator.hardwareConcurrency || 2) - 1, order.length));
+    for (let w = 0; w < n; w++) {
+      const mine = order.filter((_, j) => j % n === w);
+      const wk = new Worker(window.HERO_WORKER || "/js/hero-pattern-worker.js");
+      let left = mine.length;
+      wk.onmessage = (e) => {
+        const { i, px } = e.data;
+        gl.activeTexture(gl.TEXTURE0);
+        const t = tex();
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, sw, shh, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
+        if (patTex[i]) gl.deleteTexture(patTex[i]);
+        patTex[i] = t;
+        wake();
+        if (--left === 0) wk.terminate();
+      };
+      wk.postMessage({ w: sw, h: shh, ppu, order: mine, seed });
+      sharpWorkers.push(wk);
+    }
   }
 
   // ---- changing pattern ---------------------------------------------------------
