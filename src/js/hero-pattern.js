@@ -55,7 +55,9 @@ void main(){
   vec2 curl = vec2(fbm(q * 3.0 + vec2(0.0, time * 0.15)), fbm(q * 3.0 + vec2(5.2, 1.3) - time * 0.15)) - 0.5;
   vec2 d = -stir * (vel * 0.12 + curl * e * 0.22) / asp;   // sample behind the motion, so paint moves with the pointer
   // ambient: a constant, slow, gentle flow so the name is visibly alive even when nobody touches it
-  vec2 af = (vec2(fbm(q * 1.3 + vec2(time * 0.045, 0.0)), fbm(q * 1.3 + vec2(7.7, -time * 0.038))) - 0.5) * ambient * 0.035 / asp;
+  // local ripples (finer, faster) layered on a slow wide drift, so parts of each letter move against each other
+  vec2 af = ((vec2(fbm(q * 2.6 + vec2(time * 0.24, -time * 0.09)), fbm(q * 2.6 + vec2(7.7 - time * 0.11, time * 0.2))) - 0.5) * 0.05
+           + (vec2(fbm(q * 0.9 + vec2(time * 0.1, 0.0)), fbm(q * 0.9 + vec2(3.1, -time * 0.09))) - 0.5) * 0.035) * ambient / asp;
   d += af;
   // melt: only the outgoing pattern melts, more and more as it gives way; the incoming one arrives crisp
   float m = melt * smoothstep(0.0, 1.0, p);
