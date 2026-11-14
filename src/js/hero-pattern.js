@@ -33,8 +33,9 @@
   glc.setAttribute("aria-hidden", "true");
   const gl = glc.getContext("webgl", { premultipliedAlpha: true, alpha: true, antialias: false });
   if (!gl) return;                                      // the CSS still frame stays
-  const outline = document.createElement("canvas");
-  outline.className = "hero-canvas";
+  const outline = document.createElement("div");      // outline: a colour layer masked to the letters' edges
+  outline.className = "hero-canvas hero-edge";
+  const edgeCol = [];
   outline.setAttribute("aria-hidden", "true");
 
   // ---- shader ---------------------------------------------------------------
@@ -185,7 +186,7 @@ void main(){
     g.scale(size.dpr, size.dpr); g.font = size.font;
     if ("letterSpacing" in g) g.letterSpacing = size.ls;
     g.textBaseline = "alphabetic"; g.lineJoin = "round";
-    if (fill) g.fillStyle = "#fff"; else { g.strokeStyle = "rgba(243, 239, 228, 0.55)"; g.lineWidth = 1.5; }
+    if (fill) g.fillStyle = "#fff"; else { g.strokeStyle = "#fff"; g.lineWidth = 2; }
     for (const w of words) {
       const mt = g.measureText(w.text);
       const asc = mt.fontBoundingBoxAscent ?? mt.actualBoundingBoxAscent, desc = mt.fontBoundingBoxDescent ?? mt.actualBoundingBoxDescent;
@@ -200,7 +201,9 @@ void main(){
     for (const c of [glc, outline]) { c.style.width = `${size.w}px`; c.style.height = `${size.h}px`; }
     glc.width = Math.round(size.w * size.dpr); glc.height = Math.round(size.h * size.dpr);
     gl.viewport(0, 0, glc.width, glc.height);
-    const o = letters(false); outline.width = o.width; outline.height = o.height; outline.getContext("2d").drawImage(o, 0, 0);
+    const o = letters(false), url = `url(${o.toDataURL()})`;
+    outline.style.webkitMaskImage = outline.style.maskImage = url;
+    outline.style.webkitMaskSize = outline.style.maskSize = "100% 100%";
     gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, maskTex);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, letters(true));
     resetGrid();
@@ -218,12 +221,12 @@ void main(){
     const order = reduce ? [cur] : [...Array(N).keys()].sort((a, b) => ((a - cur + N) % N) - ((b - cur + N) % N));
     const gen = genId = (genId || 0) + 1;
     worker.onmessage = (e) => {
-      const d = e.data, i = d.i;
+      const d = e.data, i = d.i; if (d.edge) edgeCol[i] = d.edge;
       toSource(d, pw, ph).then((src) => {
         if (gen !== genId) return;                     // resized since: stale
         if (patTex[i]) gl.deleteTexture(patTex[i]);
         patTex[i] = upload(src, pw, ph);
-        if (i === cur) { h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
+        if (i === cur) { setEdge(cur, 0); h1.append(glc, outline); h1.classList.add("is-live"); frame(performance.now()); schedule(); wake(); }
       }).catch(() => {}).finally(() => {
         if (++got === order.length && gen === genId) { if (worker) worker.terminate(); worker = null; sharpen(); }
       });
@@ -247,7 +250,7 @@ void main(){
       let left = mine.length;
       const gen = genId;
       wk.onmessage = (e) => {
-        const d = e.data, i = d.i;
+        const d = e.data, i = d.i; if (d.edge) edgeCol[i] = d.edge; if (d.edge) edgeCol[i] = d.edge;
         if (--left === 0) wk.terminate();
         toSource(d, sw, shh).then((src) => {
           if (gen !== genId) return;
@@ -289,6 +292,12 @@ void main(){
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     return snaps[snapI];
   }
+  // the outline fades to the incoming pattern's colour over the first part of each change
+  function setEdge(i, ms) {
+    if (!edgeCol[i]) return;
+    outline.style.transition = ms ? `background-color ${Math.round(ms)}ms ease-out` : "none";
+    outline.style.backgroundColor = edgeCol[i];
+  }
   function advance(byClick, at) {
     if (reduce) return;
     const now = performance.now();
@@ -306,6 +315,7 @@ void main(){
     }
     org = at || [Math.random(), Math.random()];
     nxt = n; p = 0; tStart = now; dur = d;
+    setEdge(n, d * 0.6);
     wake();
   }
 

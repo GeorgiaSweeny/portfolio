@@ -92,6 +92,7 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .hero-name .w { display: inline-block; }
 .hero-name.is-live { background: none; -webkit-text-fill-color: transparent; }
 .hero-canvas { position: absolute; left: 0; top: 0; pointer-events: none; }
+.hero-edge { -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
 .hero .positioning { font: 400 20px/1.3 var(--heading); letter-spacing: -0.015em; color: var(--on-night); max-width: 26ch; }
 .hero-caption { font: 13px/1.5 var(--mono); color: var(--on-night-2); max-width: 46ch; }
 .hero-caption a { color: var(--on-night); }

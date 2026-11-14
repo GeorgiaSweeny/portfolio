@@ -111,11 +111,18 @@ export function drawVector(index, w, h, ppu, seed) {
   return { svg, k, wrap };
 }
 
+// Outline colour per pattern: the lightest colour in its own palette (Georgia's picks for Ink Bloom,
+// Overlook Diamonds and Magenta Rosette all follow this rule), unless a preset sets `edge`.
+const lum = (h) => hex(h).map((v) => v / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4))
+  .reduce((s, v, k) => s + v * [0.2126, 0.7152, 0.0722][k], 0);
+export const EDGES = PRESETS.map((p) => p.edge || [...p.colours].sort((a, b) => lum(b) - lum(a))[0]);
+
 self.onmessage = (e) => {
   const { w, h, ppu, order, seed } = e.data;
   for (const i of order) {
-    if (PRESETS[i].svg) { postMessage({ i, ...drawVector(i, w, h, ppu, seed) }); continue; }
+    const edge = EDGES[i];
+    if (PRESETS[i].svg) { postMessage({ i, edge, ...drawVector(i, w, h, ppu, seed) }); continue; }
     const px = drawFrame(i, w, h, ppu, seed);
-    postMessage({ i, px }, [px.buffer]);
+    postMessage({ i, edge, px }, [px.buffer]);
   }
 };
