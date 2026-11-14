@@ -259,21 +259,28 @@ void main(){
     clearTimeout(timer);
     if (!reduce && cfg.interval > 0) timer = setTimeout(advance, cfg.interval);
   }
+  let dur = 0, queued = false;
   function advance() {
     if (reduce) return;
-    if (nxt !== -1) { cur = nxt; nxt = -1; p = 0; }     // mid-change: finish it at once, then start the next
+    if (nxt !== -1) {                                   // mid-change: hurry it to the end (~0.35s), then play the next in full
+      if (!queued) { queued = true; const now = performance.now(); dur = 350; tStart = now - p * dur; }
+      return;
+    }
     let n = (cur + 1) % N, tries = 0;
     while (!patTex[n] && tries++ < N) n = (n + 1) % N;  // skip any not drawn yet
     if (!patTex[n] || n === cur) return schedule();
-    nxt = n; p = 0; tStart = performance.now(); wake();
+    clearTimeout(timer);
+    nxt = n; p = 0; tStart = performance.now();
+    dur = cfg.transition === "fade" ? Math.min(900, cfg.duration) : cfg.duration;
+    wake();
   }
 
   // ---- drawing ---------------------------------------------------------------------
   let running = false, visible = true;
   function frame(now) {
     if (nxt !== -1) {
-      p = Math.min(1, (now - tStart) / (cfg.transition === "fade" ? Math.min(900, cfg.duration) : cfg.duration));
-      if (p >= 1) { cur = nxt; nxt = -1; p = 0; schedule(); }
+      p = Math.min(1, Math.max(0, (now - tStart) / dur));
+      if (p >= 1) { cur = nxt; nxt = -1; p = 0; if (queued) { queued = false; advance(); } else schedule(); }
     }
     uploadVel();
     gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, patTex[cur]);
