@@ -51,6 +51,9 @@ export const PRESETS = [
     params: { tileShape: "square", tones: "3", tileSize: 99.2, scale: 0.354, segments: 4, frequency: 1, lineWidth: 0.15, rotation: 0 } },
   { name: "Tropical Bones", gen: escher, svg: escherSvg, size: 1.5, colours: ["#fd7f58", "#ffeeb3", "#f04790", "#fddddd", "#a7e633"],
     params: { tileShape: "square", tones: "5", tileSize: 88, scale: 0.48, segments: 8, frequency: 6, lineWidth: 0.0954, rotation: 22.5, baseShape: "square", bumpAmp: 10.97, bumpType: "wave" } },
+  // Georgia's export escher-translation (1), 14 Nov: wavy hexagon stars in yellow, teal and sky
+  { name: "Sky Stars", gen: escher, svg: escherSvg, size: 1.5, colours: ["#fbc604", "#10afb1", "#8cc5e8", "#e5f9ff"],
+    params: { baseShape: "hexagon", bumpType: "wave", tones: "4", tileSize: 52, bumpAmp: 13.73 } },
   { name: "Amber Weave", gen: recursive, svg: recursiveSvg, size: 2.5, kind: "wrap", colours: ["#ffc23d", "#fd8e26"],
     params: { mode: "grid", depth: 3, subdivisions: 4 } },
 ];
