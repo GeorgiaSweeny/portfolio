@@ -37,9 +37,9 @@ export const PRESETS = [
     params: { numCells: 60.5, tones: "3", tileSize: 196.8, scale: 0.3876, segments: 7, frequency: 4, lineWidth: 0.0198, rotation: 0, randomRotation: 0 } },
   { name: "Gilded Cluster", gen: voronoiIslamicV2, size: 1.5, kind: "cells", colours: ["#2a6564", "#bdc369", "#5fb498"],
     params: { numCells: 69.5, tones: "3", tileSize: 118.4, scale: 0.3148, segments: 8, frequency: 2, lineWidth: 0.0352, rotation: 0, randomRotation: 0 } },
-  // Drawn 2x with a slightly heavier line (0.0744 -> 0.095) so it reads in the letters (Georgia, 14 Nov)
-  { name: "Emerald Hex Bloom", gen: islamic, size: 2, colours: ["#05665a", "#6cc94a", "#f5c414", "#ffffff"],
-    params: { tileShape: "hexagon", tones: "4", tileSize: 49.6, scale: 0.2868, segments: 8, frequency: 1, lineWidth: 0.095, rotation: 0 } },
+  // Georgia's export islamic-rosette (2), 14 Nov: cream six-point rosettes (replaces Emerald Hex Bloom)
+  { name: "Cream Rosette", gen: islamic, size: 1.5, colours: ["#f9eed7", "#c36213"],
+    params: { tileShape: "hexagon", tones: "2", tileSize: 72, scale: 0.4324, segments: 6, frequency: 1, lineWidth: 0.0688, rotation: 0 } },
   { name: "Overlook Diamonds", gen: islamic, size: 1.5, colours: ["#493127", "#9d0b0b", "#da6110"],
     params: { tileShape: "square", tones: "3", tileSize: 99.2, scale: 0.354, segments: 4, frequency: 1, lineWidth: 0.15, rotation: 0 } },
   { name: "Tropical Bones", gen: escher, size: 1.5, colours: ["#fd7f58", "#ffeeb3", "#f04790", "#fddddd", "#a7e633"],
