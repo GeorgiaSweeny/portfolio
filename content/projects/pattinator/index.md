@@ -6,7 +6,7 @@ disciplines:
 order: 1
 role: Designer and Developer
 pitch: 'The tool behind the pattern in my name at the top of this page: my MSc research into one shared language for random and rule-based design.'
-outcome: The pattern vocabulary fitted all nine generators tested, and two user studies with 25 people found a small but real gain in understanding.
+outcome: A shared pattern vocabulary that fitted all nine generators tested, and combined existing rule sets into new hybrid patterns.
 intro: 'What if every pattern, from random noise to perfect geometric tilings, could be described in one shared vocabulary? That was the question behind my MSc Computer Science dissertation at Bristol. Nine pattern generators, from the randomness of Perlin noise to the strict geometry of Islamic star patterns, were built from one shared set of building blocks, and a handful of ways of combining them fitted every one. Pattinator (“pattern” plus “combinator”, the programming term for those ways of combining) is the web app that shows it: each pattern laid out as connected nodes, stage by stage, so learners with no coding background can see how it’s made and change it. It grew out of my earlier Islamic Pattern Generator, a Houdini tool limited to one family of patterns; writing the algorithms in code instead opened up the whole spectrum.'
 cardImage: preview.jpg
 showcase:
@@ -17,7 +17,7 @@ showcase:
 facts:
   role: Interface and interaction design, the visual workflow, and the pattern library. I ran the research, designed the node-graph UI, and built the app.
   tools: React, React Flow, JavaScript (SVG and Canvas rendering). Claude Code for AI-assisted review.
-  outcome: Two user studies with 25 participants found a small but real gain in understanding, largest in concepts taught by changing a setting and watching the pattern respond.
+  outcome: The vocabulary accounted for all nine generators, from random noise to Islamic star patterns, and combining existing rule sets produced new hybrid patterns that shift smoothly between their parents as the settings change. Two user studies with 25 participants also found a small but real gain in understanding.
 links:
   - label: Open the live app
     url: https://georgiasweeny.github.io/pattinator/
