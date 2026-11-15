@@ -8,41 +8,37 @@ npm start              # local preview at http://localhost:8080, drafts included
 npm run build          # production build into _site/ (drafts left out)
 npm run build:drafts   # production build with drafts
 npm run build:hero     # rebuild the hero pattern worker after editing tools/hero-pattern/
+npm run check          # build, then list any content that appears nowhere on the site
+npm run images -- <id> # make web copies of a project's originals (see ADDING-CONTENT.md)
 ```
 
-## Where things live
+## Content and site design
+
+`content/` holds the **content**: projects (one folder each, with their images and clips), the
+profile, About, CV, artworks and the three featured projects. Everything else is the **site
+design**, which a redesign replaces.
+
+- [CONTENT.md](CONTENT.md): every content field, what it means and whether it's required.
+- [ADDING-CONTENT.md](ADDING-CONTENT.md): adding a project, the web copy rules for images and clips.
+- [REDESIGN.md](REDESIGN.md): how redesigns work, the checklist and the site design log.
+- [docs/adr/](docs/adr/): why it's set up this way.
+
+## Where the site design lives
 
 | What | Where |
 | --- | --- |
-| A project (card + page) | `src/projects/<slug>.md`: front matter only; page at `/projects/<slug>/` |
+| Pages and templates | `src/*.njk`, `src/_includes/`; project pages from `src/project-pages.njk` |
+| Reading and checking content | `src/_lib/content.js` (templates get `projects`, `featured`, `profile`, `about`, `cv`, `artworks`) |
+| Site settings and how this design shows things | `src/_data/design.js` (domain, Turnstile key, analytics, Personal Work switch, feature card modes, gallery row heights) |
 | Disciplines (filter pages `/projects/<slug>/`) | `src/_data/disciplineList.js` |
-| Status tag, positioning line, social links, Turnstile key | `src/_data/site.js` |
-| Shared profile (About + CV + PDF CV) | `src/_data/profile.js` |
-| About: stats, skills, timeline | `src/_data/about.js` |
-| Public CV | `src/_data/cv.js`; drop the PDF at `src/static/cv/georgia-sweeny-cv.pdf` and the Download PDF buttons appear |
-| Personal Work artworks | `src/_data/artworks.js` |
-| Image masters | `src/images/` (one large file per image; the build makes AVIF/WebP/JPEG at several widths) |
+| Content this design leaves out on purpose | `src/not-shown.yaml` |
 | Styles / script | `src/css/site.css`, `src/js/site.js` |
-| Hero pattern (Home) | `src/js/hero-pattern.js` (blends between patterns, follows the cursor, random start and seed per visit); frames drawn by `src/js/hero-pattern-worker.js`, built from `tools/hero-pattern/worker-src.js` and Pattinator's own generators in `tools/hero-pattern/pattinator/`. The eight patterns (Georgia's gallery presets, random → rule-based) are `PRESETS` in `worker-src.js`; if you change how many there are, change `N` in `hero-pattern.js` too. No-JS still and wordmark fill: `src/assets/hero-still.jpg` (Gilded Cluster, `node tools/hero-pattern/still.mjs`) |
+| Hero pattern (Home) | `src/js/hero-pattern.js` (blends between patterns, stirred by the cursor, random start and seed per visit); frames drawn by `src/js/hero-pattern-worker.js`, built from `tools/hero-pattern/worker-src.js` and Pattinator's own generators in `tools/hero-pattern/pattinator/`. The patterns (Georgia's gallery presets, random → rule-based) are `PRESETS` in `worker-src.js`; if you change how many there are, change `N` in `hero-pattern.js` too. No-JS still and wordmark fill: `src/assets/hero-still.jpg` (Gilded Cluster, `node tools/hero-pattern/still.mjs`) |
+| Default link-preview image | `src/_images/pat-banner.jpg` |
 | Contact page (form) | `src/contact.njk` + `src/_includes/partials/contact.njk`; every other page ends with `partials/contact-band.njk` |
 | Security headers | `src/static/_headers` |
 | Contact form backend | `worker/index.js`, configured in `wrangler.jsonc` |
-| Show Personal Work to visitors | `showPersonalWork: true` in `src/_data/site.js` |
-
-### Adding a project
-
-Copy an existing file in `src/projects/`, rename it (the file name is the URL), and fill in the
-front matter. `draft: true` keeps it off the live site.
-
-Home shows exactly three featured projects as feature cards: give a project `featured: <1-3>` and a
-`feature:` block (`mode`: `bleed` for full-screen video/image, `range` for a drifting row of images,
-`stage` for a smaller clip beside the words; `line`: its one line; `video`/`poster` or `images`).
-
-### Images
-
-Put the largest sensible version (about 2400px wide, JPEG) in `src/images/` and refer to it by
-file name. Never crop gallery images to fit: galleries match image heights instead (`imgH` on a
-gallery sets the row height). Card images are cropped 4:3, so keep the subject centred.
+| Running an old version | `tools/view-old-site.sh <tag>` |
 
 © Georgia Sweeny. All artwork and designs in this repository are my own work and may not be
 reproduced without permission.

@@ -2,29 +2,36 @@
 layout: layouts/base.njk
 ---
 {%- from "partials/icons.njk" import icon -%}
+{#- Expects `project` (from content/, via project-pages.njk). #}
+{%- set p = project %}
+{%- set blocks = p.blocks %}
+{%- set small = design.smallVideos %}
 {#- The first block, if it's a full-size video, is the project's feature video: it sits beside the description. #}
-{%- set fv = blocks[0] if (blocks and blocks.length and blocks[0].type == "video" and blocks[0].size != "small") else false %}
-{%- set keyImage = cardImage if not (heroVideo or fv) else false %}
+{%- set fv = blocks[0] if (blocks.length and blocks[0].type == "video" and not (blocks[0].youtube in small)) else false %}
+{#- Otherwise a showcase clip plays beside the description; failing that, the card image. #}
+{%- set heroVideo = p.showcase if (p.showcase and p.showcase.video and not fv) else false %}
+{%- set ownToolNote = p.ownToolNote %}
+{%- set keyImage = p.cardImage if not (heroVideo or fv) else false %}
 {%- set hasSide = heroVideo or fv or ownToolNote or keyImage %}
 <main id="main" class="proj-main">
   <div class="proj-open"><div class="wrap">
     <div class="proj-top{% if hasSide %} has-side{% else %} solo{% endif %}">
       <div class="proj-intro">
         <header>
-          <p class="meta">{{ disciplines | disciplineLabels }} <span>· {{ year }}</span></p>
-          <h1>{{ title }}</h1>
-          <p class="proj-role">{{ role }}</p>
-          <p class="intro">{{ intro }}</p>
-          {%- if ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
+          <p class="meta">{{ p.disciplines | disciplineLabels }} <span>· {{ p.year }}</span></p>
+          <h1>{{ p.title }}</h1>
+          <p class="proj-role">{{ p.role }}</p>
+          <p class="intro">{{ p.intro }}</p>
+          {%- if p.ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
         </header>
         <dl class="facts">
-          <div><dt>My Role</dt><dd>{{ facts.role }}</dd></div>
-          <div><dt>Tools</dt><dd>{{ facts.tools }}</dd></div>
-          <div><dt>Outcome</dt><dd>{{ facts.outcome }}</dd></div>
+          <div><dt>My Role</dt><dd>{{ p.facts.role }}</dd></div>
+          <div><dt>Tools</dt><dd>{{ p.facts.tools }}</dd></div>
+          <div><dt>Outcome</dt><dd>{{ p.facts.outcome }}</dd></div>
         </dl>
-        {%- if links %}
+        {%- if p.links %}
         <p class="links">
-          {%- for l in links %}
+          {%- for l in p.links %}
           <a class="btn{% if not loop.first or l.youtube %} outline{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">{% if l.youtube %}{{ icon("youtube") }}{% endif %}{{ l.label }}</a>
           {%- endfor %}
         </p>
@@ -37,7 +44,7 @@ layout: layouts/base.njk
       {%- endif %}
       {%- if fv %}
       <figure class="video-fig feature">
-        <div class="video" data-youtube="{{ fv.youtube }}" data-title="{{ fv.label }}: {{ title }}">
+        <div class="video" data-youtube="{{ fv.youtube }}" data-title="{{ fv.label }}: {{ p.title }}">
           {% image fv.poster, "", "(min-width: 1100px) 560px, (min-width: 700px) 42vw, 100vw" %}
           <button type="button" aria-label="{{ fv.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ fv.label }}</button>
         </div>
@@ -47,8 +54,10 @@ layout: layouts/base.njk
       {%- if heroVideo %}
       <figure class="proj-media">
         <video autoplay muted loop playsinline preload="metadata" poster="{% imageFull heroVideo.poster %}" aria-label="{{ heroVideo.alt }}" data-autoplay>
-          <source src="{{ heroVideo.webm }}" type="video/webm">
-          <source src="{{ heroVideo.mp4 }}" type="video/mp4">
+          {%- if heroVideo.webm %}
+          <source src="{{ heroVideo.webm | mediaUrl }}" type="video/webm">
+          {%- endif %}
+          <source src="{{ heroVideo.video | mediaUrl }}" type="video/mp4">
         </video>
       </figure>
       {%- endif %}
@@ -57,8 +66,8 @@ layout: layouts/base.njk
         <p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>
         <p class="serif">{{ ownToolNote }}</p>
         <div class="pills">
-          {%- for l in ownToolLinks %}
-            {%- set target = collections.projects | projectBySlug(l.project) %}
+          {%- for l in p.ownToolLinks %}
+            {%- set target = projects | projectBySlug(l.project) %}
             {%- if target %}<a class="pill" href="{{ target.url }}">{{ l.label }} →</a>{% endif %}
           {%- endfor %}
         </div>
@@ -73,20 +82,22 @@ layout: layouts/base.njk
     {%- asyncEach b in blocks %}
       {%- if fv and loop.index0 == 0 %}{# feature video already shown beside the description #}
       {%- elif b.type == "video" %}
-      {#- size: small = a secondary clip, about half width on desktop, with an optional caption #}
+      {#- design.smallVideos = secondary clips, about half width on desktop, with an optional caption #}
+      {%- set isSmall = b.youtube in small %}
       {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
-      <figure class="video-fig{% if b.size == 'small' %} small{% endif %}">
-        <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ title }}">
-          {% image b.poster, "", ("(min-width: 1100px) 640px, 100vw" if b.size == "small" else "(min-width: 1328px) 1328px, 100vw") %}
+      <figure class="video-fig{% if isSmall %} small{% endif %}">
+        <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ p.title }}">
+          {% image b.poster, "", ("(min-width: 1100px) 640px, 100vw" if isSmall else "(min-width: 1328px) 1328px, 100vw") %}
           <button type="button" aria-label="{{ b.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ b.label }}</button>
         </div>
         {%- if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
       </figure>
       {%- elif b.type == "gallery" %}
         {%- if b.heading %}<h2 class="gallery-h">{{ b.heading }}</h2>{% endif %}
-        <div class="gallery"{% if b.imgH %} style="--img-h:{{ b.imgH }}px"{% endif %}>
+        {%- set imgH = (design.galleryHeights[p.id] or {})[b.heading] %}
+        <div class="gallery"{% if imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
           {%- asyncEach im in b.images %}
-          <figure{% if im.span %} class="{{ im.span }}"{% endif %} style="--ar:{% imageRatio im.src %}">
+          <figure{% if im.emphasis == "key" %} class="key"{% endif %} style="--ar:{% imageRatio im.src %}">
             <a href="{% imageFull im.src %}" data-lightbox>{% image im.src, im.alt, "(min-width: 1100px) 50vw, (min-width: 700px) 60vw, 100vw" %}</a>
             {%- if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
           </figure>
@@ -95,12 +106,11 @@ layout: layouts/base.njk
       {%- endif %}
     {%- endeach %}
 
-    {{ content | safe }}
 
-    {%- set nb = collections.projects | neighbours(page.url) %}
+    {%- set nb = projects | neighbours(page.url) %}
     <nav class="pager" aria-label="More projects">
-      <a href="{{ nb.prev.url }}">← {{ nb.prev.data.title }}</a>
-      <a href="{{ nb.next.url }}">{{ nb.next.data.title }} →</a>
+      <a href="{{ nb.prev.url }}">← {{ nb.prev.title }}</a>
+      <a href="{{ nb.next.url }}">{{ nb.next.title }} →</a>
     </nav>
   </div></div>
 </main>

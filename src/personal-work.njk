@@ -32,11 +32,11 @@ description: "Paintings, commissions and objects Georgia Sweeny makes for hersel
       {%- endfor %}
     </div>
     {%- endif %}
-    {%- set personalProjects = collections.projects | inDiscipline("personal-work") %}
+    {%- set personalProjects = projects | inDiscipline("personal-work") %}
     {%- if personalProjects.length %}
     <div class="related">
       <span class="note">Personal projects</span>
-      {%- for p in personalProjects %}<a class="pill" href="{{ p.url }}">{{ p.data.title }} →</a>{% endfor %}
+      {%- for p in personalProjects %}<a class="pill" href="{{ p.url }}">{{ p.title }} →</a>{% endfor %}
     </div>
     {%- endif %}
   </div>

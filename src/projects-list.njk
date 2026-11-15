@@ -12,7 +12,7 @@ eleventyComputed:
   title: "{% if current.slug %}{{ current.label }} Projects{% else %}Projects{% endif %}"
 ---
 {%- from "partials/icons.njk" import icon -%}
-{%- set list = collections.projects | inDiscipline(current.slug) %}
+{%- set list = projects | inDiscipline(current.slug) %}
 <header class="page-head">
   <div class="wrap">
     <h1 class="cutout page-title">Projects</h1>

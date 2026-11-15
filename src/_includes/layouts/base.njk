@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="{{ site.lang }}" class="no-js">
+<html lang="{{ design.lang }}" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{%- set pageTitle = (title + " · " + site.name) if title and title != site.name else (site.name + " · Designer, Illustrator, Technical Artist") %}
-{%- set pageDesc = description or site.description %}
-{%- set canonical = page.url | absolute(site.url) %}
+{%- set pageTitle = (title + " · " + profile.name) if title and title != profile.name else (profile.name + " · Designer, Illustrator, Technical Artist") %}
+{%- set pageDesc = description or profile.description %}
+{%- set canonical = page.url | absolute(design.url) %}
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ pageDesc }}">
 <link rel="canonical" href="{{ canonical }}">
@@ -16,12 +16,12 @@
 <link rel="preload" href="/fonts/dela-gothic-one.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css?v={{ build.version }}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:site_name" content="{{ profile.name }}">
 <meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:description" content="{{ pageDesc }}">
 <meta property="og:url" content="{{ canonical }}">
-{%- set ogSrc = ogImage or cardImage or "pat-banner.jpg" %}
-<meta property="og:image" content="{{ site.url }}{% ogImage ogSrc %}">
+{%- set ogSrc = ogImage or cardImage or "src/_images/pat-banner.jpg" %}
+<meta property="og:image" content="{{ design.url }}{% ogImage ogSrc %}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -43,8 +43,8 @@
 {%- if section == "home" %}
 <script src="/js/hero-pattern.js?v={{ build.version }}" defer></script>
 {%- endif %}
-{%- if site.analyticsToken %}
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analyticsToken }}"}'></script>
+{%- if design.analyticsToken %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ design.analyticsToken }}"}'></script>
 {%- endif %}
 </body>
 </html>

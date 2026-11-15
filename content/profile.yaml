@@ -1,0 +1,19 @@
+# Who Georgia is, in a few lines. Used wherever the site design needs them.
+name: Georgia Sweeny
+# Status tag. Once in a job, change it to e.g. "Now at …" and set open: false.
+status:
+  text: Open to work · London area
+  open: true
+# Rough location only, never an address.
+location: London area
+positioning: I craft beautiful things by hand and engineer the tools to make more of them.
+roles:
+  - Designer
+  - Illustrator
+  - Technical Artist
+# The site's default description for search engines and link previews.
+description: 'Georgia Sweeny: designer, illustrator and technical artist. I craft beautiful things by hand and engineer the tools to make more of them.'
+social:
+  linkedin: https://www.linkedin.com/in/georgia-sweeny
+  github: https://github.com/GeorgiaSweeny
+  youtube: https://www.youtube.com/@georgia-sweeny

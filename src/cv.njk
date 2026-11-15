@@ -9,16 +9,16 @@ description: "Georgia Sweeny’s CV: designer, illustrator and technical artist.
   <div class="wrap">
     <div class="cv-head">
       <h1 class="cutout page-title">CV</h1>
-      <p class="cv-meta"><span>London area</span><a href="{{ site.social.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a><a href="{{ site.social.github }}" rel="me noopener" target="_blank">GitHub</a><a href="/contact/">Get in touch</a></p>
+      <p class="cv-meta"><span>{{ profile.location }}</span><a href="{{ profile.social.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a><a href="{{ profile.social.github }}" rel="me noopener" target="_blank">GitHub</a><a href="/contact/">Get in touch</a></p>
       <nav class="cv-jump" aria-label="CV sections">
         <div class="links">{% for s in cv.sections %}<a href="#cv-{{ s | lower }}">{{ s }}</a>{% endfor %}</div>
         {%- if features.cvPdf %}
-        <a class="dl-round" href="{{ site.cvPdf }}" aria-label="Download my CV as a PDF" download>{{ icon("download") }}</a>
-        <a class="btn" href="{{ site.cvPdf }}" download>{{ icon("download") }}Download PDF</a>
+        <a class="dl-round" href="{{ design.cvPdfUrl }}" aria-label="Download my CV as a PDF" download>{{ icon("download") }}</a>
+        <a class="btn" href="{{ design.cvPdfUrl }}" download>{{ icon("download") }}Download PDF</a>
         {%- endif %}
       </nav>
-      <p class="cv-profile">{{ profile.opening }} {{ profile.rest | join(" ") }}</p>
-      {%- if features.cvPdf %}<a class="btn" href="{{ site.cvPdf }}" download>{{ icon("download") }}Download PDF</a>{% endif %}
+      <p class="cv-profile">{{ about.bio | join(" ") }}</p>
+      {%- if features.cvPdf %}<a class="btn" href="{{ design.cvPdfUrl }}" download>{{ icon("download") }}Download PDF</a>{% endif %}
     </div>
 
     <div class="cv-body">
@@ -31,7 +31,7 @@ description: "Georgia Sweeny’s CV: designer, illustrator and technical artist.
         </section>
         <section class="cv-sec loose" id="cv-projects"><h2>Projects</h2>
           {%- for p in cv.projects %}
-          {%- set target = collections.projects | projectBySlug(p.project) %}
+          {%- set target = projects | projectBySlug(p.project) %}
           <div class="cv-item"><p class="row"><span>{% if target %}<a class="t" href="{{ target.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %} <span class="sub">– {{ p.sub }}</span></span><span class="yrs">{{ p.years }}</span></p>
             {%- if p.tools %}<p class="tools">Tools: {{ p.tools }}</p>{% endif %}
             <ul class="b">{% for b in p.points %}<li>{{ b }}</li>{% endfor %}</ul></div>

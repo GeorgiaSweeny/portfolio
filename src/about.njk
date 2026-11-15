@@ -10,11 +10,11 @@ description: "About Georgia Sweeny: seven years running an illustration and gree
       <div class="portrait"><div class="inner">{% include "partials/portrait.html" %}</div></div>
       <div class="text">
         <h1 class="cutout page-title">About</h1>
-        <p class="positioning">{{ site.positioning }}</p>
-        <p class="roles">{{ site.roles | join(" · ") }}</p>
-        <ul class="about-facts">{% for s in about.stats %}<li><strong>{{ s.big }}</strong> {{ s.small }}</li>{% endfor %}</ul>
-        {#- The positioning line sits just above, so the profile's opening sentence (the same line) is left out here. #}
-        <div class="paras">{% for t in profile.rest %}<p>{{ t }}</p>{% endfor %}</div>
+        <p class="positioning">{{ profile.positioning }}</p>
+        <p class="roles">{{ profile.roles | join(" · ") }}</p>
+        <ul class="about-facts">{% for s in about.facts %}<li><strong>{{ s.value }}</strong> {{ s.label }}</li>{% endfor %}</ul>
+        {#- The positioning line sits just above, so the bio's opening sentence (the same line) is left out here. #}
+        <div class="paras">{% for t in about.bio.slice(1) %}<p>{{ t }}</p>{% endfor %}</div>
         <a class="btn" href="/cv/">Read my CV</a>
       </div>
     </div>

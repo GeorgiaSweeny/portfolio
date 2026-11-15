@@ -6,7 +6,10 @@
     "start": "eleventy --serve",
     "build": "eleventy",
     "build:drafts": "SHOW_DRAFTS=1 eleventy",
-    "build:hero": "esbuild tools/hero-pattern/worker-src.js --bundle --minify --format=iife --outfile=src/js/hero-pattern-worker.js"
+    "build:hero": "esbuild tools/hero-pattern/worker-src.js --bundle --minify --format=iife --outfile=src/js/hero-pattern-worker.js",
+    "check:coverage": "node tools/check-coverage.mjs",
+    "check": "eleventy && node tools/check-coverage.mjs",
+    "images": "node tools/web-images.mjs"
   },
   "author": "",
   "license": "ISC",

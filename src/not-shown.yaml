@@ -1,0 +1,9 @@
+# Content the Nov 2026 site design deliberately leaves out. The coverage check
+# (npm run check:coverage) fails on anything missing from the built site that
+# isn't listed here. Keys as the check prints them; * matches one project id.
+- key: projects.pattinator.outcomeLong
+  why: The longer outcome was for the retired flagship card; project cards use the short outcome.
+- key: projects.capturing-the-sun.ownToolLinks[2]
+  why: Links to the Moroccan Lamp, which is still a draft, so the link only appears in previews.
+- key: projects.*.showcase.alt
+  why: Feature cards on Home hide their clips from screen readers (the card's own text says it all); a project page shows the clip with its alt only when it has no feature video.

@@ -1,0 +1,11 @@
+---
+# One page per project in content/projects (drafts only in previews; see src/_lib/content.js).
+layout: layouts/project.njk
+section: projects
+pagination:
+  data: projects
+  size: 1
+  alias: project
+  addAllPagesToCollections: true
+permalink: "{{ project.url }}"
+---

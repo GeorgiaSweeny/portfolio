@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import site from "./site.js";
+import design from "./design.js";
 
 // Switches for things that aren't ready for visitors yet.
 // Local previews (`npm start`, `npm run build:drafts`) always show everything.
@@ -7,8 +7,8 @@ const preview = process.env.ELEVENTY_RUN_MODE === "serve" || process.env.SHOW_DR
 
 export default {
   preview,
-  // Personal Work page, nav link and filter: turn on in site.js (`showPersonalWork: true`).
-  personalWork: preview || site.showPersonalWork === true,
-  // Download PDF buttons appear by themselves once the PDF is in place.
-  cvPdf: fs.existsSync(`src/static${site.cvPdf}`),
+  // Personal Work page, nav link and filter: turn on in design.js (`showPersonalWork: true`).
+  personalWork: preview || design.showPersonalWork === true,
+  // Download PDF buttons appear by themselves once content/cv.pdf is in place.
+  cvPdf: fs.existsSync("content/cv.pdf"),
 };
