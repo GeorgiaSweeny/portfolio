@@ -23,7 +23,7 @@ experience:
     points:
       - Designed, produced and sold a range of 8 original illustrated greeting cards and prints, handling artwork, print-ready files, print production, stock and pricing; grew annual profit from ~£500 to ~£2,000 at its peak.
       - Pitched to the newly opened St Albans Museum + Gallery and became one of its first stocked local artists, with repeat orders for ~5 years; also stocked by St Albans Cathedral gift shop.
-      - A design licensed by the Mayor of St Albans as the official Christmas card (2018); designs licensed to the Addison’s Disease Self-Help Group for fundraising cards (2021 and 2022); featured in the St Albans Artists’ Calendar.
+      - A design chosen by the Mayor of St Albans as the official Christmas card (2018); the choir boys design licensed to the Addison’s Disease Self-Help Group for fundraising cards (2021 and 2022); featured in the St Albans Artists’ Calendar.
       - Ran my own marketing and sales through local social media groups, managing pre-orders, bulk orders and seasonal promotions.
   - title: Showroom Assistant – Farrow & Ball
     years: '2025'
@@ -45,9 +45,10 @@ projects:
     years: '2026'
     tools: React, React Flow, JavaScript (SVG and Canvas rendering)
     points:
-      - Designed and built a public web app that walks people through ten generative pattern algorithms step by step as an interactive node graph.
+      - Designed a shared pattern vocabulary that fitted all nine generators tested, from random noise to Islamic star patterns, and combined existing rule sets into new hybrid patterns.
+      - Built a public web app that walks people through each generator step by step as an interactive node graph.
       - Gathered requirements from 5 educators (primary school to workplace training) and prioritised scope with MoSCoW, tracing each feature back to user stories.
-      - Ran two pre/post user studies (25 participants, with a control group); average scores rose ~20% (6.8 to 8.2 out of 17) in the second study.
+      - Ran two pre/post user studies with 25 participants (a control group in the first); scores rose in both, from 6.8 to 8.2 out of 17 in the second.
   - title: The Abyss
     project: the-abyss
     sub: Collaborative Software Engineering Project

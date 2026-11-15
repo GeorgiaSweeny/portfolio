@@ -69,7 +69,7 @@ timeline:
     note: Distinction
   - year: '2018'
     title: The Mayor of St Albans’ official Christmas card
-    note: Design licensed by the Mayor
+    note: Design chosen by the Mayor
 ---
 Designer and illustrator who crafts beautiful things by hand and engineers the tools to make more of them.
 
