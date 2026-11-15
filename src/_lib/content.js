@@ -22,7 +22,7 @@ const SHAPES = {
   project: {
     title: reqText, year: { type: "year", req: true }, order: { type: "int", req: true }, draft: { type: "bool" },
     disciplines: { type: "list", req: true, of: { type: "discipline" } },
-    role: reqText, pitch: text, outcome: reqText, outcomeLong: text, intro: reqText, description: text,
+    role: reqText, featureText: text, outcome: reqText, outcomeLong: text, intro: reqText, description: text,
     cardImage: imageRef,
     showcase: { type: "shape", shape: "showcase" },
     facts: { type: "shape", shape: "facts", req: true },
@@ -179,7 +179,6 @@ export function loadContent() {
   const featured = featuredIds.map((id, i) => {
     const p = all.find((x) => x.id === id);
     if (!p) fail(`content/featured.yaml[${i + 1}]`, `no project folder called "${id}"`);
-    if (!p.pitch) fail(`content/projects/${id}/index.md`, "a featured project needs a pitch");
     if (!p.showcase) fail(`content/projects/${id}/index.md`, "a featured project needs showcase media");
     return p;
   }).filter((p) => showDrafts() || !p.draft);

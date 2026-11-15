@@ -29,7 +29,7 @@ ogImage: src/_images/pat-banner.jpg
         <p class="meta">{{ p.disciplines | disciplineLabels }} <span>· {{ p.year }}</span></p>
         <h3 id="ft-{{ p.id }}"><a href="{{ p.url }}">{{ p.title }}</a></h3>
         <p class="role">{{ p.role }}</p>
-        <p class="line">{{ p.pitch }}</p>
+        <p class="line">{{ p.featureText or p.outcome }}</p>
         <span class="go" aria-hidden="true">See the project{{ icon("arrow") }}</span>
       </div>
     </article>

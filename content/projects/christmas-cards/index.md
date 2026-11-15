@@ -5,7 +5,6 @@ disciplines:
   - illustration-print
 order: 2
 role: Illustrator, Designer and Seller
-pitch: My own card range for seven years, stocked by St Albans Museum + Gallery and the Cathedral shop, and licensed by the Mayor of St Albans.
 outcome: 'Eight designs: one won the St Albans Art Society Trophy, one became the Mayor’s official card, and the choir boys design was licensed by the Addison’s Disease Self-Help Group two years running.'
 intro: 'It began with the old Town Hall. I’d wanted to paint it for years, and when it reopened as St Albans Museum + Gallery, the painting became one of the first prints in its new gift shop, and then the Mayor of St Albans’ official Christmas card. From 2018 to 2020, my designs also won my school’s Christmas card competition three years running, and so many teachers asked for copies that I started selling prints. That gave me the confidence to approach local businesses and take commissions, and my own range grew to eight designs over seven years, painted by hand and digitally, every one inspired by St Albans.'
 cardImage: doorway.jpg

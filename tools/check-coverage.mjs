@@ -45,7 +45,7 @@ const addAll = (key, v) => {
 
 for (const p of c.projects) {
   const k = `projects.${p.id}`;
-  for (const f of ["title", "year", "role", "pitch", "outcome", "outcomeLong", "intro", "description", "ownToolNote"]) addText(`${k}.${f}`, p[f]);
+  for (const f of ["title", "year", "role", "featureText", "outcome", "outcomeLong", "intro", "description", "ownToolNote"]) addText(`${k}.${f}`, p[f]);
   addAll(`${k}.facts`, p.facts);
   (p.links ?? []).forEach((l, i) => { addText(`${k}.links[${i + 1}].label`, l.label); addRef(`${k}.links[${i + 1}].url`, l.url); });
   (p.ownToolLinks ?? []).forEach((l, i) => addText(`${k}.ownToolLinks[${i + 1}].label`, l.label));

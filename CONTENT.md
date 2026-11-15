@@ -41,8 +41,8 @@ only (between the two `---` lines). File names in it refer to files in the same 
 | `order` | yes | Position in project lists, 1 first. No two projects share a number. |
 | `draft` | no | `true` keeps the project off the live site; it still shows in previews. |
 | `role` | yes | The **project role**: Georgia's own part, in a few words ("Writer and Director"). |
-| `pitch` | yes* | One sentence **selling** the project: why look. Used wherever a site design needs a short teaser. |
-| `outcome` | yes | One sentence on **what came of it** (results), for project cards. |
+| `outcome` | yes | One sentence on **what came of it** (results), for project cards. Also the line on a feature card, unless `featureText` is set. |
+| `featureText` | no | A custom line for the project's feature card on Home, used instead of the outcome. Leave it out to show the outcome there too, so the project reads the same everywhere. |
 | `outcomeLong` | no | A longer version of the outcome. |
 | `intro` | yes | The opening paragraph: the brief, what she did, how it went. |
 | `description` | no | Text for search engines and link previews; the intro is used if left out. |
@@ -55,8 +55,8 @@ only (between the two `---` lines). File names in it refer to files in the same 
 | `ownToolLinks` | no | Projects to point to from that note: each `label` + `project` (a project id). |
 | `blocks` | no | The project's media, in order: galleries and videos (below). |
 
-\* `pitch` and `showcase` are required for the three featured projects now, and will be required
-for every project once the content pass has written them.
+\* `showcase` is required for the three featured projects, and will be required for every project
+once the content pass has picked them.
 
 ### `showcase`
 
@@ -113,7 +113,7 @@ A **video** is a film on YouTube, shown as its poster image until played:
 
 ## Featured projects: `content/featured.yaml`
 
-Exactly three project ids, in the order they appear. Each needs a `pitch` and `showcase`.
+Exactly three project ids, in the order they appear. Each needs `showcase` media; `featureText` is optional.
 
 ```yaml
 - capturing-the-sun

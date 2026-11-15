@@ -25,10 +25,9 @@ Website Portfolio/
    npm run images -- <id> --write "IMG_0412.jpg=storyboard-market"   # choose a name
    ```
 4. **Write `content/projects/<id>/index.md`**: copy another project's file as a start. Add
-   `draft: true` until it's ready to go live. Every project needs a pitch, an outcome and an intro,
+   `draft: true` until it's ready to go live. Every project needs an outcome and an intro,
    each doing a different job:
-   - **pitch**: why look (the hook);
-   - **outcome**: what came of it (results);
+   - **outcome**: what came of it (results), shown on project cards and feature cards;
    - **intro**: the context: the brief, what Georgia did, how it went.
 5. **Check**: `npm run check` builds the site and runs the coverage check. `npm start` previews it at
    http://localhost:8080 (drafts included).
@@ -36,7 +35,8 @@ Website Portfolio/
    (fast-forward `main`). Remove `draft: true` when it's ready.
 
 To feature a project on Home, put its id in `content/featured.yaml` (exactly three, in order) and
-make sure it has a `pitch` and `showcase`.
+make sure it has `showcase` media. Its feature card shows the outcome, or `featureText` if you
+want a different line there.
 
 ## Web copy rules
 

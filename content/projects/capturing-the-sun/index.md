@@ -6,7 +6,6 @@ disciplines:
   - 3d-interactive
 order: 3
 role: Writer and Director
-pitch: 'An original fable I wrote and storyboarded: a full animatic, plus a 3D previs of its world in Unreal Engine.'
 outcome: A complete pencil animatic, now on YouTube, and three lit previs environments in Unreal Engine.
 intro: 'Two proud philosophers, a wizened old woman and an impossible task: to capture a piece of the sun in three days. One hunts for riches, the other for a clever trick, but neither proves as wise as he claims. Inspired by Paulo Coelho’s The Alchemist, it started out as a pitch for my group’s shadow play in my first year and came back in my third year as my final major project, growing into a full storyboarded animatic with its characters developed further. Its world then took shape in 3D as a previs (a rough 3D version used to plan the film’s shots): three environments in Unreal Engine, modelled, textured and lit. The story is still in development as a side project.'
 cardImage: storyboard-market.jpg
