@@ -5,17 +5,17 @@ disciplines:
   - tools-software
 order: 9
 role: Tool Designer and Developer
-outcome: A Houdini tool that builds Islamic geometric patterns live from their traditional construction rules; its patterns went into the costumes, props and set of The Tale of Capturing the Sun.
-intro: 'My first project in Houdini (3D software built from networks of connected steps called nodes): a reusable digital asset that builds Islamic geometric patterns the way they are traditionally drawn, from a circle or polygon repeated, rotated and mirrored across square or hexagonal tiles. I based the steps on published shape grammar research and laid the controls out in that same order, so an artist who has never opened Houdini can design a pattern or a single motif and watch it update as they work. On The Tale of Capturing the Sun I used it to build the geometry of props and set pieces, to make textures and displacement and normal maps in Substance 3D Painter, and as line art in 2D illustrations. It later led to Pattinator.'
+outcome: A Houdini HDA that builds Islamic geometric patterns live from their traditional construction rules; I used its patterns across the props, set and costumes of The Tale of Capturing the Sun.
+intro: 'For centuries, Islamic geometric patterns were drawn by hand with a compass and a straightedge: a single shape, repeated and rotated across a tile until stars and rosettes emerge where the copies overlap. I wanted to keep that sense of discovery while giving artists a faster way to explore it. For my NCCA research project, my first in Houdini, I built a digital asset that follows the traditional construction in order (the tile, the first shape, then the shape grammar rules that turn it into a motif) and redraws the pattern live with every change. Push the copies past the edge of the tile and they interlace into shapes no one planned; I kept that freedom rather than locking the controls down, because room to iterate mattered more than a pattern that can’t break. On The Tale of Capturing the Sun, I used its patterns to model props and set pieces, to make textures, displacement and normal maps in Substance 3D Painter, and as line art in 2D illustrations. It later grew into Pattinator.'
 cardImage: patterns.jpg
 showcase:
   video: levels-of-detail.mp4
   poster: levels-of-detail.jpg
   alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
 facts:
-  role: Research, tool design and build, supervised by Oleg Fryazinov at the NCCA, Bournemouth University. I taught myself Houdini and the basics of VEX for this project, and designed the controls around how artists already work.
-  tools: 'SideFX Houdini: a digital asset (HDA), which packages a node network as one tool with its own controls. VEX, Houdini’s scripting language.'
-  outcome: 'A working tool with square or hexagonal tiles, pattern or motif output, and edges clipped to the grid, ready for texture maps or effects geometry. It made more than 15 distinct patterns from one rule set. On The Tale of Capturing the Sun its patterns became prop and set geometry, textures and displacement and normal maps, and line art for 2D illustrations.'
+  role: Research, tool design and build for my NCCA research project at Bournemouth University, supervised by Oleg Fryazinov. My first project in Houdini and VEX. I designed the controls so that an artist who has never opened Houdini can use them.
+  tools: SideFX Houdini (HDA), VEX.
+  outcome: 'A working HDA, open source on GitHub under the Apache 2.0 licence: square or hexagonal tiles, pattern or single-motif output, and edges clipped to the grid for texture maps or effects geometry. More than 15 distinct patterns from one rule set, used in the props, set, costumes and 2D line art of The Tale of Capturing the Sun.'
 links:
   - label: Source on GitHub
     url: https://github.com/GeorgiaSweeny/Pattern_Generator_HDA
