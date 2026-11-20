@@ -9,9 +9,9 @@ outcome: A Houdini tool that builds Islamic geometric patterns live from their t
 intro: 'My first project in Houdini (3D software built from networks of connected steps called nodes): a reusable digital asset that builds Islamic geometric patterns the way they are traditionally drawn, from a circle or polygon repeated, rotated and mirrored across square or hexagonal tiles. I based the steps on published shape grammar research and laid the controls out in that same order, so an artist who has never opened Houdini can design a pattern or a single motif and watch it update as they work. On The Tale of Capturing the Sun I used it to build the geometry of props and set pieces, to make textures and displacement and normal maps in Substance 3D Painter, and as line art in 2D illustrations. It later led to Pattinator.'
 cardImage: patterns.jpg
 showcase:
-  video: parameters.mp4
-  poster: parameters.jpg
-  alt: Screen recording of the tool in Houdini, the pattern growing denser and more detailed as sliders in the control panel are moved
+  video: levels-of-detail.mp4
+  poster: levels-of-detail.jpg
+  alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
 facts:
   role: Research, tool design and build, supervised by Oleg Fryazinov at the NCCA, Bournemouth University. I taught myself Houdini and the basics of VEX for this project, and designed the controls around how artists already work.
   tools: 'SideFX Houdini: a digital asset (HDA), which packages a node network as one tool with its own controls. VEX, Houdini’s scripting language.'
