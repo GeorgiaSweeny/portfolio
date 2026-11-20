@@ -140,9 +140,6 @@ blocks:
       - src: searching.jpg
         alt: Unreal Engine render of a character walking the market street
         caption: The market, in use
-      - src: camp.jpg
-        alt: Unreal Engine render of a night camp with a tent and firelight
-        caption: Night camp
       - src: watching.jpg
         alt: Unreal Engine render of two characters beneath a twisted tree
         caption: Beneath the tree
