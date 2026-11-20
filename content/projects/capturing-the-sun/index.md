@@ -146,15 +146,15 @@ blocks:
       - src: souks.jpg
         alt: Unreal Engine render of a sunlit market street through a horseshoe arch
         caption: The souks
-      - src: medina.jpg
-        alt: Unreal Engine render of the medina courtyard with the great tree on its stepped platform
+      - src: render-courtyard.jpg
+        alt: Unreal Engine render of the empty medina courtyard, the great tree on its stepped platform beneath tiled arcades, rugs laid out on the sand
         caption: The medina courtyard and the great tree
-      - src: searching.jpg
-        alt: Unreal Engine render of a character walking the market street
-        caption: The market, in use
-      - src: watching.jpg
-        alt: Unreal Engine render of two characters beneath a twisted tree
-        caption: Beneath the tree
+      - src: render-great-tree.jpg
+        alt: Unreal Engine render of the gnarled great tree, its branches hung with threads, in front of a carved arched door
+        caption: The great tree
+      - src: render-dyers-alley.jpg
+        alt: Unreal Engine render of a narrow alley hung with purple dyed wool, lit warm at its far arched end
+        caption: The dyers’ alley
   - type: gallery
     heading: Props and Set Dressing
     images:
