@@ -37,22 +37,40 @@ blocks:
     youtube: vNhvHVbImFI
     poster: souks.jpg
     label: Watch the teaser
-    caption: 3D previs concept teaser
+    caption: Early 3D previs proof of concept – environments only, characters not yet posed
   - type: gallery
-    heading: Storyboards
+    heading: Concept and Development
     images:
-      - src: storyboard-market.jpg
-        alt: 'Storyboard: looking down the market street towards the tree'
-        caption: The market street, looking towards the tree
-      - src: storyboard-tree.jpg
-        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
-        caption: The crowd at the tree, from above the rooftops
-      - src: storyboard-birds.jpg
-        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
-        caption: Bird’s-eye rough, working out how the spaces connect
-      - src: storyboard-crowd-stage.jpg
-        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
-        caption: The challenge, staged in front of the crowd
+      - src: concept-sun-tree.jpg
+        alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
+        caption: 'The sun and the tree: the film’s two key images'
+      - src: reference-wool-dyers.jpg
+        alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
+        caption: 'Reference photo: the dyers’ alley that inspired the concept painting'
+      - src: wool.jpg
+        alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
+        caption: 'Concept painting: the wool-dyers’ alley'
+  - type: gallery
+    heading: Characters
+    images:
+      - src: sketchbook.jpg
+        alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
+        caption: 'Sketchbook: working out the wise woman’s cloak'
+      - src: character-philosopher.jpg
+        alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
+        caption: The travelling philosopher
+      - src: character-wise-woman.jpg
+        alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
+        caption: The wise woman
+      - src: sculpt-philosopher.jpg
+        alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
+        caption: Sculpting the philosopher’s head
+      - src: sculpt-wise-woman.jpg
+        alt: Digital sculpt of the wise woman’s lined face inside her hood
+        caption: Sculpting the wise woman
+      - src: costume-patterns.jpg
+        alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
+        caption: Costume patterns for the two characters
   - type: gallery
     heading: Initial Storyboards and Colour Thumbnails
     images:
@@ -73,38 +91,35 @@ blocks:
         caption: The market, the sun sign on the door, and the night of golden lights
         emphasis: key
   - type: gallery
-    heading: Characters
+    heading: Storyboards
     images:
-      - src: character-philosopher.jpg
-        alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
-        caption: The travelling philosopher
-      - src: character-wise-woman.jpg
-        alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
-        caption: The wise woman
-      - src: sculpt-philosopher.jpg
-        alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
-        caption: Sculpting the philosopher’s head
-      - src: sculpt-wise-woman.jpg
-        alt: Digital sculpt of the wise woman’s lined face inside her hood
-        caption: Sculpting the wise woman
-      - src: costume-patterns.jpg
-        alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
-        caption: Costume patterns for the two characters
+      - src: storyboard-overview-act1.jpg
+        alt: 'Storyboard overview sheet for Act 1, The Challenge: 24 pencil panels in shot order, from the bird’s-eye view of the medina to the philosophers boasting beneath the tree'
+        caption: 'Act 1, The Challenge: every panel of the animatic, numbered by shot'
+        emphasis: key
+      - src: storyboard-overview-act2.jpg
+        alt: 'Storyboard overview sheet for Act 2, The Quest: the first philosopher searching the market and buying the tapestry, then the second in the forest catching fireflies at dusk'
+        caption: 'Act 2, The Quest: the market and the forest'
+        emphasis: key
+      - src: storyboard-overview-act3.jpg
+        alt: 'Storyboard overview sheet for Act 3, The Return: the tapestry and the jar both fail, the jar shatters, and the old woman lights a twig with a shard held up to the sun'
+        caption: 'Act 3, The Return: the old woman captures a piece of the sun'
+        emphasis: key
+      - src: storyboard-birds.jpg
+        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
+        caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
+      - src: storyboard-market.jpg
+        alt: 'Storyboard: looking down the market street towards the tree'
+        caption: 'SQ010 SH030: the market street, looking towards the tree'
+      - src: storyboard-tree.jpg
+        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
+        caption: 'SQ010 SH040: the crowd at the tree, from above the rooftops'
+      - src: storyboard-crowd-stage.jpg
+        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
+        caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
   - type: gallery
-    heading: Concept and Development
+    heading: Building the Medina
     images:
-      - src: reference-wool-dyers.jpg
-        alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
-        caption: 'Reference photo: the dyers’ alley that inspired the concept painting'
-      - src: concept-sun-tree.jpg
-        alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
-        caption: 'The sun and the tree: the film’s two key images'
-      - src: sketchbook.jpg
-        alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
-        caption: 'Sketchbook: working out the wise woman’s cloak'
-      - src: wool.jpg
-        alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
-        caption: 'Concept painting: the wool-dyers’ alley'
       - src: medina-plan.jpg
         alt: Three painted top-down plans in terracotta, cream and sage — the courtyard with the tree on its sun-disc plinth, the souks street lined with stalls, and the camp with bushes and a fire
         caption: Plans of the three environments – the courtyard, the souks and the camp
@@ -112,9 +127,6 @@ blocks:
         alt: Three stages of the medina courtyard build, from grey boxes to the finished tree
         caption: 'Building the courtyard: blockout, structure, final tree'
         emphasis: key
-  - type: gallery
-    heading: Building the Medina
-    images:
       - src: modular-kit.jpg
         alt: Terracotta-coloured render of a modular kit of walls, arches, doors, a plinth and a tree, laid out on a grey floor
         caption: 'The modular kit: every wall, arch and prop, built once and reused'
@@ -131,12 +143,12 @@ blocks:
   - type: gallery
     heading: Final Renders
     images:
-      - src: medina.jpg
-        alt: Unreal Engine render of the medina courtyard with the great tree on its stepped platform
-        caption: The medina courtyard and the great tree
       - src: souks.jpg
         alt: Unreal Engine render of a sunlit market street through a horseshoe arch
         caption: The souks
+      - src: medina.jpg
+        alt: Unreal Engine render of the medina courtyard with the great tree on its stepped platform
+        caption: The medina courtyard and the great tree
       - src: searching.jpg
         alt: Unreal Engine render of a character walking the market street
         caption: The market, in use
