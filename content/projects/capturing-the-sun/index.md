@@ -155,6 +155,9 @@ blocks:
       - src: render-dyers-alley.jpg
         alt: Unreal Engine render of a narrow alley hung with purple dyed wool, lit warm at its far arched end
         caption: The dyers’ alley
+      - src: render-campsite.jpg
+        alt: Unreal Engine render of a night camp under the stars, a canvas tent beside a ring of stones and a glowing fire
+        caption: The night camp
   - type: gallery
     heading: Props and Set Dressing
     images:
