@@ -31,9 +31,6 @@ blocks:
       - src: glow.jpg
         alt: The yellow submarine in the dark, surrounded by soft concentric rings of blue light
         caption: 'The sub’s ambient light: concentric rings fading into the dark, the style I made for every light in the game'
-      - src: torch.jpg
-        alt: The submarine’s torch casting a beam of layered light through dark water
-        caption: The torch, in the same concentric rings; as the battery runs low it flickers and gutters, timed to feel dramatic without breaking the style
       - src: biolume-blocks.jpg
         alt: Bioluminescent blocks glowing blue around the submarine in a dark cave
         caption: Bioluminescent blocks; bump one and it flares brighter, recharging the sub for as long as you touch it
@@ -44,7 +41,7 @@ blocks:
         alt: A single jellyfish glowing violet in the dark water
         caption: A jellyfish’s glow cycles through pink, purple and cyan, offset between its head, body and legs so the shapes stay clear, and squashes and stretches to make it swim
       - src: glow-fish.jpg
-        alt: A glow fish lit pinkish red beside the submarine in a dark cave
+        alt: A red glow fish in the dark above the submarine and its pool of blue light
         caption: A glow fish shows blue only in torchlight; ping it with sonar and it turns red, aggressive and visible in the dark
       - src: glow-fish-provoked.jpg
         alt: A glow fish glowing red beside the submarine, above a bioluminescent block glowing blue
@@ -69,21 +66,21 @@ blocks:
         group: sketches
       - src: sketch-world-complete.jpg
         alt: 'Hand-drawn map of the complete world, adding the jellyfish atrium, the biolume and the surface beside the earlier areas'
-        caption: The complete world sketch, adding the jellyfish atrium, the glowing biolume and the climb to the surface
+        caption: 'My final world concept. For demo day we streamlined it: some areas were cut, with the new enemy types and hazards planned for them, and others merged, so we could focus on fully developed rooms'
         group: sketches
         emphasis: key
       - src: world-map.jpg
         alt: 'Labelled world map of the demo: the surface, jellyfish atrium, crab caverns, spike maze, the drop, a tunnel and the endless abyss'
-        caption: The demo’s world map, from the surface down to the endless abyss
+        caption: The released game’s world map, showing how the rooms connect, from the surface down to the endless abyss
       - src: tile-editor.jpg
         alt: A tile map editor showing a winding blue cave room with red hazards placed along it
         caption: Building a room in Tiled from the sketches
-      - src: map-demo-start.jpg
-        alt: Grey grid map of the demo’s starting cave, a winding passage between two larger chambers
-        caption: The demo start, where the player begins
-      - src: map-start-area.jpg
-        alt: Grid map of the full game’s start area, a long winding cave with pick-ups and exits marked
-        caption: The start area of the full game
+      - src: map-test.jpg
+        alt: Grid map of a long winding test cave, with pick-ups and exits marked
+        caption: A test map we used during development
+      - src: map-start.jpg
+        alt: Grey grid map of the starting cave, a winding passage between two larger chambers
+        caption: The start area of the released game, where the player begins
       - src: map-tunnel.jpg
         alt: A long, narrow tunnel map with spikes along its floor and exits at each end
         caption: The tunnel, a short transition with spikes along the floor
