@@ -66,6 +66,8 @@ for (const p of c.projects) {
     } else b.images.forEach((im, j) => {
       const ik = `${bk}.images[${j + 1}]`;
       addImage(`${ik}.src`, im.src); addText(`${ik}.alt`, im.alt); addText(`${ik}.caption`, im.caption);
+      if (im.video) addRef(`${ik}.video`, mediaUrl(im.video));
+      if (im.webm) addRef(`${ik}.webm`, mediaUrl(im.webm));
     });
   });
 }

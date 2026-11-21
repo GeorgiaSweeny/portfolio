@@ -28,6 +28,9 @@ export default {
     "the-old-oak-tree": { "Every Spread": 400, "The Artwork, Without Text": 400, "Early Sketches": 400 },
     "the-abyss": { "Level Design": 300 },
   },
+  // Opening media on a project page is its first full-size YouTube video, else its showcase clip,
+  // else its card image. To choose differently for a project: { "<project id>": "video" | "clip" | "image" }.
+  openings: {},
   // YouTube videos shown as secondary clips (about half width, beside nothing).
   smallVideos: ["vNhvHVbImFI"],
 };

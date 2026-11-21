@@ -48,7 +48,7 @@ Images
 - `npm run images` applies all of this. Hand exports (from Photoshop, Procreate, etc.) follow the
   same rules.
 
-Clips (for showcase media)
+Clips (for showcase media or galleries)
 - MP4, H.264, silent, at most 1080p, a loop under about 15 seconds. Long films go on YouTube and are
   added as a `video` block.
 - From a source video, e.g. 10 seconds starting at 0:00:

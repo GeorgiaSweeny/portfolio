@@ -23,6 +23,10 @@ blocks:
   - type: gallery
     heading: Inside the Tool
     images:
+      - src: levels-of-detail.jpg
+        video: levels-of-detail.mp4
+        alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
+        caption: Changing the controls live, the pattern growing denser and more detailed
       - src: interface-pattern.jpg
         alt: 'The tool’s control panel in Houdini in Pattern mode, with sections for Output Selection, Grid Tiles, Initial Shape, Shape Grammar and Display Options, each with menus, sliders and checkboxes'
         caption: 'The controls in Pattern mode, in the order a pattern is traditionally drawn: tiles, initial shape, shape grammar'

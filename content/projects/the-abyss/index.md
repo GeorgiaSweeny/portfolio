@@ -28,6 +28,10 @@ blocks:
   - type: gallery
     heading: Lighting
     images:
+      - src: torch-dying.jpg
+        video: torch-dying.mp4
+        alt: The submarine’s torch flickering on and off in the dark as the power ring counts down from 6% to empty
+        caption: The torch as its battery dies, flickering and guttering until the power runs out; the timing took the longest to get right
       - src: glow.jpg
         alt: The yellow submarine in the dark, surrounded by soft concentric rings of blue light
         caption: 'The sub’s ambient light: concentric rings fading into the dark, the style I made for every light in the game'

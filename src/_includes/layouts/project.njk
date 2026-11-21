@@ -6,12 +6,18 @@ layout: layouts/base.njk
 {%- set p = project %}
 {%- set blocks = p.blocks %}
 {%- set small = design.smallVideos %}
-{#- The first block, if it's a full-size video, is the project's feature video: it sits beside the description. #}
-{%- set fv = blocks[0] if (blocks.length and blocks[0].type == "video" and not (blocks[0].youtube in small)) else false %}
-{#- Otherwise a showcase clip plays beside the description; failing that, the card image. #}
-{%- set heroVideo = p.showcase if (p.showcase and p.showcase.video and not fv) else false %}
+{#- Opening media, beside the description, in order of preference: the project's first full-size
+    YouTube video (wherever it sits in its blocks), then its showcase clip, then its card image.
+    design.openings can set a project to "video", "clip" or "image" instead. #}
+{%- set fvIndex = blocks | openingVideoIndex(small) %}
+{%- set hasClip = p.showcase and p.showcase.video %}
+{%- set pick = (design.openings or {})[p.id] or ("video" if fvIndex >= 0 else ("clip" if hasClip else "image")) %}
+{%- if pick == "video" and fvIndex < 0 %}{% set pick = "clip" if hasClip else "image" %}{% endif %}
+{%- if pick == "clip" and not hasClip %}{% set pick = "image" %}{% endif %}
+{%- set fv = blocks[fvIndex] if pick == "video" else false %}
+{%- set heroVideo = p.showcase if pick == "clip" else false %}
 {%- set ownToolNote = p.ownToolNote %}
-{%- set keyImage = p.cardImage if not (heroVideo or fv) else false %}
+{%- set keyImage = p.cardImage if pick == "image" else false %}
 {%- set hasSide = heroVideo or fv or ownToolNote or keyImage %}
 <main id="main" class="proj-main">
   <div class="proj-open"><div class="wrap">
@@ -80,7 +86,7 @@ layout: layouts/base.njk
 
   <div class="proj-body"><div class="wrap">
     {%- asyncEach b in blocks %}
-      {%- if fv and loop.index0 == 0 %}{# feature video already shown beside the description #}
+      {%- if fv and loop.index0 == fvIndex %}{# opening video already shown beside the description #}
       {%- elif b.type == "video" %}
       {#- design.smallVideos = secondary clips, about half width on desktop, with an optional caption #}
       {%- set isSmall = b.youtube in small %}
@@ -98,7 +104,14 @@ layout: layouts/base.njk
         <div class="gallery"{% if imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
           {%- asyncEach im in b.images %}
           <figure{% if im.emphasis == "key" %} class="key"{% endif %} style="--ar:{% imageRatio im.src %}">
+            {%- if im.video %}
+            <div class="clip"><video autoplay muted loop playsinline preload="metadata" poster="{% imageFull im.src %}" aria-label="{{ im.alt }}" data-autoplay>
+              {%- if im.webm %}<source src="{{ im.webm | mediaUrl }}" type="video/webm">{% endif %}
+              <source src="{{ im.video | mediaUrl }}" type="video/mp4">
+            </video></div>
+            {%- else %}
             <a href="{% imageFull im.src %}" data-lightbox>{% image im.src, im.alt, "(min-width: 1100px) 50vw, (min-width: 700px) 60vw, 100vw" %}</a>
+            {%- endif %}
             {%- if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
           </figure>
           {%- endeach %}

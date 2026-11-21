@@ -37,7 +37,7 @@ const SHAPES = {
   ownToolLink: { label: reqText, project: { type: "project", req: true } },
   video: { type: reqText, heading: text, youtube: reqText, poster: imageRef, label: reqText, caption: text },
   gallery: { type: reqText, heading: text, images: { type: "list", req: true, of: { type: "shape", shape: "image" } } },
-  image: { src: imageRef, alt: { type: "text", req: true, allowEmpty: false }, caption: text, emphasis: { type: "enum", values: ["key"] }, group: text },
+  image: { src: imageRef, video: { type: "file" }, webm: { type: "file" }, alt: { type: "text", req: true, allowEmpty: false }, caption: text, emphasis: { type: "enum", values: ["key"] }, group: text },
   profile: {
     name: reqText, location: reqText, positioning: reqText, description: reqText,
     status: { type: "shape", shape: "status", req: true },
@@ -165,7 +165,7 @@ export function loadContent() {
       showcase: s && { ...s, image: at(s.image), video: at(s.video), webm: at(s.webm), poster: at(s.poster) },
       blocks: (data.blocks ?? []).map((b) => b.type === "video"
         ? { ...b, poster: at(b.poster) }
-        : { ...b, images: b.images.map((im) => ({ ...im, src: at(im.src) })) }),
+        : { ...b, images: b.images.map((im) => ({ ...im, src: at(im.src), video: at(im.video), webm: at(im.webm) })) }),
     };
   });
   for (const [ref, where] of ctx.projectRefs) if (!ids.includes(ref)) fail(where, `no project folder called "${ref}"`);

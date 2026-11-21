@@ -89,6 +89,10 @@ export default function (eleventyConfig) {
     const n = projects.length;
     return { prev: projects[(i - 1 + n) % n], next: projects[(i + 1) % n] };
   });
+  // Index of the block that opens a project page as its video: the first full-size YouTube video
+  // anywhere in its blocks (small videos never open a page), or -1.
+  eleventyConfig.addFilter("openingVideoIndex", (blocks, small = []) =>
+    blocks.findIndex((b) => b.type === "video" && !small.includes(b.youtube)));
   eleventyConfig.addFilter("absolute", (url, base) => new URL(url, base).href);
 
 
