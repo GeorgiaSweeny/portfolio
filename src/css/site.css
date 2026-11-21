@@ -240,21 +240,23 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 /* ---- project page ----------------------------------------------------- */
 /* Project page opening (settled 21 Nov): a full-bleed hero with the opening media and the title over it,
    like a feature card on Home; then the buttons, the jump links (sticky) and the intro beside the facts. */
-.proj-hero { position: relative; min-height: 72vh; min-height: 72svh; display: flex; align-items: flex-end; overflow: hidden; background: var(--ink); isolation: isolate; }
-@media (min-width: 700px) { .proj-hero { min-height: 80vh; min-height: 80svh; } }
-.proj-hero-media { position: absolute; inset: 0; z-index: -1; }
-.proj-hero-media > img, .proj-hero-media > picture, .proj-hero-media > picture img, .proj-hero-media > video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Opening media, cinema style: shown whole on a dark band, nothing over it; title below. */
+.proj-hero { background: var(--ink); }
+.proj-hero-media { position: relative; margin: 0 auto; aspect-ratio: var(--ar, 1.7778); width: min(100%, var(--w, 1400px), 1400px, calc(var(--ar, 1.7778) * min(78vh, 100vh - 320px))); width: min(100%, var(--w, 1400px), 1400px, calc(var(--ar, 1.7778) * min(78svh, 100svh - 320px))); overflow: hidden; background: #000; }
+.proj-hero-media > img, .proj-hero-media > picture, .proj-hero-media > picture img, .proj-hero-media > video { width: 100%; height: 100%; object-fit: contain; display: block; }
 .proj-hero-media .video { position: absolute; inset: 0; margin: 0; aspect-ratio: auto; border-radius: 0; }
-.proj-hero-media .video img, .proj-hero-media .video picture { width: 100%; height: 100%; }
-.proj-hero-media .video img { object-fit: cover; opacity: .7; }
-.proj-hero-media .video button { padding-bottom: 18vh; } /* keep the play button clear of the title */
-.proj-hero-text { position: relative; width: 100%; padding: 160px max(var(--pad), calc((100% - var(--maxw)) / 2)) 36px; display: flex; flex-direction: column; gap: 10px; background: linear-gradient(rgba(11,53,51,0), rgba(11,53,51,.92) 58%); color: var(--on-night); pointer-events: none; }
+.proj-hero-media .video img, .proj-hero-media .video picture { width: 100%; height: 100%; display: block; }
+.proj-hero-media .video img { object-fit: cover; opacity: 1; }
+.proj-hero-media .video button { background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.18)); text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.proj-hero-media .video button span { box-shadow: 0 4px 24px rgba(0,0,0,.35); }
+@media (min-width: 700px) { .proj-hero { padding: 28px var(--pad); } .proj-hero-media { border-radius: 12px; } }
+@media (min-width: 1100px) { .proj-hero { padding: 36px var(--pad); } }
+.proj-hero-text { background: var(--night); color: var(--on-night); padding: 32px max(var(--pad), calc((100% - var(--maxw)) / 2)) 4px; display: flex; flex-direction: column; gap: 10px; }
 .proj-hero-text .meta { color: var(--sage); } .proj-hero-text .meta span { color: var(--on-night-2); }
 .proj-hero-text h1 { font: 800 44px/1 var(--heading); letter-spacing: -0.035em; max-width: 18ch; }
-.proj-hero .proj-role { color: var(--on-night); margin-top: 0; }
+.proj-hero-text .proj-role { color: var(--on-night); margin-top: 0; }
 @media (min-width: 700px) { .proj-hero-text h1 { font-size: 60px; } }
-@media (min-width: 1100px) { .proj-hero-text h1 { font-size: 76px; } .proj-hero-text { padding-bottom: 48px; } }
-.proj-hero:has(iframe) .proj-hero-text { display: none; } /* once the video plays, nothing sits over it */
+@media (min-width: 1100px) { .proj-hero-text h1 { font-size: 72px; } .proj-hero-text { padding-top: 44px; } }
 .proj-actions { background: var(--night); padding: 4px var(--pad) 0; }
 .proj-jump { position: sticky; top: 0; z-index: 3; background: var(--night); padding: 14px var(--pad); border-bottom: 1px solid rgba(243,239,228,.12); }
 .proj-jump .chips { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; }

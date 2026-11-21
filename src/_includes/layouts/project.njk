@@ -22,10 +22,10 @@ layout: layouts/base.njk
 <main id="main" class="proj-main">
   {#- Hero: the opening media full-bleed, with the title over it (like a feature card on Home). #}
   <section class="proj-hero{% if fv %} has-video{% endif %}">
-    <div class="proj-hero-media">
+    <div class="proj-hero-media" style="{% if fv %}--ar:1.7778{% elif heroVideo %}--ar:{% imageRatio heroVideo.poster %};--w:{% imageWidth heroVideo.poster %}px{% else %}--ar:{% imageRatio keyImage %};--w:{% imageWidth keyImage %}px{% endif %}">
     {%- if fv %}
       <div class="video" data-youtube="{{ fv.youtube }}" data-title="{{ fv.label }}: {{ p.title }}">
-        {% image fv.poster, "", "100vw", "", "eager" %}
+        {% image fv.poster, "", "(min-width: 1500px) 1400px, 100vw", "", "eager" %}
         <button type="button" aria-label="{{ fv.label }} (loads YouTube)"><span>{{ icon("play") }}</span>{{ fv.label }}</button>
       </div>
     {%- elif heroVideo %}
@@ -34,15 +34,15 @@ layout: layouts/base.njk
         <source src="{{ heroVideo.video | mediaUrl }}" type="video/mp4">
       </video>
     {%- else %}
-      {% image keyImage, "", "100vw", "", "eager" %}
+      {% image keyImage, "", "(min-width: 1500px) 1400px, 100vw", "", "eager" %}
     {%- endif %}
     </div>
-    <header class="proj-hero-text">
-      <p class="meta">{{ p.disciplines | disciplineLabels }} <span>· {{ p.year }}</span></p>
-      <h1>{{ p.title }}</h1>
-      <p class="proj-role">{{ p.role }}</p>
-    </header>
   </section>
+  <header class="proj-hero-text">
+    <p class="meta">{{ p.disciplines | disciplineLabels }} <span>· {{ p.year }}</span></p>
+    <h1>{{ p.title }}</h1>
+    <p class="proj-role">{{ p.role }}</p>
+  </header>
 
   {%- if p.links %}
   <div class="proj-actions"><div class="wrap">

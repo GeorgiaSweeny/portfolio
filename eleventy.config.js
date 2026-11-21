@@ -62,6 +62,11 @@ export default function (eleventyConfig) {
     const j = meta.jpeg[0];
     return (j.width / j.height).toFixed(4);
   });
+  // Width in px of the largest jpeg (the original's width, capped), so small media isn't blown up.
+  eleventyConfig.addAsyncShortcode("imageWidth", async (src) => {
+    const meta = await Image(src, imgOpts());
+    return String(meta.jpeg[meta.jpeg.length - 1].width);
+  });
   // Largest jpeg URL, for the lightbox.
   eleventyConfig.addAsyncShortcode("imageFull", async (src) => {
     const meta = await Image(src, imgOpts());
