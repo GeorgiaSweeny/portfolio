@@ -2,6 +2,7 @@
 CLAUDE.md
 .claude/
 *.pdf
+!content/cv.pdf
 !src/static/cv/*.pdf
 
 # OS / editor noise
