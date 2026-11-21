@@ -26,6 +26,7 @@ export default {
     "christmas-cards": { "The Range": 350 },
     pattinator: { "Patterns from One Shared Vocabulary": 350 },
     "the-old-oak-tree": { "Every Spread": 400, "The Artwork, Without Text": 400, "Early Sketches": 400 },
+    "the-abyss": { "Level Design": 300 },
   },
   // YouTube videos shown as secondary clips (about half width, beside nothing).
   smallVideos: ["vNhvHVbImFI"],

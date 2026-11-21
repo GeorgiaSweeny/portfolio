@@ -46,6 +46,9 @@ blocks:
       - src: glow-fish.jpg
         alt: A glow fish lit pinkish red beside the submarine in a dark cave
         caption: A glow fish shows blue only in torchlight; ping it with sonar and it turns red, aggressive and visible in the dark
+      - src: glow-fish-provoked.jpg
+        alt: A glow fish glowing red beside the submarine, above a bioluminescent block glowing blue
+        caption: A provoked glow fish, red after a sonar ping, beside a glowing bioluminescent block
       - src: sonar.jpg
         alt: A sonar pulse sweeping out and revealing the cave walls and spikes ahead
         caption: A sonar pulse (by a teammate); I matched the colours objects show when it hits them to how they look in torchlight and glow
