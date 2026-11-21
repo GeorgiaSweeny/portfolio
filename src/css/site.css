@@ -295,7 +295,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 @media (min-width: 700px) { .proj-intro h1 { font-size: 54px; } }
 @media (min-width: 1100px) {
   .proj-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; }
-  .proj-intro { grid-column: span 7; }
+  .proj-top .proj-intro { grid-column: span 7; }
   .proj-top.solo .proj-intro { grid-column: span 9; }
   .proj-intro h1 { font-size: 68px; }
   .proj-intro .intro { font-size: 21px; }
@@ -304,6 +304,8 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .facts dt { font: 14px var(--mono); color: var(--teal); }
 @media (min-width: 700px) { .facts > div { grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 18px 0; } }
 @media (min-width: 1100px) { .facts > div { grid-template-columns: 160px minmax(0, 1fr); } }
+/* In the project page's side column the labels sit above their text, so the facts aren't squeezed */
+@media (min-width: 1000px) { .proj-aside .facts > div { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
 .links { display: flex; flex-wrap: wrap; gap: 10px; }
 /* Side column (feature video, looping clip, own-tool box): beside the description from tablet up, on the right */
 .proj-side { display: flex; flex-direction: column; gap: 24px; }
