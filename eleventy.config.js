@@ -93,6 +93,8 @@ export default function (eleventyConfig) {
   // anywhere in its blocks (small videos never open a page), or -1.
   eleventyConfig.addFilter("openingVideoIndex", (blocks, small = []) =>
     blocks.findIndex((b) => b.type === "video" && !small.includes(b.youtube)));
+  // Headings of a project's blocks, for its jump links.
+  eleventyConfig.addFilter("headings", (blocks = []) => blocks.map((b) => b.heading).filter(Boolean));
   // Paragraphs of a text field (separated by line breaks).
   eleventyConfig.addFilter("paras", (s = "") => String(s).split(/\n+/).map((t) => t.trim()).filter(Boolean));
   eleventyConfig.addFilter("absolute", (url, base) => new URL(url, base).href);

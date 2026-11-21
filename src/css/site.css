@@ -238,20 +238,48 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 @media (min-width: 700px) { .filter-select { display: none; } .filter-chips { display: flex; } }
 
 /* ---- project page ----------------------------------------------------- */
-.proj-open { background: var(--night); color: var(--on-night); padding: 40px var(--pad) 56px; }
+/* Project page opening (settled 21 Nov): a full-bleed hero with the opening media and the title over it,
+   like a feature card on Home; then the buttons, the jump links (sticky) and the intro beside the facts. */
+.proj-hero { position: relative; min-height: 72vh; min-height: 72svh; display: flex; align-items: flex-end; overflow: hidden; background: var(--ink); isolation: isolate; }
+@media (min-width: 700px) { .proj-hero { min-height: 80vh; min-height: 80svh; } }
+.proj-hero-media { position: absolute; inset: 0; z-index: -1; }
+.proj-hero-media > img, .proj-hero-media > picture, .proj-hero-media > picture img, .proj-hero-media > video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-hero-media .video { position: absolute; inset: 0; margin: 0; aspect-ratio: auto; border-radius: 0; }
+.proj-hero-media .video img, .proj-hero-media .video picture { width: 100%; height: 100%; }
+.proj-hero-media .video img { object-fit: cover; opacity: .7; }
+.proj-hero-media .video button { padding-bottom: 18vh; } /* keep the play button clear of the title */
+.proj-hero-text { position: relative; width: 100%; padding: 160px max(var(--pad), calc((100% - var(--maxw)) / 2)) 36px; display: flex; flex-direction: column; gap: 10px; background: linear-gradient(rgba(11,53,51,0), rgba(11,53,51,.92) 58%); color: var(--on-night); pointer-events: none; }
+.proj-hero-text .meta { color: var(--sage); } .proj-hero-text .meta span { color: var(--on-night-2); }
+.proj-hero-text h1 { font: 800 44px/1 var(--heading); letter-spacing: -0.035em; max-width: 18ch; }
+.proj-hero .proj-role { color: var(--on-night); margin-top: 0; }
+@media (min-width: 700px) { .proj-hero-text h1 { font-size: 60px; } }
+@media (min-width: 1100px) { .proj-hero-text h1 { font-size: 76px; } .proj-hero-text { padding-bottom: 48px; } }
+.proj-hero:has(iframe) .proj-hero-text { display: none; } /* once the video plays, nothing sits over it */
+.proj-actions { background: var(--night); padding: 4px var(--pad) 0; }
+.proj-jump { position: sticky; top: 0; z-index: 3; background: var(--night); padding: 14px var(--pad); border-bottom: 1px solid rgba(243,239,228,.12); }
+.proj-jump .chips { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.proj-jump .chips span { flex: none; font: 13px var(--mono); color: var(--sage); margin-right: 4px; }
+.proj-jump .chips a { flex: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(243,239,228,.3); color: var(--on-night); text-decoration: none; white-space: nowrap; }
+.proj-jump .chips a:hover { border-color: var(--accent); color: var(--accent); }
+.proj-body .gallery-h { scroll-margin-top: 76px; }
+.proj-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+@media (min-width: 1000px) { .proj-cols { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; } }
+.proj-aside { display: flex; flex-direction: column; gap: 28px; }
+.proj-cols .proj-intro { gap: 0; } .proj-cols .proj-intro .owntool { margin-top: 20px; }
+.proj-open { background: var(--night); color: var(--on-night); padding: 32px var(--pad) 56px; }
 .proj-body { padding: 8px var(--pad) 96px; }
 @media (min-width: 700px) { .proj-open { padding-bottom: 72px; } }
-@media (min-width: 1100px) { .proj-open { padding-top: 64px; padding-bottom: 88px; } }
+@media (min-width: 1100px) { .proj-open { padding-top: 40px; padding-bottom: 88px; } }
 .proj-open .meta { color: var(--sage); }
 .proj-open .meta span { color: var(--on-night-2); }
 .proj-open .owntool { color: var(--sage); }
 .proj-open .facts > div { border-top-color: rgba(243,239,228,.16); }
 .proj-open .facts dt { color: var(--sage); }
 .proj-open .facts dd { color: var(--on-night-2); }
-.proj-open .btn { background: var(--on-night); border-color: var(--on-night); color: var(--night); }
-.proj-open .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--night); }
-.proj-open .btn.outline { background: transparent; color: var(--on-night); border-color: rgba(243,239,228,.5); }
-.proj-open .btn.outline:hover { background: var(--on-night); color: var(--night); }
+.proj-open .btn, .proj-actions .btn { background: var(--on-night); border-color: var(--on-night); color: var(--night); }
+.proj-open .btn:hover, .proj-actions .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--night); }
+.proj-open .btn.outline, .proj-actions .btn.outline { background: transparent; color: var(--on-night); border-color: rgba(243,239,228,.5); }
+.proj-open .btn.outline:hover, .proj-actions .btn.outline:hover { background: var(--on-night); color: var(--night); }
 .proj-role { font-size: 18px; font-weight: 600; margin-top: -4px; }
 .proj-key { margin: 0; border-radius: 8px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
 .proj-key img { width: 100%; }
