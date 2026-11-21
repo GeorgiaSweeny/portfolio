@@ -53,10 +53,10 @@ projects:
     project: the-abyss
     sub: Collaborative Software Engineering Project
     years: '2026'
-    tools: JavaScript, p5.js, GitHub
+    tools: JavaScript, p5.js, Tiled, GitHub
     points:
-      - Product Owner and systems architect in a six-person Scrum team; structured the concept into 5 epics and 14 user stories.
-      - Designed all the game’s lighting (apart from the sonar), including the glowing jellyfish effect, and the level layouts.
+      - Lead developer, systems architect and Product Owner in a six-person Scrum team; structured the concept into 5 epics and 14 user stories.
+      - Designed and animated the environment, creature and torch lighting, and sketched, plotted and built every level in Tiled.
       - Designed the shared code architecture and wrote team guides so six developers could work in parallel.
   - title: Islamic Pattern Generator Tool for Houdini
     project: islamic-pattern-generator
