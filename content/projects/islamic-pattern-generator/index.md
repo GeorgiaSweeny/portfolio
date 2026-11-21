@@ -6,11 +6,16 @@ disciplines:
 order: 9
 role: Tool Designer and Developer
 outcome: A Houdini HDA that builds Islamic geometric patterns live from their traditional construction rules; I used its patterns across the props, set and costumes of The Tale of Capturing the Sun.
-intro: 'For centuries, Islamic geometric patterns were drawn by hand with a compass and a straightedge: a single shape, repeated and rotated across a tile until stars and rosettes emerge where the copies overlap. I wanted to keep that sense of discovery while giving artists a faster way to explore it. For my NCCA research project, my first in Houdini, I built a digital asset that follows the traditional construction in order (the tile, the first shape, then the shape grammar rules that turn it into a motif) and redraws the pattern live with every change. Push the copies past the edge of the tile and they interlace into shapes no one planned; I kept that freedom rather than locking the controls down, because room to iterate mattered more than a pattern that can’t break. On The Tale of Capturing the Sun, I used its patterns to model props and set pieces, to make textures, displacement and normal maps in Substance 3D Painter, and as line art in 2D illustrations. It later grew into Pattinator.'
+intro: >-
+  For centuries, Islamic geometric patterns were drawn by hand with a compass and a straightedge: a single shape, repeated and rotated across a tile until stars and rosettes emerge where the copies overlap. I wanted to keep that sense of discovery while giving artists a faster way to explore it.
+
+  For my NCCA research project, my first in Houdini, I built a digital asset that follows the traditional construction in order (the tile, the first shape, then the shape grammar rules that turn it into a motif) and redraws the pattern live with every change. Push the copies past the edge of the tile and they interlace into shapes no one planned; I kept that freedom rather than locking the controls down, because room to iterate mattered more than a pattern that can’t break.
+
+  On The Tale of Capturing the Sun, I used its patterns to model props and set pieces, to make textures, displacement and normal maps in Substance 3D Painter, and as line art in 2D illustrations. It later grew into Pattinator.
 cardImage: patterns.jpg
 showcase:
-  video: levels-of-detail.mp4
-  poster: levels-of-detail.jpg
+  video: pattern-detail.mp4
+  poster: pattern-detail.jpg
   alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
 facts:
   role: Research, tool design and build for my NCCA research project at Bournemouth University, supervised by Oleg Fryazinov. My first project in Houdini and VEX. I designed the controls so that an artist who has never opened Houdini can use them.
@@ -23,8 +28,8 @@ blocks:
   - type: gallery
     heading: Inside the Tool
     images:
-      - src: levels-of-detail.jpg
-        video: levels-of-detail.mp4
+      - src: pattern-detail.jpg
+        video: pattern-detail.mp4
         alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
         caption: Changing the controls live, the pattern growing denser and more detailed
       - src: interface-pattern.jpg

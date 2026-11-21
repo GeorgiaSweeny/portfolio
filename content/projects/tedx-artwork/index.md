@@ -6,7 +6,10 @@ disciplines:
 order: 13
 role: Illustrator and Animator
 outcome: A paid commission for my school’s first TEDx event; the animated loop opened the day and the artwork was printed on its banner beside the TEDx logo.
-intro: 'In April 2016, St Albans High School for Girls held its first TEDx event, run by a group of Year 10 students under the theme “Turn and Face the Strange”, a line from David Bowie’s Changes, with talks that questioned accepted ideas and celebrated individuality. I was in Year 9 when the organisers asked me to make the artwork for it. I drew a classical stone head breaking apart to show clockwork inside, a familiar face giving way to something strange. The event was first called FACE, and my early sketch built the word around the head; when the name changed I dropped the lettering, so the artwork could go anywhere without text. I drew the artwork and its animation frames in Procreate, then put the loop together in CuteCut.'
+intro: >-
+  In April 2016, St Albans High School for Girls held its first TEDx event, run by a group of Year 10 students under the theme “Turn and Face the Strange”, a line from David Bowie’s Changes, with talks that questioned accepted ideas and celebrated individuality.
+
+  I was in Year 9 when the organisers asked me to make the artwork for it. I drew a classical stone head breaking apart to show clockwork inside, a familiar face giving way to something strange. The event was first called FACE, and my early sketch built the word around the head; when the name changed I dropped the lettering, so the artwork could go anywhere without text. I drew the artwork and its animation frames in Procreate, then put the loop together in CuteCut.
 description: Artwork and an animated loop commissioned for St Albans High School for Girls’ first TEDx event, Turn and Face the Strange (2016).
 cardImage: artwork.jpg
 showcase:

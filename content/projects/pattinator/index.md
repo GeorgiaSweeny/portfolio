@@ -7,7 +7,12 @@ order: 1
 role: Designer and Developer
 featureText: 'The tool behind the pattern in my name at the top of this page: my MSc research into one shared language for random and rule-based design.'
 outcome: A shared pattern vocabulary that fitted all nine generators tested, and combined existing rule sets into new hybrid patterns.
-intro: 'What if every pattern, from random noise to perfect geometric tilings, could be described in one shared vocabulary? That was the question behind my MSc Computer Science dissertation at Bristol. Nine pattern generators, from the randomness of Perlin noise to the strict geometry of Islamic star patterns, were built from one shared set of building blocks, and a handful of ways of combining them fitted every one. Pattinator (“pattern” plus “combinator”, the programming term for those ways of combining) is the web app that shows it: each pattern laid out as connected nodes, stage by stage, so learners with no coding background can see how it’s made and change it. It grew out of my earlier Islamic Pattern Generator, a Houdini tool limited to one family of patterns; writing the algorithms in code instead opened up the whole spectrum.'
+intro: >-
+  What if every pattern, from random noise to perfect geometric tilings, could be described in one shared vocabulary? That was the question behind my MSc Computer Science dissertation at Bristol.
+
+  Nine pattern generators, from the randomness of Perlin noise to the strict geometry of Islamic star patterns, were built from one shared set of building blocks, and a handful of ways of combining them fitted every one. Pattinator (“pattern” plus “combinator”, the programming term for those ways of combining) is the web app that shows it: each pattern laid out as connected nodes, stage by stage, so learners with no coding background can see how it’s made and change it.
+
+  It grew out of my earlier Islamic Pattern Generator, a Houdini tool limited to one family of patterns; writing the algorithms in code instead opened up the whole spectrum.
 cardImage: preview.jpg
 showcase:
   video: preview.mp4

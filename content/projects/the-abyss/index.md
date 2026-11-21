@@ -7,14 +7,19 @@ disciplines:
 order: 4
 role: Lead Developer · Lighting and Level Design
 outcome: 'A finished browser game about surviving in the dark: I led its code architecture, designed its levels and built its environment and creature lighting, in a team of six.'
-intro: 'Far below the surface, your submersible breaks down. Sonar will guide you through the dark and the torch will help you see, but light comes at a cost: every beam drains the little power you have left. Somewhere above, the surface awaits. The Abyss is an underwater Metroidvania made by six of us for our MSc software engineering project at Bristol. Light is its scarcest resource, and designing it was my part. I developed a style of layered, concentric rings of light and used it for everything that glows: a torch that flickers and gutters as its battery dies, bouncy bioluminescent blocks that flare and recharge the sub for as long as you touch them, jellyfish whose shocks randomly restore or drain power, and fish that glow blue in torchlight but turn red when the sonar provokes them. I sketched and built every level too, and on the final climb the light breaks through layer by layer as you race for the surface. In playtests, players kept clear of unlit areas without being told, and loved the light returning as they climbed. As lead developer I also set up the game’s modular architecture, so we could all build systems in parallel.'
+intro: >-
+  Far below the surface, your submersible breaks down. Sonar will guide you through the dark and the torch will help you see, but light comes at a cost: every beam drains the little power you have left. Somewhere above, the surface awaits.
+
+  The Abyss is an underwater Metroidvania made by six of us for our MSc software engineering project at Bristol. Light is its scarcest resource, and designing it was my part. I developed a style of layered, concentric rings of light and used it for everything that glows: a torch that flickers and gutters as its battery dies, bouncy bioluminescent blocks that flare and recharge the sub for as long as you touch them, jellyfish whose shocks randomly restore or drain power, and fish that glow blue in torchlight but turn red when the sonar provokes them.
+
+  I sketched and built every level too, and on the final climb the light breaks through layer by layer as you race for the surface. In playtests, players kept clear of unlit areas without being told, and loved the light returning as they climbed. As lead developer I also set up the game’s modular architecture, so we could all build systems in parallel.
 cardImage: glow.jpg
 showcase:
-  video: torch-dying.mp4
-  poster: torch-dying.jpg
+  video: torch-battery.mp4
+  poster: torch-battery.jpg
   alt: The submarine’s torch flickering on and off in the dark as the power ring counts down from 6% to empty
 facts:
-  role: 'Lead developer, systems architect and Product Owner. I designed the code architecture and wrote the team’s guides; built the room system; designed and animated the lighting of the sub, torch, pick-ups, environment and creatures, with their collision responses (including the red damage flash, brief invulnerability and bounce off hazards and enemies), and matched the colours objects show under sonar to that palette; sketched every level, plotted its pick-ups, enemy placements and paths and spawn points, and built it in Tiled; helped design the HUD and shop; reviewed pull requests; and made the video report. Teammates made the sprites, the sonar, missiles and explosions, and built the enemies’ behaviour from my plans.'
+  role: 'Lead developer, systems architect and Product Owner. I designed the code architecture and wrote the team’s guides; built the room system; designed and animated the lighting of the sub, torch, pick-ups, environment and creatures, with their collision responses (including the red damage flash, brief invulnerability and bounce off hazards and enemies), and matched the colours objects show under sonar to that palette; lit the power ring on the HUD (its low-power glow, flashing warning, the yellow inner ring that shows the torch draining power and the matching highlighted text); sketched every level, plotted its pick-ups, enemy placements and paths and spawn points, and built it in Tiled; helped design the HUD and shop; reviewed pull requests; and made the video report. Teammates made the sprites, the sonar, missiles and explosions, and built the enemies’ behaviour from my plans.'
   tools: JavaScript, p5.js, Tiled, GitHub. Scrum.
   outcome: 'A finished game, playable in the browser. Playtests confirmed the idea the design was built on: players avoided unlit areas and used sonar sparingly without being told, and they especially enjoyed the light returning on the climb to the surface.'
 links:
@@ -28,10 +33,10 @@ blocks:
   - type: gallery
     heading: Lighting
     images:
-      - src: torch-dying.jpg
-        video: torch-dying.mp4
+      - src: torch-battery.jpg
+        video: torch-battery.mp4
         alt: The submarine’s torch flickering on and off in the dark as the power ring counts down from 6% to empty
-        caption: The torch as its battery dies, flickering and guttering until the power runs out; the timing took the longest to get right
+        caption: The torch as its battery dies, flickering and guttering while the power ring glows and flashes its low-power warning (both mine); the timing took the longest to get right
       - src: glow.jpg
         alt: The yellow submarine in the dark, surrounded by soft concentric rings of blue light
         caption: 'The sub’s ambient light: concentric rings fading into the dark, the style I made for every light in the game'
@@ -47,9 +52,6 @@ blocks:
       - src: glow-fish.jpg
         alt: A red glow fish in the dark above the submarine and its pool of blue light
         caption: A glow fish shows blue only in torchlight; ping it with sonar and it turns red, aggressive and visible in the dark
-      - src: glow-fish-provoked.jpg
-        alt: A glow fish glowing red beside the submarine, above a bioluminescent block glowing blue
-        caption: A provoked glow fish, red after a sonar ping, beside a glowing bioluminescent block
       - src: sonar.jpg
         alt: A sonar pulse revealing spike walls around the submarine, with the power ring glowing red at 12%
         caption: A sonar pulse (by a teammate); I matched the colours objects show when it hits them to how they look in torchlight and glow
@@ -63,23 +65,21 @@ blocks:
       - src: sketch-rooms-start.jpg
         alt: 'Sketchbook spread of hand-drawn room plans for the start area, hazard maze and tunnel, with a key for power, health, scrap, spikes, breakable walls, hidden passages, exits and enemies'
         caption: Room sketches for the start area, hazard maze and tunnel, with my key for pick-ups, enemies, spikes, breakable walls, hidden passages and exits
-        group: sketches
       - src: sketch-rooms-deep.jpg
         alt: 'Sketchbook page of the deep caverns, a maze of hatched walls and collectables, above the endless abyss, a huge empty room'
         caption: 'The deep caverns, full of collectables, and the endless abyss below: a big, seemingly endless space'
-        group: sketches
+        group: early-maps
       - src: sketch-world-early.jpg
         alt: 'Hand-drawn mini map of the world, each area shaded a different colour, from the endless abyss at the bottom up to the final area'
         caption: An early colour-coded map of the whole world, from the endless abyss up to the final area
-        group: sketches
+        group: early-maps
       - src: sketch-world-complete.jpg
         alt: 'Hand-drawn map of the complete world, adding the jellyfish atrium, the biolume and the surface beside the earlier areas'
         caption: 'My final world concept. For demo day we streamlined it: some areas were cut, with the new enemy types and hazards planned for them, and others merged, so we could focus on fully developed rooms'
-        group: sketches
-        emphasis: key
       - src: world-map.jpg
-        alt: 'Labelled world map of the demo: the surface, jellyfish atrium, crab caverns, spike maze, the drop, a tunnel and the endless abyss'
+        alt: 'Labelled world map of the released game: the surface, jellyfish atrium, crab caverns, spike maze, the drop, a tunnel and the endless abyss'
         caption: The released game’s world map, showing how the rooms connect, from the surface down to the endless abyss
+        emphasis: key
       - src: tile-editor.jpg
         alt: A tile map editor showing a winding blue cave room with red hazards placed along it
         caption: Building a room in Tiled from the sketches

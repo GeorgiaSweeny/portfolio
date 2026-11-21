@@ -6,7 +6,10 @@ disciplines:
 order: 8
 role: Creature Designer and Modeller
 outcome: A desert ambush predator, taken from sculpt to retopology, UVs and textures for a DNEG masterclass brief.
-intro: 'Inspired by the turkey vulture, this desert predator has lost the flight of its smaller ancestors but kept the wings. It glides between canyon ledges like a flying squirrel, clings to the rock with raptor-like talons, and launches off the walls on powerful hind legs to ambush its prey. Hunting in packs or alone, it is most active at dusk and dawn, when desert rats come out and the light is at its crispest. Its sharp eyes catch the smallest movement while it blends into the rocks around it. I designed and built it for a creature-modelling masterclass run with DNEG, working to a studio brief with feedback from their mentors: sculpted in ZBrush, then retopologised, UV’d across six UDIMs and textured, ready for rigging.'
+intro: >-
+  Inspired by the turkey vulture, this desert predator has lost the flight of its smaller ancestors but kept the wings. It glides between canyon ledges like a flying squirrel, clings to the rock with raptor-like talons, and launches off the walls on powerful hind legs to ambush its prey. Hunting in packs or alone, it is most active at dusk and dawn, when desert rats come out and the light is at its crispest. Its sharp eyes catch the smallest movement while it blends into the rocks around it.
+
+  I designed and built it for a creature-modelling masterclass run with DNEG, working to a studio brief with feedback from their mentors: sculpted in ZBrush, then retopologised, UV’d across six UDIMs and textured, ready for rigging.
 cardImage: textured-side.jpg
 facts:
   role: 'Design, sculpt, retopology, UVs and textures: I designed the creature and built it from the first sculpt to the final textures.'

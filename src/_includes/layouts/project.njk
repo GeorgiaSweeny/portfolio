@@ -27,7 +27,9 @@ layout: layouts/base.njk
           <p class="meta">{{ p.disciplines | disciplineLabels }} <span>· {{ p.year }}</span></p>
           <h1>{{ p.title }}</h1>
           <p class="proj-role">{{ p.role }}</p>
-          <p class="intro">{{ p.intro }}</p>
+          {%- for para in p.intro | paras %}
+          <p class="intro">{{ para }}</p>
+          {%- endfor %}
           {%- if p.ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
         </header>
         <dl class="facts">
@@ -103,7 +105,7 @@ layout: layouts/base.njk
         {%- set imgH = (design.galleryHeights[p.id] or {})[b.heading] %}
         <div class="gallery"{% if imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
           {%- asyncEach im in b.images %}
-          <figure{% if im.emphasis == "key" %} class="key"{% endif %} style="--ar:{% imageRatio im.src %}">
+          <figure class="{% if im.emphasis == "key" %}key{% elif im.group %}grouped{% endif %}" style="--ar:{% imageRatio im.src %}">
             {%- if im.video %}
             <div class="clip"><video autoplay muted loop playsinline preload="metadata" poster="{% imageFull im.src %}" aria-label="{{ im.alt }}" data-autoplay>
               {%- if im.webm %}<source src="{{ im.webm | mediaUrl }}" type="video/webm">{% endif %}
