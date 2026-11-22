@@ -5,11 +5,11 @@ disciplines:
   - illustration-print
 order: 5
 role: Author and Illustrator
-outcome: A finished picture book about a lonely oak whose hill grows into a forest; I wrote, painted and typeset every spread.
+outcome: A finished picture book about a lonely oak whose hill grows into a forest, with the story, paintings and typesetting all my own.
 intro: >-
-  On a hill far from anyone stands a lonely old oak, until a helicopter seed spirals down beside him. Through its first winter he joins his roots to the sapling’s to share his strength, and by spring the hill is filling with flowers, bees and new seedlings he promises to look after: the beginning of the forest he lives in today.
+  On a hill far from anyone stands a lonely old oak, until a helicopter seed spirals down beside him. Through its first winter, he joins his roots to the sapling’s to share his strength. By spring the hill is alive with flowers, bees and new seedlings: the beginning of the forest he lives in today.
 
-  I made it for a first-year brief at Bournemouth: a children’s book in four double-page spreads, text on the left and one illustration on the right, so each painting had to carry a whole part of the story. I wrote the story, worked out the compositions in sketchbook thumbnails and then Procreate roughs, painted every spread digitally in Photoshop and typeset the text. The paintings follow the seasons from autumn to spring, and one cuts away the hill to show the roots meeting underground.
+  Made for a first-year brief at Bournemouth: a children’s book in four double-page spreads, text on the left and one painting on the right, so each illustration had to carry a whole part of the story. The story, paintings and typesetting are all my own, developed from sketchbook thumbnails and Procreate roughs into digital paintings in Photoshop.
 cardImage: cover.jpg
 facts:
   role: Story, illustration and typesetting for every spread.
