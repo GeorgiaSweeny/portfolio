@@ -1,61 +1,64 @@
 ---
 title: The Old Oak Tree
-year: '2021'
+year: '2022'
 disciplines:
   - illustration-print
 order: 5
 role: Author and Illustrator
-outcome: A children’s picture book I wrote and illustrated from scratch.
-intro: An original picture book written, illustrated and typeset from scratch — a story about a lonely oak tree and the seed that grows beside it.
+outcome: A finished picture book about a lonely oak whose hill grows into a forest; I wrote, painted and typeset every spread.
+intro: >-
+  On a hill far from anyone stands a lonely old oak, until a helicopter seed spirals down beside him. Through its first winter he joins his roots to the sapling’s to share his strength, and by spring the hill is filling with flowers, bees and new seedlings he promises to look after: the beginning of the forest he lives in today.
+
+  I made it for a first-year brief at Bournemouth: a children’s book in four double-page spreads, text on the left and one illustration on the right, so each painting had to carry a whole part of the story. I wrote the story, worked out the compositions in sketchbook thumbnails and then Procreate roughs, painted every spread digitally in Photoshop and typeset the text. The paintings follow the seasons from autumn to spring, and one cuts away the hill to show the roots meeting underground.
 cardImage: cover.jpg
 facts:
   role: Story, illustration and typesetting for every spread.
-  tools: Digital painting in Adobe Photoshop.
-  outcome: A complete picture book, produced in my first year at Bournemouth.
+  tools: Procreate for roughs; digital painting in Adobe Photoshop.
+  outcome: A complete picture book, a cover and four spreads, made in my first year at Bournemouth University.
 blocks:
   - type: gallery
     heading: Every Spread
     images:
       - src: cover.jpg
-        alt: 'Book cover: a single leaf falling past misty hills, with the title The Old Oak Tree'
+        alt: 'Book cover: a helicopter seed spiralling down over grass among falling leaves, with the title The Old Oak Tree'
         caption: Cover
       - src: spread-1.jpg
-        alt: 'Picture book spread: the old oak tree with a face in its trunk, a seed falling'
-        caption: Spread 1
+        alt: 'Picture book spread: text on the left; on the right, the old oak tree with a weary face in its trunk as a helicopter seed spirals in on the wind'
+        caption: 'Autumn: the seed arrives'
         emphasis: key
       - src: spread-2.jpg
-        alt: 'Picture book spread: the seed underground sprouting roots'
-        caption: Spread 2
+        alt: 'Picture book spread: text on the left; on the right, a cutaway of the hill, the oak’s roots reaching underground to join the sapling’s'
+        caption: 'Winter: joining roots'
         emphasis: key
       - src: spread-3.jpg
-        alt: 'Picture book spread: the sapling grown tall beside the oak in spring'
-        caption: Spread 3
+        alt: 'Picture book spread: text on the left; on the right, a seedling sprouting at sunrise among flowers, bees and butterflies'
+        caption: 'Spring: new life'
         emphasis: key
       - src: spread-4.jpg
-        alt: 'Picture book spread: the oak and the grown tree surrounded by deer and flowers'
-        caption: Spread 4
+        alt: 'Picture book spread: text on the left; on the right, the old oak in a forest full of animals: a bear, rabbits, a deer, a squirrel and an owl'
+        caption: The forest today
         emphasis: key
   - type: gallery
     heading: The Artwork, Without Text
     images:
       - src: art-1.jpg
-        alt: The old oak tree with a face in its trunk, a seed falling
+        alt: The old oak tree with a weary face in its trunk as a helicopter seed spirals in on the wind
       - src: art-2.jpg
-        alt: The seed underground, roots joining the oak's, a key and treasure chest buried nearby
+        alt: Cutaway of the hill, the oak’s roots joining the sapling’s underground, with a mole, worms, a key and a buried treasure chest
       - src: art-3.jpg
-        alt: The sapling grown tall beside the oak at sunrise, with bees and butterflies
+        alt: A seedling sprouting at sunrise among flowers, bees and butterflies, a young tree behind
       - src: art-4.jpg
-        alt: The oak and the grown tree in a forest, surrounded by deer, rabbits, a bear and a squirrel
+        alt: The old oak in a forest, surrounded by a bear, rabbits, a deer, a squirrel and an owl
   - type: gallery
     heading: Early Sketches
     images:
       - src: sketch-1.jpg
-        alt: Pencil rough of tangled roots and a treasure chest among fallen leaves
-        caption: 'Pencil rough: roots and buried treasure'
+        alt: Rough sketch of tangled roots and a treasure chest among fallen leaves
+        caption: 'Procreate rough: roots and buried treasure'
       - src: sketch-2.jpg
-        alt: Pencil rough of an acorn sprouting in a sunlit clearing among flowers
-        caption: 'Pencil rough: the acorn sprouts'
+        alt: Rough sketch of a seedling sprouting in a sunlit clearing among flowers
+        caption: 'Procreate rough: a seedling sprouts'
       - src: sketch-3.jpg
-        alt: Pencil rough of woodland animals gathered beneath a great tree
-        caption: 'Pencil rough: the animals gather'
+        alt: Rough sketch of woodland animals gathered beneath a great tree
+        caption: 'Procreate rough: the animals gather'
 ---
