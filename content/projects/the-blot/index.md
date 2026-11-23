@@ -9,11 +9,13 @@ outcome: My pitch was one of about 12 chosen from 80–100 across the year, then
 intro: >-
   An architect works through the night on a deadline. One spill of ink ruins the drawing, and his stress takes shape as a creature risen from the blot.
 
-  The full story goes further. His room turns to paper and ink like a floor plan, he faces the creature, and it collapses back into a puddle. By morning he has dabbed it up, leaving only a faint mark. It came from a spill on my own A Level artwork, and the panic of thinking painstaking work was ruined when it wasn’t.
+  The 30-second film stops there. In the full story, his room turns to paper and ink like a floor plan, he faces the creature, and it collapses back into a puddle. By morning he has dabbed it up, leaving only a faint blot.
 
-  He’s an architect because some practices still draw by hand, and architecture was the subject I nearly studied instead of animation. The film is set in Bristol, the city of Brunel and the Clifton Suspension Bridge; his flat’s sash window is a nod to its buildings.
+  The story was inspired by a personal experience. During my A Levels, I spilt ink on a piece I’d worked on painstakingly. I was so upset I couldn’t see it was saveable, until a kind teacher calmed me down and I dabbed it up with paper towels; only a faint blot remained. I wanted to capture that feeling: work seemingly ruined at the last moment, and fear clouding your ability to see that things aren’t always as bad as they seem.
 
-  Everyone in my second year at Bournemouth pitched a film. Mine was the story, concept art, thumbnail boards and character design. Tutors chose about 12 of the strongest to be made, each directed by its pitcher with a team of five or six from three animation and VFX courses. The brief cut it to 30 seconds.
+  I made him an architect because it was the subject I nearly studied instead of animation. Bristol, with Brunel’s iconic suspension bridge in the background, felt right for a UK setting. The sash window in his flat is typical of the city’s older buildings.
+
+  Everyone in my second year at Bournemouth pitched a film. Mine was the story, concept art, thumbnail boards and character design. Tutors chose about 12 of the strongest to be made, each directed by its pitcher with a team of five or six from three animation and VFX courses, and 30 seconds of screen time.
 
   As director, I set the creative direction and had a say in the final edit. My own build: the architect, modelled in ZBrush and Maya, with some retopology and rigging; the room itself (walls, window, door, built-in shelves); and animation for a couple of short shots. I also designed the frog clock and drawing tools, painted his graduation portrait in Procreate, and designed his certificate and the Bristol logo on his mug. Teammates modelled the props, and did the texturing, lighting, compositing and editing.
 cardImage: ink.jpg
