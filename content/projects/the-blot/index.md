@@ -4,14 +4,23 @@ year: 2022–23
 disciplines:
   - film-animation
 order: 6
-role: Writer and Director
-outcome: My pitch was one of 7–12 picked from about 100 across the year, then made as a group 3D short.
-intro: A 3D animated short about an architect whose creative block takes physical form. A group film, made over two years.
+role: Writer and Director · Character Modeller
+outcome: My pitch was one of about 12 chosen from 80–100 across the year, then made as a group 3D short that I directed.
+intro: >-
+  An architect works through the night on a deadline. One spill of ink ruins the drawing, and his stress takes shape as a creature risen from the blot.
+
+  The full story goes further. His room turns to paper and ink like a floor plan, he faces the creature, and it collapses back into a puddle. By morning he has dabbed it up, leaving only a faint mark. It came from a spill on my own A Level artwork, and the panic of thinking painstaking work was ruined when it wasn’t.
+
+  He’s an architect because some practices still draw by hand, and architecture was the subject I nearly studied instead of animation. The film is set in Bristol, the city of Brunel and the Clifton Suspension Bridge; his flat’s sash window is a nod to its buildings.
+
+  Everyone in my second year at Bournemouth pitched a film. Mine was the story, concept art, thumbnail boards and character design. Tutors chose about 12 of the strongest to be made, each directed by its pitcher with a team of five or six from three animation and VFX courses. The brief cut it to 30 seconds.
+
+  As director, I set the creative direction and had a say in the final edit. My own build: the architect, modelled in ZBrush and Maya, with some retopology and rigging; the room itself (walls, window, door, built-in shelves); and animation for a couple of short shots. I also designed the frog clock and drawing tools, painted his graduation portrait in Procreate, and designed his certificate and the Bristol logo on his mug. Teammates modelled the props, and did the texturing, lighting, compositing and editing.
 cardImage: ink.jpg
 facts:
-  role: Director and writer. I set the creative direction for the team, wrote the story, painted concept art, and modelled characters and environments.
-  tools: Autodesk Maya, ZBrush, Substance Painter, Adobe Photoshop and Premiere Pro.
-  outcome: Everyone in the year pitched a film (about 100 pitches); mine was one of 7–12 chosen for group production.
+  role: 'Director and writer. Pitched the story, concept art, boards and character design; modelled the architect, with some retopology and rigging; modelled the room’s architecture; designed props and on-set graphics; animated a couple of short shots.'
+  tools: Procreate, Autodesk Maya and ZBrush.
+  outcome: 'Everyone in the year pitched a film (80–100 pitches). Tutors chose about 12 to be made, each directed by its pitcher; mine became a 30-second short made by a team from three courses.'
 links:
   - label: Visit my channel
     url: https://www.youtube.com/@georgia-sweeny
@@ -53,7 +62,7 @@ blocks:
         caption: Sculpting his head
       - src: window-set.jpg
         alt: Render of the studio’s sash window set into a brick wall, the lit room visible behind
-        caption: The studio window, from outside
+        caption: 'A Bristol sash window: my room build, textured and lit by the team'
   - type: gallery
     heading: Stills from the Film
     images:
@@ -65,5 +74,5 @@ blocks:
         caption: The room closing in
       - src: shelf.jpg
         alt: 'Film still: a frog clock and a framed certificate on a bookshelf'
-        caption: 'Set dressing: the details that tell you whose room this is'
+        caption: 'Set dressing: the frog clock and certificate are my designs'
 ---
