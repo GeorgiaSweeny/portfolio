@@ -44,6 +44,12 @@ blocks:
     label: Watch the teaser
     caption: Early 3D previs proof of concept – environments only, characters not yet posed
   - type: gallery
+    heading: Where It Started
+    images:
+      - src: shadow-play-act-one.jpg
+        alt: "A strip of four silhouette panels on yellow for Act One: figures beneath a tree and a radiant sun, with notes under each"
+        caption: "Where it started: Act One of my first-year shadow play concept"
+  - type: gallery
     heading: Concept and Development
     images:
       - src: concept-sun-tree.jpg
@@ -55,6 +61,21 @@ blocks:
       - src: wool.jpg
         alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
         caption: 'Concept painting: the wool-dyers’ alley'
+      - src: reference-doorway.jpg
+        alt: Photo of an ornate carved doorway in a Marrakech souk, among stalls of goods
+        caption: "My reference photo: a carved doorway in the souks"
+      - src: reference-lanterns.jpg
+        alt: Photo of a shop crowded with hanging coloured-glass lanterns
+        caption: "My reference photo: a lantern shop"
+      - src: reference-souk.jpg
+        alt: Photo of a covered souk alley with slatted shade overhead and people walking
+        caption: "My reference photo: a covered souk"
+      - src: reference-spices.jpg
+        alt: Photo of a stall piled with spices and dried goods in tubs and baskets
+        caption: "My reference photo: a spice stall"
+      - src: sketchbook-sundial.jpg
+        alt: Sketchbook page planning the city in rings around a central sundial, with notes
+        caption: Planning the city and central medina around a sundial design
   - type: gallery
     heading: Characters
     images:
@@ -76,6 +97,12 @@ blocks:
       - src: costume-patterns.jpg
         alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
         caption: Costume patterns for the two characters
+      - src: sketchbook-assets.jpg
+        alt: "Sketchbook page titled Assets: the old wise woman, the philosopher and the staff in ink"
+        caption: "Sketchbook: the wise woman, the philosopher and the staff"
+      - src: sketchbook-shape-language.jpg
+        alt: Sketchbook page of simple shapes and colours mapping the shape language of the three main characters
+        caption: Shape language for the three main characters
   - type: gallery
     heading: Initial Storyboards and Colour Thumbnails
     images:
@@ -181,4 +208,13 @@ blocks:
       - src: prop-rugs-door.jpg
         alt: Render of rugs hung on a rail and laid on the ground beside a carved wooden door
         caption: Rugs and a carved door
+      - src: book-covers.jpg
+        alt: Sketchbook page of six ink designs for the story book’s cover
+        caption: Cover iterations for the story book
+      - src: book-sculpt.jpg
+        alt: Grey digital sculpt of the story book with a carved circular cover design
+        caption: Sculpting the story book
+      - src: book-textured.jpg
+        alt: The story book textured in purple with a gold sun on its cover, beside its texture maps
+        caption: The story book, textured
 ---

@@ -33,4 +33,23 @@ blocks:
       - src: blast.jpg
         alt: The ground exploding into rubble, drawn in hard black line
         caption: A hand-drawn impact frame
+  - type: gallery
+    heading: Storyboards
+    images:
+      - src: storyboard-board.jpg
+        alt: Enlarged pencil storyboard panels pinned up across a large board
+        caption: "Working out the final flow: moving enlarged storyboards around on a pinboard, making cuts and edits"
+        emphasis: key
+      - src: storyboard-1.jpg
+        alt: "Pencil storyboard page: a shop, a car on the road and a crash"
+        caption: "Storyboard page: the original crash ending, before the meteors"
+      - src: storyboard-2.jpg
+        alt: "Pencil storyboard page: the car flipping over"
+        caption: "Storyboard page: extended crash action before the ending"
+      - src: storyboard-3.jpg
+        alt: "Pencil storyboard page: the final panels of the film"
+        caption: "Storyboard page: the extended, implied crash ending"
+      - src: map.jpg
+        alt: Hand-drawn map of the film’s town with a forest and a lake
+        caption: "Map of the town: forest, town and lake"
 ---

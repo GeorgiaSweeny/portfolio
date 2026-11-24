@@ -17,6 +17,28 @@ facts:
   outcome: A finished creature, sculpted, retopologised, UV’d across six UDIMs and textured, ready for rigging, developed to a studio brief with feedback from DNEG mentors.
 blocks:
   - type: gallery
+    heading: Concept
+    images:
+      - src: concept-painting.jpg
+        alt: "Painted concept of the creature: a vulture-headed predator with skin-flap wings on a canyon ledge"
+        caption: Concept painting
+        emphasis: key
+      - src: sketch-vulture-head.jpg
+        alt: "Sketchbook page of early design notes: a vulture head on a skeletal body"
+        caption: "Vulture head, skeletal body: early design notes"
+      - src: sketch-skeleton.jpg
+        alt: Sketchbook page of skeleton studies for the creature
+        caption: Working out the skeleton
+      - src: sketch-gliding-flaps.jpg
+        alt: Sketchbook page of wings and skin flaps for gliding
+        caption: Skin flaps for gliding
+      - src: sketch-beak.jpg
+        alt: Sketchbook page of the fleshy beak and saggy skin around the eye
+        caption: The fleshy beak and saggy skin around the eye
+      - src: texture-board.jpg
+        alt: Texture concept board of vulture skin, wounds and blisters
+        caption: "Texture concept board: vulture skin, wounds and blisters"
+  - type: gallery
     heading: The Sculpt
     images:
       - src: three-quarter.jpg

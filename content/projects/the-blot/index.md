@@ -31,6 +31,15 @@ blocks:
     poster: ink.jpg
     label: Watch The Blot
   - type: gallery
+    heading: The Pitch
+    images:
+      - src: pitch-thumbnails.jpg
+        alt: Notebook page of small thumbnail sketches of the ink spill and the creature rising from it
+        caption: "Pitch thumbnails: the ink spill"
+      - src: pitch-notes.jpg
+        alt: Notebook page of handwritten pitch notes and sketches of the monster and Karl
+        caption: "Pitch notes: the monster and Karl"
+  - type: gallery
     heading: Concept Art
     images:
       - src: desk.jpg
@@ -48,6 +57,47 @@ blocks:
       - src: scribble.jpg
         alt: 'Concept painting: tangled ink scribbles bursting from a desk'
         caption: The blot taking form
+      - src: lighting-desk-yellow.jpg
+        alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
+        caption: "Lighting key, intense yellow: working late by lamplight"
+        group: desk-lighting
+      - src: lighting-desk-mono.jpg
+        alt: "Lighting key: the drawing desk at night in monochrome"
+        caption: "Lighting key, monochrome: working late by lamplight"
+        group: desk-lighting
+      - src: lighting-desk-slight.jpg
+        alt: "Lighting key: the drawing desk at night with a slight yellow light"
+        caption: "Lighting key, slight yellow: working late by lamplight"
+        group: desk-lighting
+      - src: window-warm.jpg
+        alt: "Lighting key: the dark shape of the blot against the window in warm light"
+        caption: "Lighting key: the blot against the window, warm"
+        group: window-lighting
+      - src: window-cool.jpg
+        alt: The same window lighting key in cool blue light
+        caption: …and cool
+        group: window-lighting
+  - type: gallery
+    heading: Props and Graphics
+    images:
+      - src: props-frog-clock.jpg
+        alt: Prop design sheet for a green frog-shaped clock
+        caption: "Prop design: the frog clock"
+      - src: props-drawing-tools.jpg
+        alt: "Prop design sheet of drawing tools: pencils, compasses, set squares and pens"
+        caption: "Prop design: his drawing tools"
+      - src: props-mugs-books.jpg
+        alt: Prop design sheet of mugs, architecture books and the firm’s logo
+        caption: "Prop design: mugs, books and the firm’s logo"
+      - src: props-satchel.jpg
+        alt: Prop design of a brown leather satchel
+        caption: "Prop design: his satchel"
+      - src: graphic-certificate.jpg
+        alt: A Master of Architecture certificate designed for the set, in Karl Wheatley’s name
+        caption: His certificate, designed for the set
+      - src: graphic-logo.jpg
+        alt: Black and white circular logo of a castle on waves with a ship and a fish
+        caption: The Bristol logo on his mug
   - type: gallery
     heading: Character and Set Building
     images:

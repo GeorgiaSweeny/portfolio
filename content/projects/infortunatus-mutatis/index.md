@@ -41,4 +41,47 @@ blocks:
         caption: The frame as I drew it
       - src: melt.jpg
         alt: The clay character covering his face as he melts
+  - type: gallery
+    heading: Character Design
+    images:
+      - src: sketch-character.jpg
+        alt: Sketchbook page of character designs for the puppet in a tunic
+        caption: Character design
+      - src: sketch-expressions.jpg
+        alt: Sketchbook page of facial expressions for the character
+        caption: Expressions
+      - src: sketch-cauldrons.jpg
+        alt: Sketchbook page of cauldron designs with notes on practical lighting
+        caption: Cauldron designs and practical lighting
+  - type: gallery
+    heading: Building the Set and Puppet
+    images:
+      - src: set-cave.jpg
+        alt: The cave set lit warmly, with the cauldron, shelves and fire pit
+        caption: The cave set, lit
+        emphasis: key
+      - src: puppet.jpg
+        alt: The stop-motion puppet standing, seen from the front
+        caption: The puppet
+      - src: puppet-parts.jpg
+        alt: The puppet’s replacement head and parts laid out
+        caption: Replacement head and parts
+      - src: set-shelf.jpg
+        alt: The potion shelf on set, lit by a candle
+        caption: The potion shelf
+      - src: set-fire-pit.jpg
+        alt: The fire pit on set, glowing from a light inside it
+        caption: The fire pit, lit from inside
+      - src: puppet-wrap.jpg
+        alt: Close-up of the transformed green puppet on set
+        caption: Wrap on set!
+  - type: gallery
+    heading: Behind the Scenes
+    images:
+      - src: bts-animating.jpg
+        alt: Georgia animating the puppet frame by frame on the set
+        caption: Animating frame by frame
+      - src: bts-studio.jpg
+        alt: The set built in a makeshift home studio, with lights and a camera
+        caption: The set in my makeshift studio
 ---
