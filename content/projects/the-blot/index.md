@@ -18,9 +18,9 @@ intro: >-
   My pitch was one of about 12 that tutors chose from the entire year. As well as directing and creating the story and concept art, I modelled Karl and his room, including his retopology and rigging. I also animated a couple of short shots, designed the props and created some of the on-set graphics. My teammates were responsible for the prop modelling, texturing, lighting, visual effects, compositing, editing and the rest of the animation.
 cardImage: ink.jpg
 facts:
-  role: 'Director and writer. Pitched the story, concept art, boards and character design; modelled the architect, with his retopology and rigging; modelled the room’s architecture; designed props and on-set graphics; animated a couple of short shots.'
+  role: 'Director, story, concept art and character design; modelling, retopology and rigging for Karl; modelling his room; prop design, on-set graphics, and character animation for a few short shots.'
   tools: Procreate, Autodesk Maya and ZBrush.
-  outcome: 'Everyone in the year pitched a film (80–100 pitches). Tutors chose about 12 to be made, each directed by its pitcher; mine became a 30-second short made by a team from three courses.'
+  outcome: A finished 30-second 3D short. My pitch was one of about 12 chosen from the year.
 links:
   - label: Visit my channel
     url: https://www.youtube.com/@georgia-sweeny
