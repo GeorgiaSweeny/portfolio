@@ -7,20 +7,18 @@ order: 6
 role: Writer and Director · Character Modeller
 outcome: My pitch was one of about 12 chosen from 80–100 across the year, then made as a group 3D short that I directed.
 intro: >-
-  An architect works through the night on a deadline. One spill of ink ruins the drawing, and his stress takes shape as a creature risen from the blot.
+  Karl, a newly qualified architect, has just moved into his first flat, and most of his things are still in boxes. He works arduously through the night on a project due the next morning. When he knocks over his ink pot, his stress and anxiety take shape as a creature rising out of the blot.
 
-  The 30-second film stops there. In the full story, his room turns to paper and ink like a floor plan, he faces the creature, and it collapses back into a puddle. By morning he has dabbed it up, leaving only a faint blot.
+  The 30-second short ends there. In the full story, his room turns to paper and ink and he has to face the creature, until it collapses back into a blot. By morning he has dabbed it up, and only a faint blot is left.
 
-  The story was inspired by a personal experience. During my A Levels, I spilt ink on a piece I’d worked on painstakingly. I was so upset I couldn’t see it was saveable, until a kind teacher calmed me down and I dabbed it up with paper towels; only a faint blot remained. I wanted to capture that feeling: work seemingly ruined at the last moment, and fear clouding your ability to see that things aren’t always as bad as they seem.
+  It’s based on the time I spilt ink all over a piece I’d spent hours on, certain it was ruined. After carefully dabbing it off, only a faint mark remained. In the end it was a happy accident – I liked it so much I made more blots on purpose.
 
-  I made him an architect because it was the subject I nearly studied instead of animation. Bristol, with Brunel’s iconic suspension bridge in the background, felt right for a UK setting. The sash window in his flat is typical of the city’s older buildings.
+  I wanted to set the film in the UK, and Bristol felt right. Brunel’s iconic suspension bridge makes it instantly recognisable, and the city has a rich architectural history.
 
-  Everyone in my second year at Bournemouth pitched a film. Mine was the story, concept art, thumbnail boards and character design. Tutors chose about 12 of the strongest to be made, each directed by its pitcher with a team of five or six from three animation and VFX courses, and 30 seconds of screen time.
-
-  As director, I set the creative direction and had a say in the final edit. My own build: the architect, modelled in ZBrush and Maya, with some retopology and rigging; the room itself (walls, window, door, built-in shelves); and animation for a couple of short shots. I also designed the frog clock and drawing tools, painted his graduation portrait in Procreate, and designed his certificate and the Bristol logo on his mug. Teammates modelled the props, and did the texturing, lighting, compositing and editing.
+  My pitch was one of about 12 that tutors chose from the entire year. As well as directing and creating the story and concept art, I modelled Karl and his room, including his retopology and rigging. I also animated a couple of short shots, designed the props and created some of the on-set graphics. The rest of the team did the prop modelling, texturing, lighting, visual effects, compositing and editing.
 cardImage: ink.jpg
 facts:
-  role: 'Director and writer. Pitched the story, concept art, boards and character design; modelled the architect, with some retopology and rigging; modelled the room’s architecture; designed props and on-set graphics; animated a couple of short shots.'
+  role: 'Director and writer. Pitched the story, concept art, boards and character design; modelled the architect, with his retopology and rigging; modelled the room’s architecture; designed props and on-set graphics; animated a couple of short shots.'
   tools: Procreate, Autodesk Maya and ZBrush.
   outcome: 'Everyone in the year pitched a film (80–100 pitches). Tutors chose about 12 to be made, each directed by its pitcher; mine became a 30-second short made by a team from three courses.'
 links:
