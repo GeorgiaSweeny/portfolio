@@ -4,22 +4,21 @@ year: '2024'
 disciplines:
   - 3d-interactive
 order: 7
-draft: true
 role: Designer and Maker
 outcome: A working bedside lamp, 3D-printed in resin from a pattern made with my own tool, and designed to double as a prop for The Tale of Capturing the Sun.
 intro: >-
-  I wanted a little piece of the world I created, and a physical demonstration of what my pattern tool can do. So the lamp was made for both: a bedside lamp, and a prop for The Tale of Capturing the Sun.
+  I wanted a little piece of the world I created, and a physical demonstration of what my pattern tool can do. So the lamp was made for both: my third-year 3D printing module, and as a prop for The Tale of Capturing the Sun.
 
   Its pattern comes from my Islamic Pattern Generator in Houdini, built into the lamp in Maya. The printed lamp has its own proportions and scale, separate from the film's prop models. I explored other shadow-casting shades first, but chose my pattern tool for its double use.
 
-  It was made for a 3D printing module in my third year at Bournemouth. The screens needed finer detail at lamp-shade scale than the usual filament printers could give, so a friend prepared the resin and printed the parts on their printer. Removing the supports, finishing every part and assembling the lamp were mine.
+  The screens needed finer detail at lamp-shade scale than the usual filament printers could give, so a friend prepared the resin and printed the parts on their printer. Removing the supports, finishing every part and assembling the lamp were mine.
 cardImage: lamp-lit.jpg
 showcase:
   video: turntable.mp4
   poster: turntable.jpg
   alt: The printed lamp turning slowly on a stand, its pierced panels and lattice dome catching the light
 facts:
-  role: 'Design, pattern, modelling, finishing and assembly. Printed in resin by a friend.'
+  role: 'Design, pattern, modelling, finishing and assembly.'
   tools: SideFX Houdini (with my Islamic Pattern Generator), Autodesk Maya.
   outcome: A working bedside lamp, made for a third-year 3D printing module and designed to double as a prop for The Tale of Capturing the Sun.
 ownTool: true
