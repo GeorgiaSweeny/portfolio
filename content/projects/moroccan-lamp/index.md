@@ -23,6 +23,10 @@ facts:
   outcome: A working bedside lamp, made for a third-year 3D printing module and designed to double as a prop for The Tale of Capturing the Sun.
 ownTool: true
 blocks:
+  - type: video
+    youtube: 0KFI25cUPd8
+    poster: lamp-lit.jpg
+    label: Watch how it was made
   - type: gallery
     heading: Design Concepts
     images:
