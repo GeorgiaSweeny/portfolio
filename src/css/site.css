@@ -352,6 +352,12 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .gallery figure.key { flex-basis: 100%; max-width: 100%; } /* a key image always has its row to itself */
 .gallery figure.key > a, .gallery figure.key > .clip, .gallery figure.key > figcaption { width: 100%; max-width: min(100%, calc(var(--ar) * 1000px)); }
 .gallery::after { content: ""; flex: 10000 1 0; } /* last row keeps its height instead of stretching */
+/* an even grid (design.galleryColumns): every row lines up, the last row included */
+.gallery.cols { display: grid; grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr)); gap: 20px 14px; align-items: start; }
+.gallery.cols::after { content: none; }
+.gallery.cols figure, .gallery.cols figure.grouped { max-width: none; }
+.gallery.cols figure.key { grid-column: 1 / -1; }
+@media (min-width: 700px) { .gallery.cols { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
 .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--tile); cursor: zoom-in; }
 .gallery img { width: 100%; height: auto; }
 .gallery .clip { border-radius: 10px; overflow: hidden; background: var(--tile); }

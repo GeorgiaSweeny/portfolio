@@ -45,25 +45,72 @@ blocks:
   - type: gallery
     heading: The Doorway, Stage by Stage
     images:
-      - src: doorway-stage-1.jpg
-        alt: "Early stage of the cathedral doorway painting on an easel: warm light blocked in around red doors, with a rough reflection below"
-        caption: Blocking in the light
-      - src: doorway-stage-2.jpg
-        alt: The doorway painting with its arches and reflection roughly painted in yellow and blue
-        caption: The doorway and its reflection, roughed in
-      - src: doorway-stage-3.jpg
-        alt: The painting on an easel with masking tape across it, the reflection being painted separately below
-        caption: Masking off the reflection
-      - src: doorway-stage-4.jpg
-        alt: The doorway painting with columns and pointed arches in place and the reflection still rough
-        caption: The arches take shape
-      - src: doorway-stage-5.jpg
-        alt: The near-finished painting with blue stained glass above the doors and detailed columns
-        caption: Detail and stained glass
+      - src: doorway-stage-01.jpg
+        alt: "Stage 1 of the cathedral doorway painting: the warm light and red doors blocked in, with a rough reflection below"
+      - src: doorway-stage-03.jpg
+        alt: "Stage 2 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-04.jpg
+        alt: "Stage 3 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-05.jpg
+        alt: "Stage 4 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-06.jpg
+        alt: "Stage 5 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-07.jpg
+        alt: "Stage 6 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-08.jpg
+        alt: "Stage 7 of the cathedral doorway painting: masking tape across the canvas while the reflection is painted"
+      - src: doorway-stage-09.jpg
+        alt: "Stage 8 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-10.jpg
+        alt: "Stage 9 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-11.jpg
+        alt: "Stage 10 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-12.jpg
+        alt: "Stage 11 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-13.jpg
+        alt: "Stage 12 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-14.jpg
+        alt: "Stage 13 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-15.jpg
+        alt: "Stage 14 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-16.jpg
+        alt: "Stage 15 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-17.jpg
+        alt: "Stage 16 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-18.jpg
+        alt: "Stage 17 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-19.jpg
+        alt: "Stage 18 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-20.jpg
+        alt: "Stage 19 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-21.jpg
+        alt: "Stage 20 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-22.jpg
+        alt: "Stage 21 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-23.jpg
+        alt: "Stage 22 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-24.jpg
+        alt: "Stage 23 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-25.jpg
+        alt: "Stage 24 of the cathedral doorway painting on the easel"
+      - src: doorway-stage-26.jpg
+        alt: "Stage 25 of the cathedral doorway painting on the easel"
       - src: doorway-final.jpg
         alt: The finished painting of the West Entrance of St Albans Cathedral, golden arches around red doors reflected in a dark floor
         caption: The finished painting, with its reflection
         emphasis: key
+  - type: gallery
+    heading: Carol of Bells, Stage by Stage
+    images:
+      - src: cathedral-night-progress-1.jpg
+        alt: Early stage of the Carol of Bells painting, the cathedral's lit doorways blocked in against a dark blue night
+      - src: cathedral-night-progress-2.jpg
+        alt: The Carol of Bells painting with the cathedral's towers and arches roughed in above the snow
+      - src: cathedral-full-moon-final-photo.jpg
+        alt: The Carol of Bells painting with the full moon added, before the choir figures
+      - src: moon.jpg
+        alt: The finished Carol of Bells painting, St Albans Cathedral under a full moon with choir figures in the snow
+        caption: The finished painting
   - type: gallery
     heading: Process
     images:

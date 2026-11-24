@@ -109,7 +109,8 @@ layout: layouts/base.njk
       {%- elif b.type == "gallery" %}
         {%- if b.heading %}<h2 class="gallery-h" id="{{ b.heading | slugify }}">{{ b.heading }}</h2>{% endif %}
         {%- set imgH = (design.galleryHeights[p.id] or {})[b.heading] %}
-        <div class="gallery"{% if imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
+        {%- set cols = (design.galleryColumns[p.id] or {})[b.heading] %}
+        <div class="gallery{% if cols %} cols{% endif %}"{% if cols %} style="--cols:{{ cols }};--cols-sm:{{ 3 if cols >= 5 else 2 }}"{% elif imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
           {%- asyncEach im in b.images %}
           <figure class="{% if im.emphasis == "key" %}key{% elif im.group %}grouped{% endif %}" style="--ar:{% imageRatio im.src %}">
             {%- if im.video %}
