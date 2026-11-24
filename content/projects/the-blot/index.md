@@ -15,7 +15,7 @@ intro: >-
 
   I wanted to set the film in the UK, and Bristol felt right. Brunel’s iconic suspension bridge makes it instantly recognisable, and the city has a rich architectural history.
 
-  My pitch was one of about 12 that tutors chose from the entire year. As well as directing and creating the story and concept art, I modelled Karl and his room, including his retopology and rigging. I also animated a couple of short shots, designed the props and created some of the on-set graphics. The rest of the team did the prop modelling, texturing, lighting, visual effects, compositing and editing.
+  My pitch was one of about 12 that tutors chose from the entire year. As well as directing and creating the story and concept art, I modelled Karl and his room, including his retopology and rigging. I also animated a couple of short shots, designed the props and created some of the on-set graphics. My teammates were responsible for the prop modelling, texturing, lighting, visual effects, compositing, editing and the rest of the animation.
 cardImage: ink.jpg
 facts:
   role: 'Director and writer. Pitched the story, concept art, boards and character design; modelled the architect, with his retopology and rigging; modelled the room’s architecture; designed props and on-set graphics; animated a couple of short shots.'
