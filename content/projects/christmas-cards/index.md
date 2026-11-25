@@ -42,6 +42,19 @@ blocks:
         alt: A couple on a bench by a frozen lake at dusk, the cathedral behind
   - type: gallery
     section: stages
+    heading: Museum + Gallery, Stage by Stage
+    images:
+      - src: museum-pencil.jpg
+        alt: Detailed pencil drawing of the St Albans Museum + Gallery building front, labelled for the Town Hall Christmas card
+        caption: Pencil drawing
+      - src: museum-painting.jpg
+        alt: The finished painting of the St Albans Museum + Gallery in snow under a starry night sky, with the streets either side
+        caption: The finished painting
+      - src: museum.jpg
+        alt: The Museum + Gallery card design, cropped square from the painting
+        caption: The card design
+  - type: gallery
+    section: stages
     heading: The Doorway, Stage by Stage
     images:
       - src: doorway-stages.jpg
@@ -74,6 +87,11 @@ blocks:
     section: stages
     heading: St Albans Postbox, Stage by Stage
     images:
+      - src: postbox-timelapse.jpg
+        video: postbox-timelapse.mp4
+        alt: Timelapse of the postbox design being painted, from first lines to finished colour
+        caption: Painting it, start to finish (timelapse)
+        emphasis: key
       - src: postbox-stage-01.jpg
         alt: "Pencil sketch of the postbox design: a father lifting his daughter to post a letter, with a dog beside them"
       - src: postbox-stage-02.jpg
@@ -89,6 +107,9 @@ blocks:
     section: stages
     heading: Verulamium Lake, Stage by Stage
     images:
+      - src: lake-lineart.jpg
+        alt: Black and white line art of a figure on a bench by a frozen lake, with the cathedral on the far bank
+        caption: An earlier design, in line art
       - src: lake-stage-01.jpg
         alt: "Pencil sketch of the far bank of Verulamium Lake, with the cathedral on the skyline"
       - src: lake-stage-02.jpg
@@ -105,25 +126,9 @@ blocks:
         alt: "A pink and gold sunset sky"
       - src: lake-stage-08.jpg
         alt: "Snow and detail refined across the scene"
-      - src: lake-stage-09.jpg
-        alt: "Final touches"
       - src: bench.jpg
         alt: "The finished Verulamium Lake painting: a couple on a bench by the frozen lake at dusk, the cathedral behind"
         caption: The finished painting
-  - type: gallery
-    section: development
-    heading: Process
-    images:
-      - src: museum-pencil.jpg
-        alt: Detailed pencil drawing of the St Albans Museum + Gallery building front, labelled for the Town Hall Christmas card
-        caption: Pencil drawing for the Museum + Gallery card
-      - src: lake-lineart.jpg
-        alt: Black and white line art of a figure on a bench by a frozen lake, with the cathedral on the far bank
-        caption: Design iteration line art for Verulamium Lake
-      - src: postbox-timelapse.jpg
-        video: postbox-timelapse.mp4
-        alt: Timelapse of the postbox design being painted, from first lines to finished colour
-        caption: Painting St Albans Postbox (timelapse)
   - type: gallery
     section: beyond-the-studio
     images:

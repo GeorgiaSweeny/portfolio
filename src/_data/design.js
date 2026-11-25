@@ -31,7 +31,7 @@ export default {
   // Galleries shown as an even grid with this many images per row (fewer on phones), by project id and gallery heading.
   // For runs of same-shape images, such as stage-by-stage process photos, where every row should line up.
   galleryColumns: {
-    "christmas-cards": { "The Range": 4, "Carol of Bells, Stage by Stage": 6,
+    "christmas-cards": { "The Range": 4, "Museum + Gallery, Stage by Stage": 3, "Carol of Bells, Stage by Stage": 6,
       "St Albans Postbox, Stage by Stage": 5, "Verulamium Lake, Stage by Stage": 5,
       "In the Works: Clock Tower": 5, "In the Works: Abbey Gateway": 5, "In the Works: St Peter’s Church": 4 },
   },
