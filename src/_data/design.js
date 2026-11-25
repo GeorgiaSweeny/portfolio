@@ -30,7 +30,8 @@ export default {
   // Galleries shown as an even grid with this many images per row (fewer on phones), by project id and gallery heading.
   // For runs of same-shape images, such as stage-by-stage process photos, where every row should line up.
   galleryColumns: {
-    "christmas-cards": { "The Range": 5, "The Doorway, Stage by Stage": 5, "Carol of Bells, Stage by Stage": 4 },
+    "christmas-cards": { "The Range": 5, "The Doorway, Stage by Stage": 5, "Carol of Bells, Stage by Stage": 4,
+      "St Albans Postbox, Stage by Stage": 5, "Verulamium Lake, Stage by Stage": 5 },
   },
   // Opening media on a project page is its first full-size YouTube video, else its showcase clip,
   // else its card image. To choose differently for a project: { "<project id>": "video" | "clip" | "image" }.

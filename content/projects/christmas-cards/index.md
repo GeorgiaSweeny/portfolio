@@ -112,6 +112,54 @@ blocks:
         alt: The finished Carol of Bells painting, St Albans Cathedral under a full moon with choir figures in the snow
         caption: The finished painting
   - type: gallery
+    heading: St Albans Postbox, Stage by Stage
+    images:
+      - src: postbox-stage-01.jpg
+        alt: "Pencil sketch of the postbox design: a father lifting his daughter to post a letter, with a dog beside them"
+      - src: postbox-stage-02.jpg
+        alt: "The postbox painted red over the pencil sketch"
+      - src: postbox-stage-03.jpg
+        alt: "The father's coat being inked"
+      - src: postbox-stage-04.jpg
+        alt: "The father inked and coloured"
+      - src: postbox-stage-05.jpg
+        alt: "On a clean white background, the dog sketched in"
+      - src: postbox-stage-06.jpg
+        alt: "The dog painted"
+      - src: postbox-stage-07.jpg
+        alt: "Snow added around the postbox and figures"
+      - src: postbox-stage-08.jpg
+        alt: "The daughter drawn in"
+      - src: postbox-stage-09.jpg
+        alt: "The daughter coloured in pink"
+      - src: postbox-stage-10.jpg
+        alt: "The finished postbox design"
+        caption: The finished artwork
+  - type: gallery
+    heading: Verulamium Lake, Stage by Stage
+    images:
+      - src: lake-stage-01.jpg
+        alt: "Pencil sketch of the far bank of Verulamium Lake, with the cathedral on the skyline"
+      - src: lake-stage-02.jpg
+        alt: "Pencil sketch of the whole scene: the frozen lake, small figures and a bench in the foreground"
+      - src: lake-stage-03.jpg
+        alt: "A blue wash laid over the sketch"
+      - src: lake-stage-04.jpg
+        alt: "Trees, cathedral and lamps painted in blue as the bench takes shape"
+      - src: lake-stage-05.jpg
+        alt: "Two figures on the bench, the far bank lit"
+      - src: lake-stage-06.jpg
+        alt: "Lamp reflections on the frozen lake, the figures coloured"
+      - src: lake-stage-07.jpg
+        alt: "A pink and gold sunset sky"
+      - src: lake-stage-08.jpg
+        alt: "Snow and detail refined across the scene"
+      - src: lake-stage-09.jpg
+        alt: "Final touches"
+      - src: bench.jpg
+        alt: "The finished Verulamium Lake painting: a couple on a bench by the frozen lake at dusk, the cathedral behind"
+        caption: The finished painting
+  - type: gallery
     heading: Process
     images:
       - src: museum-pencil.jpg
