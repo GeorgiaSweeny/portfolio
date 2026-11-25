@@ -125,7 +125,7 @@ blocks:
         alt: Timelapse of the postbox design being painted, from first lines to finished colour
         caption: Painting St Albans Postbox (timelapse)
   - type: gallery
-    heading: Out in the World
+    heading: Beyond the Studio
     images:
       - src: with-the-mayor-2018.jpg
         alt: Georgia with the Mayor of St Albans, each holding a copy of her Museum + Gallery Christmas card
