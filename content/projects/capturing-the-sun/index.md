@@ -175,24 +175,6 @@ blocks:
         alt: Intricate black line drawing of a twelve-pointed geometric sun motif
         caption: The sun motif, built from geometric pattern rules
   - type: gallery
-    section: final
-    images:
-      - src: souks.jpg
-        alt: Unreal Engine render of a sunlit market street through a horseshoe arch
-        caption: The souks
-      - src: render-courtyard.jpg
-        alt: Unreal Engine render of the empty medina courtyard, the great tree on its stepped platform beneath tiled arcades, rugs laid out on the sand
-        caption: The medina courtyard and the great tree
-      - src: render-great-tree.jpg
-        alt: Unreal Engine render of the gnarled great tree, its branches hung with threads, in front of a carved arched door
-        caption: The great tree
-      - src: render-dyers-alley.jpg
-        alt: Unreal Engine render of a narrow alley hung with purple dyed wool, lit warm at its far arched end
-        caption: The dyers’ alley
-      - src: render-campsite.jpg
-        alt: Unreal Engine render of a night camp under the stars, a canvas tent beside a ring of stones and a glowing fire
-        caption: The night camp
-  - type: gallery
     section: props
     heading: Props and Set Dressing
     images:
@@ -220,4 +202,22 @@ blocks:
       - src: book-textured.jpg
         alt: The story book textured in purple with a gold sun on its cover, beside its texture maps
         caption: The story book, textured
+  - type: gallery
+    section: final
+    images:
+      - src: souks.jpg
+        alt: Unreal Engine render of a sunlit market street through a horseshoe arch
+        caption: The souks
+      - src: render-courtyard.jpg
+        alt: Unreal Engine render of the empty medina courtyard, the great tree on its stepped platform beneath tiled arcades, rugs laid out on the sand
+        caption: The medina courtyard and the great tree
+      - src: render-great-tree.jpg
+        alt: Unreal Engine render of the gnarled great tree, its branches hung with threads, in front of a carved arched door
+        caption: The great tree
+      - src: render-dyers-alley.jpg
+        alt: Unreal Engine render of a narrow alley hung with purple dyed wool, lit warm at its far arched end
+        caption: The dyers’ alley
+      - src: render-campsite.jpg
+        alt: Unreal Engine render of a night camp under the stars, a canvas tent beside a ring of stones and a glowing fire
+        caption: The night camp
 ---

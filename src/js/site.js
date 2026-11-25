@@ -7,6 +7,19 @@
   });
 
   // ---- project pages (phones): the "Jump to" drop-down, and Read more for the intro and facts
+  // Wider screens: the row of links, unless it would need more than one line.
+  document.querySelectorAll(".proj-jump").forEach((nav) => {
+    const chips = nav.querySelector(".chips");
+    const fit = () => {
+      nav.classList.remove("as-select");
+      const links = chips.querySelectorAll("a");
+      if (!links.length || !chips.offsetParent) return; // hidden (phones): the drop-down shows anyway
+      nav.classList.toggle("as-select", links[links.length - 1].offsetTop > links[0].offsetTop + 4);
+    };
+    fit();
+    addEventListener("resize", fit);
+    document.fonts?.ready.then(fit);
+  });
   document.querySelectorAll("select[data-jump]").forEach((sel) => {
     sel.addEventListener("change", () => {
       const v = sel.value;

@@ -263,16 +263,19 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .proj-jump .chips a { flex: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(243,239,228,.3); color: var(--on-night); text-decoration: none; white-space: nowrap; }
 .proj-jump .chips a:hover { border-color: var(--accent); color: var(--accent); }
 .proj-body .gallery-h { scroll-margin-top: 76px; }
-/* Phones: the jump links become one line with a drop-down list */
-.jump-select { display: none; }
+/* The jump links: one row of links; when they don't fit on one line (always on phones), a drop-down list */
+.jump-select { display: none; align-items: center; gap: 10px; max-width: 520px; }
+.jump-select span { flex: none; font: 13px var(--mono); color: var(--sage); }
+.jump-select select { flex: 1; min-width: 0; font: 600 15px var(--body, system-ui); color: var(--on-night); background: transparent; border: 1px solid rgba(243,239,228,.3); border-radius: 999px; padding: 9px 36px 9px 14px; appearance: none; -webkit-appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: right 18px center, right 13px center; background-size: 5px 5px; background-repeat: no-repeat; }
+.jump-select select:hover { border-color: var(--accent); }
+.jump-select select option { color: #000; }
+.proj-jump.as-select .chips { display: none; }
+.proj-jump.as-select .jump-select { display: flex; }
 @media (max-width: 699px) {
   .proj-jump { padding-top: 10px; padding-bottom: 10px; }
   .proj-jump .chips { display: none; }
-  .jump-select { display: flex; align-items: center; gap: 10px; }
-  .jump-select span { flex: none; font: 13px var(--mono); color: var(--sage); }
-  .jump-select select { flex: 1; min-width: 0; font: 600 15px var(--body, system-ui); color: var(--on-night); background: transparent; border: 1px solid rgba(243,239,228,.3); border-radius: 999px; padding: 9px 36px 9px 14px; appearance: none; -webkit-appearance: none;
-    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: right 18px center, right 13px center; background-size: 5px 5px; background-repeat: no-repeat; }
-  .jump-select select option { color: #000; }
+  .jump-select { display: flex; max-width: none; }
   .proj-body .gallery-h { scroll-margin-top: 66px; }
 }
 /* Phones: compact buttons (two to a line) and less space before the first section */
