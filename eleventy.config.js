@@ -18,10 +18,20 @@ const mediaUrl = (src) => {
   if (!m) throw new Error(`Clips must sit in a project folder: ${src}`);
   return `/media/${m[1]}/${m[2]}`;
 };
+const IMG_CACHE = ".cache/img";
+const IMG_OUT = "_site/img";
+const usedImages = new Set(); // file names this build's pages use
+const image = async (src, opts) => {
+  const meta = await Image(src, opts);
+  for (const list of Object.values(meta)) for (const m of list) usedImages.add(m.filename);
+  return meta;
+};
 const imgOpts = (extra = {}) => ({
   widths: [400, 800, 1200, 1600, 2400],
   formats: ["webp", "jpeg"], // AVIF left out: too slow to encode on every Cloudflare build
-  outputDir: "_site/img/",
+  // Made in .cache/img/ (kept between Cloudflare builds by the build cache) and copied into
+  // _site/img/ after the build, so an image is only encoded again when its master changes.
+  outputDir: `${IMG_CACHE}/`,
   urlPath: "/img/",
   sharpWebpOptions: { quality: 72 },
   sharpJpegOptions: { quality: 76, mozjpeg: true },
@@ -43,13 +53,23 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/css/");
   eleventyConfig.addWatchTarget(`${CONTENT}/`);
   eleventyConfig.on("eleventy.before", resetContent);
+  eleventyConfig.on("eleventy.before", () => usedImages.clear());
+  // Copy this build's images from the cache into the site, and drop cached images no page uses.
+  eleventyConfig.on("eleventy.after", () => {
+    fs.mkdirSync(IMG_OUT, { recursive: true });
+    for (const name of usedImages) fs.copyFileSync(`${IMG_CACHE}/${name}`, `${IMG_OUT}/${name}`);
+    if (usedImages.size === 0) return;
+    for (const name of fs.readdirSync(IMG_CACHE)) {
+      if (!usedImages.has(name)) fs.rmSync(`${IMG_CACHE}/${name}`);
+    }
+  });
   eleventyConfig.addFilter("mediaUrl", mediaUrl);
 
   // ---- images -------------------------------------------------------------
   // {% image "content/projects/capturing-the-sun/medina.jpg", "Alt text", "(min-width: 1100px) 33vw, 100vw", "class", "eager" %}
   eleventyConfig.addAsyncShortcode("image", async (src, alt, sizes = "100vw", cls = "", loading = "lazy") => {
     if (alt === undefined) throw new Error(`Missing alt for ${src}`);
-    const meta = await Image(src, imgOpts());
+    const meta = await image(src, imgOpts());
     return Image.generateHTML(meta, {
       alt, sizes, loading, decoding: "async",
       ...(cls ? { class: cls } : {}),
@@ -58,23 +78,23 @@ export default function (eleventyConfig) {
   });
   // Width/height ratio, for justified gallery rows.
   eleventyConfig.addAsyncShortcode("imageRatio", async (src) => {
-    const meta = await Image(src, imgOpts());
+    const meta = await image(src, imgOpts());
     const j = meta.jpeg[0];
     return (j.width / j.height).toFixed(4);
   });
   // Width in px of the largest jpeg (the original's width, capped), so small media isn't blown up.
   eleventyConfig.addAsyncShortcode("imageWidth", async (src) => {
-    const meta = await Image(src, imgOpts());
+    const meta = await image(src, imgOpts());
     return String(meta.jpeg[meta.jpeg.length - 1].width);
   });
   // Largest jpeg URL, for the lightbox.
   eleventyConfig.addAsyncShortcode("imageFull", async (src) => {
-    const meta = await Image(src, imgOpts());
+    const meta = await image(src, imgOpts());
     return meta.jpeg[meta.jpeg.length - 1].url;
   });
   // 1200×630 social preview (og:image), cropped from the card image.
   eleventyConfig.addAsyncShortcode("ogImage", async (src) => {
-    const meta = await Image(src, imgOpts({
+    const meta = await image(src, imgOpts({
       widths: [1200], formats: ["jpeg"],
       filenameFormat: (id, s) => `og-${outName(s)}-${id.slice(0, 6)}.jpeg`,
       transform: (sharp) => sharp.resize(1200, 630, { fit: "cover", withoutEnlargement: false }),
