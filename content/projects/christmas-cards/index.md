@@ -226,9 +226,6 @@ blocks:
   - type: gallery
     heading: 'In Progress: Abbey Gateway'
     images:
-      - src: abbey-gateway-concept.jpg
-        alt: "First concept sketch for Abbey Gateway: people carrying candles through the far side of the gateway, under a lit lamp"
-        caption: First concept
       - src: abbey-gateway-01.jpg
         alt: "Early stage of the Abbey Gateway painting: windows and archway blocked in on white"
       - src: abbey-gateway-02.jpg
@@ -241,6 +238,8 @@ blocks:
         alt: "Sky and ground washed in blue"
       - src: abbey-gateway-06.jpg
         alt: "Stonework and windows painted over the blue"
+      - src: abbey-gateway-07.jpg
+        alt: "The windows detailed"
       - src: abbey-gateway-08.jpg
         alt: "A deep blue night sky added"
       - src: abbey-gateway-09.jpg
