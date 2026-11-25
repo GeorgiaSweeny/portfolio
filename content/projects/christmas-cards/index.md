@@ -102,6 +102,9 @@ blocks:
   - type: gallery
     heading: Carol of Bells, Stage by Stage
     images:
+      - src: carol-of-bells-concept.jpg
+        alt: "First digital concept sketch for Carol of Bells: the cathedral seen through gates hung with wreaths"
+        caption: First concept
       - src: cathedral-night-progress-1.jpg
         alt: Early stage of the Carol of Bells painting, the cathedral's lit doorways blocked in against a dark blue night
       - src: cathedral-night-progress-2.jpg
@@ -193,4 +196,80 @@ blocks:
       - src: shop-shelf.jpg
         alt: Georgia’s cards and prints in cellophane on a shop display
         caption: On the shelf at Raindrops On Roses charity shop
+  - type: gallery
+    heading: 'In Progress: Clock Tower'
+    images:
+      - src: clock-tower-01.jpg
+        alt: "First sketch for Clock Tower concept 1: the tower from street level, with a ring of figures in the square"
+        caption: Concept 1
+      - src: clock-tower-02.jpg
+        alt: "Clock Tower concept 1 in flat colour: the tower under an aurora, with snow and rooftops"
+      - src: clock-tower-03.jpg
+        alt: "Early sketch for Clock Tower concept 2: figures gathered by a doorway, with a lamppost and street signs"
+        caption: Concept 2
+      - src: clock-tower-04.jpg
+        alt: "Clock Tower concept 2: carol singers by the tower, with a lamppost and street signs"
+      - src: clock-tower-05.jpg
+        alt: "3D blockout of the clock tower and the buildings around it, seen from above"
+        caption: 3D blockout
+      - src: clock-tower-06.jpg
+        alt: "Colour study of the clock tower at dusk, lit with strings of lights"
+        caption: Colour studies
+      - src: clock-tower-07.jpg
+        alt: "Colour study of the clock tower at night"
+      - src: clock-tower-08.jpg
+        alt: "Pale colour study of the clock tower"
+      - src: clock-tower-09.jpg
+        alt: "Gold colour study of the clock tower"
+      - src: clock-tower-10.jpg
+        alt: "Gold colour study of the clock tower with sketch lines showing"
+  - type: gallery
+    heading: 'In Progress: Abbey Gateway'
+    images:
+      - src: abbey-gateway-concept.jpg
+        alt: "First concept sketch for Abbey Gateway: people carrying candles through the far side of the gateway, under a lit lamp"
+        caption: First concept
+      - src: abbey-gateway-01.jpg
+        alt: "Early stage of the Abbey Gateway painting: windows and archway blocked in on white"
+      - src: abbey-gateway-02.jpg
+        alt: "The gatehouse stonework and arch outlined in warm tones"
+      - src: abbey-gateway-03.jpg
+        alt: "The towers drawn in and the snowy ground started"
+      - src: abbey-gateway-04.jpg
+        alt: "The archway lit and the path roughed in"
+      - src: abbey-gateway-05.jpg
+        alt: "Sky and ground washed in blue"
+      - src: abbey-gateway-06.jpg
+        alt: "Stonework and windows painted over the blue"
+      - src: abbey-gateway-08.jpg
+        alt: "A deep blue night sky added"
+      - src: abbey-gateway-09.jpg
+        alt: "Trees and snow refined"
+      - src: abbey-gateway-10.jpg
+        alt: "The Abbey Gateway painting so far: the gatehouse in snow under a night sky"
+        caption: The painting so far
+  - type: gallery
+    heading: 'In Progress: St Peter’s Church'
+    images:
+      - src: st-peters-church-01.jpg
+        alt: "Blue underpainting of St Peter’s Church on canvas, with the drawing showing through"
+        caption: Underpainting
+      - src: st-peters-church-02.jpg
+        alt: "Stage 2 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-03.jpg
+        alt: "Stage 3 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-04.jpg
+        alt: "Stage 4 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-05.jpg
+        alt: "Stage 5 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-06.jpg
+        alt: "Stage 6 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-07.jpg
+        alt: "Stage 7 of the St Peter’s Church canvas on the easel"
+      - src: st-peters-church-08.jpg
+        alt: "The St Peter’s Church canvas: the lychgate glowing beneath a golden rose window"
+        caption: The canvas so far
+      - src: st-peters-church-09.jpg
+        alt: "Digital painting of St Peter’s Church in snow at night, the lychgate lit and the rose window glowing"
+        caption: Digital version
 ---
