@@ -39,72 +39,25 @@ blocks:
         alt: Gold and blue illustration of St Albans Cathedral
       - src: bench.jpg
         alt: A couple on a bench by a frozen lake at dusk, the cathedral behind
-      - src: poster.jpg
-        alt: Advance sales poster showing the full card range
-        caption: Advance sales poster I designed for the range
   - type: gallery
     heading: The Doorway, Stage by Stage
     images:
-      - src: doorway-stage-01.jpg
-        alt: "Stage 1 of the cathedral doorway painting: the warm light and red doors blocked in, with a rough reflection below"
-      - src: doorway-stage-03.jpg
-        alt: "Stage 2 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-04.jpg
-        alt: "Stage 3 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-05.jpg
-        alt: "Stage 4 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-06.jpg
-        alt: "Stage 5 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-07.jpg
-        alt: "Stage 6 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-08.jpg
-        alt: "Stage 7 of the cathedral doorway painting: masking tape across the canvas while the reflection is painted"
-      - src: doorway-stage-09.jpg
-        alt: "Stage 8 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-10.jpg
-        alt: "Stage 9 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-11.jpg
-        alt: "Stage 10 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-12.jpg
-        alt: "Stage 11 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-13.jpg
-        alt: "Stage 12 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-14.jpg
-        alt: "Stage 13 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-15.jpg
-        alt: "Stage 14 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-16.jpg
-        alt: "Stage 15 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-17.jpg
-        alt: "Stage 16 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-18.jpg
-        alt: "Stage 17 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-19.jpg
-        alt: "Stage 18 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-20.jpg
-        alt: "Stage 19 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-21.jpg
-        alt: "Stage 20 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-22.jpg
-        alt: "Stage 21 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-23.jpg
-        alt: "Stage 22 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-24.jpg
-        alt: "Stage 23 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-25.jpg
-        alt: "Stage 24 of the cathedral doorway painting on the easel"
-      - src: doorway-stage-26.jpg
-        alt: "Stage 25 of the cathedral doorway painting on the easel"
+      - src: doorway-stages.jpg
+        video: doorway-stages.mp4
+        alt: The cathedral doorway painting built up stage by stage, from the first warm underpainting to the finished painting
+        caption: Twenty-five stages, start to finish
       - src: doorway-final.jpg
         alt: The finished painting of the West Entrance of St Albans Cathedral, golden arches around red doors reflected in a dark floor
         caption: The finished painting, with its reflection
-        emphasis: key
   - type: gallery
     heading: Carol of Bells, Stage by Stage
     images:
       - src: carol-of-bells-concept.jpg
         alt: "First digital concept sketch for Carol of Bells: the cathedral seen through gates hung with wreaths"
         caption: First concept
+      - src: carol-of-bells-underpainting.jpg
+        alt: "Blue underpainting for Carol of Bells on canvas, with the drawing of the cathedral showing through"
+        caption: Underpainting
       - src: cathedral-night-progress-1.jpg
         alt: Early stage of the Carol of Bells painting, the cathedral's lit doorways blocked in against a dark blue night
       - src: cathedral-night-progress-2.jpg
@@ -121,23 +74,13 @@ blocks:
         alt: "Pencil sketch of the postbox design: a father lifting his daughter to post a letter, with a dog beside them"
       - src: postbox-stage-02.jpg
         alt: "The postbox painted red over the pencil sketch"
-      - src: postbox-stage-03.jpg
-        alt: "The father's coat being inked"
       - src: postbox-stage-04.jpg
         alt: "The father inked and coloured"
-      - src: postbox-stage-05.jpg
-        alt: "On a clean white background, the dog sketched in"
-      - src: postbox-stage-06.jpg
-        alt: "The dog painted"
-      - src: postbox-stage-07.jpg
-        alt: "Snow added around the postbox and figures"
       - src: postbox-stage-08.jpg
         alt: "The daughter drawn in"
-      - src: postbox-stage-09.jpg
-        alt: "The daughter coloured in pink"
-      - src: postbox-stage-10.jpg
-        alt: "The finished postbox design"
-        caption: The finished artwork
+      - src: postbox.jpg
+        alt: "The finished St Albans Postbox card design: a father lifting his daughter to post a letter, with their dog, framed in red"
+        caption: The card design
   - type: gallery
     heading: Verulamium Lake, Stage by Stage
     images:
@@ -240,25 +183,22 @@ blocks:
   - type: gallery
     heading: 'In Progress: St Peter’s Church'
     images:
-      - src: st-peters-church-01.jpg
-        alt: "Blue underpainting of St Peter’s Church on canvas, with the drawing showing through"
-        caption: Underpainting
+      - src: st-peters-church-photobash.jpg
+        alt: "Photobash of St Peter’s Church in snow at night, the lychgate lit and the rose window glowing"
+        caption: Photobash
       - src: st-peters-church-02.jpg
-        alt: "Stage 2 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 1 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-03.jpg
-        alt: "Stage 3 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 2 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-04.jpg
-        alt: "Stage 4 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 3 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-05.jpg
-        alt: "Stage 5 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 4 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-06.jpg
-        alt: "Stage 6 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 5 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-07.jpg
-        alt: "Stage 7 of the St Peter’s Church canvas on the easel"
+        alt: "Stage 6 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-08.jpg
         alt: "The St Peter’s Church canvas: the lychgate glowing beneath a golden rose window"
         caption: The canvas so far
-      - src: st-peters-church-09.jpg
-        alt: "Digital painting of St Peter’s Church in snow at night, the lychgate lit and the rose window glowing"
-        caption: Digital version
 ---
