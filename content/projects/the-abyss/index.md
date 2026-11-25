@@ -1,5 +1,6 @@
 ---
 title: The Abyss
+layout: game
 year: '2026'
 disciplines:
   - 3d-interactive
@@ -31,6 +32,7 @@ links:
     url: https://youtu.be/itvz9Tkm6_s
 blocks:
   - type: gallery
+    section: signature-system
     heading: Lighting
     images:
       - src: torch-battery.jpg
@@ -56,11 +58,12 @@ blocks:
         alt: A sonar pulse revealing spike walls around the submarine, with the power ring glowing red at 12%
         caption: A sonar pulse (by a teammate); I matched the colours objects show when it hits them to how they look in torchlight and glow
   - type: video
+    section: video
     youtube: CvOZ20M2DBA
     poster: wide.jpg
     label: Watch the demo
   - type: gallery
-    heading: Level Design
+    section: level-design
     images:
       - src: sketch-rooms-start.jpg
         alt: 'Sketchbook spread of hand-drawn room plans for the start area, hazard maze and tunnel, with a key for power, health, scrap, spikes, breakable walls, hidden passages, exits and enemies'
@@ -115,6 +118,7 @@ blocks:
         alt: Map of the final climb, a cave that widens as it rises to the surface
         caption: 'The surface: the final climb, where the light slowly breaks through'
   - type: gallery
+    section: systems
     heading: Game Systems
     images:
       - src: workshop.jpg

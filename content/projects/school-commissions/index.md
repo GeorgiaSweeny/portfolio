@@ -1,5 +1,6 @@
 ---
 title: School Commissions and Competitions
+layout: collection
 year: 2018–2020
 disciplines:
   - illustration-print
@@ -18,6 +19,7 @@ facts:
   outcome: Three winning Christmas card designs, printed as the school's official cards, plus a house diary cover and commissioned artworks.
 blocks:
   - type: gallery
+    section: finished
     heading: Christmas Cards
     images:
       - src: christmas-card-2018.jpg
@@ -31,6 +33,7 @@ blocks:
         alt: Framed painting of students with the four house banners around a Christmas tree in front of the cathedral
         caption: School Christmas card (2020), framed
   - type: gallery
+    section: finished
     heading: Commissions
     images:
       - src: house-diary-cover.jpg

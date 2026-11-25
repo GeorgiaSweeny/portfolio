@@ -1,5 +1,6 @@
 ---
 title: Pattinator
+layout: software
 year: '2026'
 disciplines:
   - tools-software
@@ -30,6 +31,7 @@ links:
     url: https://github.com/GeorgiaSweeny/algorithmic-pattern-explorer
 blocks:
   - type: gallery
+    section: what-it-does
     heading: Patterns from One Shared Vocabulary
     images:
       - src: pattern-01.jpg
@@ -63,6 +65,7 @@ blocks:
       - src: pattern-15.jpg
         alt: 'Generated pattern: navy and yellow Perlin noise with an animal silhouette emerging'
   - type: gallery
+    section: inside-the-tool
     heading: Designing the Interface
     images:
       - src: sketch.jpg

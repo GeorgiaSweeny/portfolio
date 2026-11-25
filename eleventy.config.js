@@ -3,6 +3,7 @@ import Image from "@11ty/eleventy-img";
 import fs from "node:fs";
 import disciplines from "./src/_data/disciplineList.js";
 import { CONTENT, resetContent } from "./src/_lib/content.js";
+import layouts from "./src/_data/layouts.js";
 
 // Content lives in content/ (see CONTENT.md); everything else here is the site design.
 // Image paths given to the shortcodes are from the repo root, e.g.
@@ -118,8 +119,26 @@ export default function (eleventyConfig) {
   // anywhere in its blocks (small videos never open a page), or -1.
   eleventyConfig.addFilter("openingVideoIndex", (blocks, small = []) =>
     blocks.findIndex((b) => b.type === "video" && !small.includes(b.youtube)));
-  // Headings of a project's blocks, for its jump links.
-  eleventyConfig.addFilter("headings", (blocks = []) => blocks.map((b) => b.heading).filter(Boolean));
+  // A block's heading: its own, else (galleries only) its section's standard heading (src/_data/layouts.js).
+  const blockHeading = (b) => b.heading || (b.type === "gallery" ? layouts.sections[b.section]?.heading : undefined);
+  eleventyConfig.addFilter("blockHeading", blockHeading);
+  // Headings of a project's blocks, for its jump links (the block opening the page is left out).
+  eleventyConfig.addFilter("headings", (blocks = [], skip = -1) =>
+    blocks.map((b, i) => (i === skip ? undefined : blockHeading(b))).filter(Boolean));
+  // How a gallery is laid out: design.js galleryColumns / galleryHeights (by project and heading)
+  // win over the section's default row style. Returns { cols } | { height } | { showcase, height }.
+  eleventyConfig.addFilter("galleryStyle", (b, id, design) => {
+    const h = blockHeading(b);
+    const cols = (design.galleryColumns[id] || {})[h];
+    if (cols) return { cols };
+    const height = (design.galleryHeights[id] || {})[h];
+    const sec = layouts.sections[b.section] || {};
+    const st = layouts.styles[sec.style] || {};
+    const small = sec.style === "small" || (height && height <= 350);
+    if (height) return { height, showcase: !!st.showcase, small };
+    if (sec.style === "grid" && sec.cols) return { cols: sec.cols };
+    return { height: st.height, showcase: !!st.showcase, small };
+  });
   // Paragraphs of a text field (separated by line breaks).
   eleventyConfig.addFilter("paras", (s = "") => String(s).split(/\n+/).map((t) => t.trim()).filter(Boolean));
   eleventyConfig.addFilter("absolute", (url, base) => new URL(url, base).href);

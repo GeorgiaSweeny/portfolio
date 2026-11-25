@@ -6,6 +6,23 @@
     sel.addEventListener("change", () => { location.href = sel.value; });
   });
 
+  // ---- project pages (phones): the "Jump to" drop-down, and Read more for the intro and facts
+  document.querySelectorAll("select[data-jump]").forEach((sel) => {
+    sel.addEventListener("change", () => {
+      const v = sel.value;
+      sel.value = "";
+      if (!v) return;
+      if (location.hash === v) document.querySelector(v)?.scrollIntoView(); // same section again
+      else location.hash = v; // the browser's own anchor jump (honours scroll-margin-top)
+    });
+  });
+  document.querySelectorAll("[data-read-more]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.closest(".proj-open")?.classList.add("expanded");
+      btn.setAttribute("aria-expanded", "true");
+    });
+  });
+
   // ---- silent looping clips: stay on their still image if the visitor prefers less motion
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll("video[data-autoplay]").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });

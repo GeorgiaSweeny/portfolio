@@ -36,6 +36,7 @@ only (between the two `---` lines). File names in it refer to files in the same 
 | Field | Required | What it is |
 | --- | --- | --- |
 | `title` | yes | The project's name. |
+| `layout` | yes | What kind of project it is, which sets the usual sections: `film` (Film & Animation), `asset` (3D Asset & Making), `game`, `software` (Software & Interactive), `book` (Book & Illustrated Pages), `collection`, `piece` (Single Piece). See "Sections" below. |
 | `year` | yes | Year or span, e.g. `'2024'` or `2018–2025`. |
 | `disciplines` | yes | One or more of `illustration-print`, `film-animation`, `3d-interactive`, `tools-software`, `personal-work`. |
 | `order` | yes | Position in project lists, 1 first. No two projects share a number. |
@@ -79,12 +80,18 @@ showcase:
 
 ### Blocks
 
-A **gallery** is a group of images under an optional heading:
+Every block names its **section** (what part of the project it shows). The section gives the
+block its standard heading; add `heading:` only to use different words (e.g. "Building the Medina"
+for an `environments` section). A section can be used by any kind of project, and split into
+several blocks (e.g. three `production` blocks: The Sculpt, Retopology and UVs, Textures).
+
+A **gallery** is a group of images:
 
 ```yaml
 blocks:
   - type: gallery
-    heading: Storyboards
+    section: storyboards      # standard heading "Storyboards and Animatic"
+    heading: Storyboards      # optional: replaces the standard heading
     images:
       - src: storyboard-market.jpg
         alt: 'Storyboard: looking down the market street towards the tree'
@@ -115,12 +122,31 @@ A **video** is a film on YouTube, shown as its poster image until played:
 
 ```yaml
   - type: video
+    section: video
     youtube: fKp3UTxZdac      # the id from the YouTube link
     poster: storyboard-market.jpg
     label: Watch the animatic
     caption: 3D previs concept teaser   # optional
     heading: …                          # optional
 ```
+
+### Sections
+
+The usual sections for each `layout`, in order (any section can be used in any project, and left
+out when there's nothing for it). The site design gives each its standard heading and how its
+images are laid out (`src/_data/layouts.js`).
+
+| `layout` | Sections |
+| --- | --- |
+| `film` | `initial-concept` (how the idea began; media used in the pitch), `concept-art` (or split: `characters`, `environments`, `props`, `references`, each with 3+ items), `storyboards`, `production` (or split: `story`, `set`, `lighting`, `models`, `vfx`, `sfx`), `final` or `stills` (may come first), `behind-the-scenes`, `video` |
+| `asset` | `concept`, `production` (one block per pipeline stage), `finished`, `video` |
+| `game` | `signature-system` (the part she owned), `video`, `level-design`, `systems`, `development` |
+| `software` | `what-it-does` (outputs first), `inside-the-tool`, `video`, `development`, `research` |
+| `book` | `every-page`, `artwork-without-text`, `sketches` |
+| `collection` | `range`, `beyond-the-studio`, `stages` (one block per piece, "[Piece], Stage by Stage"), `in-the-works` |
+| `piece` | `finished`, `sketch-to-final`, `beyond-the-studio` |
+
+A `video` section is only for videos beyond the one that opens the page.
 
 ## Featured projects: `content/featured.yaml`
 

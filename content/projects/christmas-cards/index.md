@@ -1,5 +1,6 @@
 ---
 title: Christmas Card Range
+layout: collection
 year: 2018–2025
 disciplines:
   - illustration-print
@@ -19,7 +20,7 @@ facts:
   outcome: Chosen by the Mayor of St Albans for the official Christmas card (2018). The doorway design won the St Albans Art Society Trophy (2022). Stocked by St Albans Museum + Gallery for five years and by the Cathedral gift shop, and the choir boys design was licensed to the Addison’s Disease Self-Help Group for fundraising cards two years running.
 blocks:
   - type: gallery
-    heading: The Range
+    section: range
     images:
       - src: museum.jpg
         alt: St Albans Museum + Gallery in the snow at night
@@ -40,6 +41,7 @@ blocks:
       - src: bench.jpg
         alt: A couple on a bench by a frozen lake at dusk, the cathedral behind
   - type: gallery
+    section: stages
     heading: The Doorway, Stage by Stage
     images:
       - src: doorway-stages.jpg
@@ -50,6 +52,7 @@ blocks:
         alt: The finished painting of the West Entrance of St Albans Cathedral, golden arches around red doors reflected in a dark floor
         caption: The finished painting, with its reflection
   - type: gallery
+    section: stages
     heading: Carol of Bells, Stage by Stage
     images:
       - src: carol-of-bells-concept.jpg
@@ -68,6 +71,7 @@ blocks:
         alt: The finished Carol of Bells painting, St Albans Cathedral under a full moon with choir figures in the snow
         caption: The finished painting
   - type: gallery
+    section: stages
     heading: St Albans Postbox, Stage by Stage
     images:
       - src: postbox-stage-01.jpg
@@ -82,6 +86,7 @@ blocks:
         alt: "The finished St Albans Postbox card design: a father lifting his daughter to post a letter, with their dog, framed in red"
         caption: The card design
   - type: gallery
+    section: stages
     heading: Verulamium Lake, Stage by Stage
     images:
       - src: lake-stage-01.jpg
@@ -106,6 +111,7 @@ blocks:
         alt: "The finished Verulamium Lake painting: a couple on a bench by the frozen lake at dusk, the cathedral behind"
         caption: The finished painting
   - type: gallery
+    section: development
     heading: Process
     images:
       - src: museum-pencil.jpg
@@ -119,7 +125,7 @@ blocks:
         alt: Timelapse of the postbox design being painted, from first lines to finished colour
         caption: Painting St Albans Postbox (timelapse)
   - type: gallery
-    heading: Beyond the Studio
+    section: beyond-the-studio
     images:
       - src: with-the-mayor-2018.jpg
         alt: Georgia with the Mayor of St Albans, each holding a copy of her Museum + Gallery Christmas card
@@ -140,7 +146,8 @@ blocks:
         alt: Georgia’s cards and prints in cellophane on a shop display
         caption: On the shelf at Raindrops On Roses charity shop
   - type: gallery
-    heading: 'In Progress: Clock Tower'
+    section: in-the-works
+    heading: 'In the Works: Clock Tower'
     images:
       - src: clock-tower-01.jpg
         alt: "First sketch for Clock Tower concept 1: the tower from street level, with a ring of figures in the square"
@@ -167,7 +174,8 @@ blocks:
       - src: clock-tower-10.jpg
         alt: "Gold colour study of the clock tower with sketch lines showing"
   - type: gallery
-    heading: 'In Progress: Abbey Gateway'
+    section: in-the-works
+    heading: 'In the Works: Abbey Gateway'
     images:
       - src: abbey-gateway-01.jpg
         alt: "Early stage of the Abbey Gateway painting: windows and archway blocked in on white"
@@ -181,7 +189,8 @@ blocks:
         alt: "The Abbey Gateway painting so far: the gatehouse in snow under a night sky"
         caption: The painting so far
   - type: gallery
-    heading: 'In Progress: St Peter’s Church'
+    section: in-the-works
+    heading: 'In the Works: St Peter’s Church'
     images:
       - src: st-peters-church-photobash.jpg
         alt: "Photobash of St Peter’s Church in snow at night, the lychgate lit and the rose window glowing"

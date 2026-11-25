@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import * as yaml from "js-yaml";
 import disciplines from "../_data/disciplineList.js";
+import { sections as SECTIONS, presets as PRESETS } from "../_data/layouts.js";
 
 export const CONTENT = "content";
 const showDrafts = () => process.env.ELEVENTY_RUN_MODE === "serve" || process.env.SHOW_DRAFTS === "1";
@@ -20,7 +21,7 @@ const text = { type: "text" }, reqText = { type: "text", req: true };
 const imageRef = { type: "file", req: true };
 const SHAPES = {
   project: {
-    title: reqText, year: { type: "year", req: true }, order: { type: "int", req: true }, draft: { type: "bool" },
+    title: reqText, layout: { type: "enum", req: true, values: Object.keys(PRESETS) }, year: { type: "year", req: true }, order: { type: "int", req: true }, draft: { type: "bool" },
     disciplines: { type: "list", req: true, of: { type: "discipline" } },
     role: reqText, featureText: text, outcome: reqText, outcomeLong: text, intro: reqText, description: text,
     cardImage: imageRef,
@@ -35,8 +36,8 @@ const SHAPES = {
   facts: { role: reqText, tools: reqText, outcome: reqText },
   link: { label: reqText, url: reqText, youtube: { type: "bool" } },
   ownToolLink: { label: reqText, project: { type: "project", req: true } },
-  video: { type: reqText, heading: text, youtube: reqText, poster: imageRef, label: reqText, caption: text },
-  gallery: { type: reqText, heading: text, images: { type: "list", req: true, of: { type: "shape", shape: "image" } } },
+  video: { type: reqText, section: { type: "enum", req: true, values: Object.keys(SECTIONS) }, heading: text, youtube: reqText, poster: imageRef, label: reqText, caption: text },
+  gallery: { type: reqText, section: { type: "enum", req: true, values: Object.keys(SECTIONS) }, heading: text, images: { type: "list", req: true, of: { type: "shape", shape: "image" } } },
   image: { src: imageRef, video: { type: "file" }, webm: { type: "file" }, alt: { type: "text", req: true, allowEmpty: false }, caption: text, emphasis: { type: "enum", values: ["key"] }, group: text },
   profile: {
     name: reqText, location: reqText, positioning: reqText, description: reqText,

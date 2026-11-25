@@ -1,5 +1,6 @@
 ---
 title: The Picture of Dorian Gray
+layout: book
 year: 2018–19
 disciplines:
   - illustration-print
@@ -14,6 +15,7 @@ facts:
   outcome: A complete hand-bound hardback edition, awarded an A*.
 blocks:
   - type: gallery
+    section: finished
     heading: The Finished Book
     images:
       - src: photos.jpg

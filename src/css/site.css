@@ -258,11 +258,41 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 @media (min-width: 1100px) { .proj-hero-text h1 { font-size: 72px; } .proj-hero-text { padding-top: 44px; } }
 .proj-actions { background: var(--night); padding: 4px var(--pad) 0; }
 .proj-jump { position: sticky; top: 0; z-index: 3; background: var(--night); padding: 14px var(--pad); border-bottom: 1px solid rgba(243,239,228,.12); }
-.proj-jump .chips { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.proj-jump .chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } /* wraps; never scrolls sideways */
 .proj-jump .chips span { flex: none; font: 13px var(--mono); color: var(--sage); margin-right: 4px; }
 .proj-jump .chips a { flex: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(243,239,228,.3); color: var(--on-night); text-decoration: none; white-space: nowrap; }
 .proj-jump .chips a:hover { border-color: var(--accent); color: var(--accent); }
 .proj-body .gallery-h { scroll-margin-top: 76px; }
+/* Phones: the jump links become one line with a drop-down list */
+.jump-select { display: none; }
+@media (max-width: 699px) {
+  .proj-jump { padding-top: 10px; padding-bottom: 10px; }
+  .proj-jump .chips { display: none; }
+  .jump-select { display: flex; align-items: center; gap: 10px; }
+  .jump-select span { flex: none; font: 13px var(--mono); color: var(--sage); }
+  .jump-select select { flex: 1; min-width: 0; font: 600 15px var(--body, system-ui); color: var(--on-night); background: transparent; border: 1px solid rgba(243,239,228,.3); border-radius: 999px; padding: 9px 36px 9px 14px; appearance: none; -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: right 18px center, right 13px center; background-size: 5px 5px; background-repeat: no-repeat; }
+  .jump-select select option { color: #000; }
+  .proj-body .gallery-h { scroll-margin-top: 66px; }
+}
+/* Phones: compact buttons (two to a line) and less space before the first section */
+@media (max-width: 699px) {
+  .proj-actions .links { gap: 8px; }
+  .proj-actions .btn { padding: 9px 16px; font-size: 15px; }
+  .proj-hero-text { padding-top: 24px; }
+  .proj-open { padding-top: 24px; }
+  .proj-body > .wrap > .gallery-h:first-child { margin-top: 36px; }
+}
+/* Phones: the first intro paragraph, then Read more opens the rest and the facts */
+.read-more { display: none; }
+@media (max-width: 699px) {
+  html:not(.no-js) .proj-open:not(.expanded) .proj-intro .intro ~ .intro,
+  html:not(.no-js) .proj-open:not(.expanded) .proj-intro .owntool,
+  html:not(.no-js) .proj-open:not(.expanded) .proj-aside { display: none; }
+  html:not(.no-js) .read-more { display: inline-flex; align-self: flex-start; margin-top: 14px; padding: 8px 0; background: none; border: 0; font: 600 16px var(--body, system-ui); color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+  .proj-open.expanded .read-more { display: none; }
+  html:not(.no-js) .proj-open:not(.expanded) { padding-bottom: 32px; }
+}
 .proj-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
 @media (min-width: 1000px) { .proj-cols { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; } }
 .proj-aside { display: flex; flex-direction: column; gap: 28px; }
@@ -347,15 +377,16 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
    proportion to its own shape, so a row shares one height and fills the width.
    --ar (width/height) comes from the image; --h is the target row height (imgH in the content file). */
 .gallery { --h: calc(var(--img-h, 450px) * .62); display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
-.gallery figure { flex: calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6)); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.gallery figure { flex: calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6), calc(var(--ar) * 85vh)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6), calc(var(--ar) * 85svh)); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+/* No image taller than the screen: every figure is at most 85% of the screen height (shown whole; tap for full size). */
 /* Key images (emphasis: key) take a whole row, never taller than 1000px. */
 .gallery figure.key { flex-basis: 100%; max-width: 100%; } /* a key image always has its row to itself */
-.gallery figure.key > a, .gallery figure.key > .clip, .gallery figure.key > figcaption { width: 100%; max-width: min(100%, calc(var(--ar) * 1000px)); }
+.gallery figure.key > a, .gallery figure.key > .clip, .gallery figure.key > figcaption { width: 100%; max-width: min(100%, calc(var(--ar) * 1000px), calc(var(--ar) * 85vh)); max-width: min(100%, calc(var(--ar) * 1000px), calc(var(--ar) * 85svh)); }
 .gallery::after { content: ""; flex: 10000 1 0; } /* last row keeps its height instead of stretching */
 /* an even grid (design.galleryColumns): every row lines up, the last row included */
 .gallery.cols { display: grid; grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr)); gap: 20px 14px; align-items: start; }
 .gallery.cols::after { content: none; }
-.gallery.cols figure, .gallery.cols figure.grouped { max-width: none; }
+.gallery.cols figure, .gallery.cols figure.grouped { max-width: min(100%, calc(var(--ar) * 85svh)); }
 .gallery.cols figure.key { grid-column: 1 / -1; }
 @media (min-width: 700px) { .gallery.cols { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
 .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--tile); cursor: zoom-in; }
@@ -363,7 +394,16 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .gallery .clip { border-radius: 10px; overflow: hidden; background: var(--tile); }
 .gallery .clip video { display: block; width: 100%; height: auto; }
 .gallery figcaption { font-size: 14px; color: var(--muted); }
-@media (max-width: 699px) { .gallery figure { flex-basis: 100%; max-width: 100%; } .gallery figure.grouped { flex-basis: calc(50% - 10px); max-width: calc(50% - 10px); } } /* images in a group share a row on phones */
+/* Phones: never one long column. Portrait and square images (and groups) go two per row; wide
+   landscapes, key images and clips run full width; in small-row galleries everything pairs.
+   The clamp picks 50% when --ar <= 1.1 and 100% above it. */
+@media (max-width: 699px) {
+  .gallery:not(.cols) { gap: 14px 12px; }
+  .gallery:not(.cols) figure { flex: 0 0 auto; width: clamp(calc(50% - 6px), calc((var(--ar) - 1.1) * 100000px), 100%); max-width: min(100%, calc(var(--ar) * 85svh)); }
+  .gallery:not(.cols) figure.grouped, .gallery.small:not(.cols) figure { width: calc(50% - 6px); }
+  .gallery:not(.cols) figure.key { width: 100%; }
+  .gallery figcaption { font-size: 13px; }
+}
 @media (min-width: 1100px) { .gallery { --h: calc(var(--img-h, 450px) * .55); } }
 
 .pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--rule); font-weight: 700; }

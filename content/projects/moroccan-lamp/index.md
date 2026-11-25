@@ -1,5 +1,6 @@
 ---
 title: Moroccan Lamp
+layout: asset
 year: '2024'
 disciplines:
   - 3d-interactive
@@ -24,11 +25,12 @@ facts:
 ownTool: true
 blocks:
   - type: video
+    section: video
     youtube: 0KFI25cUPd8
     poster: lamp-lit.jpg
     label: Watch how it was made
   - type: gallery
-    heading: Design Concepts
+    section: concept
     images:
       - src: patterns.jpg
         alt: Fifteen white-on-black geometric patterns made with the Islamic Pattern Generator
@@ -40,6 +42,7 @@ blocks:
         alt: Close view of a twisted vase-shaped shade model in Maya
         caption: A twisted shade, close up
   - type: gallery
+    section: production
     heading: The Model
     images:
       - src: model-three-quarter.jpg
@@ -56,6 +59,7 @@ blocks:
         alt: Render of an eight-pointed sun motif cut out as a flat panel
         caption: The sun motif, cut out as a panel
   - type: gallery
+    section: production
     heading: Printing and Finishing
     images:
       - src: print-fresh.jpg
@@ -74,6 +78,7 @@ blocks:
         alt: Tweezers fitting patterned panels into the printed hexagonal frame
         caption: Fitting the panels into the frame
   - type: gallery
+    section: finished
     heading: The Finished Lamp
     images:
       - src: lamp-lit.jpg

@@ -18,7 +18,7 @@ layout: layouts/base.njk
 {%- set heroVideo = p.showcase if pick == "clip" else false %}
 {%- set ownToolNote = p.ownToolNote %}
 {%- set keyImage = p.cardImage if pick == "image" else false %}
-{%- set jump = blocks | headings %}
+{%- set jump = blocks | headings(fvIndex if fv else -1) %}
 <main id="main" class="proj-main">
   {#- Hero: the opening media full-bleed, with the title over it (like a feature card on Home). #}
   <section class="proj-hero{% if fv %} has-video{% endif %}">
@@ -59,7 +59,14 @@ layout: layouts/base.njk
   <nav class="proj-jump" aria-label="Sections of this project"><div class="wrap"><div class="chips">
     <span>Jump to</span>
     {%- for h in jump %}<a href="#{{ h | slugify }}">{{ h }}</a>{% endfor %}
-  </div></div></nav>
+  </div>
+  {#- Phones: one line with a drop-down list instead of the row of links (never scrolls sideways). #}
+  <label class="jump-select"><span>Jump to</span>
+    <select data-jump aria-label="Jump to a section">
+      <option value="">Choose a section</option>
+      {%- for h in jump %}<option value="#{{ h | slugify }}">{{ h }}</option>{% endfor %}
+    </select>
+  </label></div></nav>
   {%- endif %}
 
   <div class="proj-open"><div class="wrap">
@@ -67,6 +74,10 @@ layout: layouts/base.njk
       <div class="proj-intro">
         {%- for para in p.intro | paras %}
         <p class="intro">{{ para }}</p>
+        {%- if loop.first %}
+        {#- Phones: the first paragraph, then Read more opens the rest and the facts. #}
+        <button type="button" class="read-more" aria-expanded="false" data-read-more>Read more</button>
+        {%- endif %}
         {%- endfor %}
         {%- if p.ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
       </div>
@@ -98,7 +109,8 @@ layout: layouts/base.njk
       {%- elif b.type == "video" %}
       {#- design.smallVideos = secondary clips, about half width on desktop, with an optional caption #}
       {%- set isSmall = b.youtube in small %}
-      {%- if b.heading %}<h2 class="gallery-h" id="{{ b.heading | slugify }}">{{ b.heading }}</h2>{% endif %}
+      {%- set bh = b | blockHeading %}
+      {%- if bh %}<h2 class="gallery-h" id="{{ bh | slugify }}">{{ bh }}</h2>{% endif %}
       <figure class="video-fig{% if isSmall %} small{% endif %}">
         <div class="video" data-youtube="{{ b.youtube }}" data-title="{{ b.label }}: {{ p.title }}">
           {% image b.poster, "", ("(min-width: 1100px) 640px, 100vw" if isSmall else "(min-width: 1328px) 1328px, 100vw") %}
@@ -107,12 +119,14 @@ layout: layouts/base.njk
         {%- if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
       </figure>
       {%- elif b.type == "gallery" %}
-        {%- if b.heading %}<h2 class="gallery-h" id="{{ b.heading | slugify }}">{{ b.heading }}</h2>{% endif %}
-        {%- set imgH = (design.galleryHeights[p.id] or {})[b.heading] %}
-        {%- set cols = (design.galleryColumns[p.id] or {})[b.heading] %}
-        <div class="gallery{% if cols %} cols{% endif %}"{% if cols %} style="--cols:{{ cols }};--cols-sm:{{ 3 if cols >= 5 else 2 }}"{% elif imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
+        {%- set bh = b | blockHeading %}
+        {%- if bh %}<h2 class="gallery-h" id="{{ bh | slugify }}">{{ bh }}</h2>{% endif %}
+        {%- set gs = b | galleryStyle(p.id, design) %}
+        {%- set cols = gs.cols %}
+        {%- set imgH = gs.height %}
+        <div class="gallery{% if cols %} cols{% endif %}{% if gs.showcase %} showcase{% endif %}{% if gs.small %} small{% endif %}"{% if cols %} style="--cols:{{ cols }};--cols-sm:{{ 3 if cols >= 5 else 2 }}"{% elif imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
           {%- asyncEach im in b.images %}
-          <figure class="{% if im.emphasis == "key" %}key{% elif im.group %}grouped{% endif %}" style="--ar:{% imageRatio im.src %}">
+          <figure class="{% if im.emphasis == "key" or gs.showcase %}key{% elif im.group %}grouped{% endif %}" style="--ar:{% imageRatio im.src %}">
             {%- if im.video %}
             <div class="clip"><video autoplay muted loop playsinline preload="metadata" poster="{% imageFull im.src %}" aria-label="{{ im.alt }}" data-autoplay>
               {%- if im.webm %}<source src="{{ im.webm | mediaUrl }}" type="video/webm">{% endif %}

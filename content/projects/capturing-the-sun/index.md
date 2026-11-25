@@ -1,5 +1,6 @@
 ---
 title: The Tale of Capturing the Sun
+layout: film
 year: '2024'
 disciplines:
   - film-animation
@@ -35,22 +36,24 @@ ownToolLinks:
     project: moroccan-lamp
 blocks:
   - type: video
+    section: video
     youtube: fKp3UTxZdac
     poster: storyboard-market.jpg
     label: Watch the animatic
   - type: video
+    section: video
     youtube: vNhvHVbImFI
     poster: souks.jpg
     label: Watch the teaser
     caption: Early 3D previs proof of concept – environments only, characters not yet posed
   - type: gallery
-    heading: Where It Started
+    section: initial-concept
     images:
       - src: shadow-play-act-one.jpg
         alt: "A strip of four silhouette panels on yellow for Act One: figures beneath a tree and a radiant sun, with notes under each"
         caption: "Where it started: Act One of my first-year shadow play concept"
   - type: gallery
-    heading: Concept and Development
+    section: concept-art
     images:
       - src: concept-sun-tree.jpg
         alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
@@ -77,7 +80,7 @@ blocks:
         alt: Sketchbook page planning the city in rings around a central sundial, with notes
         caption: Planning the city and central medina around a sundial design
   - type: gallery
-    heading: Characters
+    section: characters
     images:
       - src: sketchbook.jpg
         alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
@@ -104,7 +107,8 @@ blocks:
         alt: Sketchbook page of simple shapes and colours mapping the shape language of the three main characters
         caption: Shape language for the three main characters
   - type: gallery
-    heading: Initial Storyboards and Colour Thumbnails
+    section: storyboards
+    heading: Storyboards
     images:
       - src: thumbnails-notebook.jpg
         alt: A notebook spread of tiny pen thumbnail storyboards for Acts 3 and 4, each panel annotated with handwritten notes, a few touched with yellow and red
@@ -122,9 +126,6 @@ blocks:
         alt: Twelve sketch panels — the philosopher in a narrow alley and at a stall, a golden sun sign on a door, then night scenes in dark blue with glowing golden lights swirling around him and a lantern
         caption: The market, the sun sign on the door, and the night of golden lights
         emphasis: key
-  - type: gallery
-    heading: Storyboards
-    images:
       - src: storyboard-overview-act1.jpg
         alt: 'Storyboard overview sheet for Act 1, The Challenge: 24 pencil panels in shot order, from the bird’s-eye view of the medina to the philosophers boasting beneath the tree'
         caption: 'Act 1, The Challenge: every panel of the animatic, numbered by shot'
@@ -150,6 +151,7 @@ blocks:
         alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
         caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
   - type: gallery
+    section: set
     heading: Building the Medina
     images:
       - src: medina-plan.jpg
@@ -173,7 +175,7 @@ blocks:
         alt: Intricate black line drawing of a twelve-pointed geometric sun motif
         caption: The sun motif, built from geometric pattern rules
   - type: gallery
-    heading: Final Renders
+    section: final
     images:
       - src: souks.jpg
         alt: Unreal Engine render of a sunlit market street through a horseshoe arch
@@ -191,6 +193,7 @@ blocks:
         alt: Unreal Engine render of a night camp under the stars, a canvas tent beside a ring of stones and a glowing fire
         caption: The night camp
   - type: gallery
+    section: props
     heading: Props and Set Dressing
     images:
       - src: prop-book-staff.jpg

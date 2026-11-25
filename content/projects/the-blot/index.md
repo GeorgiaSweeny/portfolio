@@ -1,5 +1,6 @@
 ---
 title: The Blot
+layout: film
 year: 2022–23
 disciplines:
   - film-animation
@@ -27,20 +28,21 @@ links:
     youtube: true
 blocks:
   - type: video
+    section: video
     youtube: C97a5pO2v8o
     poster: ink.jpg
     label: Watch The Blot
   - type: gallery
-    heading: The Pitch
+    section: initial-concept
     images:
       - src: pitch-thumbnails.jpg
         alt: Notebook page of small thumbnail sketches of the ink spill and the creature rising from it
-        caption: "Pitch thumbnails: the ink spill"
+        caption: "Sketchbook thumbnails: the ink spill"
       - src: pitch-notes.jpg
-        alt: Notebook page of handwritten pitch notes and sketches of the monster and Karl
-        caption: "Pitch notes: the monster and Karl"
+        alt: Notebook page of handwritten notes and sketches of the monster and Karl
+        caption: "Sketchbook notes: the monster and Karl"
   - type: gallery
-    heading: Concept Art
+    section: concept-art
     images:
       - src: desk.jpg
         alt: 'Concept painting: the architect at his drawing desk in warm light'
@@ -78,6 +80,7 @@ blocks:
         caption: …and cool
         group: window-lighting
   - type: gallery
+    section: props
     heading: Props and Graphics
     images:
       - src: props-frog-clock.jpg
@@ -99,6 +102,7 @@ blocks:
         alt: Black and white circular logo of a castle on waves with a ship and a fish
         caption: The Bristol logo on his mug
   - type: gallery
+    section: production
     heading: Character and Set Building
     images:
       - src: expressions.jpg
@@ -114,7 +118,7 @@ blocks:
         alt: Render of the studio’s sash window set into a brick wall, the lit room visible behind
         caption: 'A Bristol sash window: my room build, textured and lit by the team'
   - type: gallery
-    heading: Stills from the Film
+    section: stills
     images:
       - src: ink.jpg
         alt: 'Film still: an ink creature rising from a desk under a lamp'

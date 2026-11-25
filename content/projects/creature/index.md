@@ -1,5 +1,6 @@
 ---
 title: Canyon Creature
+layout: asset
 year: 2023–24
 disciplines:
   - 3d-interactive
@@ -17,7 +18,7 @@ facts:
   outcome: A finished creature, sculpted, retopologised, UV’d across six UDIMs and textured, ready for rigging, developed to a studio brief with feedback from DNEG mentors.
 blocks:
   - type: gallery
-    heading: Concept
+    section: concept
     images:
       - src: concept-painting.jpg
         alt: "Painted concept of the creature: a vulture-headed predator with skin-flap wings on a canyon ledge"
@@ -39,6 +40,7 @@ blocks:
         alt: Texture concept board of vulture skin, wounds and blisters
         caption: "Texture concept board: vulture skin, wounds and blisters"
   - type: gallery
+    section: production
     heading: The Sculpt
     images:
       - src: three-quarter.jpg
@@ -58,6 +60,7 @@ blocks:
         alt: Rear three-quarter view of the creature sculpt, showing the skin flap stretched between its foreleg and body, and its haunches and spine
         caption: The skin-flap wings it glides on
   - type: gallery
+    section: production
     heading: Retopology and UVs
     images:
       - src: retopo-front.jpg
@@ -71,6 +74,7 @@ blocks:
         caption: UV layout across six UDIMs
         emphasis: key
   - type: gallery
+    section: production
     heading: Textures
     images:
       - src: textured-side.jpg

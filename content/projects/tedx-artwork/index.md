@@ -1,5 +1,6 @@
 ---
 title: 'TEDx: Turn and Face the Strange'
+layout: piece
 year: '2016'
 disciplines:
   - illustration-print
@@ -25,6 +26,7 @@ links:
     url: https://hsabulletin.jimdoweb.com/issue-4-july-2016/
 blocks:
   - type: gallery
+    section: sketch-to-final
     heading: From Sketch to Final
     images:
       - src: sketch.jpg

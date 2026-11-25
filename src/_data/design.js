@@ -33,7 +33,7 @@ export default {
   galleryColumns: {
     "christmas-cards": { "The Range": 4, "Carol of Bells, Stage by Stage": 6,
       "St Albans Postbox, Stage by Stage": 5, "Verulamium Lake, Stage by Stage": 5,
-      "In Progress: Clock Tower": 5, "In Progress: Abbey Gateway": 5, "In Progress: St Peter’s Church": 4 },
+      "In the Works: Clock Tower": 5, "In the Works: Abbey Gateway": 5, "In the Works: St Peter’s Church": 4 },
   },
   // Opening media on a project page is its first full-size YouTube video, else its showcase clip,
   // else its card image. To choose differently for a project: { "<project id>": "video" | "clip" | "image" }.

@@ -1,5 +1,6 @@
 ---
 title: Witness
+layout: film
 year: '2021'
 disciplines:
   - film-animation
@@ -18,10 +19,12 @@ links:
     youtube: true
 blocks:
   - type: video
+    section: video
     youtube: uT-t6BHIzAo
     poster: crow.jpg
     label: Watch Witness
   - type: gallery
+    section: stills
     heading: Frames from the Film
     images:
       - src: cafe.jpg
@@ -34,6 +37,7 @@ blocks:
         alt: The ground exploding into rubble, drawn in hard black line
         caption: A hand-drawn impact frame
   - type: gallery
+    section: storyboards
     heading: Storyboards
     images:
       - src: storyboard-board.jpg

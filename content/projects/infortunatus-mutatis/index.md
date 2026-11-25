@@ -1,5 +1,6 @@
 ---
 title: Infortunatus Mutatis
+layout: film
 year: '2021'
 disciplines:
   - film-animation
@@ -18,10 +19,12 @@ links:
     youtube: true
 blocks:
   - type: video
+    section: video
     youtube: 025fPgYGW2E
     poster: cauldron.jpg
     label: Watch Infortunatus Mutatis
   - type: gallery
+    section: stills
     heading: Stills, with the Storyboard Frame Beside Each
     images:
       - src: shelf.jpg
@@ -42,7 +45,7 @@ blocks:
       - src: melt.jpg
         alt: The clay character covering his face as he melts
   - type: gallery
-    heading: Character Design
+    section: concept-art
     images:
       - src: sketch-character.jpg
         alt: Sketchbook page of character designs for the puppet in a tunic
@@ -54,6 +57,7 @@ blocks:
         alt: Sketchbook page of cauldron designs with notes on practical lighting
         caption: Cauldron designs and practical lighting
   - type: gallery
+    section: production
     heading: Building the Set and Puppet
     images:
       - src: set-cave.jpg
@@ -76,7 +80,7 @@ blocks:
         alt: Close-up of the transformed green puppet on set
         caption: Wrap on set!
   - type: gallery
-    heading: Behind the Scenes
+    section: behind-the-scenes
     images:
       - src: bts-animating.jpg
         alt: Georgia animating the puppet frame by frame on the set

@@ -1,5 +1,6 @@
 ---
 title: The Old Oak Tree
+layout: book
 year: '2022'
 disciplines:
   - illustration-print
@@ -17,6 +18,7 @@ facts:
   outcome: A complete picture book, a cover and four spreads, made in my first year at Bournemouth University.
 blocks:
   - type: gallery
+    section: every-page
     heading: Every Spread
     images:
       - src: cover.jpg
@@ -39,7 +41,7 @@ blocks:
         caption: The forest today
         emphasis: key
   - type: gallery
-    heading: The Artwork, Without Text
+    section: artwork-without-text
     images:
       - src: art-1.jpg
         alt: The old oak tree with a weary face in its trunk as a helicopter seed spirals in on the wind
@@ -50,6 +52,7 @@ blocks:
       - src: art-4.jpg
         alt: The old oak in a forest, surrounded by a bear, rabbits, a deer, a squirrel and an owl
   - type: gallery
+    section: sketches
     heading: Early Sketches
     images:
       - src: sketch-1.jpg
