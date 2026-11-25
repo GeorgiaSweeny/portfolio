@@ -10,7 +10,26 @@ npm run build:drafts   # production build with drafts
 npm run build:hero     # rebuild the hero pattern worker after editing tools/hero-pattern/
 npm run check          # build, then list any content that appears nowhere on the site
 npm run images -- <id> # make web copies of a project's originals (see ADDING-CONTENT.md)
+npm run preview:phone  # production build, uploaded to the phone preview (see below)
 ```
+
+## Working locally, then "go live"
+
+Changes are made and checked on a Mac and pushed only when Georgia says "go live", so Cloudflare
+builds once per release rather than once per edit.
+
+1. **Local preview.** In Terminal, in this folder, run `npm start` and leave it running (the first
+   time, run `npm ci` first; needs Node.js 20 or newer). The site is at http://localhost:8080 and
+   rebuilds itself whenever a file changes. It shows drafts and the hidden Personal Work page,
+   which the live site doesn't.
+2. **Edit and commit on `redesign`, without pushing.** Check each change on localhost.
+3. **Phone preview, when wanted.** Stop `npm start` (Ctrl+C), run `npm run preview:phone`, then
+   start `npm start` again. It builds the site as the live site would be (no drafts) and uploads
+   it to https://redesign-portfolio.georgia-sweeny.workers.dev/ (the preview is named after the
+   current branch). The first time, run `npx wrangler login` and approve it in the browser.
+   Stopping `npm start` first matters: it writes draft pages into `_site/`.
+4. **Go live.** `git checkout main && git merge --ff-only redesign && git push`, then
+   `git checkout redesign && git push`. Only the `main` push builds.
 
 ## Content and site design
 
@@ -42,9 +61,10 @@ design**, which a redesign replaces.
 
 ## Builds and deploys
 
-Cloudflare Workers Builds builds every push: `main` deploys the live site (`npx wrangler deploy`),
-other branches deploy a preview (`npx wrangler preview`, e.g.
-https://redesign-portfolio.georgia-sweeny.workers.dev/). Build cache is on in the dashboard.
+Cloudflare Workers Builds builds every push to `main` and deploys the live site
+(`npx wrangler deploy`). Builds for other branches are switched off (Settings → Builds → Previews
+Base → "Builds for Preview branches"), so pushing `redesign` builds nothing; the phone preview is
+uploaded by hand (above). Build cache is on in the dashboard.
 
 - **Image cache.** Eleventy Image writes the encoded images to `.cache/img/`, which the build cache
   keeps between builds, and copies them into `_site/img/` afterwards, so only new or changed
@@ -68,7 +88,7 @@ npm ci
 npm run build                                # 5–10 minutes the first time; .cache/ makes later builds quick
 npx wrangler login                           # once: approve in the browser
 npx wrangler deploy                          # live site (from main)
-npx wrangler preview                         # or: preview named after the current branch
+npx wrangler preview                         # or: the phone preview, named after the current branch
 git checkout redesign
 ```
 
