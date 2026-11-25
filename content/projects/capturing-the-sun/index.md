@@ -6,7 +6,7 @@ disciplines:
   - 3d-interactive
 order: 3
 role: Writer and Director
-outcome: A complete pencil animatic, now on YouTube, and three lit previs environments in Unreal Engine.
+outcome: A complete animatic, now on YouTube, and three lit previs environments in Unreal Engine.
 intro: >-
   Two proud philosophers, a wizened old woman and an impossible task: to capture a piece of the sun in three days. One hunts for riches, the other for a clever trick, but neither proves as wise as he claims.
 
@@ -17,7 +17,7 @@ cardImage: storyboard-market.jpg
 showcase:
   video: animatic-clip.mp4
   poster: animatic-clip.jpg
-  alt: 'Animatic clip in pencil: sweeping over the medina rooftops, down the market street, and to the crowd watching the philosopher and the wise woman on a stage beneath the tree'
+  alt: 'Animatic clip: sweeping over the medina rooftops, down the market street, and to the crowd watching the philosopher and the wise woman on a stage beneath the tree'
 facts:
   role: Writer and director. I storyboarded the film, painted the concept art, and modelled, textured and lit the three previs environments.
   tools: Autodesk Maya, ZBrush, Substance 3D Painter, Houdini (with my own pattern generator), Unreal Engine, Adobe Photoshop, Procreate.
