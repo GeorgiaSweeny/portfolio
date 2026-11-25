@@ -40,5 +40,42 @@ design**, which a redesign replaces.
 | Contact form backend | `worker/index.js`, configured in `wrangler.jsonc` |
 | Running an old version | `tools/view-old-site.sh <tag>` |
 
+## Builds and deploys
+
+Cloudflare Workers Builds builds every push: `main` deploys the live site (`npx wrangler deploy`),
+other branches deploy a preview (`npx wrangler preview`, e.g.
+https://redesign-portfolio.georgia-sweeny.workers.dev/). Build cache is on in the dashboard.
+
+- **Image cache.** Eleventy Image writes the encoded images to `.cache/img/`, which the build cache
+  keeps between builds, and copies them into `_site/img/` afterwards, so only new or changed
+  images are encoded. A normal build takes about 2 minutes, plus any wait for a free build
+  machine.
+- **Full rebuilds** (every image encoded again, 6–15 minutes in Nov 2026) happen when
+  `package-lock.json` changes, after 7 days with no builds (Cloudflare clears the cache), or after
+  "Clear Cache" in the dashboard.
+- **Builds stop after 20 minutes.** A build that times out saves no cache, so the next one times
+  out too, and so does every one after it. The site that's already live stays up.
+
+### If a Cloudflare build times out
+
+Build on a Mac, where there's no time limit, and deploy from there. You need Node.js 20 or newer
+(`node -v`; get it from nodejs.org).
+
+```sh
+cd ~/Website\ Portfolio/site
+git fetch && git checkout main && git pull   # or redesign, for the preview
+npm ci
+npm run build                                # 5–10 minutes the first time; .cache/ makes later builds quick
+npx wrangler login                           # once: approve in the browser
+npx wrangler deploy                          # live site (from main)
+npx wrangler preview                         # or: preview named after the current branch
+git checkout redesign
+```
+
+`wrangler.jsonc` sets `keep_vars`, and deploys never remove secrets, so the contact form's
+settings in the dashboard are kept. Pushes keep failing on Cloudflare until full rebuilds fit
+in 20 minutes again, so deploy each one this way until then, and then move the image cache
+somewhere that doesn't expire (planned: an R2 bucket; see the handoff).
+
 © Georgia Sweeny. All artwork and designs in this repository are my own work and may not be
 reproduced without permission.
