@@ -27,7 +27,7 @@ builds once per release rather than once per edit.
    start `npm start` again. It builds the site as the live site would be (no drafts) and uploads
    it to https://redesign-portfolio.georgia-sweeny.workers.dev/ (the preview is named after the
    current branch). The first time, run `npx wrangler login` and approve it in the browser.
-   Stopping `npm start` first matters: it writes draft pages into `_site/`.
+   Stopping `npm start` first matters: it writes draft pages into `_site/`. The script clears `_site/` with retries, because macOS can recreate a hidden `.DS_Store` there while it is being deleted.
 4. **Go live.** `git checkout main && git merge --ff-only redesign && git push`, then
    `git checkout redesign && git push`. Only the `main` push builds.
 

@@ -10,7 +10,7 @@
     "check:coverage": "node tools/check-coverage.mjs",
     "check": "eleventy && node tools/check-coverage.mjs",
     "images": "node tools/web-images.mjs",
-    "preview:phone": "rm -rf _site && eleventy && wrangler preview"
+    "preview:phone": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true,maxRetries:10})\" && eleventy && wrangler preview"
   },
   "author": "",
   "license": "ISC",
