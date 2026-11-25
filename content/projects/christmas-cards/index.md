@@ -228,22 +228,12 @@ blocks:
     images:
       - src: abbey-gateway-01.jpg
         alt: "Early stage of the Abbey Gateway painting: windows and archway blocked in on white"
-      - src: abbey-gateway-02.jpg
-        alt: "The gatehouse stonework and arch outlined in warm tones"
       - src: abbey-gateway-03.jpg
         alt: "The towers drawn in and the snowy ground started"
-      - src: abbey-gateway-04.jpg
-        alt: "The archway lit and the path roughed in"
       - src: abbey-gateway-05.jpg
         alt: "Sky and ground washed in blue"
-      - src: abbey-gateway-06.jpg
-        alt: "Stonework and windows painted over the blue"
       - src: abbey-gateway-07.jpg
         alt: "The windows detailed"
-      - src: abbey-gateway-08.jpg
-        alt: "A deep blue night sky added"
-      - src: abbey-gateway-09.jpg
-        alt: "Trees and snow refined"
       - src: abbey-gateway-10.jpg
         alt: "The Abbey Gateway painting so far: the gatehouse in snow under a night sky"
         caption: The painting so far
