@@ -7,10 +7,10 @@
   });
 
   // ---- top bar: every link on one line. If it doesn't fit, one step at a time: narrower gaps on wider
-  // screens (tg), Get in touch drops its pill (t0), then becomes the envelope (t1), Personal Work becomes
+  // screens (tg), Get in touch goes from the pill to the envelope (t1), Personal Work becomes
   // an icon (t2), tighter gaps (t4), CV becomes an icon (t3), and a smaller name on the narrowest phones (t5).
   document.querySelectorAll(".topbar").forEach((bar) => {
-    const steps = ["tg", "t0", "t1", "t2", "t4", "t3", "t5"];
+    const steps = ["tg", "t1", "t2", "t4", "t3", "t5"];
     const over = () => bar.scrollWidth > bar.clientWidth + 1;
     const fit = () => {
       bar.classList.remove(...steps);

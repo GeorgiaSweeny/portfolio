@@ -47,17 +47,14 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 /* Home on phones: no wordmark, so the links spread across the whole bar. */
 /* Its edges line up with the name below (the hero uses --pad). */
 @media (max-width: 699px) { .topbar.on-home { padding-left: var(--pad); padding-right: var(--pad); } .topbar.on-home .nav { flex: 1; justify-content: space-between; } }
-/* Phones: "Get in touch" shows as the pill whenever it fits, then as plain words (.t0), then as the
-   envelope (.t1) — the same steps as on wider screens (in practice: the pill on Home, the envelope on
-   other pages below ~500px). */
+/* Phones: "Get in touch" shows as the pill whenever it fits, otherwise the envelope (.t1), the same as
+   on wider screens (in practice: the pill on Home, the envelope on other pages below ~500px). */
 @media (max-width: 699px) {
-  .topbar:not(.t1) .nav .cta { width: auto; height: auto; margin: 0; padding: 10px 2px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; display: inline; background: none; }
-  .topbar:not(.t1) .nav .cta:hover, .topbar:not(.t1) .nav .cta:focus-visible { background: none; color: var(--accent); }
+  .topbar:not(.t1) .nav .cta { width: auto; height: auto; margin: 0; padding: 9px 18px; border: 1px solid rgba(243,239,228,.4); border-radius: 999px; display: inline; background: none; }
+  .topbar:not(.t1) .nav .cta:hover, .topbar:not(.t1) .nav .cta:focus-visible { background: none; color: var(--accent); border-color: var(--accent); }
+  .topbar:not(.t1) .nav .cta[aria-current] { border-color: var(--accent); }
   .topbar:not(.t1) .nav .cta svg { display: none; }
   .topbar:not(.t1) .nav .cta .label { display: inline; }
-  /* ...and as the pill, as on desktop, while that fits too (site.js adds .t0 to drop the pill first). */
-  .topbar:not(.t0):not(.t1) .nav .cta { padding: 9px 18px; border: 1px solid rgba(243,239,228,.4); border-radius: 999px; }
-  .topbar:not(.t0):not(.t1) .nav .cta:hover, .topbar:not(.t0):not(.t1) .nav .cta[aria-current] { border-color: var(--accent); }
 }
 .wordmark {
   font: 400 22px/1.15 var(--name); letter-spacing: -0.01em; white-space: nowrap; text-decoration: none;
@@ -94,12 +91,10 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
   .nav .cta[aria-current] { border-color: var(--accent); }
 }
 /* Every link stays on one line. When the words don't fit, site.js turns links into icons, one step at a time:
-   .tg narrower gaps (wider screens), .t0 Get in touch loses its pill, .t1 Get in touch, .t2 Personal Work, .t4 tighter gaps, .t3 CV (as late as possible),
+   .tg narrower gaps (wider screens), .t1 Get in touch (pill → envelope), .t2 Personal Work, .t4 tighter gaps, .t3 CV (as late as possible),
    .t5 a smaller name on the narrowest phones. */
 @media (min-width: 700px) {
   .topbar.tg .nav { gap: 20px; }
-  .topbar.t0 .nav .cta { padding: 10px 2px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; }
-  .topbar.t0 .nav .cta[aria-current] { border-bottom-color: var(--accent); }
   .topbar.t1 .nav .cta, .topbar.t1 .nav .cta[aria-current] { width: 40px; height: 40px; margin: 0 -10px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
   .topbar.t1 .nav .cta:hover, .topbar.t1 .nav .cta:focus-visible { background: rgba(243,239,228,.12); color: var(--on-night); }
   .topbar.t1 .nav .cta[aria-current] { background: linear-gradient(var(--accent), var(--accent)) center bottom 2px / 22px 2px no-repeat; border-radius: 0; }
