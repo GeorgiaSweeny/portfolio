@@ -69,7 +69,9 @@ const SHAPES = {
   cvJob: { title: reqText, years: reqText, points: { type: "list", req: true, of: reqText } },
   cvProject: { title: reqText, project: { type: "project" }, sub: text, years: reqText, tools: text, points: { type: "list", req: true, of: reqText } },
   cvEducation: { qual: reqText, place: reqText, years: { type: "text", allowEmpty: true }, note: text },
-  artwork: { title: reqText, medium: reqText, year: { type: "year", req: true }, image: imageRef, alt: reqText, sold: { type: "bool" } },
+  artwork: { title: reqText, medium: reqText, year: { type: "year", req: true }, image: imageRef, alt: reqText, sold: { type: "bool" }, note: text,
+    stages: { type: "list", of: { type: "shape", shape: "artworkStage" } } },
+  artworkStage: { src: imageRef, alt: reqText, caption: text },
 };
 
 // ---- checking ----------------------------------------------------------------
@@ -205,7 +207,7 @@ export function loadContent() {
   const adir = path.join(CONTENT, "artworks");
   const artworks = (readYaml(path.join(adir, "artworks.yaml")) ?? []).map((a, i) => {
     checkShape(a, "artwork", `content/artworks/artworks.yaml[${i + 1}]`, { ...ctx, dir: adir });
-    return { ...a, year: String(a.year), image: path.join(adir, a.image) };
+    return { ...a, year: String(a.year), image: path.join(adir, a.image), stages: (a.stages ?? []).map((s) => ({ ...s, src: path.join(adir, s.src) })) };
   });
 
   cache = { projects, allProjects: all, featured, profile, about, cv, cvPdf, artworks };

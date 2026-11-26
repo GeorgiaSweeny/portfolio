@@ -212,6 +212,8 @@ A list of artworks for Personal Work, each with its image in `content/artworks/`
 | `image` | yes | File name in `content/artworks/`. |
 | `alt` | yes | What the artwork shows. |
 | `sold` | no | `true` once it has been bought. |
+| `note` | no | A short explanation shown in the enlarged view (what it was for, the story behind it). |
+| `stages` | no | Sketches and progress shots, in order: each `src` (file in `content/artworks/`), `alt`, optional `caption`. Shown after the artwork in the enlarged view. |
 
 ## Files
 

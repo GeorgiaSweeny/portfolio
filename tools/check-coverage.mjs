@@ -21,7 +21,7 @@ for (const file of walk(SITE)) {
   texts.push($("body").text(), $("title").text());
   $("*").each((_, el) => {
     for (const [k, v] of Object.entries(el.attribs || {})) {
-      if (["alt", "aria-label", "title", "content", "data-title"].includes(k)) texts.push(v);
+      if (["alt", "aria-label", "title", "content", "data-title", "data-caption", "data-alt"].includes(k)) texts.push(v);
       if (["href", "src", "poster", "data-youtube"].includes(k)) refs.add(v);
       if (k === "srcset") v.split(",").forEach((s) => refs.add(s.trim().split(" ")[0]));
     }
@@ -82,7 +82,12 @@ for (const [g, list] of Object.entries(c.about.skills)) { addText(`about.skills.
 addAll("about.timeline", c.about.timeline);
 c.about.bio.forEach((t, i) => addText(`about.bio[${i + 1}]`, t));
 addAll("cv", { ...c.cv, projects: c.cv.projects.map((p) => ({ ...p, project: undefined })) });
-c.artworks.forEach((a, i) => { addAll(`artworks[${i + 1}]`, { title: a.title, medium: a.medium, year: a.year, alt: a.alt }); addImage(`artworks[${i + 1}].image`, a.image); });
+// Artworks only count once the Personal Work page is built (it stays hidden until Georgia publishes it).
+if (fs.existsSync(path.join(SITE, "personal-work", "index.html"))) c.artworks.forEach((a, i) => {
+  addAll(`artworks[${i + 1}]`, { title: a.title, medium: a.medium, year: a.year, alt: a.alt, note: a.note });
+  addImage(`artworks[${i + 1}].image`, a.image);
+  (a.stages ?? []).forEach((s, j) => { addAll(`artworks[${i + 1}].stages[${j + 1}]`, { alt: s.alt, caption: s.caption }); addImage(`artworks[${i + 1}].stages[${j + 1}].src`, s.src); });
+});
 
 function mediaUrl(p) { const m = p.split(path.sep).join("/").match(/^content\/projects\/([^/]+)\/([^/]+)$/); return `/media/${m[1]}/${m[2]}`; }
 function imageStem(p) {

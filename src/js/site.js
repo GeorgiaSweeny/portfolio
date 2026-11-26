@@ -134,8 +134,9 @@
       i = (n + set.length) % set.length;
       const a = set[i], thumb = a.querySelector("img");
       img.src = a.href;
-      img.alt = thumb ? thumb.alt : "";
-      cap.textContent = a.closest("figure")?.querySelector("figcaption")?.textContent || "";
+      img.alt = thumb ? thumb.alt : (a.dataset.alt || "");
+      // data-caption (Personal Work: title, medium and year, note; stage captions) beats the visible label
+      cap.textContent = a.dataset.caption ?? (a.closest("figure")?.querySelector("figcaption")?.textContent || "");
       dlg.querySelectorAll(".prev,.next").forEach((b) => { b.hidden = set.length < 2; });
     };
     links.forEach((a) => a.addEventListener("click", (e) => {
