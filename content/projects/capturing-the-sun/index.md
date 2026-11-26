@@ -70,6 +70,18 @@ blocks:
       - src: sketchbook-sundial.jpg
         alt: Sketchbook page planning the city in rings around a central sundial, with notes
         caption: Planning the city and central medina around a sundial design
+      - src: storyboard-birds.jpg
+        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
+        caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
+      - src: storyboard-market.jpg
+        alt: 'Storyboard: looking down the market street towards the tree'
+        caption: 'SQ010 SH030: the market street, looking towards the tree'
+      - src: storyboard-tree.jpg
+        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
+        caption: 'SQ010 SH040: the crowd at the tree, from above the rooftops'
+      - src: storyboard-crowd-stage.jpg
+        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
+        caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
   - type: gallery
     section: characters
     images:
@@ -129,18 +141,6 @@ blocks:
         alt: 'Storyboard overview sheet for Act 3, The Return: the tapestry and the jar both fail, the jar shatters, and the old woman lights a twig with a shard held up to the sun'
         caption: 'Act 3, The Return: the old woman captures a piece of the sun'
         emphasis: key
-      - src: storyboard-birds.jpg
-        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
-        caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
-      - src: storyboard-market.jpg
-        alt: 'Storyboard: looking down the market street towards the tree'
-        caption: 'SQ010 SH030: the market street, looking towards the tree'
-      - src: storyboard-tree.jpg
-        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
-        caption: 'SQ010 SH040: the crowd at the tree, from above the rooftops'
-      - src: storyboard-crowd-stage.jpg
-        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
-        caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
   - type: gallery
     section: set
     heading: Building the Medina
