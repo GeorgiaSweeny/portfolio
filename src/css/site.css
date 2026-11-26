@@ -375,7 +375,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .proj-intro header { display: flex; flex-direction: column; gap: 14px; }
 .proj-intro h1 { font: 800 42px/1 var(--heading); letter-spacing: -0.035em; }
 .proj-intro .intro { font-size: 19px; max-width: 58ch; }
-.proj-intro .intro + .intro { margin-top: .85em; }
+.proj-intro .intro ~ .intro { margin-top: .85em; } /* ~ not +: the phone Read more button sits after the first paragraph */
 @media (min-width: 700px) { .proj-intro h1 { font-size: 54px; } }
 @media (min-width: 1100px) {
   .proj-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; }
