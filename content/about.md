@@ -4,9 +4,9 @@ facts:
   - value: 7 years
     label: running my own illustration and greeting card business
   - value: MSc
-    label: Computer Science, Bristol, 2026
+    label: Computer Science, University of Bristol, 2026
   - value: BA
-    label: 'Computer Animation: Art and Design, Bournemouth'
+    label: 'Computer Animation: Art and Design, Bournemouth University, 2024'
 # Skills: three groups, each ordered by relevance to target roles.
 skills:
   Creative:
