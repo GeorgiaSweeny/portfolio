@@ -21,7 +21,7 @@
 @media (min-width: 1100px) { :root { --pad: 56px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; } /* in-page links (Jump to, the Home arrow, CV sections) glide; off with reduced motion (end of file) */
 body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--body); overflow-wrap: break-word; }
 @media (min-width: 700px) { body { font-size: 18px; } }
 img, svg { display: block; max-width: 100%; }
