@@ -199,6 +199,19 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(2) { transition-delay: .
 html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .18s; } html:not(.no-js) .feature.in .feature-text > :nth-child(5) { transition-delay: .24s; }
 @media (prefers-reduced-motion: reduce) { html:not(.no-js) .feature-text > * { opacity: 1; transform: none; transition: none; } }
 .all-projects { display: flex; justify-content: center; padding: 56px var(--pad) 0; }
+/* Headline facts at the foot of Home (7 years · MSc · BA), gold on the dark teal. */
+.home-facts { padding: 72px var(--pad) 0; }
+.home-facts .wrap { display: flex; flex-direction: column; gap: 28px; }
+.home-facts .hf-row { display: flex; flex-wrap: wrap; gap: 28px; }
+.home-facts .hf { display: flex; flex-direction: column; gap: 4px; flex: 1 1 200px; }
+.home-facts .big { font: 800 56px/1 var(--heading); letter-spacing: -0.035em; padding-bottom: .06em; color: var(--accent); }
+.home-facts .hf p:last-child { color: var(--on-night-2); font-size: 16px; max-width: 30ch; }
+.home-facts .more { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--on-night); text-decoration: none; padding: 10px 0; }
+.home-facts .more svg { width: 18px; height: 18px; transition: transform .2s; }
+.home-facts .more:hover { color: var(--accent); }
+.home-facts .more:hover svg { transform: translateX(4px); }
+@media (min-width: 700px) { .home-facts { padding-top: 96px; } .home-facts .hf { flex-basis: 160px; } .home-facts .big { font-size: 72px; white-space: nowrap; } }
+@media (min-width: 1100px) { .home-facts .hf { flex-basis: 200px; } .home-facts .big { font-size: 96px; white-space: normal; } }
 @media (min-width: 700px) {
   .feature h3 { font-size: 60px; }
   .feature-text { padding-bottom: 56px; gap: 10px; }

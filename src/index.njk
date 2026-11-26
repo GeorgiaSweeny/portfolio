@@ -36,4 +36,15 @@ ogImage: src/_images/pat-banner.jpg
     {%- endeach %}
   </section>
   <div class="all-projects"><a class="btn light outline" href="/projects/">All projects</a></div>
+  {#- Headline facts from content/about.md (also listed, smaller, on About). #}
+  <section class="home-facts" aria-label="About me">
+    <div class="wrap">
+      <div class="hf-row">
+        {%- for s in about.facts %}
+        <div class="hf"><p class="big">{{ s.value }}</p><p>{{ s.label }}</p></div>
+        {%- endfor %}
+      </div>
+      <a class="more" href="/about/">More about me{{ icon("arrow") }}</a>
+    </div>
+  </section>
 </main>
