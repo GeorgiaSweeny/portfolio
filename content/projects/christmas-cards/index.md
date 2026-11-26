@@ -41,6 +41,27 @@ blocks:
       - src: bench.jpg
         alt: A couple on a bench by a frozen lake at dusk, the cathedral behind
   - type: gallery
+    section: beyond-the-studio
+    images:
+      - src: with-the-mayor-2018.jpg
+        alt: Georgia with the Mayor of St Albans, each holding a copy of her Museum + Gallery Christmas card
+        caption: With the Mayor of St Albans, 2018
+      - src: trophy-presentation-2022.jpg
+        alt: Georgia being presented with the framed St Albans Trophy certificate at the Art Society exhibition
+        caption: Receiving the St Albans Art Society Trophy, 2022
+      - src: with-winning-painting-2022.jpg
+        alt: Georgia smiling beside the cathedral doorway painting under a Winner, St Albans Trophy sign
+        caption: With the winning painting
+      - src: prism-cover-story.jpg
+        alt: "PRISM magazine, December 2022: the cover shows the doorway painting, with Georgia's cover story inside"
+        caption: "The cover story in the Art Society's PRISM magazine"
+      - src: first-batch.jpg
+        alt: A cardboard box full of the first printed cards and envelopes
+        caption: The first batch of cards
+      - src: shop-shelf.jpg
+        alt: Georgia’s cards and prints in cellophane on a shop display
+        caption: On the shelf at Raindrops On Roses charity shop
+  - type: gallery
     section: stages
     heading: Museum + Gallery, Stage by Stage
     images:
@@ -129,27 +150,6 @@ blocks:
       - src: bench.jpg
         alt: "The finished Verulamium Lake painting: a couple on a bench by the frozen lake at dusk, the cathedral behind"
         caption: The finished painting
-  - type: gallery
-    section: beyond-the-studio
-    images:
-      - src: with-the-mayor-2018.jpg
-        alt: Georgia with the Mayor of St Albans, each holding a copy of her Museum + Gallery Christmas card
-        caption: With the Mayor of St Albans, 2018
-      - src: trophy-presentation-2022.jpg
-        alt: Georgia being presented with the framed St Albans Trophy certificate at the Art Society exhibition
-        caption: Receiving the St Albans Art Society Trophy, 2022
-      - src: with-winning-painting-2022.jpg
-        alt: Georgia smiling beside the cathedral doorway painting under a Winner, St Albans Trophy sign
-        caption: With the winning painting
-      - src: prism-cover-story.jpg
-        alt: "PRISM magazine, December 2022: the cover shows the doorway painting, with Georgia's cover story inside"
-        caption: "The cover story in the Art Society's PRISM magazine"
-      - src: first-batch.jpg
-        alt: A cardboard box full of the first printed cards and envelopes
-        caption: The first batch of cards
-      - src: shop-shelf.jpg
-        alt: Georgia’s cards and prints in cellophane on a shop display
-        caption: On the shelf at Raindrops On Roses charity shop
   - type: gallery
     section: in-the-works
     heading: 'In the Works: Clock Tower'

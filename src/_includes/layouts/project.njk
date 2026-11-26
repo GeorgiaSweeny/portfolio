@@ -125,8 +125,10 @@ layout: layouts/base.njk
         {%- set cols = gs.cols %}
         {%- set imgH = gs.height %}
         <div class="gallery{% if cols %} cols{% endif %}{% if gs.showcase %} showcase{% endif %}{% if gs.small %} small{% endif %}"{% if cols %} style="--cols:{{ cols }};--cols-sm:{{ 3 if cols >= 5 else 2 }}"{% elif imgH %} style="--img-h:{{ imgH }}px"{% endif %}>
-          {%- asyncEach im in b.images %}
-          <figure class="{% if im.emphasis == "key" or gs.showcase %}key{% elif im.group %}grouped{% endif %}" style="--ar:{% imageRatio im.src %}">
+          {%- asyncEach e in b.images | pairRefs %}
+          {%- if e.length == 2 %}<div class="pair" style="--ar2:{% imageRatio e[0].src %};--ar1:{% imageRatio e[1].src %}">{% endif %}
+          {%- asyncEach im in e %}
+          <figure class="{% if im.emphasis == "key" or gs.showcase %}key{% else %}{% if im.group %}grouped{% endif %}{% if im.emphasis == "reference" %} ref{% endif %}{% endif %}" style="--ar:{% imageRatio im.src %}">
             {%- if im.video %}
             <div class="clip"><video autoplay muted loop playsinline preload="metadata" poster="{% imageFull im.src %}" aria-label="{{ im.alt }}" data-autoplay>
               {%- if im.webm %}<source src="{{ im.webm | mediaUrl }}" type="video/webm">{% endif %}
@@ -137,6 +139,8 @@ layout: layouts/base.njk
             {%- endif %}
             {%- if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
           </figure>
+          {%- endeach %}
+          {%- if e.length == 2 %}</div>{% endif %}
           {%- endeach %}
         </div>
       {%- endif %}

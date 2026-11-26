@@ -385,6 +385,11 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 /* Key images (emphasis: key) take a whole row, never taller than 1000px. */
 .gallery figure.key { flex-basis: 100%; max-width: 100%; } /* a key image always has its row to itself */
 .gallery figure.key > a, .gallery figure.key > .clip, .gallery figure.key > figcaption { width: 100%; max-width: min(100%, calc(var(--ar) * 1000px), calc(var(--ar) * 85vh)); max-width: min(100%, calc(var(--ar) * 1000px), calc(var(--ar) * 85svh)); }
+/* A reference photo (emphasis: reference) and the work it inspired: one unit in the row, never split;
+   the reference at 60% of the work's height. --ar1 = the work, --ar2 = the reference. */
+.gallery .pair { --ar: calc(var(--ar1) + var(--ar2) * .6); flex: calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6), calc(var(--ar) * 85svh)); display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
+.gallery .pair > figure { flex: calc(var(--ar) * 100) 1 0; max-width: none; min-width: 0; }
+.gallery .pair > figure.ref { flex-grow: calc(var(--ar) * 60); }
 .gallery::after { content: ""; flex: 10000 1 0; } /* last row keeps its height instead of stretching */
 /* an even grid (design.galleryColumns): every row lines up, the last row included */
 .gallery.cols { display: grid; grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr)); gap: 20px 14px; align-items: start; }
@@ -404,6 +409,9 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
   .gallery:not(.cols) { gap: 14px 12px; }
   .gallery:not(.cols) figure { flex: 0 0 auto; width: clamp(calc(50% - 6px), calc((var(--ar) - 1.1) * 100000px), 100%); max-width: min(100%, calc(var(--ar) * 85svh)); }
   .gallery:not(.cols) figure.grouped, .gallery.small:not(.cols) figure { width: calc(50% - 6px); }
+  .gallery:not(.cols) .pair { width: 100%; max-width: 100%; }
+  .gallery:not(.cols) .pair > figure { flex: calc(var(--ar) * 100) 1 0; width: auto; max-width: none; }
+  .gallery:not(.cols) .pair > figure.ref { flex-grow: calc(var(--ar) * 100); } /* same height as its work on phones, so it stays readable */
   .gallery:not(.cols) figure.key { width: 100%; }
   .gallery figcaption { font-size: 13px; }
 }

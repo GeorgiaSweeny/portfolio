@@ -104,7 +104,7 @@ blocks:
 | `src` | yes | File name in the project folder. |
 | `alt` | yes | What the image shows, for people who can't see it. Never empty. |
 | `caption` | no | The line shown under it. |
-| `emphasis` | no | `key`: one of the images that matter most in the project. |
+| `emphasis` | no | `key`: one of the images that matter most in the project. `reference`: a reference photo (shown smaller); give it the same `group` as the work it inspired and put it just before that work. |
 | `group` | no | A name shared by images that belong together (e.g. a before and after). |
 | `video` | no | Makes the item a silent looping clip (MP4, same rules as showcase clips); `src` is then its poster still. |
 | `webm` | no | An optional second format for the clip. |

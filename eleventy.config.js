@@ -122,6 +122,17 @@ export default function (eleventyConfig) {
   // A block's heading: its own, else (galleries only) its section's standard heading (src/_data/layouts.js).
   const blockHeading = (b) => b.heading || (b.type === "gallery" ? layouts.sections[b.section]?.heading : undefined);
   eleventyConfig.addFilter("blockHeading", blockHeading);
+  // A gallery's images as entries of one or two: a reference photo (emphasis: reference) followed
+  // by the work in its group becomes one pair, so the two are never split across rows.
+  eleventyConfig.addFilter("pairRefs", (images = []) => {
+    const out = [];
+    for (let i = 0; i < images.length; i++) {
+      const im = images[i], next = images[i + 1];
+      if (im.emphasis === "reference" && im.group && next && next.group === im.group && next.emphasis !== "key") { out.push([im, next]); i++; }
+      else out.push([im]);
+    }
+    return out;
+  });
   // Headings of a project's blocks, for its jump links (the block opening the page is left out).
   eleventyConfig.addFilter("headings", (blocks = [], skip = -1) =>
     blocks.map((b, i) => (i === skip ? undefined : blockHeading(b))).filter(Boolean));

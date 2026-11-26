@@ -38,7 +38,7 @@ const SHAPES = {
   ownToolLink: { label: reqText, project: { type: "project", req: true } },
   video: { type: reqText, section: { type: "enum", req: true, values: Object.keys(SECTIONS) }, heading: text, youtube: reqText, poster: imageRef, label: reqText, caption: text },
   gallery: { type: reqText, section: { type: "enum", req: true, values: Object.keys(SECTIONS) }, heading: text, images: { type: "list", req: true, of: { type: "shape", shape: "image" } } },
-  image: { src: imageRef, video: { type: "file" }, webm: { type: "file" }, alt: { type: "text", req: true, allowEmpty: false }, caption: text, emphasis: { type: "enum", values: ["key"] }, group: text },
+  image: { src: imageRef, video: { type: "file" }, webm: { type: "file" }, alt: { type: "text", req: true, allowEmpty: false }, caption: text, emphasis: { type: "enum", values: ["key", "reference"] }, group: text },
   profile: {
     name: reqText, location: reqText, positioning: reqText, description: reqText,
     status: { type: "shape", shape: "status", req: true },

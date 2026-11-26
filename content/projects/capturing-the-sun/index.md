@@ -61,21 +61,12 @@ blocks:
       - src: reference-wool-dyers.jpg
         alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
         caption: 'Reference photo: the dyers’ alley that inspired the concept painting'
+        emphasis: reference
+        group: dyers
       - src: wool.jpg
         alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
         caption: 'Concept painting: the wool-dyers’ alley'
-      - src: reference-doorway.jpg
-        alt: Photo of an ornate carved doorway in a Marrakech souk, among stalls of goods
-        caption: "My reference photo: a carved doorway in the souks"
-      - src: reference-lanterns.jpg
-        alt: Photo of a shop crowded with hanging coloured-glass lanterns
-        caption: "My reference photo: a lantern shop"
-      - src: reference-souk.jpg
-        alt: Photo of a covered souk alley with slatted shade overhead and people walking
-        caption: "My reference photo: a covered souk"
-      - src: reference-spices.jpg
-        alt: Photo of a stall piled with spices and dried goods in tubs and baskets
-        caption: "My reference photo: a spice stall"
+        group: dyers
       - src: sketchbook-sundial.jpg
         alt: Sketchbook page planning the city in rings around a central sundial, with notes
         caption: Planning the city and central medina around a sundial design
@@ -165,9 +156,15 @@ blocks:
         alt: Terracotta-coloured render of a modular kit of walls, arches, doors, a plinth and a tree, laid out on a grey floor
         caption: 'The modular kit: every wall, arch and prop, built once and reused'
         emphasis: key
+      - src: reference-souk.jpg
+        alt: Photo of a covered souk alley with slatted shade overhead and people walking
+        caption: "My reference photo: a covered souk"
+        emphasis: reference
+        group: souk
       - src: souks-lighting.jpg
         alt: Untextured terracotta street of the souks with stall frames and two placeholder figures, lit by sunlight
         caption: Lighting the souks before texturing
+        group: souk
       - src: lantern-model.jpg
         alt: Grey 3D model of an ornate lantern with pierced patterned panels and a domed top
         caption: Lantern prop model
@@ -181,18 +178,36 @@ blocks:
       - src: prop-book-staff.jpg
         alt: Render of a purple book with a gold sun on its cover, beside the wise woman’s staff
         caption: The book and the staff
+      - src: reference-lanterns.jpg
+        alt: Photo of a shop crowded with hanging coloured-glass lanterns
+        caption: "My reference photo: a lantern shop"
+        emphasis: reference
+        group: lanterns
       - src: prop-lantern-stall.jpg
         alt: Render of a market stall laid with brass lanterns, plates and glass jars
         caption: The lantern stall
+        group: lanterns
+      - src: reference-spices.jpg
+        alt: Photo of a stall piled with spices and dried goods in tubs and baskets
+        caption: "My reference photo: a spice stall"
+        emphasis: reference
+        group: spices
       - src: prop-spice-stall.jpg
         alt: Render of a spice stall with tall dark jars, wooden tubs and dishes of coloured spices
         caption: The spice stall
+        group: spices
       - src: prop-pottery-stall.jpg
         alt: Render of a stall of painted pottery and pastel dishes
         caption: The pottery stall
+      - src: reference-doorway.jpg
+        alt: Photo of an ornate carved doorway in a Marrakech souk, among stalls of goods
+        caption: "My reference photo: a carved doorway in the souks"
+        emphasis: reference
+        group: doorway
       - src: prop-rugs-door.jpg
         alt: Render of rugs hung on a rail and laid on the ground beside a carved wooden door
         caption: Rugs and a carved door
+        group: doorway
       - src: book-covers.jpg
         alt: Sketchbook page of six ink designs for the story book’s cover
         caption: Cover iterations for the story book
