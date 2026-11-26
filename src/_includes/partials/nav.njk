@@ -2,7 +2,7 @@
 <nav class="nav" aria-label="Main">
   <a href="/projects/"{% if section == "projects" %} aria-current="page"{% endif %}>Projects</a>
   {%- if features.personalWork %}
-  <a class="pw" href="/personal-work/" aria-label="Personal Work"{% if section == "personal" %} aria-current="page"{% endif %}>{{ icon("palette") }}<span class="label" aria-hidden="true">Personal Work</span></a>
+  <a class="pw" href="/personal-work/" aria-label="Personal Work"{% if section == "personal" %} aria-current="page"{% endif %}>{{ icon("brush") }}<span class="label" aria-hidden="true">Personal Work</span></a>
   {%- endif %}
   <a href="/about/"{% if section == "about" %} aria-current="page"{% endif %}>About</a>
   <a class="cv" href="/cv/" aria-label="CV"{% if section == "cv" %} aria-current="page"{% endif %}>{{ icon("cv") }}<span class="label" aria-hidden="true">CV</span></a>
