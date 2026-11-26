@@ -1,7 +1,7 @@
 ---
 title: House and Building Portraits
 layout: collection
-year: 2019–2023
+year: 2017–2023
 disciplines:
   - illustration-print
 order: 17
@@ -48,6 +48,9 @@ blocks:
       - src: lockdown-heroes-colour.jpg
         alt: 'Drawing of a school, a low building and a block with rainbow-coloured panels, under a watercolour rainbow'
         caption: 'Lockdown Heroes: a leaving gift for two teachers (2020)'
+      - src: school-main-building.jpg
+        alt: 'Ink and watercolour of a red-brick school building with tall arched windows, a central clock tower and a weathervane, a paved path and shrubs in front, under a pale blue sky'
+        caption: My school’s main building, ink and watercolour (2017)
       - src: congratulations-card.jpg
         alt: 'Hand-drawn card of a couple walking hand in hand down a lane towards a hanging pub sign, carrying pink balloons, with Congratulations lettered in gold'
         caption: An engagement and wedding card (2023)
@@ -124,6 +127,16 @@ blocks:
         caption: Line art
       - src: school-leaving-gift-2023.jpg
         alt: The finished ink and watercolour leaving gift, with a rainbow over the school
+        caption: The finished piece
+  - type: gallery
+    section: sketch-to-final
+    heading: 'My School’s Main Building, Line Art to Colour'
+    images:
+      - src: school-main-building-line-art.jpg
+        alt: 'Detailed ink line art of the school building, its brickwork, arched windows and clock tower drawn in fine lines'
+        caption: Line art
+      - src: school-main-building.jpg
+        alt: The finished ink and watercolour of the school’s main building
         caption: The finished piece
   - type: gallery
     section: sketch-to-final
