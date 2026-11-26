@@ -21,6 +21,38 @@
     document.fonts?.ready.then(fit);
   });
 
+  // ---- galleries (phones): images sharing a row are the same height. CSS puts portrait and square
+  // images two to a row at half width each; here each pair splits the row by shape (aspect ratio),
+  // so both come out equally tall. A reference beside its work (.pair) keeps its own sizing.
+  const phone = matchMedia("(max-width: 699px)");
+  const evenRows = () => {
+    document.querySelectorAll(".gallery:not(.cols)").forEach((g) => {
+      const figs = [...g.children].filter((f) => f.tagName === "FIGURE");
+      figs.forEach((f) => { f.style.width = ""; });
+      if (!phone.matches) return;
+      const full = g.clientWidth;
+      const gap = parseFloat(getComputedStyle(g).columnGap) || 0;
+      let run = [];
+      const flush = () => {
+        for (let i = 0; i + 1 < run.length; i += 2) {
+          const a = run[i], b = run[i + 1];
+          const ra = parseFloat(a.style.getPropertyValue("--ar")) || 1, rb = parseFloat(b.style.getPropertyValue("--ar")) || 1;
+          a.style.width = `calc((100% - ${gap}px) * ${ra / (ra + rb)})`;
+          b.style.width = `calc((100% - ${gap}px) * ${rb / (ra + rb)})`;
+        }
+        run = [];
+      };
+      [...g.children].forEach((el) => {
+        if (el.tagName === "FIGURE" && el.getBoundingClientRect().width < full * 0.7) run.push(el);
+        else flush(); // a full-width image or a reference pair starts a new row
+      });
+      flush();
+    });
+  };
+  evenRows();
+  phone.addEventListener("change", evenRows);
+  addEventListener("resize", evenRows);
+
   // ---- project pages (phones): the "Jump to" drop-down, and Read more for the intro and facts
   // Wider screens: the row of links, unless it would need more than one line.
   document.querySelectorAll(".proj-jump").forEach((nav) => {
