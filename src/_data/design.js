@@ -24,6 +24,7 @@ export default {
   // Row height for galleries whose images read better smaller (default 450), by project id and gallery heading.
   galleryHeights: {
     "christmas-cards": { "The Doorway, Stage by Stage": 850 },
+    "capturing-the-sun": { "Thumbnails": 300, "Storyboards": 300, "Building the Medina": 300, "Models and Textures": 300, "The Great Tree": 300 },
     pattinator: { "Patterns from One Shared Vocabulary": 350 },
     "the-old-oak-tree": { "Every Spread": 400, "The Artwork, Without Text": 400, "Early Sketches": 400 },
     "the-abyss": { "Level Design": 300 },
