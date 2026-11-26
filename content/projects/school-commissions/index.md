@@ -11,7 +11,7 @@ outcome: Three winning school Christmas card designs, a house diary cover and co
 intro: >-
   My school's Christmas card competition was where my card designs began. I won it three years running, from 2018 to 2020, and each winning design was printed as the school's official card.
 
-  Other work for the school followed: the cover for my house's diary, commissioned leaving gifts for teachers, and a digital sketch for the school during lockdown.
+  Other work for the school followed: the cover for my house's diary and commissioned leaving gifts for teachers.
 cardImage: christmas-card-2018.jpg
 facts:
   role: Illustration for every piece, from first sketch to final artwork.
@@ -42,7 +42,4 @@ blocks:
       - src: leaving-gift-dragon.jpg
         alt: A green and gold dragon coiled around a globe with a mortarboard, with the house motto beneath
         caption: Commissioned leaving gift for a teacher
-      - src: lockdown-heroes.jpg
-        alt: Digital sketch of a school building under a rainbow, titled Lockdown Heroes 2020
-        caption: 'Lockdown school commission: digital sketch'
 ---
