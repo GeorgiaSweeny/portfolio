@@ -153,6 +153,11 @@ blocks:
       - src: head-sculpt.jpg
         alt: Grey digital sculpt of the architect’s bald head from the front, eyes closed
         caption: Sculpting his head
+        group: head-sculpt
+      - src: sculpt-hair-dynamesh.jpg
+        alt: 'Photo of the ZBrush screen: Karl’s head with his swept quiff blocked out as a rough DynaMesh sculpt'
+        caption: 'DynaMesh: sculpting his hair'
+        group: head-sculpt
       - src: sculpt-bust-with-reference-zbrush-photo.jpg
         alt: 'Photo of a laptop screen with Karl’s bust in ZBrush beside his drawn reference'
         caption: 'Sculpting from my drawing'
