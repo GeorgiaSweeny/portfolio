@@ -13,7 +13,7 @@ intro: >-
   Its pattern comes from my Islamic Pattern Generator in Houdini, built into the lamp in Maya. The printed lamp has its own proportions and scale, separate from the film's prop models. I explored other shadow-casting shades first, but chose my pattern tool for its double use.
 
   The screens needed finer detail at lamp-shade scale than the usual filament printers could give, so a friend prepared the resin and printed the parts on their printer. Removing the supports, finishing every part and assembling the lamp were mine.
-cardImage: lamp-lit.jpg
+cardImage: card-lamp-lit.jpg
 showcase:
   video: turntable.mp4
   poster: turntable.jpg
