@@ -107,31 +107,6 @@ blocks:
         caption: …and cool
         group: room-lighting
   - type: gallery
-    section: props
-    heading: Props and Graphics
-    images:
-      - src: props-frog-clock.jpg
-        alt: Prop design sheet for a green frog-shaped clock
-        caption: "Prop design: the frog clock"
-      - src: props-drawing-tools.jpg
-        alt: "Prop design sheet of drawing tools: pencils, compasses, set squares and pens"
-        caption: "Prop design: his drawing tools"
-      - src: props-mugs-books.jpg
-        alt: Prop design sheet of mugs, architecture books and the firm’s logo
-        caption: "Prop design: mugs, books and the firm’s logo"
-      - src: props-satchel.jpg
-        alt: Prop design of a brown leather satchel
-        caption: "Prop design: his satchel"
-      - src: char.jpg
-        alt: 'Painted graduation portrait of the architect in a black gown with a red hood, against a soft blue background'
-        caption: 'His graduation portrait, painted for the photo on his shelf'
-      - src: graphic-certificate.jpg
-        alt: A Master of Architecture certificate designed for the set, in Karl Wheatley’s name
-        caption: His certificate, designed for the set
-      - src: graphic-logo.jpg
-        alt: Black and white circular logo of a castle on waves with a ship and a fish
-        caption: 'Bristol logo on his mug'
-  - type: gallery
     section: production
     heading: Character Model
     images:
@@ -168,12 +143,33 @@ blocks:
         alt: 'Karl’s head sculpt turning in ZBrush, filmed on a phone'
         caption: 'Turnaround'
   - type: gallery
-    section: production
-    heading: Environment and Props
+    section: set
+    heading: Set, Props and Graphics
     images:
       - src: window-set.jpg
         alt: 'Film still: the studio’s Bristol sash window set into a brick wall, the lit room visible behind'
         caption: 'Film still: I modelled the room (walls, windows, door, shelves); props and set dressing by the team'
+      - src: props-frog-clock.jpg
+        alt: Prop design sheet for a green frog-shaped clock
+        caption: "Prop design: the frog clock"
+      - src: props-drawing-tools.jpg
+        alt: "Prop design sheet of drawing tools: pencils, compasses, set squares and pens"
+        caption: "Prop design: his drawing tools"
+      - src: props-mugs-books.jpg
+        alt: Prop design sheet of mugs, architecture books and the firm’s logo
+        caption: "Prop design: mugs, books and the firm’s logo"
+      - src: props-satchel.jpg
+        alt: Prop design of a brown leather satchel
+        caption: "Prop design: his satchel"
+      - src: graphic-certificate.jpg
+        alt: A Master of Architecture certificate designed for the set, in Karl Wheatley’s name
+        caption: His certificate, designed for the set
+      - src: char.jpg
+        alt: 'Painted graduation portrait of the architect in a black gown with a red hood, against a soft blue background'
+        caption: 'His graduation portrait, painted for the photo on his shelf'
+      - src: graphic-logo.jpg
+        alt: Black and white circular logo of a castle on waves with a ship and a fish
+        caption: 'Bristol logo on his mug'
       - src: screenshot-2023-05-20-at-224023.jpg
         alt: 'Still from the film: a shelf with Karl’s graduation portrait and his Master of Architecture certificate'
         caption: 'His graduation portrait and certificate on set (my designs)'
