@@ -1,6 +1,6 @@
 // Hero pattern (WebGL): Georgia's name with her own Pattinator gallery patterns showing through the letters.
 // A worker draws each pattern once with her generator code (src/js/hero-pattern-worker.js); a small
-// hand-written shader then does everything live:
+// custom WebGL shader then does everything live:
 //  - stir: moving the cursor (or dragging a finger) pushes the pattern around like a brush through wet
 //    paint, scaled by speed; it settles back to the clean pattern when you stop;
 //  - change: the pattern moves on to the next one every few seconds, or on a click/tap. Georgia's pick
