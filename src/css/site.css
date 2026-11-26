@@ -173,7 +173,7 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .card:hover { color: var(--ink); }
 .card:hover h3 { color: var(--teal); }
 .card .shot { position: relative; aspect-ratio: 4 / 3; border-radius: 4px; overflow: hidden; background: var(--tile); }
-.card .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--focus, 50% 50%); transition: transform .4s ease; }
 
 .card .shot .placeholder { position: absolute; inset: 0; background: url(/assets/band.jpg) 0 0 / 180px; opacity: .35; }
 .card .text { display: flex; flex-direction: column; gap: 4px; }

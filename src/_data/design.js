@@ -40,6 +40,12 @@ export default {
   // Opening media on a project page is its first full-size YouTube video, else its showcase clip,
   // else its card image. To choose differently for a project: { "<project id>": "video" | "clip" | "image" }.
   openings: {},
+  // Project cards crop the card image to 4:3 from the centre. Where the subject sits off-centre,
+  // set where the crop centres (CSS object-position, x then y).
+  cardFocus: {
+    "capturing-the-sun": "68% 50%",    // the Great Tree and the boy, right of centre
+    "infortunatus-mutatis": "72% 50%", // the creature's face over the cauldron
+  },
   // YouTube videos shown as secondary clips (about half width, beside nothing).
   smallVideos: ["vNhvHVbImFI"],
 };

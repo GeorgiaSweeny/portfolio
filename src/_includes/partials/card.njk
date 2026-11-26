@@ -1,7 +1,7 @@
 {#- Project card. Expects `p` (a project from the projects data) and `flagship`, `sizes`. -#}
 {%- from "partials/icons.njk" import icon -%}
 <a class="card{% if flagship %} flagship{% endif %}" href="{{ p.url }}">
-  <div class="shot">
+  <div class="shot"{% if design.cardFocus[p.id] %} style="--focus: {{ design.cardFocus[p.id] }}"{% endif %}>
     {%- if p.cardImage %}{% image p.cardImage, "", sizes %}{% else %}<div class="placeholder"></div>{% endif -%}
     {%- if p.draft %}<span class="draft-flag">Draft: hidden on the live site</span>{% endif -%}
   </div>
