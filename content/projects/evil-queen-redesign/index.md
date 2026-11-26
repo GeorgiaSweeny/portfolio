@@ -2,7 +2,6 @@
 title: Evil Queen Redesign
 layout: film
 year: '2022'
-draft: true
 disciplines:
   - film-animation
   - illustration-print

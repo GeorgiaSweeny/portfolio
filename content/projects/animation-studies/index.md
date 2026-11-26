@@ -2,7 +2,6 @@
 title: Animation Studies
 layout: film
 year: 2020–21
-draft: true
 disciplines:
   - film-animation
 order: 16
