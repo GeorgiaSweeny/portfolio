@@ -10,7 +10,7 @@ export default {
   // Where the CV PDF (content/cv.pdf) is published; the Download PDF buttons appear once it exists.
   cvPdfUrl: "/cv/georgia-sweeny-cv.pdf",
   // Personal Work stays hidden from visitors until this is true.
-  showPersonalWork: false,
+  showPersonalWork: true,
 
   // How each featured project's feature card is shown on Home, by project id.
   //   bleed: showcase clip fills the card (tone: light adds a darker wash for light clips)
