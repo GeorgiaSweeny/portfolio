@@ -6,6 +6,7 @@
 #     alt: …
 #     sold: true      # leave out unless it has been bought. No prices, ever.
 #     note: …         # optional: the story, shown in the enlarged view
+#     draft: true     # optional: hidden on the live site until removed
 #     stages:         # optional, in viewing order: finished → back to the first sketch, then photos of Georgia at work
 - title: Mandeville House Diary Cover
   medium: Coloured pencil and ink
@@ -44,7 +45,121 @@
   alt: 'A green and gold dragon coiled around a globe with a mortarboard, with the house motto beneath'
 - title: Sinbad, House Drama Poster
   medium: Digital
-  year: '2020'
+  year: '2019'
   image: sinbad-poster.jpg
   note: 'Poster for my house drama, One Thousand and One Arabian Nights, which I co-wrote and co-directed'
   alt: 'Poster with a red four-poster bed under gold constellations of a ship, a genie and a flying horse, titled Sinbad, with Mandeville’s One Thousand and One Arabian Nights beneath'
+- title: Station Triptych
+  medium: '[?] Watercolour and ink'
+  year: '2020'
+  draft: true
+  image: station-triptych.jpg
+  note: '[?] What it was for'
+  alt: 'Three watercolour panels of a station: a long platform in red and teal, a crowd at the ticket barriers under a turquoise sky, and figures against a red wash'
+  stages:
+    - src: station-triptych-framed.jpg
+      alt: The three panels framed together in a grey frame
+      caption: Framed
+    - src: station-ticket-barriers-colour.jpg
+      alt: 'Loose colour sketch of people passing through ticket barriers, washes of teal, orange and red above'
+      caption: 'Ticket barriers: colour sketch'
+    - src: station-ticket-barriers-ink.jpg
+      alt: 'Ink sketch of a crowd at the ticket barriers, the barrier gates in heavy black'
+      caption: 'Ticket barriers: ink sketch'
+    - src: station-crowd.jpg
+      alt: Busy charcoal sketch of a crowd moving through a station concourse
+      caption: Crowd sketch
+    - src: station-piano.jpg
+      alt: 'Ink sketch of people gathered round a public piano on a station concourse'
+      caption: Station piano
+    - src: station-platform-canopy.jpg
+      alt: 'Sketch of a platform under a curved glass canopy, with people waiting and walking'
+      caption: Platform canopy
+    - src: station-sketchbook-1.jpg
+      alt: 'Sketchbook page with handwritten notes beside a charcoal sketch of an underground entrance and passers-by'
+      caption: Sketchbook page
+    - src: station-sketchbook-2.jpg
+      alt: Sketchbook page with a pencil sketch of an empty platform and track, and handwritten notes beneath
+      caption: Sketchbook page
+- title: Grief
+  medium: '[?] Digital painting'
+  year: '2022'
+  draft: true
+  image: grief-green-storm.jpg
+  note: '[?] Illustration for a poem about grief: whose poem, and what it was for'
+  alt: 'A tiny figure on a dark hillside under a towering green storm, rain streaking down and a faint pyramid of rocks on the ridge'
+  stages:
+    - src: grief-figure-in-storm.jpg
+      alt: 'A figure bent against the wind in a green storm, with a cairn behind on the hill'
+      caption: Figure in the storm
+    - src: grief-clouds-study.jpg
+      alt: Study of swirling green and teal storm clouds
+      caption: Cloud study
+    - src: grief-lightning.jpg
+      alt: 'A small figure on a hillside under a dark blue storm, lightning forking across the sky'
+      caption: Lightning version
+    - src: grief-breath.jpg
+      alt: A figure in profile on dark blue breathing out swirls of green mist
+      caption: Breath study
+    - src: grief-composition-notes.jpg
+      alt: 'Composition sketch of a storm over a hill, with handwritten notes on the triadic composition, scale and perspective'
+      caption: Composition notes
+    - src: grief-sketchbook.jpg
+      alt: 'Sketchbook page titled Grief, with quoted lines from the poem and three ink thumbnails of a figure in a storm'
+      caption: Sketchbook thumbnails
+- title: The Odyssey Cinema
+  medium: '[?] Mixed media'
+  year: '2019'
+  draft: true
+  image: odyssey-cinema.jpg
+  note: '[?] What it was for'
+  alt: 'Large grey mixed-media piece: a woman holding up a film reel among projectors, stacked reels and collaged cinema tickets and posters'
+  stages:
+    - src: odyssey-cinema-interiors.jpg
+      alt: 'Six small paintings of cinema interiors: a gold foyer, red seats, a bar, a skull-lit screen, an EXIT sign and red stairs'
+      caption: Cinema interior paintings
+    - src: odyssey-cinema-projector.jpg
+      alt: 'Painting of an old film projector and reels in bright orange, yellow and blue'
+      caption: Projector and reels
+    - src: odyssey-cinema-progress-3.jpg
+      alt: 'The piece taped to a wall nearly finished, with reference photos pinned below'
+      caption: In progress
+    - src: odyssey-cinema-progress-2.jpg
+      alt: The piece taped to a wall part-way through
+      caption: In progress
+    - src: odyssey-cinema-progress-1.jpg
+      alt: The piece taped to a wall early on
+      caption: In progress
+    - src: odyssey-cinema-with-georgia.jpg
+      alt: 'The finished piece framed, leaning against a wall, with me standing beside it'
+      caption: Framed
+- title: Life Drawing
+  medium: '[?] Pencil'
+  year: '2020'
+  draft: true
+  image: life-drawing-portrait.jpg
+  alt: 'Loose pencil portrait of a bald older man in profile, shading built up in quick hatching'
+  stages:
+    - src: life-drawing-reclining.jpg
+      alt: Pencil drawing of a reclining figure stretched out on a mat
+      caption: Reclining figure
+    - src: life-drawing-reclining-2.jpg
+      alt: 'Pencil drawing of a figure reclining over a draped box, seen from the feet'
+      caption: Reclining figure
+    - src: life-drawing-hands.jpg
+      alt: Sketchbook page of three hand studies in pencil
+      caption: Hand studies
+    - src: life-drawing-feet.jpg
+      alt: Sketchbook page of foot studies in pencil
+      caption: Foot studies
+- title: Clockwork Dress
+  medium: Ink
+  year: '2020'
+  draft: true
+  image: clockwork-dress.jpg
+  note: '[?] What it was for'
+  alt: 'Ink drawing of a dress built from clockwork: a bodice of cogs and springs and a round, glass-like skirt full of gears'
+  stages:
+    - src: clockwork-dress-designs.jpg
+      alt: 'Three ink dress designs side by side with colour swatches and handwritten notes, the clockwork dress on the left'
+      caption: Three dress designs

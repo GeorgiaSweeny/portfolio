@@ -213,6 +213,7 @@ A list of artworks for Personal Work, each with its image in `content/artworks/`
 | `alt` | yes | What the artwork shows. |
 | `sold` | no | `true` once it has been bought. |
 | `note` | no | A short explanation shown in the enlarged view (what it was for, the story behind it). |
+| `draft` | no | `true` keeps it off the live site; local previews still show it. Remove it to publish. |
 | `stages` | no | Sketches and progress shots, shown after the artwork in the enlarged view, in viewing order: from the last stage back to the first sketch, then any photos of Georgia at work. Each `src` (file in `content/artworks/`), `alt`, optional `caption`. |
 
 ## Files
