@@ -479,6 +479,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; min-height: 0; }
 .lightbox figcaption { font-size: 15px; text-align: center; white-space: pre-line; max-width: 62ch; }
 .lightbox figcaption::first-line { font-weight: 700; }
+.lightbox .count { font: 13px var(--mono); color: var(--on-night-2); margin: 0; }
 .lightbox button { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(243,239,228,.35); background: rgba(243,239,228,.08); color: var(--paper); font-size: 22px; cursor: pointer; }
 .lightbox .close { top: 8px; right: 8px; }
 .lightbox .prev { left: 12px; bottom: 12px; }

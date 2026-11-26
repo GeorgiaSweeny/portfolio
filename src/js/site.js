@@ -123,12 +123,12 @@
     const dlg = document.createElement("dialog");
     dlg.className = "lightbox";
     dlg.setAttribute("aria-label", "Enlarged image");
-    dlg.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure>' +
+    dlg.innerHTML = '<figure><img alt=""><figcaption></figcaption><p class="count" hidden></p></figure>' +
       '<button class="close" type="button" aria-label="Close">×</button>' +
       '<button class="prev" type="button" aria-label="Previous image">←</button>' +
       '<button class="next" type="button" aria-label="Next image">→</button>';
     document.body.append(dlg);
-    const img = dlg.querySelector("img"), cap = dlg.querySelector("figcaption");
+    const img = dlg.querySelector("img"), cap = dlg.querySelector("figcaption"), count = dlg.querySelector(".count");
     let set = [], i = 0;
     const show = (n) => {
       i = (n + set.length) % set.length;
@@ -137,6 +137,10 @@
       img.alt = thumb ? thumb.alt : (a.dataset.alt || "");
       // data-caption (Personal Work: title, medium and year, note; stage captions) beats the visible label
       cap.textContent = a.dataset.caption ?? (a.closest("figure")?.querySelector("figcaption")?.textContent || "");
+      // Personal Work: "2 of 4" within one artwork (its own images: the piece, then its stages)
+      const own = a.dataset.group ? set.filter((l) => l.dataset.group === a.dataset.group) : [];
+      count.hidden = own.length < 2;
+      count.textContent = own.length > 1 ? `${own.indexOf(a) + 1} of ${own.length}` : "";
       dlg.querySelectorAll(".prev,.next").forEach((b) => { b.hidden = set.length < 2; });
     };
     links.forEach((a) => a.addEventListener("click", (e) => {
