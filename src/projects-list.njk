@@ -2,14 +2,14 @@
 layout: layouts/base.njk
 section: projects
 title: Projects
-description: "Georgia Sweeny’s projects: illustration and print, film and animation, 3D and interactive work, and the tools and software she builds."
+description: "Georgia Sweeny’s projects: illustration and print, film and animation, commissions and commercial work, 3D and interactive work, and the tools and software she builds."
 pagination:
   data: filterPages
   size: 1
   alias: current
 permalink: "/projects/{% if current.slug %}{{ current.slug }}/{% endif %}"
 eleventyComputed:
-  title: "{% if current.slug %}{{ current.label }} Projects{% else %}Projects{% endif %}"
+  title: "{% if current.slug %}{{ current.label | safe }} Projects{% else %}Projects{% endif %}"
 ---
 {%- from "partials/icons.njk" import icon -%}
 {%- set list = projects | inDiscipline(current.slug) %}
