@@ -20,7 +20,7 @@ showcase:
   image: scene-potions.jpg
 facts:
   role: 'Character design, environment design, storyboard and key scenes.'
-  tools: '[?] e.g. pencil, Procreate, Photoshop.'
+  tools: Procreate.
   outcome: 'Character sheets, an environment and key art concepts: the unit’s final pieces.'
 blocks:
   - type: gallery
