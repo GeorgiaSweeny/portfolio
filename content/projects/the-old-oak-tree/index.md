@@ -4,7 +4,7 @@ layout: book
 year: '2022'
 disciplines:
   - illustration-print
-order: 5
+order: 6
 role: Author and Illustrator
 outcome: A finished picture book about a lonely oak whose hill grows into a forest, with the story, artwork and typesetting all my own.
 intro: >-

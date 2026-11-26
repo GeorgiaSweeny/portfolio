@@ -4,6 +4,7 @@ layout: collection
 year: 2018–2025
 disciplines:
   - illustration-print
+  - commissions-commercial
 order: 2
 role: Illustrator, Designer and Seller
 outcome: 'Eight designs: one won the St Albans Art Society Trophy, one became the Mayor’s official card, and the choir boys design was licensed by the Addison’s Disease Self-Help Group two years running.'

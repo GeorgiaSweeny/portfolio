@@ -4,7 +4,9 @@ layout: piece
 year: '2016'
 disciplines:
   - illustration-print
-order: 13
+  - commissions-commercial
+  - film-animation
+order: 8
 role: Illustrator and Animator
 outcome: A paid commission for my school’s first TEDx event; the animated loop opened the day and the artwork was printed on its banner beside the TEDx logo.
 intro: >-

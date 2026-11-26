@@ -5,7 +5,7 @@ year: '2024'
 disciplines:
   - film-animation
   - 3d-interactive
-order: 3
+order: 1
 role: Writer and Director
 outcome: A complete animatic, now on YouTube, and three lit previs environments in Unreal Engine.
 intro: >-

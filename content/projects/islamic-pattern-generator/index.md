@@ -4,7 +4,7 @@ layout: software
 year: '2024'
 disciplines:
   - tools-software
-order: 9
+order: 10
 role: Tool Designer and Developer
 outcome: A Houdini HDA that builds Islamic geometric patterns live from their traditional construction rules; I used its patterns across the props, set and costumes of The Tale of Capturing the Sun.
 intro: >-

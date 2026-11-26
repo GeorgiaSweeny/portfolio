@@ -4,7 +4,8 @@ layout: collection
 year: 2018–2020
 disciplines:
   - illustration-print
-order: 14
+  - commissions-commercial
+order: 19
 role: Illustrator
 outcome: 'Three winning designs in my school’s Christmas card competition, each printed as the school’s official card.'
 intro: >-

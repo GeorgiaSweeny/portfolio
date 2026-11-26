@@ -4,7 +4,7 @@ layout: film
 year: '2021'
 disciplines:
   - film-animation
-order: 10
+order: 15
 role: Director and Animator
 outcome: A hand-drawn 2D short, storyboarded in pencil, made as my Art Foundation final project.
 intro: A hand-drawn 2D short, made as my Art Foundation final project.

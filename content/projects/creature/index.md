@@ -4,7 +4,7 @@ layout: asset
 year: 2023–24
 disciplines:
   - 3d-interactive
-order: 8
+order: 11
 role: Creature Designer and Modeller
 outcome: A desert ambush predator, taken from sculpt to retopology, UVs and textures for a DNEG masterclass brief.
 intro: >-

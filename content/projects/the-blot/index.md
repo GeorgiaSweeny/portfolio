@@ -4,7 +4,7 @@ layout: film
 year: 2022–23
 disciplines:
   - film-animation
-order: 6
+order: 4
 role: Writer and Director · Character Modeller
 outcome: My pitch was one of about 12 chosen from 80–100 across the year, then made as a group 3D short that I directed.
 intro: >-

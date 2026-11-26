@@ -4,7 +4,7 @@ layout: asset
 year: '2024'
 disciplines:
   - 3d-interactive
-order: 7
+order: 9
 role: Designer and Maker
 outcome: A working bedside lamp, 3D-printed in resin from a pattern made with my own tool, and designed to double as a prop for The Tale of Capturing the Sun.
 intro: >-

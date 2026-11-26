@@ -1,11 +1,11 @@
 ---
 title: Animation Studies
 layout: film
-year: 2020–[?]
+year: 2020–21
 draft: true
 disciplines:
   - film-animation
-order: 19
+order: 16
 role: Animator
 outcome: 'Three short animation exercises: a 2D hamster on its wheel in Procreate, a body mechanics sneak in Maya, and a can I modelled, textured and simulated into live-action footage.'
 intro: >-

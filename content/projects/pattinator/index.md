@@ -4,7 +4,7 @@ layout: software
 year: '2026'
 disciplines:
   - tools-software
-order: 1
+order: 3
 role: Designer and Developer
 featureText: 'The tool behind the pattern in my name at the top of this page: my MSc research into one shared language for random and rule-based design.'
 outcome: A shared pattern vocabulary that fitted all nine generators tested, and combined existing rule sets into new hybrid patterns.

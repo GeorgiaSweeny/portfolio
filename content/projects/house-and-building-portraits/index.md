@@ -4,7 +4,8 @@ layout: collection
 year: 2017–2023
 disciplines:
   - illustration-print
-order: 17
+  - commissions-commercial
+order: 12
 role: Illustrator, Commissions
 outcome: 'Commissioned portraits of buildings my clients loved, from family homes to a school, made as keepsakes and gifts for weddings, birthdays and house moves.'
 intro: >-

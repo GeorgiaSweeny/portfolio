@@ -38,7 +38,7 @@ only (between the two `---` lines). File names in it refer to files in the same 
 | `title` | yes | The project's name. |
 | `layout` | yes | What kind of project it is, which sets the usual sections: `film` (Film & Animation), `asset` (3D Asset & Making), `game`, `software` (Software & Interactive), `book` (Book & Illustrated Pages), `collection`, `piece` (Single Piece). See "Sections" below. |
 | `year` | yes | Year or span, e.g. `'2024'` or `2018–2025`. |
-| `disciplines` | yes | One or more of `illustration-print`, `film-animation`, `3d-interactive`, `tools-software`, `personal-work`. |
+| `disciplines` | yes | One or more of `illustration-print`, `film-animation`, `commissions-commercial`, `3d-interactive`, `tools-software`, `personal-work`. |
 | `order` | yes | Position in project lists, 1 first. No two projects share a number. |
 | `draft` | no | `true` keeps the project off the live site; it still shows in previews. |
 | `role` | yes | The **project role**: Georgia's own part, in a few words ("Writer and Director"). |

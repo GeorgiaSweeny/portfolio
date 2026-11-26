@@ -4,7 +4,7 @@ layout: asset
 year: '2023'
 disciplines:
   - 3d-interactive
-order: 16
+order: 18
 role: Digital Sculptor
 outcome: 'Two ZBrush head sculpts: Anton Ego, taken from a speed sculpt to a polished concept sculpt ready to texture, and a likeness of a friend for a 3D-printed bust.'
 intro: >-

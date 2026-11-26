@@ -5,7 +5,7 @@ year: '2026'
 disciplines:
   - 3d-interactive
   - tools-software
-order: 4
+order: 5
 role: Lead Developer · Lighting and Level Design
 outcome: 'A finished browser game about surviving in the dark: I led its code architecture, designed its levels and built its environment and creature lighting, in a team of six.'
 intro: >-

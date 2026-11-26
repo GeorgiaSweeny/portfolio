@@ -6,7 +6,7 @@ draft: true
 disciplines:
   - film-animation
   - illustration-print
-order: 18
+order: 7
 role: Character and Environment Designer
 outcome: 'Snow White’s Evil Queen reimagined as a fae-like being from British folklore, with silhouettes, character sheets, her castle and key art concepts.'
 intro: >-

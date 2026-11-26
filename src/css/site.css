@@ -272,7 +272,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 @media (min-width: 1100px) { .page-head { padding-top: 64px; } .page-title { font-size: 96px; } }
 .page-main { padding: 0 var(--pad) 96px; }
 
-/* discipline filter: a select on phones, chips from tablet up */
+/* discipline filter: a select up to laptop width, chips on one line from 1040px (six chips need about 1020px plus a scrollbar; never two rows) */
 .filter-select { display: flex; align-items: center; gap: 10px; }
 .filter-select label { font: 13px var(--mono); color: var(--muted); }
 .filter-select .box { position: relative; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px 0 18px; border-radius: 999px; border: 1px solid var(--teal); font-size: 15px; font-weight: 600; }
@@ -281,7 +281,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .filter-chips { display: none; }
 .no-js .filter-select { display: none; }
 .no-js .filter-chips { display: flex; }
-@media (min-width: 700px) { .filter-select { display: none; } .filter-chips { display: flex; } }
+@media (min-width: 1040px) { .filter-select { display: none; } .filter-chips { display: flex; } }
 
 /* ---- project page ----------------------------------------------------- */
 /* Project page opening (settled 21 Nov): a full-bleed hero with the opening media and the title over it,
