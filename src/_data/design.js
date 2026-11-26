@@ -40,6 +40,11 @@ export default {
   // Opening media on a project page is its first full-size YouTube video, else its showcase clip,
   // else its card image. To choose differently for a project: { "<project id>": "video" | "clip" | "image" }.
   openings: {},
+  // When a project opens with its card image but the card image is a card-only version, the image
+  // to open the page with instead (a file in the same project folder).
+  openingImages: {
+    "the-old-oak-tree": "cover.jpg",   // the card is cover-card.jpg (the square cover widened to 4:3)
+  },
   // Project cards crop the card image to 4:3 from the centre. Where the subject sits off-centre,
   // set where the crop centres (CSS object-position, x then y).
   cardFocus: {

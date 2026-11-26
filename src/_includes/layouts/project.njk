@@ -17,7 +17,9 @@ layout: layouts/base.njk
 {%- set fv = blocks[fvIndex] if pick == "video" else false %}
 {%- set heroVideo = p.showcase if pick == "clip" else false %}
 {%- set ownToolNote = p.ownToolNote %}
-{%- set keyImage = p.cardImage if pick == "image" else false %}
+{#- design.openingImages: a different image (in the project folder) to open the page, when the card image is a card-only version. #}
+{%- set oi = (design.openingImages or {})[p.id] %}
+{%- set keyImage = (((p.cardImage | replace(p.cardImage.split("/") | last, oi)) if oi else p.cardImage) if pick == "image" else false) %}
 {%- set jump = blocks | headings(fvIndex if fv else -1) %}
 <main id="main" class="proj-main">
   {#- Hero: the opening media full-bleed, with the title over it (like a feature card on Home). #}
