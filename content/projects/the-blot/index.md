@@ -133,9 +133,14 @@ blocks:
       - src: turnaround.jpg
         alt: Character turnaround of the architect from front, three-quarter, side and back
         caption: Turnaround for modelling
+      - src: final-model-turn.jpg
+        video: final-model-turn.mp4
+        alt: 'Looping clip of the final Karl model in T-pose turning from the front to one side, back to the front, then to the other side'
+        caption: 'Final model turning'
+        emphasis: key
       - src: final-model-turnaround.jpg
-        alt: 'Turnaround of the final Karl model in T-pose, in grey ZBrush clay on a dark background: front, left side, three-quarter back, back and right side'
-        caption: 'Final model: front, side, three-quarter back, back and side'
+        alt: 'Turnaround of the final Karl model in T-pose, in grey ZBrush clay on a dark background: three-quarter back, side, front in the centre, side, three-quarter back'
+        caption: 'Final model: front in the centre, sides and three-quarter backs either side'
         emphasis: key
       - src: head-sculpt.jpg
         alt: Grey digital sculpt of the architect’s bald head from the front, eyes closed
