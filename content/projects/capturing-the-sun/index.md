@@ -59,37 +59,6 @@ blocks:
         alt: 'Environment board pairing grey and colour concept sketches of the medina with Marrakech reference photos'
         caption: 'Environment board: concept art beside my reference photos'
   - type: gallery
-    section: references
-    heading: 'References from Marrakech'
-    images:
-      - src: ref-marrakech-market-street.jpg
-        alt: 'Photo of a busy Marrakech market street lined with awnings and stalls'
-        caption: 'My reference photo: a market street'
-      - src: ref-covered-souk.jpg
-        alt: 'Photo of a crowded covered souk under slatted roof panels'
-        caption: 'My reference photo: a covered souk'
-      - src: ref-arched-doorway.jpg
-        alt: 'Photo of a pointed arched doorway in a terracotta wall, with robes hanging outside a shop'
-        caption: 'My reference photo: an arched doorway'
-      - src: ref-marrakech-wool-dyers-souk-2.jpg
-        alt: 'Photo of the narrow wool dyers’ alley with dyed wool hanging overhead and people passing'
-        caption: 'My reference photo: the wool dyers’ souk'
-      - src: ref-spice-stall.jpg
-        alt: 'Photo of a spice stall with heaped spices and an orange umbrella'
-        caption: 'My reference photo: a spice stall'
-      - src: ref-marrakech-dried-goods-stall.jpg
-        alt: 'Photo of baskets of dried fruit, nuts and spices stacked outside a carved wooden door'
-        caption: 'My reference photo: a dried goods stall'
-      - src: ref-marrakech-metalware-shop.jpg
-        alt: 'Photo of a shop crowded with silver teapots, trays and metal lanterns'
-        caption: 'My reference photo: a metalware shop'
-      - src: ref-marrakech-square-awnings.jpg
-        alt: 'Photo of crowds in a square under large green shade awnings'
-        caption: 'My reference photo: awnings over the square'
-      - src: ref-marrakech-rooftops.jpg
-        alt: 'Photo across Marrakech rooftops to a busy square under a cloudy sky'
-        caption: 'My reference photo: the rooftops'
-  - type: gallery
     section: concept-art
     images:
       - src: concept-sun-tree.jpg
