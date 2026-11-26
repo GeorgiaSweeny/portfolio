@@ -14,12 +14,12 @@ intro: >-
 
   I reimagined Snow White’s Evil Queen as a fae-like being from British folklore, the opposite of her dark, brooding Disney interpretation. She draws on historical accounts of witches, who were often women who were healers or held power, accused of witchcraft or of bewitching people with their beauty. Ethereal touches in her design give her a slight otherworldliness.
 
-  I wanted the designs to feel like a woodblock print or a carving, with rigid lines and strong shapes; the head iterations show this best. Her castle began as sketches of three real castles, Eltz, Rheinstein and Neuschwanstein, and the project ends with a storyboard and two key scenes.
+  I wanted the designs to feel like a woodblock print or a carving, with rigid lines and strong shapes; the head iterations show this best. Her castle began as sketches of three real castles, Eltz, Rheinstein and Neuschwanstein, and the project ends with four key art concepts. I developed two of them further, and the third became the final key art: the Queen mixing potions in her secret chamber.
 cardImage: scene-potions.jpg
 showcase:
   image: scene-potions.jpg
 facts:
-  role: 'Character design, environment design, storyboard and key scenes.'
+  role: 'Character design, environment design, key art concepts and final key art.'
   tools: Procreate.
   outcome: 'Character sheets, an environment and key art concepts: the unit’s final pieces.'
 blocks:
@@ -60,21 +60,18 @@ blocks:
         caption: Castle in colour
         emphasis: key
   - type: gallery
-    section: storyboards
-    heading: Storyboard
+    section: concept-art
+    heading: Key Art Concepts
     images:
-      - src: storyboard.jpg
-        alt: 'Four numbered storyboard panels with handwritten notes: approaching the castle over the Queen’s shoulder, the castle seen from the path, the Queen mixing potions, the Queen at her mirror'
-        caption: Four-panel storyboard
+      - src: key-art-concepts.jpg
+        alt: 'Four numbered key art concept thumbnails with handwritten notes: over the Queen’s shoulder approaching the mirror; the castle from the path into the forest; the Queen mixing potions in her secret chamber, seen in a reflection; the Queen approaching the mirror, her shadow on the wall'
+        caption: 'Four key art concepts; I developed 2 and 3'
   - type: gallery
     section: final
-    heading: Key Scenes
+    heading: Key Art
     images:
       - src: scene-potions.jpg
         alt: 'The Queen in a purple gown mixing potions at a cluttered table in a gold-framed chamber lit by candles'
-        caption: Mixing potions in her secret chamber
+        caption: 'Final key art, from concept 3: mixing potions in her secret chamber'
         emphasis: key
-      - src: scene-mirror.jpg
-        alt: 'Greyscale sketch of the Queen leaning towards a tall mirror, claw-like hands spread'
-        caption: At the mirror
 ---
