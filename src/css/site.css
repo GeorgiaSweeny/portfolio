@@ -44,6 +44,9 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 /* ---- top bar and nav ---------------------------------------------------- */
 .topbar { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px var(--pad); background: var(--night); color: var(--on-night); }
 .topbar.on-home { justify-content: flex-end; }
+/* Home on phones: no wordmark, so the links spread across the whole bar. */
+/* Its edges line up with the name below (the hero uses --pad). */
+@media (max-width: 699px) { .topbar.on-home { padding-left: var(--pad); padding-right: var(--pad); } .topbar.on-home .nav { flex: 1; justify-content: space-between; } }
 .wordmark {
   font: 400 22px/1.15 var(--name); letter-spacing: -0.01em; white-space: nowrap; text-decoration: none;
   color: var(--on-night); background: url(/assets/hero-still.jpg) center / 220px; /* small enough that the pattern reads as a fine texture and the name stays legible */ -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
