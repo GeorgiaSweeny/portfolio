@@ -18,6 +18,9 @@ facts:
   role: 'Everything: illustration, print-ready artwork, print production, pricing, stockist relationships, marketing and sales.'
   tools: Watercolour, ink, Procreate and Adobe Photoshop; print-ready artwork and digital print production.
   outcome: Chosen by the Mayor of St Albans for the official Christmas card (2018). The doorway design won the St Albans Art Society Trophy (2022). Stocked by St Albans Museum + Gallery for five years and by the Cathedral gift shop, and the choir boys design was licensed to the Addison’s Disease Self-Help Group for fundraising cards two years running.
+related:
+  - label: Where it began, my school’s Christmas cards
+    project: school-christmas-cards
 blocks:
   - type: gallery
     section: range

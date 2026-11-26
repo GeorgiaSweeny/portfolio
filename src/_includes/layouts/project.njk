@@ -79,6 +79,15 @@ layout: layouts/base.njk
         <button type="button" class="read-more" aria-expanded="false" data-read-more>Read more</button>
         {%- endif %}
         {%- endfor %}
+        {#- Related pages: another project, or Personal Work (only once that page is public). #}
+        {%- if p.related %}
+        <p class="proj-related">
+          {%- for l in p.related %}
+            {%- if l.project %}{%- set target = projects | projectBySlug(l.project) %}{%- if target %}<a class="pill" href="{{ target.url }}">{{ l.label }} →</a>{% endif %}
+            {%- elif l.page == "personal-work" and features.personalWork %}<a class="pill" href="/personal-work/">{{ l.label }} →</a>{% endif %}
+          {%- endfor %}
+        </p>
+        {%- endif %}
         {%- if p.ownTool and not ownToolNote %}<p class="owntool">Made With One of My Own Tools{{ icon("tool") }}</p>{% endif %}
       </div>
       <div class="proj-aside">

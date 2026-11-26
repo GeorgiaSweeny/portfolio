@@ -5,4 +5,18 @@
 #     image: file-name.jpg
 #     alt: …
 #     sold: true      # leave out unless it has been bought. No prices, ever.
-[]
+- title: Mandeville House Diary Cover
+  medium: Coloured pencil and ink
+  year: '2018'
+  image: mandeville-house-diary-cover.jpg
+  alt: 'House diary cover for Mandeville: a green dragon over the house name, and three students in green beneath, one with a lacrosse stick'
+- title: The Green Dress, a Leaving Gift
+  medium: Watercolour and ink
+  year: '2019'
+  image: green-dress-leaving-gift.jpg
+  alt: 'Painting of a dark green dress on a dressmaker’s stand beside a bare tailor’s dummy, on a splashed green background'
+- title: The House Dragon, a Leaving Gift
+  medium: Ink and watercolour
+  year: '2021'
+  image: house-dragon-leaving-gift.jpg
+  alt: 'A green and gold dragon coiled around a globe with a mortarboard, with the house motto beneath'

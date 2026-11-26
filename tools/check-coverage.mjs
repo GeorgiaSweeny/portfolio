@@ -51,6 +51,8 @@ for (const p of c.projects) {
   addAll(`${k}.facts`, p.facts);
   (p.links ?? []).forEach((l, i) => { addText(`${k}.links[${i + 1}].label`, l.label); addRef(`${k}.links[${i + 1}].url`, l.url); });
   (p.ownToolLinks ?? []).forEach((l, i) => addText(`${k}.ownToolLinks[${i + 1}].label`, l.label));
+  // related links show only when the target is live (a published project; Personal Work once public)
+  (p.related ?? []).forEach((l, i) => { if (l.project && c.projects.some((x) => x.id === l.project)) addText(`${k}.related[${i + 1}].label`, l.label); });
   addImage(`${k}.cardImage`, p.cardImage);
   if (p.showcase) {
     addImage(`${k}.showcase.image`, p.showcase.image);

@@ -354,6 +354,11 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .proj-open .meta { color: var(--sage); }
 .proj-open .meta span { color: var(--on-night-2); }
 .proj-open .owntool { color: var(--sage); }
+/* Related pages under the intro: pills on the dark opening. */
+.proj-intro .proj-related { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.proj-intro .proj-related:empty { display: none; }
+.proj-open .proj-related .pill { color: var(--on-night); border-color: rgba(243,239,228,.5); }
+.proj-open .proj-related .pill:hover, .proj-open .proj-related .pill:focus-visible { color: var(--accent); border-color: var(--accent); }
 .proj-open .facts > div { border-top-color: rgba(243,239,228,.16); }
 .proj-open .facts dt { color: var(--sage); }
 .proj-open .facts dd { color: var(--on-night-2); }

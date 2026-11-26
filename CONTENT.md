@@ -54,6 +54,7 @@ only (between the two `---` lines). File names in it refer to files in the same 
 | `ownTool` | no | `true` if something in it was made with one of her own tools (the own-tool tag). |
 | `ownToolNote` | no | A sentence about how her tools were used here. |
 | `ownToolLinks` | no | Projects to point to from that note: each `label` + `project` (a project id). |
+| `related` | no | Links to related pages, shown under the intro: each `label` + either `project` (a project id; shown once that project is live) or `page: personal-work` (shown once Personal Work is public). |
 | `blocks` | no | The project's media, in order: galleries and videos (below). |
 
 \* `showcase` is required for the three featured projects, and will be required for every project
