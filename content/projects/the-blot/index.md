@@ -105,9 +105,6 @@ blocks:
       - src: props-frog-clock.jpg
         alt: Prop design sheet for a green frog-shaped clock
         caption: "Prop design: the frog clock"
-      - src: concept-props-drawing-tools-pencil.jpg
-        alt: 'Pencil drawings of drawing tools: pens, a compass, a ruler, a set square and an ink bottle'
-        caption: 'His drawing tools, in pencil'
       - src: props-drawing-tools.jpg
         alt: "Prop design sheet of drawing tools: pencils, compasses, set squares and pens"
         caption: "Prop design: his drawing tools"
@@ -142,7 +139,7 @@ blocks:
       - src: screenshot-2023-04-24-at-233853.jpg
         alt: 'ZBrush turnaround of the Karl model from four sides'
       - src: head-sculpt.jpg
-        alt: Two views of a grey digital sculpt of the architect’s head
+        alt: Grey digital sculpt of the architect’s bald head from the front, eyes closed
         caption: Sculpting his head
       - src: sculpt-bust-with-reference-zbrush-photo.jpg
         alt: 'Photo of a laptop screen with Karl’s bust in ZBrush beside his drawn reference'
