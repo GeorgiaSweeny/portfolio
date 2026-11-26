@@ -38,32 +38,32 @@ blocks:
       - src: torch-battery.jpg
         video: torch-battery.mp4
         alt: The submarine’s torch flickering on and off in the dark as the power ring counts down from 6% to empty
-        caption: The torch as its battery dies, flickering and guttering while the power ring glows and flashes its low-power warning (both mine); the timing took the longest to get right
+        caption: 'Torch dying as the battery drains, with the power ring’s low-power warning (both mine); the timing took longest to get right'
       - src: glow.jpg
         alt: The yellow submarine in the dark, surrounded by soft concentric rings of blue light
-        caption: 'The sub’s ambient light: concentric rings fading into the dark, the style I made for every light in the game'
+        caption: 'Sub’s ambient light: concentric rings fading into the dark, my style for every light in the game'
       - src: site-lighting-torch-beam.jpg
         alt: 'The sub’s torch beam cutting down through the dark, its light in concentric rings'
-        caption: 'The torch beam'
+        caption: 'Torch beam'
       - src: biolume-blocks.jpg
         alt: Bioluminescent blocks glowing blue around the submarine in a dark cave
-        caption: Bioluminescent blocks; bump one and it flares brighter, recharging the sub for as long as you touch it
+        caption: 'Bioluminescent blocks: bump one and it flares, recharging the sub while you touch it'
       - src: scrap-glow.jpg
         alt: A scrap pick-up glowing softly beside the cave wall, with a violet jellyfish in the distance
-        caption: A scrap pick-up’s ambient glow; every pick-up glows or pulses softly, like the sub, when you come close
+        caption: 'Scrap pick-up glow: every pick-up pulses softly when you come close'
       - src: jellyfish-glow.jpg
         alt: A single jellyfish glowing violet in the dark water
-        caption: A jellyfish’s glow cycles through pink, purple and cyan, offset between its head, body and legs so the shapes stay clear, and squashes and stretches to make it swim
+        caption: 'Jellyfish glow: pink, purple and cyan, offset across head, body and legs, with squash and stretch to swim'
       - src: jellyfish-glow-test.jpg
         video: jellyfish-glow-test.mp4
         alt: 'Testing the jellyfish glow: a jellyfish pulsing through pink, purple and cyan'
         caption: 'Testing the jellyfish glow'
       - src: glow-fish.jpg
         alt: A red glow fish in the dark above the submarine and its pool of blue light
-        caption: A glow fish shows blue only in torchlight; ping it with sonar and it turns red, aggressive and visible in the dark
+        caption: 'Glow fish: blue only in torchlight; ping it with sonar and it turns red, aggressive and visible'
       - src: sonar.jpg
         alt: A sonar pulse revealing spike walls around the submarine, with the power ring glowing red at 12%
-        caption: A sonar pulse (by a teammate); I matched the colours objects show when it hits them to how they look in torchlight and glow
+        caption: 'Sonar pulse (by a teammate); I matched the colours it reveals to each object’s torchlight and glow'
       - src: site-lighting-sonar-pulse.jpg
         alt: 'A sonar pulse spreading through a dark cavern, the sub in the middle'
   - type: video
@@ -76,44 +76,44 @@ blocks:
     images:
       - src: sketch-rooms-start.jpg
         alt: 'Sketchbook spread of hand-drawn room plans for the start area, hazard maze and tunnel, with a key for power, health, scrap, spikes, breakable walls, hidden passages, exits and enemies'
-        caption: Room sketches for the start area, hazard maze and tunnel, with my key for pick-ups, enemies, spikes, breakable walls, hidden passages and exits
+        caption: 'Room sketches: start area, hazard maze and tunnel, with my key for pick-ups, enemies, hazards and exits'
       - src: sketch-rooms-deep.jpg
         alt: 'Sketchbook page of the deep caverns, a maze of hatched walls and collectables, above the endless abyss, a huge empty room'
-        caption: 'The deep caverns, full of collectables, and the endless abyss below: a big, seemingly endless space'
+        caption: 'Deep caverns full of collectables, above the endless abyss'
         group: early-maps
       - src: sketch-world-early.jpg
         alt: 'Hand-drawn mini map of the world, each area shaded a different colour, from the endless abyss at the bottom up to the final area'
-        caption: An early colour-coded map of the whole world, from the endless abyss up to the final area
+        caption: 'Early colour-coded world map, from the endless abyss to the final area'
         group: early-maps
       - src: sketch-world-complete.jpg
         alt: 'Hand-drawn map of the complete world, adding the jellyfish atrium, the biolume and the surface beside the earlier areas'
-        caption: 'My final world concept. For demo day we streamlined it: some areas were cut, with the new enemy types and hazards planned for them, and others merged, so we could focus on fully developed rooms'
+        caption: 'My final world concept, streamlined for demo day: some areas cut, others merged, to focus on fully developed rooms'
       - src: world-map.jpg
         alt: 'Labelled world map of the released game: the surface, jellyfish atrium, crab caverns, spike maze, the drop, a tunnel and the endless abyss'
-        caption: The released game’s world map, showing how the rooms connect, from the surface down to the endless abyss
+        caption: 'Released game’s world map, from the surface down to the endless abyss'
         emphasis: key
       - src: tile-editor.jpg
         alt: A tile map editor showing a winding blue cave room with red hazards placed along it
         caption: Building a room in Tiled from the sketches
       - src: tiled-level-editor-early-map.jpg
         alt: 'An early blue cavern map in the Tiled level editor'
-        caption: 'An early map in Tiled'
+        caption: 'Early map in Tiled'
       - src: map-test.jpg
         alt: Grid map of a long winding test cave, with pick-ups and exits marked
-        caption: A test map we used during development
+        caption: 'Test map used during development'
       - src: map-start.jpg
         alt: Grey grid map of the starting cave, a winding passage between two larger chambers
-        caption: The start area of the released game, where the player begins
+        caption: 'Start area, where the player begins'
       - src: map-tunnel.jpg
         alt: A long, narrow tunnel map with spikes along its floor and exits at each end
-        caption: The tunnel, a short transition with spikes along the floor
+        caption: 'Tunnel: a short, spiked transition'
         emphasis: key
       - src: spike-maze-map.jpg
         alt: 'An earlier layout of the spike maze map'
-        caption: 'An earlier version of the spike maze'
+        caption: 'Earlier spike maze'
       - src: map-spike-maze.jpg
         alt: Grey grid map of the spike maze, a looping corridor lined with red spike walls
-        caption: The spike maze, with spikes, pick-ups and spawn points plotted
+        caption: 'Spike maze, with spikes, pick-ups and spawn points plotted'
       - src: map-the-drop.jpg
         alt: A tall, narrow shaft map leading straight down
         caption: The drop
@@ -122,29 +122,29 @@ blocks:
         caption: The endless abyss
       - src: map-crab-caverns.jpg
         alt: Grid map of the crab caverns, winding corridors with crab placements and their paths marked in red
-        caption: The crab caverns, with crab placements and paths plotted for the enemy system
+        caption: 'Crab caverns, with crab placements and paths for the enemy system'
       - src: map-final.jpg
         alt: Grid map of the jellyfish caverns with jellyfish spawns and their paths marked in red
-        caption: The jellyfish caverns, with jellyfish spawns and paths marked
+        caption: 'Jellyfish caverns, with spawns and paths marked'
       - src: map-atrium.jpg
         alt: Grey grid map of the jellyfish atrium, a tall cave of pillars and pockets with jellyfish marked in red
-        caption: The jellyfish atrium, its jellyfish marked in red
+        caption: 'Jellyfish atrium, jellyfish marked in red'
       - src: map-surface.jpg
         alt: Map of the final climb, a cave that widens as it rises to the surface
-        caption: 'The surface: the final climb, where the light slowly breaks through'
+        caption: 'Surface: the final climb, as the light breaks through'
       - src: site-level-in-play.jpg
         alt: 'The game in play: the sub in a dark cavern with the power, sonar and torch rings below'
-        caption: 'A level in play'
+        caption: 'Level in play'
   - type: gallery
     section: systems
     heading: Game Systems
     images:
       - src: workshop.jpg
         alt: The workshop screen over the dimmed game, with upgrade cards for power, sonar, torch and missiles and the player’s loadout
-        caption: 'The workshop, which I helped design: players spend scrap on power, sonar and torch upgrades'
+        caption: 'Workshop (I helped design it): scrap buys power, sonar and torch upgrades'
       - src: controls.jpg
         alt: The controls screen over an illustrated seabed, listing the keys for moving, sonar, torch, missiles, workshop and settings
-        caption: The controls screen
+        caption: 'Controls screen'
   - type: gallery
     section: development
     images:

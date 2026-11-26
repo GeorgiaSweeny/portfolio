@@ -54,7 +54,7 @@ blocks:
         caption: "Where it started: Act One of my first-year shadow play concept"
       - src: concept-pitch-board.jpg
         alt: 'Pitch board titled The Tale of Capturing the Sun, with the wise woman and the philosopher, Marrakech photos, a story summary and a strip of environment concepts'
-        caption: 'The pitch board'
+        caption: 'Pitch board'
       - src: concept-environment-board.jpg
         alt: 'Environment board pairing grey and colour concept sketches of the medina with Marrakech reference photos'
         caption: 'Environment board: concept art beside my reference photos'
@@ -66,7 +66,7 @@ blocks:
         caption: 'The sun and the tree: the film’s two key images'
       - src: reference-wool-dyers.jpg
         alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
-        caption: 'Reference photo: the dyers’ alley that inspired the concept painting'
+        caption: 'Reference photo for the dyers’ alley painting'
         emphasis: reference
         group: dyers
       - src: wool.jpg
@@ -78,13 +78,13 @@ blocks:
         caption: 'Sketchbook: an aqueduct and the sun motif'
       - src: sketchbook-sundial.jpg
         alt: Sketchbook page planning the city in rings around a central sundial, with notes
-        caption: Planning the city and central medina around a sundial design
+        caption: 'City and medina plan, laid out around a sundial'
       - src: forest-edge-city.jpg
         alt: Grey sketch looking out between trees at the edge of the forest, across open ground to the city on the horizon under the sun
-        caption: The city from the edge of the forest
+        caption: 'City from the forest edge'
       - src: concept-silhouette-in-souk.jpg
         alt: 'Black and white concept painting of a dark silhouette of the philosopher standing in a sunlit souk'
-        caption: 'A silhouette in the souks'
+        caption: 'Silhouette in the souks'
       - src: storyboard-birds.jpg
         alt: 'Storyboard: rough bird’s-eye view of the medina layout'
         caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
@@ -162,23 +162,23 @@ blocks:
         caption: 'Proportions for modelling'
       - src: character-philosopher.jpg
         alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
-        caption: The travelling philosopher
+        caption: 'Travelling philosopher'
       - src: char-philosopher-lantern.jpg
         alt: 'The philosopher in green beside a painted jar of glowing fireflies on a dark blue ground'
-        caption: 'The philosopher and his jar of fireflies'
+        caption: 'Philosopher with his jar of fireflies'
       - src: dev-philosopher-body-sculpt.jpg
         alt: 'Grey sculpt of the philosopher’s full body in long robes, in T-pose'
         caption: 'Body sculpt'
       - src: sculpt-philosopher.jpg
         alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
-        caption: Sculpting the philosopher’s head
+        caption: 'Philosopher’s head sculpt'
   - type: gallery
     section: characters
     heading: 'The Wise Woman'
     images:
       - src: sketchbook.jpg
         alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
-        caption: 'Sketchbook: working out the wise woman’s cloak'
+        caption: 'Sketchbook: the wise woman’s cloak'
       - src: concept-sketchbook-04.jpg
         alt: 'Sketchbook page of cloak designs for the wise woman, with front and back views and notes'
         caption: 'Cloak designs'
@@ -187,7 +187,7 @@ blocks:
         caption: 'Face studies'
       - src: character-wise-woman.jpg
         alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
-        caption: The wise woman
+        caption: 'Wise woman'
       - src: dev-wise-woman-body-sculpt.jpg
         alt: 'Grey sculpt of the wise woman’s full body in a hooded robe, arms out'
         caption: 'Body sculpt'
@@ -198,7 +198,7 @@ blocks:
         alt: 'Grey sculpt of the wise woman’s head in profile'
       - src: sculpt-wise-woman.jpg
         alt: Digital sculpt of the wise woman’s lined face inside her hood
-        caption: Sculpting the wise woman
+        caption: 'Wise woman sculpt'
   - type: gallery
     section: characters
     heading: 'The Young Boy'
@@ -216,26 +216,26 @@ blocks:
     images:
       - src: sketchbook-recurring-motif-sun-and-tree.jpg
         alt: 'Sketchbook page planning the recurring sun motif and the tree on its plinth, with a colour key'
-        caption: 'The recurring motif: the sun and the tree'
+        caption: 'Recurring motif: sun and tree'
       - src: sketchbook-locations-campsite-street-medina-souks.jpg
         alt: 'Sketchbook page of small location sketches: the campsite, the main street, the medina and the souks'
-        caption: 'The locations'
+        caption: 'Locations'
       - src: sketchbook-medina-layout-plan.jpg
         alt: 'Sketchbook plan of the medina courtyard and the street of buildings leading to it'
         caption: 'Medina layout plan'
       - src: sketchbook-medina-buildings-plan.jpg
         alt: 'Sketchbook plan of the medina street with buildings coloured in yellow and orange'
-        caption: 'Planning the buildings'
+        caption: 'Building plans'
       - src: sketchbook-forest-and-tree-layout.jpg
         alt: 'Sketchbook plan of the forest, its path and stream, with notes'
-        caption: 'The forest layout'
+        caption: 'Forest layout'
   - type: gallery
     section: storyboards
     heading: 'Thumbnails'
     images:
       - src: thumbnails-notebook.jpg
         alt: A notebook spread of tiny pen thumbnail storyboards for Acts 3 and 4, each panel annotated with handwritten notes, a few touched with yellow and red
-        caption: The very first thumbnail storyboards, in my notebook (Acts 3 and 4)
+        caption: 'First thumbnail storyboards, in my notebook (Acts 3 and 4)'
         emphasis: key
       - src: sketchbook-opening-shot-thumbnails.jpg
         alt: 'Sketchbook page of ink thumbnail frames planning the opening shots, with notes'
@@ -258,18 +258,18 @@ blocks:
         alt: 'Sketchbook spread with a column of storyboard frames and empty panels'
       - src: thumbnails-1.jpg
         alt: Twelve colour storyboard panels — a glowing sun emblem, a book on a lit pedestal opening, its pages and an orange picture, then the market street and the crowd around the tree
-        caption: The opening – the book, its pages, and into the medina
+        caption: 'Opening: the book, its pages, then into the medina'
         emphasis: key
       - src: sb-book-sequence-early-alternate-one-philosopher.jpg
         alt: 'Colour thumbnail strip of the opening: the sun motif, the story book opening and the medina, ending on a boy at a tunnel'
-        caption: 'An earlier version of the opening, from when the story had one philosopher'
+        caption: 'Earlier opening, from when the story had one philosopher'
       - src: thumbnails-2.jpg
         alt: Twelve colour thumbnail panels — the philosopher on the stage beneath the tree before the crowd, the wise woman and her golden staff, the sun emblem, and a walk into an alley hung with dyed wool
-        caption: The challenge at the tree, and into the dyers’ alley
+        caption: 'Challenge at the tree, then into the dyers’ alley'
         emphasis: key
       - src: thumbnails-3.jpg
         alt: Twelve sketch panels — the philosopher in a narrow alley and at a stall, a golden sun sign on a door, then night scenes in dark blue with glowing golden lights swirling around him and a lantern
-        caption: The market, the sun sign on the door, and the night of golden lights
+        caption: 'Market, sun sign on the door and night of golden lights'
         emphasis: key
   - type: gallery
     section: storyboards
@@ -317,7 +317,7 @@ blocks:
     images:
       - src: concept-medina-plan-detailed.jpg
         alt: 'Detailed colour plans of the three environments side by side: the courtyard around the great tree, the souks street with its stalls, and the camp in the forest'
-        caption: Plans of the three environments – the courtyard, the souks and the camp
+        caption: 'Plans for the three environments: courtyard, souks and camp'
       - src: dev-medina-blockout-scene.jpg
         alt: 'Maya viewport of the medina courtyard blockout with simple blocks and the tree'
         caption: 'Blocking out the medina'
@@ -329,14 +329,14 @@ blocks:
         emphasis: key
       - src: dev-souks-layout-01.jpg
         alt: 'Top view of the souks street layout in Maya'
-        caption: 'Laying out the souks street'
+        caption: 'Souks street layout'
       - src: dev-souks-blockout-scene.jpg
         alt: 'Maya viewport of the souks blockout, a long street of simple blocks'
       - src: dev-souks-blockout-render.jpg
         alt: 'Flat-shaded render looking down the souks blockout street with a figure'
       - src: dev-souks-layout-03.jpg
         alt: 'The souks street in Unreal Engine with doors, arches and awnings, untextured'
-        caption: 'The souks, dressed'
+        caption: 'Souks, dressed'
       - src: dev-souks-layout-04.jpg
         alt: 'The souks street in Unreal Engine with a wooden stall frame'
       - src: reference-souk.jpg
@@ -350,14 +350,14 @@ blocks:
         group: souk
       - src: dev-modular-kit-layout.jpg
         alt: 'Grey modular wall, arch and plinth pieces laid out in Maya'
-        caption: 'The modular kit, laid out'
+        caption: 'Modular kit, laid out'
       - src: dev-modular-kit-maya.jpg
         alt: 'Maya viewport of the modular kit pieces'
       - src: dev-modular-kit-wireframe.jpg
         alt: 'Maya viewport of the modular kit in wireframe'
       - src: modular-kit.jpg
         alt: Terracotta-coloured render of a modular kit of walls, arches, doors, a plinth and a tree, laid out on a grey floor
-        caption: 'The modular kit: every wall, arch and prop, built once and reused'
+        caption: 'Modular kit: every wall, arch and prop, built once and reused'
         emphasis: key
       - src: dev-arches-01.jpg
         alt: 'Unreal Engine viewport of a carved arch with a closed door'
@@ -378,7 +378,7 @@ blocks:
         caption: 'Building texture'
       - src: dev-door-knocker-model.jpg
         alt: 'Maya viewport of a door knocker model in wireframe, beside the modular kit'
-        caption: 'The door knocker'
+        caption: 'Door knocker'
       - src: dev-arched-door-texture.jpg
         alt: 'Textured wooden door in an arched frame with a metal knocker'
       - src: dev-door-texture-01.jpg
@@ -398,19 +398,19 @@ blocks:
         caption: Lantern prop model
       - src: dev-sun-motif-simple.jpg
         alt: 'White geometric star pattern on black, a simple version of the sun motif'
-        caption: 'The sun motif, simple version'
+        caption: 'Sun motif, simple version'
       - src: dev-sun-motif-inverted.jpg
         alt: 'Detailed white sun motif with stars and rosettes on black'
       - src: motif.jpg
         alt: Intricate black line drawing of a twelve-pointed geometric sun motif
-        caption: The sun motif, built from geometric pattern rules
+        caption: 'Sun motif, built from geometric pattern rules'
   - type: gallery
     section: models
     heading: 'The Great Tree'
     images:
       - src: dev-tree-plinth-01.jpg
         alt: 'Grey model of the great tree on its round stepped plinth'
-        caption: 'The tree on its plinth'
+        caption: 'Tree on its plinth'
       - src: dev-tree-plinth-03.jpg
         alt: 'Grey model of the great tree and plinth with figures for scale'
       - src: dev-tree-sculpt.jpg
@@ -433,7 +433,7 @@ blocks:
         caption: Cover iterations for the story book
       - src: sketchbook-story-book-opening-ink.jpg
         alt: 'Sketchbook page planning the story book opening into the scene, with notes'
-        caption: 'The book opens into the story'
+        caption: 'Book opening into the story'
       - src: sketchbook-story-book-page-layouts.jpg
         alt: 'Sketchbook page of story book page layouts with borders'
         caption: 'Page layouts'
@@ -456,7 +456,7 @@ blocks:
         emphasis: key
       - src: book-textured.jpg
         alt: The story book textured in purple with a gold sun on its cover, beside its texture maps
-        caption: The story book, textured
+        caption: 'Story book, textured'
   - type: gallery
     section: props
     heading: Props and Set Dressing
@@ -474,10 +474,10 @@ blocks:
         alt: 'Sketchbook page of staff designs wrapped in fabric'
       - src: dev-props-overview.jpg
         alt: 'Overview of props: the story book, sun motif, staff, character sculpts and three market stalls'
-        caption: 'The props'
+        caption: 'Props'
       - src: prop-book-staff.jpg
         alt: Render of a purple book with a gold sun on its cover, beside the wise woman’s staff
-        caption: The book and the staff
+        caption: 'Book and staff'
       - src: reference-lanterns.jpg
         alt: Photo of a shop crowded with hanging coloured-glass lanterns
         caption: "My reference photo: a lantern shop"
@@ -485,7 +485,7 @@ blocks:
         group: lanterns
       - src: prop-lantern-stall.jpg
         alt: Render of a market stall laid with brass lanterns, plates and glass jars
-        caption: The lantern stall
+        caption: 'Lantern stall'
         group: lanterns
       - src: reference-spices.jpg
         alt: Photo of a stall piled with spices and dried goods in tubs and baskets
@@ -494,11 +494,11 @@ blocks:
         group: spices
       - src: prop-spice-stall.jpg
         alt: Render of a spice stall with tall dark jars, wooden tubs and dishes of coloured spices
-        caption: The spice stall
+        caption: 'Spice stall'
         group: spices
       - src: prop-pottery-stall.jpg
         alt: Render of a stall of painted pottery and pastel dishes
-        caption: The pottery stall
+        caption: 'Pottery stall'
       - src: reference-doorway.jpg
         alt: Photo of an ornate carved doorway in a Marrakech souk, among stalls of goods
         caption: "My reference photo: a carved doorway in the souks"
@@ -510,7 +510,7 @@ blocks:
         group: doorway
       - src: dev-market-stall-02.jpg
         alt: 'Grey model of a market stall frame with an awning'
-        caption: 'A market stall model'
+        caption: 'Market stall model'
   - type: gallery
     section: final
     images:
@@ -519,10 +519,10 @@ blocks:
         caption: 'The challenge'
       - src: render-medina-courtyard.jpg
         alt: 'Render of the medina courtyard with the great tree on its plinth and the two characters'
-        caption: 'The medina courtyard'
+        caption: 'Medina courtyard'
       - src: render-courtyard.jpg
         alt: Unreal Engine render of the empty medina courtyard, the great tree on its stepped platform beneath tiled arcades, rugs laid out on the sand
-        caption: The medina courtyard and the great tree
+        caption: 'Medina courtyard and great tree'
       - src: render-courtyard-from-the-gate.jpg
         alt: 'Render of the courtyard and great tree seen past a wall, the philosopher by the plinth'
       - src: render-beneath-the-tree.jpg
@@ -530,29 +530,29 @@ blocks:
         caption: 'Beneath the tree'
       - src: render-great-tree.jpg
         alt: Unreal Engine render of the gnarled great tree, its branches hung with threads, in front of a carved arched door
-        caption: The great tree
+        caption: 'Great tree'
       - src: render-staff.jpg
         alt: 'Close render of the wise woman’s staff with the philosopher out of focus behind'
-        caption: 'The staff'
+        caption: 'Staff'
       - src: souks.jpg
         alt: Unreal Engine render of a sunlit market street through a horseshoe arch
-        caption: The souks
+        caption: 'Souks'
       - src: render-market-in-use.jpg
         alt: 'Render of the philosopher in the market street among rugs, spice cones and pottery'
-        caption: 'The market'
+        caption: 'Market'
       - src: render-market-stalls.jpg
         alt: 'Render of three market stalls with striped awnings, spices and pottery'
-        caption: 'The market stalls'
+        caption: 'Market stalls'
       - src: render-dyers-alley.jpg
         alt: Unreal Engine render of a narrow alley hung with purple dyed wool, lit warm at its far arched end
-        caption: The dyers’ alley
+        caption: 'Dyers’ alley'
       - src: render-setting-off.jpg
         alt: 'Render of the philosopher standing by an arched gateway in the medina'
         caption: 'Setting off'
       - src: render-night-camp.jpg
         alt: 'Render of the philosopher at his tent by a campfire under the stars'
-        caption: 'The night camp'
+        caption: 'Night camp'
       - src: render-campsite.jpg
         alt: Unreal Engine render of a night camp under the stars, a canvas tent beside a ring of stones and a glowing fire
-        caption: The night camp
+        caption: 'Night camp'
 ---

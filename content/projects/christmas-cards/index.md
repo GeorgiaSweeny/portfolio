@@ -30,7 +30,7 @@ blocks:
         caption: The Mayor of St Albans’ official Christmas card, 2018
       - src: doorway.jpg
         alt: A Gothic cathedral doorway glowing with warm light
-        caption: Painted original won the St Albans Art Society Trophy, 2022
+        caption: 'Original painting, winner of the St Albans Art Society Trophy, 2022'
       - src: choir.jpg
         alt: Choirboys in red robes outside St Albans Cathedral
       - src: tree.jpg
@@ -61,10 +61,10 @@ blocks:
         caption: With the winning painting
       - src: prism-cover-story.jpg
         alt: "PRISM magazine, December 2022: the cover shows the doorway painting, with Georgia's cover story inside"
-        caption: "The cover story in the Art Society's PRISM magazine"
+        caption: 'Cover story in the Art Society’s PRISM magazine'
       - src: first-batch.jpg
         alt: A cardboard box full of the first printed cards and envelopes
-        caption: The first batch of cards
+        caption: 'First batch of cards'
       - src: shop-shelf.jpg
         alt: Georgia’s cards and prints in cellophane on a shop display
         caption: On the shelf at Raindrops On Roses charity shop
@@ -77,10 +77,10 @@ blocks:
         caption: Pencil drawing
       - src: museum-painting.jpg
         alt: The finished painting of the St Albans Museum + Gallery in snow under a starry night sky, with the streets either side
-        caption: The finished painting
+        caption: 'Finished painting'
       - src: museum.jpg
         alt: The Museum + Gallery card design, cropped square from the painting
-        caption: The card design
+        caption: 'Card design'
   - type: gallery
     section: stages
     heading: The Doorway, Stage by Stage
@@ -91,7 +91,7 @@ blocks:
         caption: Twenty-five stages, start to finish
       - src: doorway-final.jpg
         alt: The finished painting of the West Entrance of St Albans Cathedral, golden arches around red doors reflected in a dark floor
-        caption: The finished painting, with its reflection
+        caption: 'Finished painting, with its reflection'
   - type: gallery
     section: stages
     heading: Carol of Bells, Stage by Stage
@@ -110,7 +110,7 @@ blocks:
         alt: The Carol of Bells painting with the full moon added, before the choir figures
       - src: moon.jpg
         alt: The finished Carol of Bells painting, St Albans Cathedral under a full moon with choir figures in the snow
-        caption: The finished painting
+        caption: 'Finished painting'
   - type: gallery
     section: stages
     heading: St Albans Postbox, Stage by Stage
@@ -118,7 +118,7 @@ blocks:
       - src: postbox-timelapse.jpg
         video: postbox-timelapse.mp4
         alt: Timelapse of the postbox design being painted, from first lines to finished colour
-        caption: Painting it, start to finish (timelapse)
+        caption: 'Timelapse, start to finish'
         emphasis: key
       - src: postbox-stage-01.jpg
         alt: "Pencil sketch of the postbox design: a father lifting his daughter to post a letter, with a dog beside them"
@@ -130,7 +130,7 @@ blocks:
         alt: "The daughter drawn in"
       - src: postbox.jpg
         alt: "The finished St Albans Postbox card design: a father lifting his daughter to post a letter, with their dog, framed in red"
-        caption: The card design
+        caption: 'Card design'
   - type: gallery
     section: stages
     heading: Verulamium Lake, Stage by Stage
@@ -140,10 +140,10 @@ blocks:
         caption: 'Pencil rough'
       - src: snowman-and-bench-rough.jpg
         alt: 'Digital rough of two children building a snowman in falling snow beside a bench and a robin'
-        caption: 'An early idea: the snowman'
+        caption: 'Early idea: snowman'
       - src: lake-lineart.jpg
         alt: Black and white line art of a figure on a bench by a frozen lake, with the cathedral on the far bank
-        caption: An earlier design, in line art
+        caption: 'Earlier design, line art'
       - src: lake-stage-01.jpg
         alt: "Pencil sketch of the far bank of Verulamium Lake, with the cathedral on the skyline"
       - src: lake-stage-02.jpg
@@ -162,7 +162,7 @@ blocks:
         alt: "Snow and detail refined across the scene"
       - src: bench.jpg
         alt: "The finished Verulamium Lake painting: a couple on a bench by the frozen lake at dusk, the cathedral behind"
-        caption: The finished painting
+        caption: 'Finished painting'
   - type: gallery
     section: in-the-works
     heading: 'In the Works: Clock Tower'
@@ -205,7 +205,7 @@ blocks:
         alt: "The windows detailed"
       - src: abbey-gateway-10.jpg
         alt: "The Abbey Gateway painting so far: the gatehouse in snow under a night sky"
-        caption: The painting so far
+        caption: 'Painting so far'
   - type: gallery
     section: in-the-works
     heading: 'In the Works: St Peter’s Church'
@@ -227,5 +227,5 @@ blocks:
         alt: "Stage 6 of the St Peter’s Church canvas on the easel"
       - src: st-peters-church-08.jpg
         alt: "The St Peter’s Church canvas: the lychgate glowing beneath a golden rose window"
-        caption: The canvas so far
+        caption: 'Canvas so far'
 ---

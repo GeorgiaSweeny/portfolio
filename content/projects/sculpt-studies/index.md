@@ -31,7 +31,7 @@ blocks:
         emphasis: key
       - src: ego-render.jpg
         alt: Moody render of the Anton Ego bust, lit from above against a dark background
-        caption: A render of the polished sculpt
+        caption: 'Render of the polished sculpt'
   - type: gallery
     section: finished
     heading: Portrait of a Friend
@@ -39,7 +39,7 @@ blocks:
       - src: portrait-turntable.jpg
         video: portrait-turntable.mp4
         alt: 'Sped-up recording of the portrait sculpt turning in ZBrush: front, profile, a close-up and a view from below'
-        caption: 'Turning the sculpt in ZBrush (sped up)'
+        caption: 'ZBrush turntable (sped up)'
         emphasis: key
       - src: portrait-front.jpg
         alt: 'Grey ZBrush head-and-shoulders portrait sculpt, front view: no hair and a slight smile'

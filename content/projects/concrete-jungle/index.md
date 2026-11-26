@@ -27,7 +27,7 @@ blocks:
     images:
       - src: sculpt-turnaround.jpg
         alt: 'Grey ZBrush sculpt of CJ in a T-pose from the front, side, back and other side: a young man with short curly hair in an open-collared shirt with rolled cuffs, trousers and lace-up boots'
-        caption: 'The finished sculpt: front, side, back and side'
+        caption: 'Finished sculpt: front, side, back and side'
         emphasis: key
       - src: sculpt-three-quarter-a.jpg
         alt: The CJ sculpt from the front three-quarter, arms out in a T-pose
@@ -39,7 +39,7 @@ blocks:
     images:
       - src: head-three-quarter.jpg
         alt: 'Close-up of CJ’s sculpted head from the three-quarter: short curly hair, a strong jaw and an open shirt collar'
-        caption: 'The face, sculpted for close-ups'
+        caption: 'Face, sculpted for close-ups'
         emphasis: key
       - src: head-front.jpg
         alt: CJ’s head and shoulders from the front, his shirt collar open
@@ -47,12 +47,12 @@ blocks:
         alt: CJ’s head in profile, showing the sculpted curls, ear and jawline
       - src: hand-back.jpg
         alt: 'Close-up of CJ’s right hand from above: knuckles, tendons and veins sculpted in detail'
-        caption: 'The hands, which the storyboards showed in close-up'
+        caption: 'Hands, detailed for storyboarded close-ups'
       - src: hand-palm.jpg
         alt: Close-up of CJ’s hand from the palm side, the fingers spread
       - src: shoes.jpg
         alt: Close-up of CJ’s lace-up boots and turned-up trouser hems
-        caption: 'The shoes, which come close to the camera'
+        caption: 'Shoes, detailed for close camera shots'
   - type: gallery
     section: concept
     images:
@@ -68,20 +68,20 @@ blocks:
     images:
       - src: base-body-turnaround.jpg
         alt: 'Grey ZBrush base body for CJ in a T-pose from the front, side and back: an anatomical male figure with a muscular build'
-        caption: 'The base body: anatomy and a boxer’s build, before the clothes'
+        caption: 'Base body: a boxer’s build, before clothing'
   - type: gallery
     section: production
     heading: Retopology
     images:
       - src: retopology-head.jpg
         alt: 'Maya viewport: a blue quad mesh drawn over the sculpted head, with edge loops around the eyes and mouth'
-        caption: 'Retopologising the head in Maya'
+        caption: 'Head retopology in Maya'
       - src: retopology-in-progress.jpg
         alt: 'Maya viewport: the blue retopology mesh covering the head, arms, torso and legs, the hips still to do'
-        caption: In progress
+        caption: 'Retopology in progress'
       - src: retopology-body-a.jpg
         alt: The finished retopology mesh over the whole body, front view
-        caption: 'The finished retopology, ready for rigging'
+        caption: 'Finished retopology, ready for rigging'
       - src: retopology-body-b.jpg
         alt: The finished retopology mesh from behind
 ---

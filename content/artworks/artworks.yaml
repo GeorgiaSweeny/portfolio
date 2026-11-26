@@ -11,14 +11,14 @@
   medium: Coloured pencil and ink
   year: '2018'
   image: mandeville-house-diary-cover.jpg
-  note: The cover artwork for my house’s diary at school, Mandeville.
+  note: 'Cover for Mandeville’s house diary at school'
   stages:
     - src: mandeville-house-diary-cover-white.jpg
       alt: The cover artwork finished on a white background, before the teal
       caption: Before the teal background
     - src: mandeville-house-diary-cover-sketch.jpg
       alt: Pencil sketch of the cover layout, with colour swatches around it
-      caption: The sketch
+      caption: 'Sketch'
     - src: mandeville-house-diary-cover-painting.jpg
       alt: 'Testing colours on the rough at a kitchen table: a hand with a brush over the pencil rough, the printed cover beside it'
       caption: Testing colours on the rough
@@ -27,24 +27,24 @@
   medium: Watercolour and ink
   year: '2019'
   image: green-dress-leaving-gift.jpg
-  note: Painted as a leaving gift at my school.
+  note: 'Leaving gift for a teacher'
   alt: 'Painting of a dark green dress on a dressmaker’s stand beside a bare tailor’s dummy, on a splashed green background'
 - title: The House Dragon, a Leaving Gift
   medium: Ink and watercolour
   year: '2021'
   image: house-dragon-leaving-gift.jpg
-  note: 'Commissioned as a leaving gift for a teacher: the house dragon, with the house motto beneath.'
+  note: 'Commissioned leaving gift for a teacher, with the house dragon and motto'
   stages:
     - src: house-dragon-leaving-gift-line-art.jpg
       alt: Ink line art of the dragon, the globe and the mortarboard before colour
       caption: Line art
     - src: house-dragon-leaving-gift-sketch.jpg
       alt: Pencil sketch of the dragon coiled around a globe inside a drawn frame, with a note where a verse of the house hymn would go
-      caption: The first sketch
+      caption: 'First sketch'
   alt: 'A green and gold dragon coiled around a globe with a mortarboard, with the house motto beneath'
 - title: Sinbad, House Drama Poster
   medium: Digital
   year: '2020'
   image: sinbad-poster.jpg
-  note: The poster for my house’s drama performance, One Thousand and One Arabian Nights, which I co-wrote and co-directed.
+  note: 'Poster for my house drama, One Thousand and One Arabian Nights, which I co-wrote and co-directed'
   alt: 'Poster with a red four-poster bed under gold constellations of a ship, a genie and a flying horse, titled Sinbad, with Mandeville’s One Thousand and One Arabian Nights beneath'

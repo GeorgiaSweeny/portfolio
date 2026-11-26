@@ -20,11 +20,11 @@ blocks:
     images:
       - src: photos.jpg
         alt: Four photographs of the hand-bound purple and gold hardback, open and closed
-        caption: 'The finished hardback: purple cloth with gold tooling'
+        caption: 'Finished hardback: purple cloth, gold tooling'
       - src: illustrations.jpg
         alt: Three ink illustrations from the book shown as a spread
-        caption: Ink illustrations drawn for key moments in the story
+        caption: 'Ink illustrations for key moments'
       - src: layout.jpg
         alt: Research notebook pages planning the concept and artefact
-        caption: Planning the layout, typeface and binding
+        caption: 'Planning layout, typeface and binding'
 ---

@@ -61,7 +61,7 @@ blocks:
         caption: 'Laying out the room'
       - src: window.jpg
         alt: 'Concept painting: a dark shape against a bright window'
-        caption: Lighting and mood for the blot itself
+        caption: 'Lighting and mood for the blot'
       - src: char.jpg
         alt: 'Character painting: the architect in a graduation gown'
         caption: Character design
@@ -72,7 +72,7 @@ blocks:
         alt: 'Ink sketches of Karl standing, sitting and working at his desk'
       - src: scribble.jpg
         alt: 'Concept painting: tangled ink scribbles bursting from a desk'
-        caption: The blot taking form
+        caption: 'Blot taking form'
       - src: lighting-desk-yellow.jpg
         alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
         caption: "Lighting key, intense yellow: working late by lamplight"
@@ -125,20 +125,20 @@ blocks:
         caption: His certificate, designed for the set
       - src: graphic-logo.jpg
         alt: Black and white circular logo of a castle on waves with a ship and a fish
-        caption: The Bristol logo on his mug
+        caption: 'Bristol logo on his mug'
   - type: gallery
     section: production
     heading: Character and Set Building
     images:
       - src: expressions.jpg
         alt: 'Character sketches of the architect: standing with a satchel, clutching his face, and slumped on a chair with his head in his hands'
-        caption: 'The architect: expression studies'
+        caption: 'Architect expression studies'
       - src: turnaround.jpg
         alt: Character turnaround of the architect from front, three-quarter, side and back
         caption: Turnaround for modelling
       - src: screenshot-2023-04-24-at-233703.jpg
         alt: 'ZBrush turnaround of the Karl model in T-pose: side, front and back'
-        caption: 'The model, front, side and back'
+        caption: 'Model: front, side and back'
       - src: screenshot-2023-04-24-at-233853.jpg
         alt: 'ZBrush turnaround of the Karl model from four sides'
       - src: head-sculpt.jpg
@@ -155,20 +155,20 @@ blocks:
         caption: 'Turnaround'
       - src: window-set.jpg
         alt: Render of the studio’s sash window set into a brick wall, the lit room visible behind
-        caption: 'A Bristol sash window: my room build, textured and lit by the team'
+        caption: 'Bristol sash window: my room build, textured and lit by the team'
   - type: gallery
     section: stills
     images:
       - src: ink.jpg
         alt: 'Film still: an ink creature rising from a desk under a lamp'
-        caption: The blot escapes the page
+        caption: 'Blot escaping the page'
       - src: bedroom.jpg
         alt: 'Film still: the architect in his bedroom surrounded by falling books'
-        caption: The room closing in
+        caption: 'Room closing in'
       - src: shelf.jpg
         alt: 'Film still: a frog clock and a framed certificate on a bookshelf'
-        caption: 'Set dressing: the frog clock and certificate are my designs'
+        caption: 'Set dressing: frog clock and certificate (my designs)'
       - src: screenshot-2023-05-20-at-224023.jpg
         alt: 'Still from the film: a shelf with Karl’s graduation portrait and his Master of Architecture certificate'
-        caption: 'His graduation portrait and certificate, both my designs, on set'
+        caption: 'His graduation portrait and certificate on set (my designs)'
 ---

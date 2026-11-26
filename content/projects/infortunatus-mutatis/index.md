@@ -31,17 +31,17 @@ blocks:
         alt: Shelf of potion bottles lit by candlelight
       - src: storyboard-shelf.jpg
         alt: 'Storyboard frame: the dark shelf of potion bottles'
-        caption: The frame as I drew it
+        caption: 'Frame as I drew it'
       - src: cauldron.jpg
         alt: A frog in a glowing green cauldron
       - src: storyboard-fire.jpg
         alt: 'Storyboard frame: a cauldron over roaring flames'
-        caption: The frame as I drew it
+        caption: 'Frame as I drew it'
       - src: stir.jpg
         alt: The character stirring the glowing cauldron
       - src: storyboard-melt.jpg
         alt: 'Storyboard frame: the character staring in shock as his hand melts'
-        caption: The frame as I drew it
+        caption: 'Frame as I drew it'
       - src: melt.jpg
         alt: The clay character covering his face as he melts
   - type: gallery
@@ -65,16 +65,16 @@ blocks:
     images:
       - src: set-cave.jpg
         alt: The cave set lit warmly, with the cauldron, shelves and fire pit
-        caption: The cave set, lit
+        caption: 'Cave set, lit'
         emphasis: key
       - src: set-in-blackout-tent.jpg
         alt: 'The cave set inside a black-out tent, lit for filming'
-        caption: 'The set in its black-out tent'
+        caption: 'Set in its blackout tent'
       - src: set-cauldron-glow.jpg
         alt: 'The cauldron on the set, glowing blue over a lit fire pit'
       - src: puppet.jpg
         alt: The stop-motion puppet standing, seen from the front
-        caption: The puppet
+        caption: 'Puppet'
       - src: puppet-three-quarter.jpg
         alt: 'The puppet from a three-quarter view, in a knitted blue tunic'
       - src: puppet-side.jpg
@@ -86,10 +86,10 @@ blocks:
         caption: Replacement head and parts
       - src: set-shelf.jpg
         alt: The potion shelf on set, lit by a candle
-        caption: The potion shelf
+        caption: 'Potion shelf'
       - src: set-fire-pit.jpg
         alt: The fire pit on set, glowing from a light inside it
-        caption: The fire pit, lit from inside
+        caption: 'Fire pit, lit from inside'
       - src: puppet-on-set-holding-jar.jpg
         alt: 'The puppet sitting on the edge of the set, holding a jar'
       - src: puppet-on-set-wide.jpg
@@ -108,7 +108,7 @@ blocks:
         caption: Animating frame by frame
       - src: bts-studio.jpg
         alt: The set built in a makeshift home studio, with lights and a camera
-        caption: The set in my makeshift studio
+        caption: 'Set in my makeshift studio'
       - src: bts-animating-lamp-lit.jpg
         alt: 'Georgia animating on the set, the lamp lit inside the cave'
       - src: bts-animating-wide.jpg

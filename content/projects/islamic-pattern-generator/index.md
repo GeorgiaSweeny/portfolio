@@ -32,67 +32,67 @@ blocks:
     images:
       - src: title-pattern.jpg
         alt: A dense white line pattern of interlaced octagons and stars on black
-        caption: A tessellated pattern on square tiles
+        caption: 'Tessellated pattern on square tiles'
         emphasis: key
       - src: motif-a.jpg
         alt: A single motif in white line on black, a star inside layered rotated polygons, framed by a hexagonal tile
-        caption: A motif on a hexagonal tile
+        caption: 'Motif on a hexagonal tile'
         group: motifs
       - src: motif-b1.jpg
         alt: A denser motif of many rotated polygons forming a ring, inside a hexagonal tile
-        caption: The same idea with more rotated copies
+        caption: 'Same idea, more rotated copies'
         group: motifs
       - src: motif-b2.jpg
         alt: The ring-shaped motif on its own, with the tile turned off
-        caption: The same motif with the tile turned off
+        caption: 'Same motif, tile hidden'
         group: motifs
       - src: pattern-a.jpg
         alt: Overlapping circular rosettes on a hexagonal grid, spilling past its edges
         caption: Rosettes on hexagonal tiles, overlapping into new shapes
       - src: pattern-b1-unclipped.jpg
         alt: A square-tiled line pattern whose lines spill untidily past the edge of the grid
-        caption: Before Clip Pattern Edges, the lines spill past the grid
+        caption: 'Before Clip Pattern Edges: lines spill past the grid'
         group: clipping
       - src: pattern-b2-clipped.jpg
         alt: The same square-tiled pattern trimmed neatly to the edge of the grid
-        caption: After, trimmed to the grid and ready for a texture map
+        caption: 'After: trimmed to the grid, ready for a texture map'
         group: clipping
       - src: patterns.jpg
         alt: A grid of fifteen generated geometric patterns in white line on black
-        caption: Fifteen patterns, all generated from the same rule set
+        caption: 'Fifteen patterns from one rule set'
   - type: gallery
     section: inside-the-tool
     images:
       - src: ipg-sketchbook-houdini-workflow-v1.jpg
         alt: 'Sketchbook page titled Houdini Workflow (version 1), planning the steps from shapes to motifs to patterns'
-        caption: 'Planning the Houdini workflow, first version'
+        caption: 'First plan of the Houdini workflow'
       - src: pattern-detail.jpg
         video: pattern-detail.mp4
         alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
-        caption: Changing the controls live, the pattern growing denser and more detailed
+        caption: 'Changing the controls live: the pattern grows denser and more detailed'
       - src: interface-pattern.jpg
         alt: 'The tool’s control panel in Houdini in Pattern mode, with sections for Output Selection, Grid Tiles, Initial Shape, Shape Grammar and Display Options, each with menus, sliders and checkboxes'
-        caption: 'The controls in Pattern mode, in the order a pattern is traditionally drawn: tiles, initial shape, shape grammar'
+        caption: 'Pattern mode controls, in traditional drawing order: tiles, initial shape, shape grammar'
         group: interface
       - src: interface-motif.jpg
         alt: The same control panel in Motif mode, with a Motif Tile section in place of Grid Tiles
-        caption: Motif mode makes a single motif on one tile
+        caption: 'Motif mode: a single motif on one tile'
         group: interface
       - src: network-overview.jpg
         alt: Zoomed-out Houdini node network of seven coloured boxes of nodes with yellow notes beside them, all joined to one output
-        caption: The whole node network behind the controls
+        caption: 'Node network behind the controls'
       - src: network-initial-shape.jpg
         alt: A gold network box labelled Initial Shape Generator, with circle, polygon, switch, reverse, polycut and clean nodes, and notes explaining them
-        caption: 'The initial shape: a circle or many-sided polygon, scaled to stay the same size in every tile'
+        caption: 'Initial shape: a circle or polygon, the same size in every tile'
       - src: network-tile-grid.jpg
         alt: A teal network box for the tile grid, with square and hexagon branches meeting at a switch, then fuse and edge-equalise nodes
-        caption: The tile grid, squares or hexagons, fused and evened out so they tessellate without gaps
+        caption: 'Tile grid: squares or hexagons, fused to tessellate without gaps'
       - src: network-shape-grammar.jpg
         alt: A pink network box labelled Shape Grammar Rules, with translate, rotate and duplicate, clip, mirror, copy and fuse nodes, and notes explaining them
-        caption: 'The shape grammar rules: translate, rotate and duplicate, then mirror one segment to keep the symmetry'
+        caption: 'Shape grammar rules: translate, rotate, duplicate, then mirror one segment for symmetry'
       - src: network-clip-edges.jpg
         alt: Two blue network boxes that clip the pattern to the grid using polywire, boolean and blast nodes, with a switch to turn it on or off
-        caption: 'Clipping the edges: the lines become geometry for a boolean cut, then lines again; a switch keeps it off while you design'
+        caption: 'Edge clipping: lines become geometry for a boolean cut, then lines again (off while designing)'
   - type: video
     section: video
     youtube: ktCdd7lKSzg

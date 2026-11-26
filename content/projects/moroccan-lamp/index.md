@@ -34,46 +34,46 @@ blocks:
     images:
       - src: patterns.jpg
         alt: Fifteen white-on-black geometric patterns made with the Islamic Pattern Generator
-        caption: Patterns from my Islamic Pattern Generator, the starting point
+        caption: 'Starting point: patterns from my Islamic Pattern Generator'
       - src: concept-twisted-vases.jpg
         alt: Maya viewport with several twisted vase-shaped lamp shade models
         caption: Other ideas for shadow-casting shades
       - src: concept-twisted-vase-close.jpg
         alt: Close view of a twisted vase-shaped shade model in Maya
-        caption: A twisted shade, close up
+        caption: 'Twisted shade, close up'
   - type: gallery
     section: production
     heading: The Model
     images:
       - src: maya-lantern-frame-early.jpg
         alt: 'Early grey model of the lantern frame in Maya, photographed on screen'
-        caption: 'An early frame in Maya'
+        caption: 'Early frame in Maya'
       - src: maya-lantern-frame.jpg
         alt: 'Grey model of the lantern frame with its dome in Maya, photographed on screen'
       - src: maya-hexagon-base.jpg
         alt: 'The hexagonal base modelled in Maya, highlighted in green, photographed on screen'
-        caption: 'The hexagonal base'
+        caption: 'Hexagonal base'
       - src: maya-sun-motif-panel.jpg
         alt: 'The sun motif modelled as a pierced round panel in Maya, photographed on screen'
       - src: model-three-quarter.jpg
         alt: Render of the hexagonal lamp with pierced patterned panels and a lattice dome
-        caption: The finished model, ready to print
+        caption: 'Finished model, ready to print'
         emphasis: key
       - src: model-dome.jpg
         alt: Render of the lamp's lattice dome seen from above
-        caption: The dome, built from one of my generated patterns
+        caption: 'Dome, built from one of my generated patterns'
       - src: model-side-panel.jpg
         alt: Render of one side panel, its pattern running edge to edge
-        caption: 'A side panel: the pattern runs edge to edge'
+        caption: 'Side panel: the pattern runs edge to edge'
       - src: model-sun-motif.jpg
         alt: Render of an eight-pointed sun motif cut out as a flat panel
-        caption: The sun motif, cut out as a panel
+        caption: 'Sun motif, cut out as a panel'
       - src: render-base-top-view.jpg
         alt: 'Grey render of the lamp from above, looking into the hexagonal frame and patterned base'
-        caption: 'The base from above'
+        caption: 'Base from above'
       - src: render-dome-three-quarter.jpg
         alt: 'Grey render of the patterned dome from a three-quarter view'
-        caption: 'The dome'
+        caption: 'Dome'
   - type: gallery
     section: production
     heading: 'Printing'
@@ -115,10 +115,10 @@ blocks:
         caption: Smoothing the edges with a rotary tool
       - src: print-dome-close.jpg
         alt: 'The printed dome held up close, its pattern cut through'
-        caption: 'The dome, finished'
+        caption: 'Dome, finished'
       - src: print-panel.jpg
         alt: A finished white lace-like panel held up against a blue sky
-        caption: A finished panel held up to the light
+        caption: 'Finished panel held up to the light'
       - src: print-panels-glue-up.jpg
         alt: 'Printed panels laid out on paper beside a tube of glue'
         caption: 'Gluing up'
@@ -146,13 +146,13 @@ blocks:
         caption: Unlit, showing the printed detail
       - src: lamp-shadow.jpg
         alt: The dome's circular pattern cast as a shadow on a wall by a torch
-        caption: The dome's pattern cast as a shadow
+        caption: 'Dome pattern cast as a shadow'
       - src: finished-lamp-close.jpg
         alt: 'Close view of the grey printed lamp, its dome and patterned side panels'
         caption: 'Close up'
       - src: shadow-projection-panels.jpg
         alt: 'A hand holding a printed side panel against a wall, casting its pattern as a shadow'
-        caption: 'A side panel’s pattern cast as a shadow'
+        caption: 'Side panel pattern cast as a shadow'
       - src: turntable.jpg
         video: turntable.mp4
         alt: 'The finished lamp turning slowly, lit from inside'

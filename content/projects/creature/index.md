@@ -31,7 +31,7 @@ blocks:
         alt: 'Sketchbook page with an ink study of a hunched creature, headed Design Bank and Ref Board'
       - src: sketchbook-body-and-fleshy-beak.jpg
         alt: 'Sketchbook page of body poses, the general form and the fleshy beak, with notes'
-        caption: 'The body and the beak, the whole page'
+        caption: 'Body and beak, full page'
       - src: sketch-vulture-head.jpg
         alt: "Sketchbook page of early design notes: a vulture head on a skeletal body"
         caption: "Vulture head, skeletal body: early design notes"
@@ -43,7 +43,7 @@ blocks:
         caption: Skin flaps for gliding
       - src: sketch-beak.jpg
         alt: Sketchbook page of the fleshy beak and saggy skin around the eye
-        caption: The fleshy beak and saggy skin around the eye
+        caption: 'Fleshy beak and saggy skin around the eye'
       - src: img-5891.jpg
         alt: 'Sketchbook drawing of the creature’s skeleton and muscles in red, blue and black ink, with a beak study'
         caption: 'Skeleton and muscles'
@@ -51,17 +51,17 @@ blocks:
         alt: 'Sketchbook ink drawing of the creature in a long, low gliding pose'
       - src: img-4218.jpg
         alt: 'Procreate canvas with a light pencil rough of the creature on all fours'
-        caption: 'The first rough in Procreate'
+        caption: 'First rough in Procreate'
       - src: concept-sketch-procreate-lineart.jpg
         alt: 'Procreate canvas with the creature’s line art'
         caption: 'Line art'
       - src: img-4220.jpg
         alt: 'The concept painting with extra colour on the head and body'
-        caption: 'A second colour pass'
+        caption: 'Second colour pass'
       - src: concept-painting-timelapse.jpg
         video: concept-painting-timelapse.mp4
         alt: 'Sped-up timelapse of the concept painting, from line art to colour'
-        caption: 'Painting it (timelapse, sped up)'
+        caption: 'Painting timelapse (sped up)'
         emphasis: key
       - src: texture-board.jpg
         alt: Texture concept board of vulture skin, wounds and blisters
@@ -72,7 +72,7 @@ blocks:
     images:
       - src: screenshot-71.jpg
         alt: 'Early grey sculpt of the creature on a gradient background, less detailed'
-        caption: 'An earlier stage of the sculpt'
+        caption: 'Earlier stage of the sculpt'
       - src: three-quarter.jpg
         alt: Grey digital sculpt of a gaunt, beaked creature crouched on long clawed limbs, seen from the front three-quarter
         caption: 'Built to ambush: a crouched, coiled stance'
@@ -81,14 +81,14 @@ blocks:
         caption: Powerful hind legs for launching off canyon walls
       - src: head.jpg
         alt: Close-up of the creature’s beaked head and ribbed, wrinkled throat
-        caption: The vulture’s head, with eyes tuned to the smallest movement
+        caption: 'Vulture head, eyes tuned to the smallest movement'
         emphasis: key
       - src: front.jpg
         alt: Front view of the creature sculpt, its limbs splayed wide
         caption: Raptor talons for clinging to rock
       - src: rear.jpg
         alt: Rear three-quarter view of the creature sculpt, showing the skin flap stretched between its foreleg and body, and its haunches and spine
-        caption: The skin-flap wings it glides on
+        caption: 'Skin-flap wings for gliding'
       - src: screenshot-2024-01-07-at-153222.jpg
         alt: 'ZBrush view of the sculpt from directly behind'
       - src: screenshot-2024-01-07-at-153316.jpg
@@ -122,11 +122,11 @@ blocks:
         caption: 'Textured: front'
       - src: texture-back.jpg
         alt: Close-up of the textured back and ribcage, with ridged spine and wrinkled, mottled skin
-        caption: 'Detail: the back and ribs'
+        caption: 'Detail: back and ribs'
         emphasis: key
       - src: texture-skin-flap.jpg
         alt: Close-up of the textured ribcage and the thin skin flap stretched from the foreleg
-        caption: 'Detail: the skin flap and ribs'
+        caption: 'Detail: skin flap and ribs'
         emphasis: key
       - src: texture-sheet.jpg
         alt: The creature’s painted textures laid out across its six UDIM tiles in Substance 3D Painter

@@ -41,19 +41,19 @@ blocks:
         caption: Brick house, watercolour and ink (2022)
       - src: school-leaving-gift-2023.jpg
         alt: 'Ink and watercolour of a school building under a rainbow, with trees and flowers either side, lettered Thank you Mrs Rowe for all you have done for STAHS Prep 2015–2023'
-        caption: A school leaving gift, ink and watercolour (2023)
+        caption: 'School leaving gift, ink and watercolour (2023)'
       - src: lockdown-heroes-gates.jpg
         alt: 'Ink drawing of open school gates and a sign beneath a rainbow, lettered Lockdown Heroes 2020, Mrs Rowe and staff we all thank you'
-        caption: 'Lockdown Heroes: a thank-you to a school’s staff (2020)'
+        caption: 'Lockdown Heroes, thank-you to school staff (2020)'
       - src: lockdown-heroes-colour.jpg
         alt: 'Drawing of a school, a low building and a block with rainbow-coloured panels, under a watercolour rainbow'
-        caption: 'Lockdown Heroes: a leaving gift for two teachers (2020)'
+        caption: 'Lockdown Heroes, leaving gift for two teachers (2020)'
       - src: school-main-building.jpg
         alt: 'Ink and watercolour of a red-brick school building with tall arched windows, a central clock tower and a weathervane, a paved path and shrubs in front, under a pale blue sky'
         caption: My school’s main building, ink and watercolour (2017)
       - src: congratulations-card.jpg
         alt: 'Hand-drawn card of a couple walking hand in hand down a lane towards a hanging pub sign, carrying pink balloons, with Congratulations lettered in gold'
-        caption: An engagement and wedding card (2023)
+        caption: 'Engagement and wedding card (2023)'
   - type: gallery
     section: sketch-to-final
     heading: 'The Arts and Crafts House, Sketch to Final'
@@ -63,51 +63,51 @@ blocks:
         caption: Sketching from the client’s photos
       - src: arts-and-crafts-concept-sketch.jpg
         alt: 'Shaded pencil sketch of the house, its garden and the trees around it'
-        caption: The concept sketch
+        caption: 'Concept sketch'
       - src: arts-and-crafts-line-art.jpg
         alt: Light pencil line art of the house on the final watercolour paper, taped to a board
-        caption: Line art on the final paper
+        caption: 'Line art on final paper'
       - src: arts-and-crafts-painting.jpg
         alt: 'Georgia painting the house in watercolour, the roof and walls done and the garden still to paint'
-        caption: Painting the colour
+        caption: 'Adding colour'
       - src: arts-and-crafts-house.jpg
         alt: The finished watercolour of the Arts and Crafts house
-        caption: The finished portrait
+        caption: 'Finished portrait'
   - type: gallery
     section: sketch-to-final
     heading: 'The Tudor-Style House, Sketch to Final'
     images:
       - src: tudor-concept-corner.jpg
         alt: Digital pencil concept of the timber-framed house seen from the corner
-        caption: 'Concept one: from the corner'
+        caption: 'Concept 1: corner view'
       - src: tudor-concept-front.jpg
         alt: Digital pencil concept of the timber-framed house seen straight on from the front
-        caption: 'Concept two: from the front'
+        caption: 'Concept 2: front view'
       - src: tudor-concept-planting.jpg
         alt: The corner concept with flowering plants added along the front of the house
-        caption: 'The chosen view, revised with the planting'
+        caption: 'Chosen view, revised with planting'
       - src: tudor-line-art.jpg
         alt: Ink line art of the timber-framed house on deckle-edged watercolour paper, before any colour
         caption: Inked line art
       - src: tudor-ink.jpg
         alt: 'The inked house with a first touch of green on the trees and garden'
-        caption: The first colour going in
+        caption: 'First colour wash'
       - src: tudor-house.jpg
         alt: The finished watercolour of the Tudor-style house
-        caption: The finished portrait
+        caption: 'Finished portrait'
   - type: gallery
     section: sketch-to-final
     heading: 'The Brick House, Sketch to Final'
     images:
       - src: brick-house-concept.jpg
         alt: Digital pencil concept of the brick house with its garage, porch and front garden
-        caption: The concept sketch
+        caption: 'Concept sketch'
       - src: brick-house-line-art.jpg
         alt: Ink line art of the brick house on watercolour paper taped to a board
-        caption: Line art on the final paper
+        caption: 'Line art on final paper'
       - src: brick-house.jpg
         alt: The finished watercolour of the brick house
-        caption: The finished portrait
+        caption: 'Finished portrait'
   - type: gallery
     section: sketch-to-final
     heading: 'The Wedding Venue, Line Art to Colour'
@@ -117,7 +117,7 @@ blocks:
         caption: Line art
       - src: wedding-venue.jpg
         alt: The finished watercolour of the wedding venue with the couple in front
-        caption: The finished portrait
+        caption: 'Finished portrait'
   - type: gallery
     section: sketch-to-final
     heading: 'The School Leaving Gift, Line Art to Colour'
@@ -127,7 +127,7 @@ blocks:
         caption: Line art
       - src: school-leaving-gift-2023.jpg
         alt: The finished ink and watercolour leaving gift, with a rainbow over the school
-        caption: The finished piece
+        caption: 'Finished piece'
   - type: gallery
     section: sketch-to-final
     heading: 'My School’s Main Building, Line Art to Colour'
@@ -137,18 +137,18 @@ blocks:
         caption: Line art
       - src: school-main-building.jpg
         alt: The finished ink and watercolour of the school’s main building
-        caption: The finished piece
+        caption: 'Finished piece'
   - type: gallery
     section: sketch-to-final
     heading: 'Lockdown Heroes, Sketch to Final'
     images:
       - src: lockdown-heroes-concept.jpg
         alt: 'Digital concept sketch of the school, a low dark building and a block with rainbow-coloured panels, under a rainbow, titled Lockdown Heroes 2020'
-        caption: The digital concept
+        caption: 'Digital concept'
       - src: lockdown-heroes-pencil.jpg
         alt: 'Pencil drawing of the school buildings under the outline of a rainbow, with the title Lockdown Heroes 2020 lettered beneath'
-        caption: The pencil drawing
+        caption: 'Pencil drawing'
       - src: lockdown-heroes-colour.jpg
         alt: 'The finished piece: the rainbow and the coloured panels of the school building in colour, photographed without the lettering beneath'
-        caption: 'The finished piece (the photo crops off the lettering)'
+        caption: 'Finished piece (lettering cropped out of photo)'
 ---

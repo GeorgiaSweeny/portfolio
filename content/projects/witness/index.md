@@ -35,7 +35,7 @@ blocks:
         alt: Sheep in a field staring directly at the viewer
       - src: blast.jpg
         alt: The ground exploding into rubble, drawn in hard black line
-        caption: A hand-drawn impact frame
+        caption: 'Hand-drawn impact frame'
   - type: gallery
     section: concept-art
     images:
@@ -57,7 +57,7 @@ blocks:
     images:
       - src: storyboard-board.jpg
         alt: Enlarged pencil storyboard panels pinned up across a large board
-        caption: "Working out the final flow: moving enlarged storyboards around on a pinboard, making cuts and edits"
+        caption: 'Final flow: rearranging enlarged storyboards on a pinboard'
         emphasis: key
       - src: storyboard-1.jpg
         alt: "Pencil storyboard page: a shop, a car on the road and a crash"
@@ -67,7 +67,7 @@ blocks:
         caption: "Storyboard page: extended crash action before the ending"
       - src: storyboard-3.jpg
         alt: "Pencil storyboard page: the final panels of the film"
-        caption: "Storyboard page: the extended, implied crash ending"
+        caption: 'Storyboard page: extended, implied crash ending'
       - src: map.jpg
         alt: Hand-drawn map of the film’s town with a forest and a lake
         caption: "Map of the town: forest, town and lake"

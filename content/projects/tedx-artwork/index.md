@@ -37,6 +37,6 @@ blocks:
         caption: Line art in Procreate
       - src: artwork.jpg
         alt: A white classical stone head with curly hair and beard on a red background, cracked open down one side to show black cogs and metal brackets, with broken pieces falling below
-        caption: The final artwork
+        caption: 'Final artwork'
         emphasis: key
 ---

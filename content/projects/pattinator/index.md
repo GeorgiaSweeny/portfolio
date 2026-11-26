@@ -82,22 +82,22 @@ blocks:
     images:
       - src: sketch.jpg
         alt: Hand-drawn wireframe sketches of the app layout
-        caption: First wireframes, working out how to hide the technical layer
+        caption: 'First wireframes: hiding the technical layer'
       - src: prototype.jpg
         alt: Early prototype showing a noise texture and a checkerboard
         caption: 'Early prototype: the first algorithms running'
       - src: interface.jpg
         alt: The finished app showing the node graph editor beside a generated green pattern
-        caption: 'The finished editor: node graph on the left, live pattern on the right'
+        caption: 'Finished editor: node graph left, live pattern right'
       - src: gallery.jpg
         alt: The gallery screen showing a grid of saved patterns
-        caption: The gallery, where learners load an example and take it apart
+        caption: 'Gallery: learners load an example and take it apart'
   - type: gallery
     section: development
     images:
       - src: parametrised-pattern-generator-3.jpg
         alt: 'Four Voronoi cell patterns, each with its sliders, from an earlier pattern generator'
-        caption: 'An earlier version: the parametrised pattern generator (v3)'
+        caption: 'Earlier version: the parametrised pattern generator (v3)'
       - src: parametrised-pattern-generator-4.jpg
         alt: 'Four Perlin noise patterns with their sliders, from the earlier generator'
       - src: parametrised-pattern-generator-5.jpg
