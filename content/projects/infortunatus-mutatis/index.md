@@ -39,6 +39,26 @@ blocks:
         alt: 'Black and white storyboard frame of the cave with a bench and a bubbling green cauldron'
         caption: 'Storyboard frame: the cave'
   - type: gallery
+    section: storyboards
+    heading: Storyboard from the Animatic
+    images:
+      - src: storyboard-sheet-1.jpg
+        alt: 'Storyboard sheet of nine numbered panels: the fire under the cauldron, the potion shelf, a lantern, a basket of apples with a snake, the snake slithering away, a spoon stirring by itself, the boy between two cauldrons, the snake by the fire, and a scroll unrolling on the bench'
+        caption: 'Panels 1–9'
+        emphasis: key
+      - src: storyboard-sheet-2.jpg
+        alt: 'Storyboard sheet of nine numbered panels: the boy reads the scroll, looks confused, drops an ingredient into the cauldron, tastes the green brew from a spoon, walks away from the cauldron, and sees his face change in the brew'
+        caption: 'Panels 10–18'
+        emphasis: key
+      - src: storyboard-sheet-3.jpg
+        alt: 'Storyboard sheet of nine numbered panels: he stumbles and falls with a thud, stands up green and transformed, stares at his green hand, wide eyes in close-up, gets up and reaches for a jar on the shelf'
+        caption: 'Panels 19–27'
+        emphasis: key
+      - src: storyboard-sheet-4.jpg
+        alt: 'Storyboard sheet of eight numbered panels: he opens the jar and drinks the potion, recoils, turns back to the shelf in shock, and is left as a melted puddle beside the spilled bottle'
+        caption: 'Panels 28–35'
+        emphasis: key
+  - type: gallery
     section: production
     heading: The Puppet
     images:
