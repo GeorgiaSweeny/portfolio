@@ -70,6 +70,9 @@ blocks:
       - src: sketchbook-sundial.jpg
         alt: Sketchbook page planning the city in rings around a central sundial, with notes
         caption: Planning the city and central medina around a sundial design
+      - src: forest-edge-city.jpg
+        alt: Grey animatic sketch looking out between trees at the edge of the forest, across open ground to the city on the horizon under the sun
+        caption: 'From the animatic: the city from the edge of the forest'
       - src: storyboard-birds.jpg
         alt: 'Storyboard: rough bird’s-eye view of the medina layout'
         caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
