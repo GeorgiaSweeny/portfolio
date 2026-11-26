@@ -51,7 +51,10 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 }
 .wordmark:hover { filter: brightness(1.12); }
 .nav { display: flex; align-items: center; gap: 16px; }
-.nav a { font-size: 15px; font-weight: 600; color: var(--on-night); text-decoration: none; padding: 10px 2px; border-bottom: 2px solid transparent; }
+.nav a { font-size: 15px; font-weight: 600; color: var(--on-night); text-decoration: none; padding: 10px 2px; border-bottom: 2px solid transparent; white-space: nowrap; }
+.nav { flex: none; }
+/* Personal Work and CV: their words, unless the bar is too tight (see .t2 / .t3 below). */
+.nav .pw svg, .nav .cv svg { display: none; width: 18px; height: 18px; }
 .nav a:hover { color: var(--accent); }
 .nav a[aria-current] { border-bottom-color: var(--accent); }
 .nav .ic { width: 40px; height: 40px; margin: 0 -10px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
@@ -75,6 +78,24 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
   .nav .cta:hover { border-color: var(--accent); }
   .nav .cta[aria-current] { border-color: var(--accent); }
 }
+/* Every link stays on one line. When the words don't fit, site.js turns links into icons, one step at a time:
+   .t1 Get in touch (already an icon on phones), .t2 Personal Work, .t4 tighter gaps, .t3 CV (as late as possible),
+   .t5 a smaller name on the narrowest phones. */
+@media (min-width: 700px) {
+  .topbar.t1 .nav .cta, .topbar.t1 .nav .cta[aria-current] { width: 40px; height: 40px; margin: 0 -10px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .topbar.t1 .nav .cta:hover, .topbar.t1 .nav .cta:focus-visible { background: rgba(243,239,228,.12); color: var(--on-night); }
+  .topbar.t1 .nav .cta[aria-current] { background: linear-gradient(var(--accent), var(--accent)) center bottom 2px / 22px 2px no-repeat; border-radius: 0; }
+  .topbar.t1 .nav .cta svg { display: block; }
+  .topbar.t1 .nav .cta .label { display: none; }
+}
+.topbar.t2 .nav .pw, .topbar.t3 .nav .cv { width: 40px; height: 40px; margin: 0 -10px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.topbar.t2 .nav .pw:hover, .topbar.t2 .nav .pw:focus-visible, .topbar.t3 .nav .cv:hover, .topbar.t3 .nav .cv:focus-visible { background: rgba(243,239,228,.12); color: var(--on-night); }
+.topbar.t2 .nav .pw[aria-current], .topbar.t3 .nav .cv[aria-current] { background: linear-gradient(var(--accent), var(--accent)) center bottom 2px / 22px 2px no-repeat; border-radius: 0; }
+.topbar.t2 .nav .pw svg, .topbar.t3 .nav .cv svg { display: block; }
+.topbar.t2 .nav .pw .label, .topbar.t3 .nav .cv .label { display: none; }
+/* Narrowest phones, after every icon step: tighter gaps (.t4), then a smaller name (.t5). */
+.topbar.t4 { gap: 8px; } .topbar.t4 .nav { gap: 8px; }
+.topbar.t5 .wordmark { font-size: 14px; } .topbar.t5 .nav { gap: 6px; } .topbar.t5 .nav a { font-size: 13px; }
 
 /* ---- Home: hero pattern --------------------------------------------------- */
 /* Hugs its content from the top (no full-screen centring), so the name sits near the top and the featured section starts sooner. */

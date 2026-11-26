@@ -6,6 +6,21 @@
     sel.addEventListener("change", () => { location.href = sel.value; });
   });
 
+  // ---- top bar: every link on one line. If the words don't fit, links become icons one at a time:
+  // Get in touch (t1; already an icon on phones), then Personal Work (t2), tighter gaps (t4), then CV (t3),
+  // then a smaller name (t5) on the narrowest phones.
+  document.querySelectorAll(".topbar").forEach((bar) => {
+    const steps = ["t1", "t2", "t4", "t3", "t5"]; // t4 tighter gaps before CV gives up its word; t5 smaller name last
+    const over = () => bar.scrollWidth > bar.clientWidth + 1;
+    const fit = () => {
+      bar.classList.remove(...steps);
+      for (const s of steps) { if (!over()) break; bar.classList.add(s); }
+    };
+    fit();
+    addEventListener("resize", fit);
+    document.fonts?.ready.then(fit);
+  });
+
   // ---- project pages (phones): the "Jump to" drop-down, and Read more for the intro and facts
   // Wider screens: the row of links, unless it would need more than one line.
   document.querySelectorAll(".proj-jump").forEach((nav) => {
