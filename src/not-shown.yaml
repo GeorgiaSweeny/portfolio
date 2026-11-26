@@ -3,7 +3,3 @@
 # isn't listed here. Keys as the check prints them; * matches one project id.
 - key: projects.*.showcase.alt
   why: Feature cards on Home hide their clips from screen readers (the card's own text says it all); a project page shows the clip with its alt only when it has no feature video.
-- key: projects.moroccan-lamp.showcase.video
-  why: The digital fabrication video opens the lamp page (Georgia, 24 Nov); the turntable clip stays as its showcase media for later site designs and any feature card.
-- key: projects.moroccan-lamp.showcase.poster
-  why: The turntable clip's poster, kept with its clip (see above).

@@ -25,15 +25,16 @@ export default {
   galleryHeights: {
     "christmas-cards": { "The Doorway, Stage by Stage": 850 },
     "capturing-the-sun": { "Thumbnails": 300, "Storyboards": 300, "Building the Medina": 300, "Models and Textures": 300, "The Great Tree": 300 },
-    pattinator: { "Patterns from One Shared Vocabulary": 350 },
+    pattinator: { "Patterns from One Shared Vocabulary": 350, "Development": 260 },
     "the-old-oak-tree": { "Every Spread": 400, "The Artwork, Without Text": 400, "Early Sketches": 400 },
-    "the-abyss": { "Level Design": 300 },
+    "the-abyss": { "Level Design": 300, "Development": 300 },
+    "moroccan-lamp": { "Printing": 320, "Finishing and Assembly": 320 },
   },
   // Galleries shown as an even grid with this many images per row (fewer on phones), by project id and gallery heading.
   // For runs of same-shape images, such as stage-by-stage process photos, where every row should line up.
   galleryColumns: {
     "christmas-cards": { "The Range": 4, "Museum + Gallery, Stage by Stage": 3, "Carol of Bells, Stage by Stage": 6,
-      "St Albans Postbox, Stage by Stage": 5, "Verulamium Lake, Stage by Stage": 5,
+      "St Albans Postbox, Stage by Stage": 5, "Verulamium Lake, Stage by Stage": 6,
       "In the Works: Clock Tower": 5, "In the Works: Abbey Gateway": 5, "In the Works: St Peter’s Church": 4 },
   },
   // Opening media on a project page is its first full-size YouTube video, else its showcase clip,

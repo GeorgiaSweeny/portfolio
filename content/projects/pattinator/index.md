@@ -64,6 +64,18 @@ blocks:
         alt: 'Generated pattern: black and white Perlin swirl'
       - src: pattern-15.jpg
         alt: 'Generated pattern: navy and yellow Perlin noise with an animal silhouette emerging'
+      - src: escher-translation-24.jpg
+        alt: 'Generated pattern: interlocking pink, teal and grey Escher-style tiles'
+      - src: islamic-rosette-2-copy.jpg
+        alt: 'Generated pattern: red rosettes on charcoal'
+      - src: islamic-rosette-copy.jpg
+        alt: 'Generated pattern: orange six-pointed stars and triangles on cream'
+      - src: recursive-grid.jpg
+        alt: 'Generated pattern: an orange recursive grid'
+      - src: ridge-noise-8.jpg
+        alt: 'Generated pattern: blue-grey ridge noise with tan highlights'
+      - src: pattinator-banner.jpg
+        alt: 'Pattinator banner: bands of different generated patterns side by side'
   - type: gallery
     section: inside-the-tool
     heading: Designing the Interface
@@ -80,4 +92,62 @@ blocks:
       - src: gallery.jpg
         alt: The gallery screen showing a grid of saved patterns
         caption: The gallery, where learners load an example and take it apart
+  - type: gallery
+    section: development
+    images:
+      - src: parametrised-pattern-generator-3.jpg
+        alt: 'Four Voronoi cell patterns, each with its sliders, from an earlier pattern generator'
+        caption: 'An earlier version: the parametrised pattern generator (v3)'
+      - src: parametrised-pattern-generator-4.jpg
+        alt: 'Four Perlin noise patterns with their sliders, from the earlier generator'
+      - src: parametrised-pattern-generator-5.jpg
+        alt: 'Four ridge noise patterns with their sliders, from the earlier generator'
+      - src: screenshot-2026-08-20-at-123848.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+        caption: 'Outputs from my earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123855.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123859.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123912.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123934.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123940.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123945.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-123951.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-124008.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202557.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202607.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202717.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202750.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202827.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202839.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-202941.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-203020.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-203030.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-203055.jpg
+        alt: 'Black and white geometric pattern from the earlier star-line and rosette generator'
+      - src: screenshot-2026-08-20-at-132746.jpg
+        alt: 'Terminal output: a geometric pattern printed in text characters'
+        caption: 'Testing the Islamic rebuild: patterns printed as text in the terminal'
+      - src: screenshot-2026-08-20-at-132813.jpg
+        alt: 'Terminal output: a geometric pattern printed in text characters'
+      - src: screenshot-2026-08-20-at-132837.jpg
+        alt: 'Terminal output: a geometric pattern printed in text characters'
+      - src: screenshot-2026-08-20-at-132924.jpg
+        alt: 'Terminal output: a geometric pattern printed in text characters'
 ---

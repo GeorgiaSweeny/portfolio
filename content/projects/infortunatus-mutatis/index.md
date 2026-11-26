@@ -56,6 +56,9 @@ blocks:
       - src: sketch-cauldrons.jpg
         alt: Sketchbook page of cauldron designs with notes on practical lighting
         caption: Cauldron designs and practical lighting
+      - src: storyboard-cave-cauldron-bench.jpg
+        alt: 'Black and white storyboard frame of the cave with a bench and a bubbling green cauldron'
+        caption: 'Storyboard frame: the cave'
   - type: gallery
     section: production
     heading: Building the Set and Puppet
@@ -64,9 +67,20 @@ blocks:
         alt: The cave set lit warmly, with the cauldron, shelves and fire pit
         caption: The cave set, lit
         emphasis: key
+      - src: set-in-blackout-tent.jpg
+        alt: 'The cave set inside a black-out tent, lit for filming'
+        caption: 'The set in its black-out tent'
+      - src: set-cauldron-glow.jpg
+        alt: 'The cauldron on the set, glowing blue over a lit fire pit'
       - src: puppet.jpg
         alt: The stop-motion puppet standing, seen from the front
         caption: The puppet
+      - src: puppet-three-quarter.jpg
+        alt: 'The puppet from a three-quarter view, in a knitted blue tunic'
+      - src: puppet-side.jpg
+        alt: 'The puppet in profile'
+      - src: puppet-back.jpg
+        alt: 'The puppet from behind'
       - src: puppet-parts.jpg
         alt: The puppet’s replacement head and parts laid out
         caption: Replacement head and parts
@@ -76,6 +90,13 @@ blocks:
       - src: set-fire-pit.jpg
         alt: The fire pit on set, glowing from a light inside it
         caption: The fire pit, lit from inside
+      - src: puppet-on-set-holding-jar.jpg
+        alt: 'The puppet sitting on the edge of the set, holding a jar'
+      - src: puppet-on-set-wide.jpg
+        alt: 'Wider view of the puppet on the set, with the cave wall behind'
+      - src: puppet-transformed-holding-jar-1.jpg
+        alt: 'The transformed green puppet holding a glass jar'
+        caption: 'Transformed'
       - src: puppet-wrap.jpg
         alt: Close-up of the transformed green puppet on set
         caption: Wrap on set!
@@ -88,4 +109,12 @@ blocks:
       - src: bts-studio.jpg
         alt: The set built in a makeshift home studio, with lights and a camera
         caption: The set in my makeshift studio
+      - src: bts-animating-lamp-lit.jpg
+        alt: 'Georgia animating on the set, the lamp lit inside the cave'
+      - src: bts-animating-wide.jpg
+        alt: 'Wide view of Georgia kneeling to animate on the set in a living room'
+      - src: bts-lighting-the-set.jpg
+        alt: 'Georgia adjusting the lighting on the set, a salt lamp glowing in front'
+      - src: bts-georgia-with-puppet.jpg
+        alt: 'Georgia smiling, sitting on the floor holding the puppet'
 ---

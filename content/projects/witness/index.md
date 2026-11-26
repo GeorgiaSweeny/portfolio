@@ -37,6 +37,21 @@ blocks:
         alt: The ground exploding into rubble, drawn in hard black line
         caption: A hand-drawn impact frame
   - type: gallery
+    section: concept-art
+    images:
+      - src: concept-map-forest-town-lake.jpg
+        alt: 'Simple coloured map of the forest, the town and the lake, joined by a road'
+        caption: 'First map of the town'
+      - src: rough-crow.jpg
+        alt: 'Pencil rough of a crow'
+        caption: 'Rough: the crow'
+      - src: rough-car-dashboard.jpg
+        alt: 'Pencil rough of a car dashboard and steering wheel'
+        caption: 'Rough: the dashboard'
+      - src: rough-car-skid.jpg
+        alt: 'Pencil rough of a car skidding, with Schreeech written above'
+        caption: 'Rough: the skid'
+  - type: gallery
     section: storyboards
     heading: Storyboards
     images:
@@ -56,4 +71,7 @@ blocks:
       - src: map.jpg
         alt: Hand-drawn map of the film’s town with a forest and a lake
         caption: "Map of the town: forest, town and lake"
+      - src: animatic-editing-screen.jpg
+        alt: 'Editing the animatic: a timeline of storyboard frames in an editing app'
+        caption: 'Editing the animatic'
 ---

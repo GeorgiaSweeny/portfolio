@@ -42,6 +42,9 @@ blocks:
       - src: glow.jpg
         alt: The yellow submarine in the dark, surrounded by soft concentric rings of blue light
         caption: 'The sub’s ambient light: concentric rings fading into the dark, the style I made for every light in the game'
+      - src: site-lighting-torch-beam.jpg
+        alt: 'The sub’s torch beam cutting down through the dark, its light in concentric rings'
+        caption: 'The torch beam'
       - src: biolume-blocks.jpg
         alt: Bioluminescent blocks glowing blue around the submarine in a dark cave
         caption: Bioluminescent blocks; bump one and it flares brighter, recharging the sub for as long as you touch it
@@ -51,12 +54,18 @@ blocks:
       - src: jellyfish-glow.jpg
         alt: A single jellyfish glowing violet in the dark water
         caption: A jellyfish’s glow cycles through pink, purple and cyan, offset between its head, body and legs so the shapes stay clear, and squashes and stretches to make it swim
+      - src: jellyfish-glow-test.jpg
+        video: jellyfish-glow-test.mp4
+        alt: 'Testing the jellyfish glow: a jellyfish pulsing through pink, purple and cyan'
+        caption: 'Testing the jellyfish glow'
       - src: glow-fish.jpg
         alt: A red glow fish in the dark above the submarine and its pool of blue light
         caption: A glow fish shows blue only in torchlight; ping it with sonar and it turns red, aggressive and visible in the dark
       - src: sonar.jpg
         alt: A sonar pulse revealing spike walls around the submarine, with the power ring glowing red at 12%
         caption: A sonar pulse (by a teammate); I matched the colours objects show when it hits them to how they look in torchlight and glow
+      - src: site-lighting-sonar-pulse.jpg
+        alt: 'A sonar pulse spreading through a dark cavern, the sub in the middle'
   - type: video
     section: video
     youtube: CvOZ20M2DBA
@@ -86,6 +95,9 @@ blocks:
       - src: tile-editor.jpg
         alt: A tile map editor showing a winding blue cave room with red hazards placed along it
         caption: Building a room in Tiled from the sketches
+      - src: tiled-level-editor-early-map.jpg
+        alt: 'An early blue cavern map in the Tiled level editor'
+        caption: 'An early map in Tiled'
       - src: map-test.jpg
         alt: Grid map of a long winding test cave, with pick-ups and exits marked
         caption: A test map we used during development
@@ -96,6 +108,9 @@ blocks:
         alt: A long, narrow tunnel map with spikes along its floor and exits at each end
         caption: The tunnel, a short transition with spikes along the floor
         emphasis: key
+      - src: spike-maze-map.jpg
+        alt: 'An earlier layout of the spike maze map'
+        caption: 'An earlier version of the spike maze'
       - src: map-spike-maze.jpg
         alt: Grey grid map of the spike maze, a looping corridor lined with red spike walls
         caption: The spike maze, with spikes, pick-ups and spawn points plotted
@@ -117,6 +132,9 @@ blocks:
       - src: map-surface.jpg
         alt: Map of the final climb, a cave that widens as it rises to the surface
         caption: 'The surface: the final climb, where the light slowly breaks through'
+      - src: site-level-in-play.jpg
+        alt: 'The game in play: the sub in a dark cavern with the power, sonar and torch rings below'
+        caption: 'A level in play'
   - type: gallery
     section: systems
     heading: Game Systems
@@ -127,4 +145,41 @@ blocks:
       - src: controls.jpg
         alt: The controls screen over an illustrated seabed, listing the keys for moving, sonar, torch, missiles, workshop and settings
         caption: The controls screen
+  - type: gallery
+    section: development
+    images:
+      - src: screenshot-2026-02-11-at-063443.jpg
+        alt: 'A very early prototype: the player lit inside a single circle of light'
+        caption: '11 Feb 2026: the light as a circle around the player'
+      - src: screenshot-2026-02-22-at-185344.jpg
+        alt: 'The sub glowing softly in a dark underwater scene'
+        caption: '22 Feb 2026'
+      - src: screenshot-2026-04-18-at-024916.jpg
+        alt: 'The sub lit faintly in a dark room'
+        caption: '18 Apr 2026'
+      - src: screenshot-2026-04-23-at-000827.jpg
+        alt: 'The sub among glowing blocks in the dark'
+        caption: '23 Apr 2026'
+      - src: screenshot-2026-04-30-at-164010.jpg
+        alt: 'The game window: the sub among glowing blocks, with the power, sonar and torch rings'
+        caption: '30 Apr 2026'
+      - src: screenshot-2026-04-30-at-164114.jpg
+        alt: 'The game window: the sub in the dark with a red enemy nearby'
+      - src: screenshot-2026-04-30-at-164200.jpg
+        alt: 'The game window: the sub near two glowing jellyfish'
+      - src: screenshot-2026-04-30-at-164330.jpg
+        alt: 'The game window: the sub inside a spiky cavern'
+      - src: screenshot-2026-04-30-at-164335.jpg
+        alt: 'The game window: the sub with its torch on in a narrow cavern'
+      - src: screenshot-2026-04-30-at-164439.jpg
+        alt: 'The game window: sonar outlining a cavern wall'
+      - src: screenshot-2026-04-30-at-164839.jpg
+        alt: 'The game window: the sub and a jellyfish in the dark'
+      - src: screenshot-2026-05-01-at-104011.jpg
+        alt: 'The sub’s light rings above a crab on a ledge'
+        caption: '1 May 2026'
+      - src: screenshot-2026-05-01-at-104150.jpg
+        alt: 'The sub near a red glow fish and a glowing pick-up'
+      - src: sonar-pulse-a.jpg
+        alt: 'The game window: a sonar pulse outlining a cavern with spikes'
 ---

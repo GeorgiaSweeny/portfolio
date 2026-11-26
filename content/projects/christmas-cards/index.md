@@ -46,9 +46,13 @@ blocks:
       - src: with-the-mayor-2018.jpg
         alt: Georgia with the Mayor of St Albans, each holding a copy of her Museum + Gallery Christmas card
         caption: With the Mayor of St Albans, 2018
+      - src: with-the-mayor-2018-landscape.jpg
+        alt: 'Georgia and the Mayor of St Albans holding the Museum + Gallery card'
       - src: trophy-presentation-2022.jpg
         alt: Georgia being presented with the framed St Albans Trophy certificate at the Art Society exhibition
         caption: Receiving the St Albans Art Society Trophy, 2022
+      - src: trophy-presentation-2022-square.jpg
+        alt: 'Georgia receiving the framed St Albans Art Society Trophy'
       - src: with-winning-painting-2022.jpg
         alt: Georgia smiling beside the cathedral doorway painting under a Winner, St Albans Trophy sign
         caption: With the winning painting
@@ -128,6 +132,12 @@ blocks:
     section: stages
     heading: Verulamium Lake, Stage by Stage
     images:
+      - src: verulamium-lake-pencil-rough.jpg
+        alt: 'Pencil rough of the lake with the cathedral and trees beyond'
+        caption: 'Pencil rough'
+      - src: snowman-and-bench-rough.jpg
+        alt: 'Digital rough of two children building a snowman in falling snow beside a bench and a robin'
+        caption: 'An early idea: the snowman'
       - src: lake-lineart.jpg
         alt: Black and white line art of a figure on a bench by a frozen lake, with the cathedral on the far bank
         caption: An earlier design, in line art

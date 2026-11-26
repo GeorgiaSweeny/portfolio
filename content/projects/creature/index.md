@@ -24,6 +24,14 @@ blocks:
         alt: "Painted concept of the creature: a vulture-headed predator with skin-flap wings on a canyon ledge"
         caption: Concept painting
         emphasis: key
+      - src: sketchbook-jenny-early-ideas.jpg
+        alt: 'Sketchbook page of early creature ideas: heads, a beak, claws and skin details, with notes'
+        caption: 'Early ideas'
+      - src: sketchbook-design-bank-ref-board.jpg
+        alt: 'Sketchbook page with an ink study of a hunched creature, headed Design Bank and Ref Board'
+      - src: sketchbook-body-and-fleshy-beak.jpg
+        alt: 'Sketchbook page of body poses, the general form and the fleshy beak, with notes'
+        caption: 'The body and the beak, the whole page'
       - src: sketch-vulture-head.jpg
         alt: "Sketchbook page of early design notes: a vulture head on a skeletal body"
         caption: "Vulture head, skeletal body: early design notes"
@@ -36,6 +44,25 @@ blocks:
       - src: sketch-beak.jpg
         alt: Sketchbook page of the fleshy beak and saggy skin around the eye
         caption: The fleshy beak and saggy skin around the eye
+      - src: img-5891.jpg
+        alt: 'Sketchbook drawing of the creature’s skeleton and muscles in red, blue and black ink, with a beak study'
+        caption: 'Skeleton and muscles'
+      - src: sketchbook-gliding-pose.jpg
+        alt: 'Sketchbook ink drawing of the creature in a long, low gliding pose'
+      - src: img-4218.jpg
+        alt: 'Procreate canvas with a light pencil rough of the creature on all fours'
+        caption: 'The first rough in Procreate'
+      - src: concept-sketch-procreate-lineart.jpg
+        alt: 'Procreate canvas with the creature’s line art'
+        caption: 'Line art'
+      - src: img-4220.jpg
+        alt: 'The concept painting with extra colour on the head and body'
+        caption: 'A second colour pass'
+      - src: concept-painting-timelapse.jpg
+        video: concept-painting-timelapse.mp4
+        alt: 'Sped-up timelapse of the concept painting, from line art to colour'
+        caption: 'Painting it (timelapse, sped up)'
+        emphasis: key
       - src: texture-board.jpg
         alt: Texture concept board of vulture skin, wounds and blisters
         caption: "Texture concept board: vulture skin, wounds and blisters"
@@ -43,6 +70,9 @@ blocks:
     section: production
     heading: The Sculpt
     images:
+      - src: screenshot-71.jpg
+        alt: 'Early grey sculpt of the creature on a gradient background, less detailed'
+        caption: 'An earlier stage of the sculpt'
       - src: three-quarter.jpg
         alt: Grey digital sculpt of a gaunt, beaked creature crouched on long clawed limbs, seen from the front three-quarter
         caption: 'Built to ambush: a crouched, coiled stance'
@@ -59,6 +89,13 @@ blocks:
       - src: rear.jpg
         alt: Rear three-quarter view of the creature sculpt, showing the skin flap stretched between its foreleg and body, and its haunches and spine
         caption: The skin-flap wings it glides on
+      - src: screenshot-2024-01-07-at-153222.jpg
+        alt: 'ZBrush view of the sculpt from directly behind'
+      - src: screenshot-2024-01-07-at-153316.jpg
+        alt: 'ZBrush view of the sculpt from above, spine and limbs spread'
+        caption: 'From above'
+      - src: screenshot-2024-01-07-at-153328.jpg
+        alt: 'ZBrush view of the sculpt from below'
   - type: gallery
     section: production
     heading: Retopology and UVs

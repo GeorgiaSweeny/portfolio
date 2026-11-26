@@ -64,4 +64,9 @@ blocks:
       - src: sketch-3.jpg
         alt: Rough sketch of woodland animals gathered beneath a great tree
         caption: 'Procreate rough: the animals gather'
+      - src: ink-sketch-forest-animals.jpg
+        alt: 'Ink sketch of the forest with animals gathering among the trees'
+        caption: 'Ink sketch: the animals in the forest'
+      - src: procreate-rough-forest-photo.jpg
+        alt: 'Photo of an iPad showing a Procreate rough of the forest and animals'
 ---

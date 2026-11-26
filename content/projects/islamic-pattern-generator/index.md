@@ -63,6 +63,9 @@ blocks:
   - type: gallery
     section: inside-the-tool
     images:
+      - src: ipg-sketchbook-houdini-workflow-v1.jpg
+        alt: 'Sketchbook page titled Houdini Workflow (version 1), planning the steps from shapes to motifs to patterns'
+        caption: 'Planning the Houdini workflow, first version'
       - src: pattern-detail.jpg
         video: pattern-detail.mp4
         alt: Screen recording from the Houdini viewport, a white line pattern on black growing denser and more detailed as the tool’s controls are changed
