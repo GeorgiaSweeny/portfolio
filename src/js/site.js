@@ -10,8 +10,18 @@
   // screens (tg), Get in touch goes from the pill to the envelope (t1), Personal Work becomes
   // an icon (t2), tighter gaps (t4), CV becomes an icon (t3), and a smaller name on the narrowest phones (t5).
   document.querySelectorAll(".topbar").forEach((bar) => {
-    const steps = ["tg", "t1", "t2", "t4", "t3", "t5"];
-    const over = () => bar.scrollWidth > bar.clientWidth + 1;
+    // Home keeps the Get in touch pill on phones as long as possible, so there the pill goes last.
+    const steps = bar.classList.contains("on-home") ? ["tg", "t2", "t4", "t3", "t1", "t5"] : ["tg", "t1", "t2", "t4", "t3", "t5"];
+    // Overflow on either side: Home's links sit to the right, so they spill off the left edge.
+    const over = () => {
+      if (bar.scrollWidth > bar.clientWidth + 1) return true;
+      const b = bar.getBoundingClientRect();
+      return [...bar.querySelectorAll("a, button")].some((el) => {
+        if (!el.offsetParent) return false;
+        const r = el.getBoundingClientRect();
+        return r.left < b.left - 1 || r.right > b.right + 1;
+      });
+    };
     const fit = () => {
       bar.classList.remove(...steps);
       for (const s of steps) { if (!over()) break; bar.classList.add(s); }
