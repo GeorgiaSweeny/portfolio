@@ -62,9 +62,6 @@ blocks:
       - src: window.jpg
         alt: 'Concept painting: a dark shape against a bright window'
         caption: 'Lighting and mood for the blot'
-      - src: char.jpg
-        alt: 'Character painting: the architect in a graduation gown'
-        caption: Character design
       - src: concept-character-face-studies.jpg
         alt: 'Three ink face studies of Karl'
         caption: 'Face studies'
@@ -120,6 +117,9 @@ blocks:
       - src: props-satchel.jpg
         alt: Prop design of a brown leather satchel
         caption: "Prop design: his satchel"
+      - src: char.jpg
+        alt: 'Painted graduation portrait of the architect in a black gown with a red hood, against a soft blue background'
+        caption: 'His graduation portrait, painted for the photo on his shelf'
       - src: graphic-certificate.jpg
         alt: A Master of Architecture certificate designed for the set, in Karl Wheatley’s name
         caption: His certificate, designed for the set
