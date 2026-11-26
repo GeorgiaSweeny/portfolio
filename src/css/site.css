@@ -46,7 +46,7 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 .topbar.on-home { justify-content: flex-end; }
 .wordmark {
   font: 400 22px/1.15 var(--name); letter-spacing: -0.01em; white-space: nowrap; text-decoration: none;
-  color: var(--on-night); background: url(/assets/hero-still.jpg) center / 420px; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  color: var(--on-night); background: url(/assets/hero-still.jpg) center / 220px; /* small enough that the pattern reads as a fine texture and the name stays legible */ -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   padding-bottom: .08em;
 }
 .wordmark:hover { filter: brightness(1.12); }
