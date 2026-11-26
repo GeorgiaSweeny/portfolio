@@ -5,7 +5,6 @@ year: 2023–24
 disciplines:
   - 3d-interactive
 order: 15
-draft: true
 role: Character Modeller
 outcome: 'CJ, a character for a course-mate’s graduation film, sculpted and retopologised ready for rigging, with the most detail where the storyboards put the camera.'
 intro: >-
