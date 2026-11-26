@@ -125,7 +125,7 @@ blocks:
         caption: 'Bristol logo on his mug'
   - type: gallery
     section: production
-    heading: Character and Set Building
+    heading: Character Model
     images:
       - src: expressions.jpg
         alt: 'Character sketches of the architect: standing with a satchel, clutching his face, and slumped on a chair with his head in his hands'
@@ -150,9 +150,19 @@ blocks:
         video: sculpt-turnaround.mp4
         alt: 'Karl’s head sculpt turning in ZBrush, filmed on a phone'
         caption: 'Turnaround'
+  - type: gallery
+    section: production
+    heading: Environment and Props
+    images:
       - src: window-set.jpg
-        alt: Render of the studio’s sash window set into a brick wall, the lit room visible behind
-        caption: 'Bristol sash window: my room build, textured and lit by the team'
+        alt: 'Film still: the studio’s Bristol sash window set into a brick wall, the lit room visible behind'
+        caption: 'Still from the film: my room build, textured and lit by the team'
+      - src: shelf.jpg
+        alt: 'Film still: a frog clock and a framed certificate on a bookshelf'
+        caption: 'Set dressing: frog clock and certificate (my designs)'
+      - src: screenshot-2023-05-20-at-224023.jpg
+        alt: 'Still from the film: a shelf with Karl’s graduation portrait and his Master of Architecture certificate'
+        caption: 'His graduation portrait and certificate on set (my designs)'
   - type: gallery
     section: stills
     images:
@@ -162,10 +172,4 @@ blocks:
       - src: bedroom.jpg
         alt: 'Film still: the architect in his bedroom surrounded by falling books'
         caption: 'Room closing in'
-      - src: shelf.jpg
-        alt: 'Film still: a frog clock and a framed certificate on a bookshelf'
-        caption: 'Set dressing: frog clock and certificate (my designs)'
-      - src: screenshot-2023-05-20-at-224023.jpg
-        alt: 'Still from the film: a shelf with Karl’s graduation portrait and his Master of Architecture certificate'
-        caption: 'His graduation portrait and certificate on set (my designs)'
 ---
