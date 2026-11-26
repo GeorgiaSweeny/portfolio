@@ -59,45 +59,6 @@ blocks:
         alt: 'Environment board pairing grey and colour concept sketches of the medina with Marrakech reference photos'
         caption: 'Environment board: concept art beside my reference photos'
   - type: gallery
-    section: concept-art
-    images:
-      - src: concept-sun-tree.jpg
-        alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
-        caption: 'The sun and the tree: the film’s two key images'
-      - src: reference-wool-dyers.jpg
-        alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
-        caption: 'Reference photo for the dyers’ alley painting'
-        emphasis: reference
-        group: dyers
-      - src: wool.jpg
-        alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
-        caption: 'Concept painting: the wool-dyers’ alley'
-        group: dyers
-      - src: sketchbook-aqueduct-and-sun-motif.jpg
-        alt: 'Sketchbook page with an ink and yellow aqueduct arch, the sun motif and handwritten notes'
-        caption: 'Sketchbook: an aqueduct and the sun motif'
-      - src: sketchbook-sundial.jpg
-        alt: Sketchbook page planning the city in rings around a central sundial, with notes
-        caption: 'City and medina plan, laid out around a sundial'
-      - src: forest-edge-city.jpg
-        alt: Grey sketch looking out between trees at the edge of the forest, across open ground to the city on the horizon under the sun
-        caption: 'City from the forest edge'
-      - src: concept-silhouette-in-souk.jpg
-        alt: 'Black and white concept painting of a dark silhouette of the philosopher standing in a sunlit souk'
-        caption: 'Silhouette in the souks'
-      - src: storyboard-birds.jpg
-        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
-        caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
-      - src: storyboard-market.jpg
-        alt: 'Storyboard: looking down the market street towards the tree'
-        caption: 'SQ010 SH030: the market street, looking towards the tree'
-      - src: storyboard-tree.jpg
-        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
-        caption: 'SQ010 SH040: the crowd at the tree, from above the rooftops'
-      - src: storyboard-crowd-stage.jpg
-        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
-        caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
-  - type: gallery
     section: references
     heading: 'References from Marrakech'
     images:
@@ -129,88 +90,32 @@ blocks:
         alt: 'Photo across Marrakech rooftops to a busy square under a cloudy sky'
         caption: 'My reference photo: the rooftops'
   - type: gallery
-    section: characters
+    section: concept-art
     images:
-      - src: sketchbook-shape-language.jpg
-        alt: Sketchbook page of simple shapes and colours mapping the shape language of the three main characters
-        caption: Shape language for the three main characters
-      - src: sketchbook-assets.jpg
-        alt: "Sketchbook page titled Assets: the old wise woman, the philosopher and the staff in ink"
-        caption: "Sketchbook: the wise woman, the philosopher and the staff"
-      - src: costume-patterns.jpg
-        alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
-        caption: Costume patterns for the two characters
-  - type: gallery
-    section: characters
-    heading: 'The Philosopher'
-    images:
-      - src: sketchbook-philosopher-silhouettes.jpg
-        alt: 'Two ink silhouettes of the philosopher with red notes comparing a flat design with a more interesting one'
-        caption: 'Silhouette studies'
-      - src: sketchbook-philosopher-pose.jpg
-        alt: 'Loose ink sketch of the philosopher with one arm raised'
-        caption: 'Pose sketch'
-      - src: sketchbook-philosopher-robes.jpg
-        alt: 'Ink sketches of the philosopher in two versions of his robes'
-        caption: 'Robe designs'
-      - src: sketchbook-lantern-and-philosopher-costume.jpg
-        alt: 'Sketchbook page with a lantern design and a small costume sketch of the philosopher, with notes'
-      - src: concept-sketchbook-02.jpg
-        alt: 'Coloured pencil sketch of the philosopher in a green patterned coat, in a sketchbook'
-      - src: char-philosopher-proportions.jpg
-        alt: 'Red line drawing of the philosopher’s body in T-pose with proportion marks'
-        caption: 'Proportions for modelling'
-      - src: character-philosopher.jpg
-        alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
-        caption: 'Travelling philosopher'
-      - src: char-philosopher-lantern.jpg
-        alt: 'The philosopher in green beside a painted jar of glowing fireflies on a dark blue ground'
-        caption: 'Philosopher with his jar of fireflies'
-      - src: dev-philosopher-body-sculpt.jpg
-        alt: 'Grey sculpt of the philosopher’s full body in long robes, in T-pose'
-        caption: 'Body sculpt'
-      - src: sculpt-philosopher.jpg
-        alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
-        caption: 'Philosopher’s head sculpt'
-  - type: gallery
-    section: characters
-    heading: 'The Wise Woman'
-    images:
-      - src: sketchbook.jpg
-        alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
-        caption: 'Sketchbook: the wise woman’s cloak'
-      - src: concept-sketchbook-04.jpg
-        alt: 'Sketchbook page of cloak designs for the wise woman, with front and back views and notes'
-        caption: 'Cloak designs'
-      - src: char-wise-woman-face-sketches.jpg
-        alt: 'Ink sketches of the wise woman’s wrinkled face from two angles, with ear studies'
-        caption: 'Face studies'
-      - src: character-wise-woman.jpg
-        alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
-        caption: 'Wise woman'
-      - src: dev-wise-woman-body-sculpt.jpg
-        alt: 'Grey sculpt of the wise woman’s full body in a hooded robe, arms out'
-        caption: 'Body sculpt'
-      - src: dev-wise-woman-head-sculpt-front.jpg
-        alt: 'Grey sculpt of the wise woman’s bald, wrinkled head from the front'
-        caption: 'Head sculpt, before the hood'
-      - src: dev-wise-woman-head-sculpt-side.jpg
-        alt: 'Grey sculpt of the wise woman’s head in profile'
-      - src: sculpt-wise-woman.jpg
-        alt: Digital sculpt of the wise woman’s lined face inside her hood
-        caption: 'Wise woman sculpt'
-  - type: gallery
-    section: characters
-    heading: 'The Young Boy'
-    images:
-      - src: sketchbook-young-boy-close-up.jpg
-        alt: 'Sketchbook page titled The Young Boy, with two costume sketches, head studies and notes'
-      - src: sketchbook-young-boy-costume.jpg
-        alt: 'Two ink sketches of the young boy in a tunic and trousers, one coloured in green check'
-        caption: 'Costume, about ten years old'
-      - src: sketchbook-young-boy-faces.jpg
-        alt: 'Close ink sketches of the young boy’s face and hair'
-        caption: 'Face studies'
+      - src: concept-sun-tree.jpg
+        alt: Painted concept of a golden sun disc beside a bare tree on a stepped platform
+        caption: 'The sun and the tree: the film’s two key images'
+      - src: reference-wool-dyers.jpg
+        alt: Photo of dyed wool hanging to dry above a narrow alley in a souk
+        caption: 'Reference photo for the dyers’ alley painting'
+        emphasis: reference
+        group: dyers
+      - src: wool.jpg
+        alt: 'Concept painting: colourful wool hanging to dry above a narrow alley'
+        caption: 'Concept painting: the wool-dyers’ alley'
+        group: dyers
+      - src: sketchbook-aqueduct-and-sun-motif.jpg
+        alt: 'Sketchbook page with an ink and yellow aqueduct arch, the sun motif and handwritten notes'
+        caption: 'Sketchbook: an aqueduct and the sun motif'
+      - src: sketchbook-sundial.jpg
+        alt: Sketchbook page planning the city in rings around a central sundial, with notes
+        caption: 'City and medina plan, laid out around a sundial'
+      - src: forest-edge-city.jpg
+        alt: Grey sketch looking out between trees at the edge of the forest, across open ground to the city on the horizon under the sun
+        caption: 'City from the forest edge'
+      - src: concept-silhouette-in-souk.jpg
+        alt: 'Black and white concept painting of a dark silhouette of the philosopher standing in a sunlit souk'
+        caption: 'Silhouette in the souks'
   - type: gallery
     section: environments
     images:
@@ -303,14 +208,109 @@ blocks:
         alt: 'Storyboard overview sheet for Act 3, The Return: the tapestry and the jar both fail, the jar shatters, and the old woman lights a twig with a shard held up to the sun'
         caption: 'Act 3, The Return: the old woman captures a piece of the sun'
         emphasis: key
+      - src: storyboard-birds.jpg
+        alt: 'Storyboard: rough bird’s-eye view of the medina layout'
+        caption: 'SQ010 SH010: bird’s-eye rough, establishing the medina'
       - src: animatic-sq010-sh020-boy-running-feet.jpg
         alt: 'Grey storyboard frame of the young boy’s feet running'
         caption: 'SQ010 SH020: the boy runs to the square'
+      - src: storyboard-market.jpg
+        alt: 'Storyboard: looking down the market street towards the tree'
+        caption: 'SQ010 SH030: the market street, looking towards the tree'
+      - src: storyboard-tree.jpg
+        alt: 'Storyboard: the crowd around the tree, seen from above the rooftops'
+        caption: 'SQ010 SH040: the crowd at the tree, from above the rooftops'
+      - src: storyboard-crowd-stage.jpg
+        alt: 'Storyboard: the philosopher and the wise woman on a stage beneath the tree, the crowd silhouetted in front'
+        caption: 'SQ010 SH050: the philosophers on the stage, over the crowd'
       - src: animatic-sq010-sh080a-philosophers-argue.jpg
         alt: 'Grey storyboard frame of the two philosophers arguing face to face, the crowd behind'
         caption: 'SQ010 SH080: the philosophers argue'
       - src: animatic-sq010-sh080b-philosophers-argue.jpg
         alt: 'Grey storyboard frame of the philosophers arguing, one pointing his staff'
+  - type: gallery
+    section: characters
+    images:
+      - src: sketchbook-shape-language.jpg
+        alt: Sketchbook page of simple shapes and colours mapping the shape language of the three main characters
+        caption: Shape language for the three main characters
+      - src: sketchbook-assets.jpg
+        alt: "Sketchbook page titled Assets: the old wise woman, the philosopher and the staff in ink"
+        caption: "Sketchbook: the wise woman, the philosopher and the staff"
+      - src: costume-patterns.jpg
+        alt: 'Two fabric swatches: green with a gold scroll border, purple with a gold medallion border'
+        caption: Costume patterns for the two characters
+  - type: gallery
+    section: characters
+    heading: 'The Philosopher'
+    images:
+      - src: sketchbook-philosopher-silhouettes.jpg
+        alt: 'Two ink silhouettes of the philosopher with red notes comparing a flat design with a more interesting one'
+        caption: 'Silhouette studies'
+      - src: sketchbook-philosopher-pose.jpg
+        alt: 'Loose ink sketch of the philosopher with one arm raised'
+        caption: 'Pose sketch'
+      - src: sketchbook-philosopher-robes.jpg
+        alt: 'Ink sketches of the philosopher in two versions of his robes'
+        caption: 'Robe designs'
+      - src: sketchbook-lantern-and-philosopher-costume.jpg
+        alt: 'Sketchbook page with a lantern design and a small costume sketch of the philosopher, with notes'
+      - src: concept-sketchbook-02.jpg
+        alt: 'Coloured pencil sketch of the philosopher in a green patterned coat, in a sketchbook'
+      - src: char-philosopher-proportions.jpg
+        alt: 'Red line drawing of the philosopher’s body in T-pose with proportion marks'
+        caption: 'Proportions for modelling'
+      - src: character-philosopher.jpg
+        alt: Character painting of the travelling philosopher in a green robe and teal turban, one arm raised
+        caption: 'Travelling philosopher'
+      - src: char-philosopher-lantern.jpg
+        alt: 'The philosopher in green beside a painted jar of glowing fireflies on a dark blue ground'
+        caption: 'Philosopher with his jar of fireflies'
+      - src: dev-philosopher-body-sculpt.jpg
+        alt: 'Grey sculpt of the philosopher’s full body in long robes, in T-pose'
+        caption: 'Body sculpt'
+      - src: sculpt-philosopher.jpg
+        alt: Digital sculpt of the philosopher’s head, with a beard and wrapped turban
+        caption: 'Philosopher’s head sculpt'
+  - type: gallery
+    section: characters
+    heading: 'The Wise Woman'
+    images:
+      - src: sketchbook.jpg
+        alt: Sketchbook page with pen studies of the wise woman in a hooded Berber-style cloak, coloured in purple
+        caption: 'Sketchbook: the wise woman’s cloak'
+      - src: concept-sketchbook-04.jpg
+        alt: 'Sketchbook page of cloak designs for the wise woman, with front and back views and notes'
+        caption: 'Cloak designs'
+      - src: char-wise-woman-face-sketches.jpg
+        alt: 'Ink sketches of the wise woman’s wrinkled face from two angles, with ear studies'
+        caption: 'Face studies'
+      - src: character-wise-woman.jpg
+        alt: Character painting of the wise woman in a purple hooded cloak, holding a staff topped with a golden ring
+        caption: 'Wise woman'
+      - src: dev-wise-woman-body-sculpt.jpg
+        alt: 'Grey sculpt of the wise woman’s full body in a hooded robe, arms out'
+        caption: 'Body sculpt'
+      - src: dev-wise-woman-head-sculpt-front.jpg
+        alt: 'Grey sculpt of the wise woman’s bald, wrinkled head from the front'
+        caption: 'Head sculpt, before the hood'
+      - src: dev-wise-woman-head-sculpt-side.jpg
+        alt: 'Grey sculpt of the wise woman’s head in profile'
+      - src: sculpt-wise-woman.jpg
+        alt: Digital sculpt of the wise woman’s lined face inside her hood
+        caption: 'Wise woman sculpt'
+  - type: gallery
+    section: characters
+    heading: 'The Young Boy'
+    images:
+      - src: sketchbook-young-boy-close-up.jpg
+        alt: 'Sketchbook page titled The Young Boy, with two costume sketches, head studies and notes'
+      - src: sketchbook-young-boy-costume.jpg
+        alt: 'Two ink sketches of the young boy in a tunic and trousers, one coloured in green check'
+        caption: 'Costume, about ten years old'
+      - src: sketchbook-young-boy-faces.jpg
+        alt: 'Close ink sketches of the young boy’s face and hair'
+        caption: 'Face studies'
   - type: gallery
     section: set
     heading: Building the Medina
