@@ -170,6 +170,12 @@ blocks:
   - type: gallery
     section: stills
     images:
+      - src: still-karl-at-desk.jpg
+        alt: 'Film still: Karl at his drafting table late at night, drawing a floor plan with a set square under a single lamp'
+        caption: 'Karl at his desk'
+      - src: still-drawing-close-up.jpg
+        alt: 'Film still: close-up of Karl leaning in to draw on the plan with a red pen, holding a set square'
+        caption: 'Drawing with his pen'
       - src: ink.jpg
         alt: 'Film still: an ink creature rising from a desk under a lamp'
         caption: 'Blot escaping the page'
