@@ -442,6 +442,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .gallery .pair { --ar: calc(var(--ar1) + var(--ar2) * .6); flex: calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h)); max-width: min(100%, calc(var(--ar) * var(--h) * 1.6), calc(var(--ar) * 85svh)); display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
 .gallery .pair > figure { flex: calc(var(--ar) * 100) 1 0; max-width: none; min-width: 0; }
 .gallery .pair > figure.ref { flex-grow: calc(var(--ar) * 60); }
+.gallery .pair.even { --ar: calc(var(--ar1) + var(--ar2)); } /* a group of two: equal height, side by side */
 .gallery::after { content: ""; flex: 10000 1 0; } /* last row keeps its height instead of stretching */
 /* an even grid (design.galleryColumns): every row lines up, the last row included */
 .gallery.cols { display: grid; grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr)); gap: 20px 14px; align-items: start; }

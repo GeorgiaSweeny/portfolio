@@ -122,13 +122,17 @@ export default function (eleventyConfig) {
   // A block's heading: its own, else (galleries only) its section's standard heading (src/_data/layouts.js).
   const blockHeading = (b) => b.heading || (b.type === "gallery" ? layouts.sections[b.section]?.heading : undefined);
   eleventyConfig.addFilter("blockHeading", blockHeading);
-  // A gallery's images as entries of one or two: a reference photo (emphasis: reference) followed
-  // by the work in its group becomes one pair, so the two are never split across rows.
+  // A gallery's images as entries of one or two, so pairs are never split across rows:
+  // a reference photo (emphasis: reference) followed by the work in its group, or a group of
+  // exactly two images (e.g. warm and cool lighting keys), shown side by side at the same height.
   eleventyConfig.addFilter("pairRefs", (images = []) => {
     const out = [];
+    const size = (g) => images.filter((x) => x.group === g).length;
     for (let i = 0; i < images.length; i++) {
       const im = images[i], next = images[i + 1];
-      if (im.emphasis === "reference" && im.group && next && next.group === im.group && next.emphasis !== "key") { out.push([im, next]); i++; }
+      const together = im.group && next && next.group === im.group && next.emphasis !== "key";
+      if (together && im.emphasis === "reference") { out.push([im, next]); i++; }
+      else if (together && !im.emphasis && !next.emphasis && size(im.group) === 2) { out.push([im, next]); i++; }
       else out.push([im]);
     }
     return out;
