@@ -13,7 +13,7 @@ intro: >-
 
   Every commission began with a consultation. The client shared photos, and we talked through what to include or leave out and what mattered most to them: favourite plants, features of the property, the season, garden furniture or decorations. At a second meeting I brought a rough sketch or a couple of concepts, made revisions there and then, and noted any bigger changes to make afterwards.
 
-  I then drew the clean line art on the final paper and sent the client a photo for any last tweaks before inking. Another progress photo went to them after inking and during the first light colour wash, to make sure the colours were right, and then I finished the painting and delivered it.
+  I then drew the clean line art on the final paper and sent the client a photo for any last tweaks before inking. Another progress photo went to them after inking and during the first light colour wash, to make sure the colours were right.
 cardImage: arts-and-crafts-house.jpg
 showcase:
   image: arts-and-crafts-house.jpg
@@ -136,6 +136,6 @@ blocks:
         alt: 'Pencil drawing of the school buildings under the outline of a rainbow, with the title Lockdown Heroes 2020 lettered beneath'
         caption: The pencil drawing
       - src: lockdown-heroes-colour.jpg
-        alt: 'The drawing with colour added: the rainbow and the coloured panels of the school building'
-        caption: Colour
+        alt: 'The finished piece: the rainbow and the coloured panels of the school building in colour, photographed without the lettering beneath'
+        caption: 'The finished piece (the photo crops off the lettering)'
 ---
