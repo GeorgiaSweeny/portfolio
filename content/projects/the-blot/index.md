@@ -42,8 +42,8 @@ blocks:
         alt: Notebook page of small thumbnail sketches of the ink spill and the creature rising from it
         caption: "Sketchbook thumbnails: the ink spill"
       - src: pitch-notes.jpg
-        alt: Notebook page of handwritten notes and sketches of the monster and Karl
-        caption: "Sketchbook notes: the monster and Karl"
+        alt: 'Sketchbook page for an earlier version of the story: a scribbled paper monster that feeds on self-doubt, a crumpled paper ball, and a stressed artist with notes on his look'
+        caption: 'Story variant: the artist and the paper monster'
       - src: pitch-thumbnails-monster-sim.jpg
         alt: 'Notebook page of thumbnail frames titled Monster Sim, with notes'
         caption: 'Thumbnails: the monster sim'
