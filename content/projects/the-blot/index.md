@@ -100,8 +100,12 @@ blocks:
         group: window-lighting
       - src: concept-room-window-blot-warm.jpg
         alt: 'Warm concept painting of the room with the blot by the window and bookshelves'
+        caption: The room with the blot, warm
+        group: room-lighting
       - src: concept-room-window-blot-cool.jpg
         alt: 'Cool blue concept painting of the room with the blot by the window'
+        caption: …and cool
+        group: room-lighting
   - type: gallery
     section: props
     heading: Props and Graphics
