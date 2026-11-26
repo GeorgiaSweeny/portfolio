@@ -160,7 +160,7 @@ blocks:
     images:
       - src: window-set.jpg
         alt: 'Film still: the studio’s Bristol sash window set into a brick wall, the lit room visible behind'
-        caption: 'Still from the film: my room build, textured and lit by the team'
+        caption: 'Film still: I modelled the room (walls, windows, door, shelves); props and set dressing by the team'
       - src: screenshot-2023-05-20-at-224023.jpg
         alt: 'Still from the film: a shelf with Karl’s graduation portrait and his Master of Architecture certificate'
         caption: 'His graduation portrait and certificate on set (my designs)'
