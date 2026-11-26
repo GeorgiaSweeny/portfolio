@@ -8,18 +8,20 @@ disciplines:
   - illustration-print
 order: 18
 role: Character and Environment Designer
-outcome: '[?] A redesign of the Evil Queen from Snow White, from shape language and silhouettes to her costume, her castle and two key scenes.'
+outcome: 'Snow White’s Evil Queen reimagined as a fae-like being from British folklore, with silhouettes, character sheets, her castle and key art concepts.'
 intro: >-
-  [? What it was for: the brief or unit, and what you were asked to do.]
+  For a second-year design unit, the brief was to redesign a well-known fairytale character and produce key concept art as the final result: a character sheet, an environment and key art, with the focus on silhouette, shape language, tone and stylisation.
 
-  A redesign of the Evil Queen from Snow White. I started with shape language and silhouettes, then worked out her face, eyes and costume. For her castle I sketched three real castles, Eltz, Rheinstein and Neuschwanstein, before designing my own and taking it into colour. The project ends with a four-panel storyboard and two key scenes: the Queen at her mirror, and mixing potions in her secret chamber.
+  I reimagined Snow White’s Evil Queen as a fae-like being from British folklore, the opposite of her dark, brooding Disney interpretation. She draws on historical accounts of witches, who were often women who were healers or held power, accused of witchcraft or of bewitching people with their beauty. Ethereal touches in her design give her a slight otherworldliness.
+
+  I wanted the designs to feel like a woodblock print or a carving, with rigid lines and strong shapes; the head iterations show this best. Her castle began as sketches of three real castles, Eltz, Rheinstein and Neuschwanstein, and the project ends with a storyboard and two key scenes.
 cardImage: scene-potions.jpg
 showcase:
   image: scene-potions.jpg
 facts:
   role: 'Character design, environment design, storyboard and key scenes.'
   tools: '[?] e.g. pencil, Procreate, Photoshop.'
-  outcome: '[?]'
+  outcome: 'Character sheets, an environment and key art concepts: the unit’s final pieces.'
 blocks:
   - type: gallery
     section: characters
@@ -38,8 +40,8 @@ blocks:
         alt: 'Five black costume silhouettes with red notes and arrows on collars, sleeves and hems, showing how the design developed'
         caption: Costume iterations
       - src: face-studies.jpg
-        alt: Five numbered white line drawings of the Queen’s face on black, with different headdresses and hair
-        caption: Face studies
+        alt: Five numbered white line drawings of the Queen’s face on black, with different headdresses and hair, in rigid, carved-looking lines
+        caption: Head iterations
       - src: eye-studies.jpg
         alt: Eighteen pairs of drawn eyes in three rows, from soft and round to narrow and sharply winged
         caption: Eye studies

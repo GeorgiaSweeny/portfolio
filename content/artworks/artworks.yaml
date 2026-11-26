@@ -50,12 +50,12 @@
   note: 'Poster for my house drama, One Thousand and One Arabian Nights, which I co-wrote and co-directed'
   alt: 'Poster with a red four-poster bed under gold constellations of a ship, a genie and a flying horse, titled Sinbad, with Mandeville’s One Thousand and One Arabian Nights beneath'
 - title: Station Triptych
-  medium: '[?] Watercolour and ink'
+  medium: Acrylic and ink
   year: '2020'
   draft: true
   image: station-triptych.jpg
-  note: '[?] What it was for'
-  alt: 'Three watercolour panels of a station: a long platform in red and teal, a crowd at the ticket barriers under a turquoise sky, and figures against a red wash'
+  note: 'A-level project on the 2020 lockdown: a world turned still and small, and the separation and isolation that came with it'
+  alt: 'Three painted panels of a station: a long platform in red and teal, a crowd at the ticket barriers under a turquoise sky, and figures against a red wash'
   stages:
     - src: station-triptych-framed.jpg
       alt: The three panels framed together in a grey frame
@@ -82,11 +82,11 @@
       alt: Sketchbook page with a pencil sketch of an empty platform and track, and handwritten notes beneath
       caption: Sketchbook page
 - title: Grief
-  medium: '[?] Digital painting'
+  medium: Digital
   year: '2022'
   draft: true
   image: grief-green-storm.jpg
-  note: '[?] Illustration for a poem about grief: whose poem, and what it was for'
+  note: 'Narrative Strategies project illustrating Owen Sheers’s paired poems The Hill Fort (Y Gaer) and Y Gaer (The Hill Fort), on the loss of a son, the power and cycles of nature, and moving through grief'
   alt: 'A tiny figure on a dark hillside under a towering green storm, rain streaking down and a faint pyramid of rocks on the ridge'
   stages:
     - src: grief-figure-in-storm.jpg
@@ -108,11 +108,11 @@
       alt: 'Sketchbook page titled Grief, with quoted lines from the poem and three ink thumbnails of a figure in a storm'
       caption: Sketchbook thumbnails
 - title: The Odyssey Cinema
-  medium: '[?] Mixed media'
+  medium: Mixed media (acrylic, ink and collage)
   year: '2019'
   draft: true
   image: odyssey-cinema.jpg
-  note: '[?] What it was for'
+  note: 'A-level project on the 100-year history of the Odyssey Cinema in St Albans: artefacts old and new, local people’s stories from its Odeon days, concerts such as the Rolling Stones, the old building’s fire and the years it stood abandoned before reopening'
   alt: 'Large grey mixed-media piece: a woman holding up a film reel among projectors, stacked reels and collaged cinema tickets and posters'
   stages:
     - src: odyssey-cinema-interiors.jpg
@@ -157,7 +157,7 @@
   year: '2020'
   draft: true
   image: clockwork-dress.jpg
-  note: '[?] What it was for'
+  note: 'Experimental design project: everyday household objects remixed into fashion, inspired by Christian Dior’s figure-accentuating silhouettes'
   alt: 'Ink drawing of a dress built from clockwork: a bodice of cogs and springs and a round, glass-like skirt full of gears'
   stages:
     - src: clockwork-dress-designs.jpg

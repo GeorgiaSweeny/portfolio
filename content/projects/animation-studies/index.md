@@ -9,7 +9,9 @@ order: 19
 role: Animator
 outcome: '[?] Three short animation exercises: a 2D hamster on a wheel, a 3D sneak cycle for body mechanics, and a simulated can integrated into live footage.'
 intro: >-
-  [? What these were for (units and years), and what each exercise asked for.]
+  [? Hamster wheel and can simulation: which unit and year, and what each asked for.]
+
+  The sneak is from my Animation Production unit at university: a body mechanics shot, animated from reference footage we filmed of ourselves. The brief allowed a walk, run, skip or similar, and focused on weight, balance, the line of action (the curve that runs through a pose) and working pose to pose (key poses first, then the frames between).
 
   Three short loops, each practising a different side of animation: timing and weight in 2D with a hamster running on its wheel, body mechanics with a sneak cycle in 3D, and integrating a computer-generated can into live-action footage with a simulation.
 cardImage: can-simulation.jpg
@@ -41,7 +43,7 @@ blocks:
       - src: sneak-cycle.jpg
         video: sneak-cycle.mp4
         alt: 'Looping 3D animation of a plain grey figure sneaking on tiptoe, seen from several angles'
-        caption: 'Body mechanics: a sneak cycle'
+        caption: 'Body mechanics: a sneak, from my own reference footage'
         emphasis: key
   - type: gallery
     section: vfx
