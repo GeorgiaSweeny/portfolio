@@ -592,6 +592,7 @@ html:not(.no-js) .feature.in .feature-text > :nth-child(4) { transition-delay: .
 .tile .more { position: absolute; right: 8px; bottom: 8px; font: 12px/1.2 var(--mono); padding: 4px 8px; border-radius: 999px; background: rgba(19,32,31,.82); color: var(--paper); }
 .tile .sold { position: absolute; left: 8px; top: 8px; font: 12px/1.2 var(--mono); padding: 4px 8px; border-radius: 999px; background: var(--ink); color: var(--paper); }
 .tile figcaption { display: flex; flex-direction: column; gap: 2px; }
+.pw-rows a[hidden] { display: none; } /* stage links (lightbox only) inside same-height rows */
 .tile .t { font: 600 16px/1.2 var(--heading); letter-spacing: -0.02em; }
 .tile .m { font: 13px var(--mono); color: var(--muted); }
 @media (min-width: 700px) { .tile .t { font-size: 19px; } }

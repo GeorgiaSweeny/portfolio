@@ -16,12 +16,13 @@ description: "Paintings, drawings and design pieces by Georgia Sweeny, alongside
   <div class="wrap">
     <h2 class="sr-only">Artworks</h2>
     {%- if artworks.length %}
-    <div class="tiles">
+    {#- Same-height rows, like project galleries (Georgia chose this over the even grid, 26 Nov). #}
+    <div class="gallery pw-rows" style="--img-h:520px">
       {%- asyncEach a in artworks %}
       {#- Click a tile: the lightbox opens on the artwork (caption: title, medium and year, and its note),
           and the arrows step through its sketches and progress shots, then on to the next artwork. #}
-      <figure class="tile">
-        <a class="img" href="{% imageFull a.image %}" data-lightbox data-group="{{ a.title | slugify }}" data-caption="{{ a.title }}&#10;{{ a.medium }} · {{ a.year }}{% if a.note %}&#10;{{ a.note }}{% endif %}">{% image a.image, a.alt, "(min-width: 700px) 33vw, 50vw" %}{% if a.sold %}<span class="sold">Sold</span>{% endif %}{% if a.stages.length %}<span class="more" aria-hidden="true">+{{ a.stages.length }}</span>{% endif %}</a>
+      <figure class="tile" style="--ar:{% imageRatio a.image %}">
+        <a class="img" href="{% imageFull a.image %}" data-lightbox data-group="{{ a.title | slugify }}" data-caption="{{ a.title }}&#10;{{ a.medium }} · {{ a.year }}{% if a.note %}&#10;{{ a.note }}{% endif %}">{% image a.image, a.alt, "(min-width: 700px) 40vw, 50vw" %}{% if a.sold %}<span class="sold">Sold</span>{% endif %}{% if a.stages.length %}<span class="more" aria-hidden="true">+{{ a.stages.length }}</span>{% endif %}</a>
         {%- for s in a.stages %}
         <a hidden href="{% imageFull s.src %}" data-lightbox data-group="{{ a.title | slugify }}" data-alt="{{ s.alt }}" data-caption="{{ a.title }}{% if s.caption %}: {{ s.caption }}{% endif %}">{{ s.alt }}</a>
         {%- endfor %}
