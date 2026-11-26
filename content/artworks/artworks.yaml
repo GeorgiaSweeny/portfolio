@@ -5,21 +5,23 @@
 #     image: file-name.jpg
 #     alt: …
 #     sold: true      # leave out unless it has been bought. No prices, ever.
+#     note: …         # optional: the story, shown in the enlarged view
+#     stages:         # optional, in viewing order: finished → back to the first sketch, then photos of Georgia at work
 - title: Mandeville House Diary Cover
   medium: Coloured pencil and ink
   year: '2018'
   image: mandeville-house-diary-cover.jpg
   note: The cover artwork for my house’s diary at school, Mandeville.
   stages:
+    - src: mandeville-house-diary-cover-white.jpg
+      alt: The cover artwork finished on a white background, before the teal
+      caption: Before the teal background
     - src: mandeville-house-diary-cover-sketch.jpg
       alt: Pencil sketch of the cover layout, with colour swatches around it
       caption: The sketch
     - src: mandeville-house-diary-cover-painting.jpg
       alt: Georgia colouring the cover artwork at a kitchen table
       caption: Colouring it in
-    - src: mandeville-house-diary-cover-white.jpg
-      alt: The cover artwork finished on a white background, before the teal
-      caption: Before the teal background
   alt: 'House diary cover for Mandeville on a teal background: a green dragon over the house name, and three students in green beneath, one with a lacrosse stick'
 - title: The Green Dress, a Leaving Gift
   medium: Watercolour and ink
@@ -33,12 +35,12 @@
   image: house-dragon-leaving-gift.jpg
   note: 'Commissioned as a leaving gift for a teacher: the house dragon, with the house motto beneath.'
   stages:
-    - src: house-dragon-leaving-gift-sketch.jpg
-      alt: Pencil sketch of the dragon coiled around a globe inside a drawn frame, with a note where a verse of the house hymn would go
-      caption: The first sketch
     - src: house-dragon-leaving-gift-line-art.jpg
       alt: Ink line art of the dragon, the globe and the mortarboard before colour
       caption: Line art
+    - src: house-dragon-leaving-gift-sketch.jpg
+      alt: Pencil sketch of the dragon coiled around a globe inside a drawn frame, with a note where a verse of the house hymn would go
+      caption: The first sketch
   alt: 'A green and gold dragon coiled around a globe with a mortarboard, with the house motto beneath'
 - title: Sinbad, House Drama Poster
   medium: Digital
