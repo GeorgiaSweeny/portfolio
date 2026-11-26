@@ -49,7 +49,6 @@ export default {
   // set where the crop centres (CSS object-position, x then y).
   cardFocus: {
     "capturing-the-sun": "68% 50%",    // the Great Tree and the boy, right of centre
-    "infortunatus-mutatis": "72% 50%", // the creature's face over the cauldron
   },
   // YouTube videos shown as secondary clips (about half width, beside nothing).
   smallVideos: ["vNhvHVbImFI"],

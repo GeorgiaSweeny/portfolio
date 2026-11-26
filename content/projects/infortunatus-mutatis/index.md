@@ -8,7 +8,7 @@ order: 14
 role: Set Design, Lighting and Edit
 outcome: A stop-motion short about a potion that goes badly wrong, built, lit and shot frame by frame.
 intro: A stop-motion short about a potion that goes badly wrong — built, lit and shot frame by frame.
-cardImage: cauldron.jpg
+cardImage: stir.jpg
 facts:
   role: 'Everything: set design, puppet building, lighting, animation and the edit.'
   tools: Handmade sets and puppets, practical lighting, Adobe Premiere Pro.
