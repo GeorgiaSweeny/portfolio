@@ -74,10 +74,6 @@ blocks:
       - src: window.jpg
         alt: 'Concept painting: a dark shape against a bright window'
         caption: 'Mood for the blot'
-      - src: lighting-desk-yellow.jpg
-        alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
-        caption: "Intense yellow: working late by lamplight"
-        group: desk-lighting
       - src: lighting-desk-mono.jpg
         alt: "Lighting key: the drawing desk at night in monochrome"
         caption: "Monochrome: working late by lamplight"
@@ -85,6 +81,10 @@ blocks:
       - src: lighting-desk-slight.jpg
         alt: "Lighting key: the drawing desk at night with a slight yellow light"
         caption: "Slight yellow: working late by lamplight"
+        group: desk-lighting
+      - src: lighting-desk-yellow.jpg
+        alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
+        caption: "Intense yellow: working late by lamplight"
         group: desk-lighting
       - src: concept-desk-at-night-grey.jpg
         alt: 'Grey-blue concept painting of the desk at night'
