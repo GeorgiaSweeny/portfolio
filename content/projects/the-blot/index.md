@@ -59,9 +59,6 @@ blocks:
       - src: concept-set-drawing-desk-layout.jpg
         alt: 'Ink sketch of the drawing desk and a room layout plan with labels for window, bookshelf and door'
         caption: 'Laying out the room'
-      - src: window.jpg
-        alt: 'Concept painting: a dark shape against a bright window'
-        caption: 'Lighting and mood for the blot'
       - src: concept-character-face-studies.jpg
         alt: 'Three ink face studies of Karl'
         caption: 'Face studies'
@@ -70,17 +67,24 @@ blocks:
       - src: scribble.jpg
         alt: 'Concept painting: tangled ink scribbles bursting from a desk'
         caption: 'Blot taking form'
+  - type: gallery
+    section: lighting
+    heading: Lighting Concepts
+    images:
+      - src: window.jpg
+        alt: 'Concept painting: a dark shape against a bright window'
+        caption: 'Mood for the blot'
       - src: lighting-desk-yellow.jpg
         alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
-        caption: "Lighting key, intense yellow: working late by lamplight"
+        caption: "Intense yellow: working late by lamplight"
         group: desk-lighting
       - src: lighting-desk-mono.jpg
         alt: "Lighting key: the drawing desk at night in monochrome"
-        caption: "Lighting key, monochrome: working late by lamplight"
+        caption: "Monochrome: working late by lamplight"
         group: desk-lighting
       - src: lighting-desk-slight.jpg
         alt: "Lighting key: the drawing desk at night with a slight yellow light"
-        caption: "Lighting key, slight yellow: working late by lamplight"
+        caption: "Slight yellow: working late by lamplight"
         group: desk-lighting
       - src: concept-desk-at-night-grey.jpg
         alt: 'Grey-blue concept painting of the desk at night'
@@ -88,7 +92,7 @@ blocks:
         alt: 'Teal concept painting of the desk at night'
       - src: window-warm.jpg
         alt: "Lighting key: the dark shape of the blot against the window in warm light"
-        caption: "Lighting key: the blot against the window, warm"
+        caption: "The blot against the window, warm"
         group: window-lighting
       - src: window-cool.jpg
         alt: The same window lighting key in cool blue light
