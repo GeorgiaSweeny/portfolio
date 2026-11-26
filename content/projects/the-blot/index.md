@@ -86,10 +86,14 @@ blocks:
         alt: "Lighting key: the drawing desk at night in intense yellow lamplight"
         caption: "Intense yellow: working late by lamplight"
         group: desk-lighting
-      - src: concept-desk-at-night-grey.jpg
-        alt: 'Grey-blue concept painting of the desk at night'
       - src: concept-desk-at-night-teal.jpg
         alt: 'Teal concept painting of the desk at night'
+        caption: The desk at night, teal
+        group: desk-night
+      - src: concept-desk-at-night-grey.jpg
+        alt: 'Grey-blue concept painting of the desk at night'
+        caption: …and darker grey-blue
+        group: desk-night
       - src: window-warm.jpg
         alt: "Lighting key: the dark shape of the blot against the window in warm light"
         caption: "The blot against the window, warm"
